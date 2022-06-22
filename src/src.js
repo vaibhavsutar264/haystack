@@ -29,7 +29,7 @@ if (typeof window !== 'undefined') {
             var navMenu = document.getElementById("menu_container");
             // var frameMenu = document.getElementById('frame');
 
-            navToggle.addEventListener("click", function(e){
+            navToggle?.addEventListener("click", function(e){
             //   navMenu.classList.toggle("open");
             
             //   flexboxOFTextVideo.classList.toggle("open");
@@ -575,7 +575,7 @@ if (typeof window !== 'undefined') {
 window.sections = [...document.querySelectorAll('.section')];
 window.lastScrollTop = window.pageYOffset;
 
-document.body.style.background = window.sections[0].getAttribute('data-bg');
+document.body.style.background = window?.sections[0]?.getAttribute('data-bg');
 
 window.addEventListener('scroll', onScroll);
 

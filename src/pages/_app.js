@@ -8,19 +8,19 @@ import '../styles/globals.css';
 <Link rel='stylesheet' href='https://codepen.io/GreenSock/pen/ZEGdQLM/7ba936b34824fefdccfe2c6d9f0b740b.css' ></Link>; */}
 
 
-// import '../public/scrollMagic';
-// import '../public/scrollMagicIndicators';
-// import '../public/tweenMax';
-// import { TimelineMax, Sine } from '../public/tweenMax';
+// import '../scrollMagic';
+// import '../scrollMagicIndicators';
+// import '../tweenMax';
+// import { TimelineMax, Sine } from '../tweenMax';
 // import ScrollMagic from 'scrollmagic';
-// import '../public/scrollMagicAnimationGsap';
+// import '../scrollMagicAnimationGsap';
 // import 'debug.addIndicators'
 // import { TweenMax, TimelineMax, Linear } from "gsap";
 
-// import '../public/scrollmagicFromStackOverFlow';
-// import '../public/scrollmagicDebugFromStackOverFlow';
-// import '../public/scrollMagicGsap';
-// import '../public/scrollMagicAnimationGsap';
+// import '../scrollmagicFromStackOverFlow';
+// import '../scrollmagicDebugFromStackOverFlow';
+// import '../scrollMagicGsap';
+// import '../scrollMagicAnimationGsap';
 
 
 
@@ -29,22 +29,22 @@ import '../styles/globals.css';
 // import { gsap, TimelineMax } from "gsap";
 // import { TweenLite, TimelineMax, Linear, Back, Sine } from 'gsap/all';
 
-// import '../public/gsapMinVideoScrollTrial';
-// import '../public/scrollTriggerMinVideoScrollTrial1';
-import '../public/jquerry';
-// import '../public/gsapMinVideoScrollTrial1.js';
-// import '../public/scrollTriggerMinVideoScrollTrial1.js';
-import '../public/src';
-import '../public/Footer';
+// import '../gsapMinVideoScrollTrial';
+// import '../scrollTriggerMinVideoScrollTrial1';
+import '../jquerry';
+// import '../gsapMinVideoScrollTrial1.js';
+// import '../scrollTriggerMinVideoScrollTrial1.js';
+import '../src';
+import '../Footer';
 
 // import '../src/style/cloudFareAjaxVideoScrollTrial1.css';
 // import '../src/style/googleApisVideoScrollTrial1.css';
 // import '../src/style/greenSockVideoScrollTrial1.css';
 
 
-// import '../public/gsapMin';
+// import '../gsapMin';
 
-// import '../public/controller';
+// import '../controller';
 
 // import Link from 'next/link';
 
@@ -54,35 +54,35 @@ import '../public/Footer';
 <Link href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></Link>;
 <Link href="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></Link>; */}
 
-// import '../public/ScrollMagic.jsx';
-// import '../public/ScrollMagicIndicators.jsx';
-// import '../public/ScrollMagicGsap.jsx';
-// import '../public/ScrollMagicAnimationGsap.jsx';
-// import '../public/script';
+// import '../ScrollMagic.jsx';
+// import '../ScrollMagicIndicators.jsx';
+// import '../ScrollMagicGsap.jsx';
+// import '../ScrollMagicAnimationGsap.jsx';
+// import '../script';
 // import 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js';
 // import 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js';
 // import 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js';
 // import 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js';
-import data from "../src/data/data.json";
-import PreAnimationOnLoad from "../public/PreAnimationOnLoad";
-import HambergerMenuWithScriptTag from "../public/HambergerMenuWithScriptTag";
-// import NavbarContent from "../public/NavbarContent";
+import data from "../data/data.json";
+import PreAnimationOnLoad from "../PreAnimationOnLoad";
+import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
+// import NavbarContent from "../NavbarContent";
 // import Navbar from "../src/components/Navbar";
-import OurPartners from "../public/OurPartners";
-import TextVideo from "../public/textVideo";
+import OurPartners from "../OurPartners";
+import TextVideo from "../textVideo";
 // import About from "./About";
-import Precision from "../public/Precision";
-import Upgrade from "../public/Upgrade";
-import WeGotCovered from "../public/WeGotCovered";
-import Footer from "../public/Footer";
+import Precision from "../Precision";
+import Upgrade from "../Upgrade";
+import WeGotCovered from "../WeGotCovered";
+import Footer from "../Footer";
 
-// import Video from "../public/Video";
-// import MouseMoveScroll from "../public/MouseMoveScroll";
-import VideoRemake from "../public/VideoRemake";
+// import Video from "../Video";
+// import MouseMoveScroll from "../MouseMoveScroll";
+import VideoRemake from "../VideoRemake";
 import { motion } from 'framer-motion';
 // import { ScrollContainer, ScrollPage, Animator, FadeOut, ZoomOut, batch, ZoomIn } from 'react-scroll-motion';
-// import VideoScrollTrial1 from "../public/VideoScrollTrial1";
-// import VideoScrollTrial from "../public/VideoScrollTrial";
+// import VideoScrollTrial1 from "../VideoScrollTrial1";
+// import VideoScrollTrial from "../VideoScrollTrial";
 // import HambergerMenuWithJQuery from "../src/components/HambergerMenuWithJQuery";
 // import {  BrowserRouter as Router } from "react-router-dom"
 // import React, { useEffect } from 'react'

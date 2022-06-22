@@ -411,7 +411,7 @@ font-size: 6vw;
 top: 350px;
 /* text-align: center; */
 /* mix-blend-mode: screen; */
-background-color: url('../public/black.png');
+background-color: url('../black.png');
 margin-top: -350px;
 padding-top: 150px;
 color: black;
@@ -554,7 +554,7 @@ color: black;
 } */
 
 .precision-bg{
-  background-image: url('../src/waste-jsx-files/precision-bg-true.png');
+  background-image: url('../waste-jsx-files/precision-bg-true.png');
   object-fit: cover;
   background-color: rgba(0, 0, 0, 0.267);
   background-blend-mode: multiply;
@@ -783,7 +783,7 @@ color: black;
 
 
 .upgrade-img {
-  background-image: url('../src/box.png');
+  background-image: url('../box.png');
   width: 300px;
   height: 300px;
   background-repeat: no-repeat;
@@ -791,7 +791,7 @@ color: black;
 }
 
 .we-got-covered-img {
-  background-image: url('../src/box-2.png');
+  background-image: url('../box-2.png');
   width: 300px;
   height: 250px;
   margin-right: 20px;
