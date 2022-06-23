@@ -74,7 +74,7 @@ const textVideo = () => {
                                 
                             </h2>
                             <video id="banner" type="video/mp4" muted autoPlay loop >
-                                <source src="istockphoto-454669794-640_adpp_is.mp4" />
+                                <source src="https://media.istockphoto.com/videos/cloning-bacteria-loop-video-id473038835" />
                             </video>
                             
                             
