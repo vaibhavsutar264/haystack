@@ -69,7 +69,7 @@ import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
 // import NavbarContent from "../NavbarContent";
 // import Navbar from "../src/components/Navbar";
 import OurPartners from "../OurPartners";
-import TextVideo from "../textVideo";
+import TextVideo from "../TextVideo";
 // import About from "./About";
 import Precision from "../Precision";
 import Upgrade from "../Upgrade";
