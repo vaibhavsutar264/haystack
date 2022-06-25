@@ -113,14 +113,14 @@ function MyApp({ Component, pageProps }) {
       {/* <ScrollContainer>
         <ScrollPage>
           <Animator animation={ZoomOutScrollOut}> */}
-          <div className="section" data-bg="rgb(20, 20, 20)">
+          <div className="section" data-bg="rgb(36, 101, 237)">
       <Upgrade/>
       </div>
       {/* </Animator>
       </ScrollPage>
       </ScrollContainer> */}
       
-      <div className="section" data-bg="rgb(36, 101, 237)">
+      <div className="section" data-bg="rgb(20, 20, 20)">
       <OurPartners ourPartner={data.ourPartner} />
       </div>
       {/* <MouseMoveScroll/> */}
