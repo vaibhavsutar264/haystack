@@ -1,8 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const OurPartner = ({src,link,index}) => {
-    return     <a href={link}> <img src={src} alt={`${index} offer`} /></a>
-    
-}
+const OurPartner = ({ src, link, index }) => {
+   return (
+      <a href={link}>
+         {" "}
+         <img src={src} alt={`${index} offer`} />
+      </a>
+   );
+};
 
-export default OurPartner
+export default OurPartner;

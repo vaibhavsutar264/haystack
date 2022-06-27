@@ -1,35 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Link from "next/link";
 import NavItem from "../components/NavItem";
 import data from "../data/data.json";
 
-
 const MENU_LIST = [
-    {
-        text: "content will shown here in a while",
-        href: "/Home"
-    }
-]
+   {
+      text: "content will shown here in a while",
+      href: "/Home",
+   },
+];
 const Navbar = () => {
-    const [navActive, setNavActive] = useState(false);
-    const [activeIdx, setActiveIdx] = useState(0);
-    return (
-        <header>
-            <nav className="nav">
-                <Link href={'/'}>
-                    <a onClick={() => setActiveIdx(0)}>
-                        <img src={data.logo} alt="" />
-                    </a>
-                </Link>
-                <div onClick={() => setNavActive(!navActive)} className="nav__menu-bar">
-                    <div>
-
-                    </div>
-                    <div></div>
-                    <div></div>
-
-                </div>
-                {/* <div>
+   const [navActive, setNavActive] = useState(false);
+   const [activeIdx, setActiveIdx] = useState(0);
+   return (
+      <header>
+         <nav className="nav">
+            <Link href={"/"}>
+               <a onClick={() => setActiveIdx(0)}>
+                  <img src={data.logo} alt="" />
+               </a>
+            </Link>
+            <div
+               onClick={() => setNavActive(!navActive)}
+               className="nav__menu-bar"
+            >
+               <div></div>
+               <div></div>
+               <div></div>
+            </div>
+            {/* <div>
 
                     <div onload="Animation:none">
                         <input onclick="no" type="checkbox" id="bgtoggle" />
@@ -42,7 +41,7 @@ const Navbar = () => {
                     </div>
                 </div> */}
 
-                {/* {
+            {/* {
                   let abc = document.getElementsByClassName('menu_container'); 
 
                   document.addEventListener("DOMContentLoaded", function(){
@@ -54,26 +53,26 @@ const Navbar = () => {
                       });
                     });  
                 } */}
-                <div className={`${navActive ? "active" : ""} nav__menu-list`}>
-                    {MENU_LIST.map((menu, idx) => {
+            <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+               {MENU_LIST.map((menu, idx) => {
+                  // here menu means item in MENU_LIST
+                  return (
+                     <div
+                        onClick={() => {
+                           setActiveIdx(idx);
+                           setNavActive(false);
+                        }}
+                        key={menu.text}
+                     >
+                        <NavItem {...menu} />
+                        {/* ...menu means MENU_LIST item */}
+                     </div>
+                  );
+               })}
+            </div>
+         </nav>
+      </header>
+   );
+};
 
-                        // here menu means item in MENU_LIST
-                        return (
-                            <div onClick={() => {
-                                setActiveIdx(idx);
-                                setNavActive(false);
-                            }}
-                                key={menu.text}>
-                                <NavItem {...menu} />
-                                {/* ...menu means MENU_LIST item */}
-                            </div>
-                        );
-                    })}
-                </div>
-
-            </nav>
-        </header>
-    )
-}
-
-export default Navbar
+export default Navbar;

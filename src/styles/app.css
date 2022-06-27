@@ -1,109 +1,109 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Poppins", sans-serif;
+   box-sizing: border-box;
 }
 
 hr {
-  width: 1160px;
-  border-top: 3px solid black;
+   width: 1160px;
+   border-top: 3px solid black;
 }
 
 .upgrade-main {
-  display: flex;
-  justify-content: space-around;
-  background-color: black;
-  color: white;
-  padding: 80px;
+   display: flex;
+   justify-content: space-around;
+   background-color: black;
+   color: white;
+   padding: 80px;
 }
 
 .upgrade-heading {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 40px;
+   font-style: normal;
+   font-weight: 800;
+   font-size: 40px;
+   line-height: 40px;
 }
 
 .upgrade-para {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 25px;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 25px;
+   line-height: 25px;
 }
 
 .btn-test {
-  background-color: #F9F7E8;
-  color: #3470D3;
-  padding: 10px;
-  padding-left: 35px;
-  padding-right: 35px;
-  border-radius: 40px;
-  font-weight: 600;
-  font-size: 15px;
+   background-color: #f9f7e8;
+   color: #3470d3;
+   padding: 10px;
+   padding-left: 35px;
+   padding-right: 35px;
+   border-radius: 40px;
+   font-weight: 600;
+   font-size: 15px;
 }
 
 .we-got-covered {
-  padding: 40px;
+   padding: 40px;
 }
 
 .we-got-covered-heading {
-  color: #3470D3;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  padding-left: 6%;
+   color: #3470d3;
+   font-weight: 700;
+   font-size: 50px;
+   line-height: 50px;
+   padding-left: 6%;
 }
 
 .we-got-covered-inner-container {
-  display: flex;
-  justify-content: center;
+   display: flex;
+   justify-content: center;
 }
 
-.we-got-covered-inner-container>div>img {
-  margin-right: 30px;
+.we-got-covered-inner-container > div > img {
+   margin-right: 30px;
 }
 
-.we-got-covered-inner-container>div>h3 {
-  width: 30vh;
+.we-got-covered-inner-container > div > h3 {
+   width: 30vh;
 }
 
-.we-got-covered-inner-container>div>a {
-  text-decoration: none;
+.we-got-covered-inner-container > div > a {
+   text-decoration: none;
 }
 
 .footer-center {
-  display: flex;
-  justify-content: center;
+   display: flex;
+   justify-content: center;
 }
 
 .footer-inner-container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 25px;
-  padding-bottom: 100px;
-  width: 1160px;
+   display: flex;
+   justify-content: space-between;
+   padding-top: 25px;
+   padding-bottom: 100px;
+   width: 1160px;
 }
 
 .footer-row-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
 }
 
-.footer-row-2>a {
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 35px;
-  color: black;
-  text-decoration: none;
+.footer-row-2 > a {
+   font-weight: 800;
+   font-size: 20px;
+   line-height: 35px;
+   color: black;
+   text-decoration: none;
 }
 
 .social-icon {
-  display: flex;
-  justify-content: space-around;
+   display: flex;
+   justify-content: space-around;
 }
 
-.social-icon>a {
-  color: black;
+.social-icon > a {
+   color: black;
 }

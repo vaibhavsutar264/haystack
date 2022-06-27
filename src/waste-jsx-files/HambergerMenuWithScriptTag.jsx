@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 // import ScriptTag from 'react-script-tag';
 // import { Helmet } from "react-helmet";
 // import $ from 'jquery';
-import Script from 'next/script'
+import Script from "next/script";
 // import Head from 'next/head';
 // Create the function
 // export function AddLibrary(urlOfTheLibrary) {
@@ -13,46 +13,38 @@ import Script from 'next/script'
 // }
 
 const HambergerMenuWithScriptTag = () => {
-    return (
-        <>
-            <div >
+   return (
+      <>
+         <div>
             {/* <Head>
                 <script src="app.js"></script>
             </Head> */}
-                <input  type="checkbox" id="bgtoggle" />
-                <div className="frame">
-                    <label htmlFor="bgtoggle" className="menu"></label>
-                    <div className="menu_container" id="menu_container">
-                        <h1>hystack content will be shown here</h1>
-                    </div>
-                </div>
-                <Script src="src.js" strategy="lazyOnload"></Script>
-
+            <input type="checkbox" id="bgtoggle" />
+            <div className="frame">
+               <label htmlFor="bgtoggle" className="menu"></label>
+               <div className="menu_container" id="menu_container">
+                  <h1>hystack content will be shown here</h1>
+               </div>
             </div>
-            {/* <ScriptTag isHydrating={true} type="text/javascript"
+            <Script src="src.js" strategy="lazyOnload"></Script>
+         </div>
+         {/* <ScriptTag isHydrating={true} type="text/javascript"
                 src=
                 "./app.js" /> */}
-            {/* <Helmet>
+         {/* <Helmet>
                     <script src=
                         "https://github.com/vaibhavsutar264/hamberger-menu-animation/blob/main/app.js"
                         type="text/javascript" 
                         />
                 </Helmet> */}
-            {/* Call the function to add a library */}
-            {/* {AddLibrary(
+         {/* Call the function to add a library */}
+         {/* {AddLibrary(
                 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')} */}
+      </>
+   );
+};
 
-                
-
-        </>
-    )
-}
-
-export default HambergerMenuWithScriptTag
-
-
-
-
+export default HambergerMenuWithScriptTag;
 
 // import React from 'react'
 // // import ScriptTag from 'react-script-tag';
@@ -86,7 +78,7 @@ export default HambergerMenuWithScriptTag
 //             {/* <Helmet>
 //                     <script src=
 //                         "https://github.com/vaibhavsutar264/hamberger-menu-animation/blob/main/app.js"
-//                         type="text/javascript" 
+//                         type="text/javascript"
 //                         />
 //                 </Helmet> */}
 //             {/* Call the function to add a library */}
@@ -98,6 +90,3 @@ export default HambergerMenuWithScriptTag
 // }
 
 // export default HambergerMenuWithScriptTag
-
-
-
