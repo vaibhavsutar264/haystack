@@ -1,15 +1,16 @@
 import React from "react";
+import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
 import AreYouClinician from "../AreYouClinician";
 import ResearchPapers from "../ResearchPapers";
 import WhyChooseHaystack from "../WhyChooseHaystack";
 import WhyThisTechnology from "../WhyThisTechnology";
-import OurPartnersMain from "../OurPartnersMain";
 import AreYouClinicianTestimonial from "../AreYouClinicianTestimonial";
 import Footer from "../Footer";
 
 function Clinician() {
    return (
       <>
+         <HambergerMenuWithScriptTag />
          <AreYouClinician />
          <AreYouClinicianTestimonial />
          <ResearchPapers />
