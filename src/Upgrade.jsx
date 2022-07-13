@@ -22,30 +22,43 @@ function Upgrade() {
    }, [controls, inView]);
 
    return (
-      <section name="upgrade">
+      <section className="upgrade">
          <motion.div
             ref={ref}
             animate={controls}
             initial="hidden"
             variants={topBottomVariants}
-            className="upgrade-main row"
-         >
-            <div className="col-6 d-flex floating-purpose">
-               <div className="m-auto upgrade-left">
-                  <h2 className="upgrade-heading">
-                     Upgrade your lab
-                     <br />
+            className="upgrade-main">
+            <div className="row">
+               <div className="upgrade-content m-auto col-lg-6 col-md-6 col-sm-6">
+                  <h2 className="upgrade-heading text-uppercase">
+                     Upgrade your lab<br />
                      without hassle
                   </h2>
-                  <p className="upgrade-para">Some detail about the test</p>
-                  <p className="upgrade-para">Some detail about the test</p>
+                  <p className="upgrade-para w-75">A Cutting edge health tech platform and genomic testing rolled into one</p>
                   <button className="btn-test">View UID Test</button>
                </div>
+               <div className="upgrade-img m-auto col-lg-6 col-md-6 col-sm-6"></div>
             </div>
-            <div className="upgrade-img col-6 d-flex m-auto floating-purpose-right"></div>
-         </motion.div>
-      </section>
+         </motion.div >
+      </section >
    );
 }
 
 export default Upgrade;
+
+// @media(max - width: 356px) {
+//     .upgrade - main {
+//       padding: 10px;
+//    }
+    
+//     .upgrade - content {
+//       width: 70 %;
+//    }
+    
+//     .upgrade - img {
+//       width: 100px;
+//       height: 100px;
+//       background - color: yellow;
+//    }
+// }
