@@ -19,8 +19,8 @@ function WeGotCovered() {
       <>
          <section className="we-got-covered m-auto container">
             <h2 className="we-got-covered-heading p-lg-3 p-md-3 p-sm-1">
-               <div class="title-animation-box">
-                  <h1 class="title-animation">
+               <div className="title-animation-box">
+                  <h1 className="title-animation">
                      We got Covered <br /> We got Covered{" "}
                   </h1>
                </div>
@@ -30,35 +30,37 @@ function WeGotCovered() {
                animate={controls}
                initial="hidden"
                variants={topBottomVariants}
-               className="we-got-covered-inner-container row"
+               className="we-got-covered-inner-container"
             >
-               <div className="col-lg-3 col-md-6 my-2">
-                  <div className="we-got-covered-img"></div>
-                  <h3>Haystack Analytics and faster genomics diagnostics</h3>
-                  <a href="#read-more">
-                     <strong>Read more &gt;&gt;</strong>
-                  </a>
-               </div>
-               <div className="col-lg-3 col-md-6 my-2">
-                  <div className="we-got-covered-img"></div>
-                  <h3>Haystack Analytics and faster genomics diagnostics</h3>
-                  <a href="#read-more">
-                     <strong>Read more &gt;&gt;</strong>
-                  </a>
-               </div>
-               <div className="col-lg-3 col-md-6 my-2">
-                  <div className="we-got-covered-img"></div>
-                  <h3>Haystack Analytics and faster genomics diagnostics</h3>
-                  <a href="#read-more">
-                     <strong>Read more &gt;&gt;</strong>
-                  </a>
-               </div>
-               <div className="col-lg-3 col-md-6 my-2">
-                  <div className="we-got-covered-img"></div>
-                  <h3>Haystack Analytics and faster genomics diagnostics</h3>
-                  <a href="#read-more">
-                     <strong>Read more &gt;&gt;</strong>
-                  </a>
+               <div className="cards row pb-5">
+                  <div className="we-got-covered-card col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                     <div className="we-got-covered-img"></div>
+                     <h3 className="we-got-covered-headings w-75">Haystack Analytics and faster genomics diagnostics</h3>
+                     <p className="we-got-covered-read-more font-weight-normal">
+                        <a href="#read-more">Read more &gt;&gt;</a>
+                     </p>
+                  </div>
+                  <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                     <div className="we-got-covered-img"></div>
+                     <h3 className="we-got-covered-headings w-75">Haystack Analytics and faster genomics diagnostics</h3>
+                     <p className="we-got-covered-read-more font-weight-normal">
+                        <a href="#read-more">Read more &gt;&gt;</a>
+                     </p>
+                  </div>
+                  <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                     <div className="we-got-covered-img"></div>
+                     <h3 className="we-got-covered-headings w-75">Haystack Analytics and faster genomics diagnostics</h3>
+                     <p className="we-got-covered-read-more font-weight-normal">
+                        <a href="#read-more">Read more &gt;&gt;</a>
+                     </p>
+                  </div>
+                  <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                     <div className="we-got-covered-img"></div>
+                     <h3 className="we-got-covered-headings w-75">Haystack Analytics and faster genomics diagnostics</h3>
+                     <p className="we-got-covered-read-more font-weight-normal">
+                        <a href="#read-more">Read more &gt;&gt;</a>
+                     </p>
+                  </div>
                </div>
             </motion.div>
          </section>

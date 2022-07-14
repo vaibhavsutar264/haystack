@@ -29,23 +29,24 @@ const Precision = () => {
             variants={topBottomVariants}
             className="precision-bg  width-75"
          >
-            <div className="precision">
-               <h1 className="precision-text">
-                  Making Precision med a reality in india
-               </h1>
-            </div>
-            <div className="precision-inner-content">
-               <br />
-               <button className="precision-button-left">
-                  <a href="">
-                     I am a <br /> clinician
-                  </a>{" "}
-               </button>
-               <button className="precision-button-right">
-                  <a href="">
-                     I am a <br /> Diagnostician
-                  </a>{" "}
-               </button>
+            <div className="d-flex justify-content-center text-center flex-column precision-main">
+               <div className="precision align-center">
+                  <h1 className="precision-text text-white mb-5">
+                     Making Precision med a reality in india
+                  </h1>
+               </div>
+               <div className="precision-inner-content">
+                  <button className="button precision-button-left me-lg-5 me-md-4 me-sm-3 me-xs-1 mb-sm-2">
+                     <a href="">
+                        I am a <br /> Clinician
+                     </a>{" "}
+                  </button>
+                  <button className="button precision-button-right">
+                     <a href="">
+                        I am a <br /> Diagnostician
+                     </a>{" "}
+                  </button>
+               </div>
             </div>
          </motion.div>
       </>

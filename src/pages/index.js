@@ -12,45 +12,58 @@ import TextVideo from "../TextVideo";
 import Precision from "../Precision";
 import Upgrade from "../Upgrade";
 import WeGotCovered from "../WeGotCovered";
+import Quiz from "../Quiz";
 import Footer from "../Footer";
 import VideoRemake from "../VideoRemake";
 import AppTemplate from '../components/templates/AppTemplate'
+import AreYouClinician from "../AreYouClinician";
+import ResearchPapers from "../ResearchPapers";
+import WhyChooseHaystack from "../WhyChooseHaystack";
+import WhyThisTechnology from "../WhyThisTechnology";
+import OurPartnersMain from "../OurPartnersMain";
+import AreYouClinicianTestimonial from "../AreYouClinicianTestimonial";
 
 function Home({ Component, pageProps }) {
    return (
       <>
          <AppTemplate>
+            {/* <HambergerMenuWithJQuery/> */}
             {/* <Navbar/> */}
-         <div className="section" data-bg="white">
-            <TextVideo />
-         </div>
-         {/* <NavbarContent/> */}
-         <div className="section" data-bg="white">
-            <VideoRemake />
-         </div>
+            <div className="section" data-bg="white">
+               <TextVideo />
+            </div>
+            {/* <NavbarContent/> */}
+            {/* <div className="section" data-bg="white">
+               <VideoRemake />
+            </div> */}
 
-         {/* <VideoScrollTrial/> */}
-         {/* <ScrollContainer>
-        <ScrollPage>
-          <Animator animation={ZoomOutScrollOut}> */}
-         <div className="section" data-bg="rgb(36, 101, 237)">
-            <Upgrade />
-         </div>
-         {/* </Animator>
-      </ScrollPage>
-      </ScrollContainer> */}
+            {/* <VideoScrollTrial/> */}
+            {/* <ScrollContainer>
+            <ScrollPage>
+            <Animator animation={ZoomOutScrollOut}> */}
+            <div className="section" data-bg="rgb(20, 20, 20)">
+               <Upgrade />
+            </div>
+            {/* </Animator>
+            </ScrollPage>
+            </ScrollContainer> */}
 
-         <div className="section" data-bg="rgb(20, 20, 20)">
-            <OurPartners ourPartner={data.ourPartner} />
-         </div>
-         {/* <MouseMoveScroll/> */}
+            {/* <div className="section" data-bg="rgb(36, 101, 237)">
+               <OurPartnersMain />
+            </div> */}
 
-         <div className="section" data-bg="rgb(36, 101, 237)">
-            <Precision />
-         </div>
-         <div className="section" data-bg="white">
-            <WeGotCovered />
-         </div>
+            <div className="section" data-bg="rgb(36, 101, 237)">
+               <OurPartners ourPartner={data.ourPartner} />
+            </div>
+            {/* <MouseMoveScroll/> */}
+
+            <div className="section">
+               <Precision />
+            </div>
+            <div className="section" data-bg="white">
+               <WeGotCovered />
+            </div>
+            {/* <Video/> */}
          </AppTemplate>
       </>
    );

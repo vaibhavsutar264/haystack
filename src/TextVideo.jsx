@@ -84,9 +84,9 @@ const textVideo = () => {
                   {/* <video src="istockphoto-454669794-640_adpp_is.mp4" id="banner" type="video/mp4" muted loop autoPlay></video> */}
                </div>
                <div>
-                  <h2 id="text-video-h6">
+                  <h2 id="text-video-h6" className="text-capitalize font-weight-normal">
                      {" "}
-                     Avoid Avoidable Deaths with The Haystack UID test
+                     400+ bacteria and fungi tested and reported in 12 hours
                   </h2>
                </div>
 
