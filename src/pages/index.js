@@ -21,7 +21,6 @@ import ResearchPapers from "../ResearchPapers";
 import WhyChooseHaystack from "../WhyChooseHaystack";
 import WhyThisTechnology from "../WhyThisTechnology";
 import OurPartnersMain from "../OurPartnersMain";
-import AreYouClinicianTestimonial from "../AreYouClinicianTestimonial";
 
 function Home({ Component, pageProps }) {
    return (
