@@ -1,10 +1,11 @@
 import React from "react";
+import AppTemplate from "../components/templates/AppTemplate";
 
 const Contact = () => {
    return (
-      <div className="center">
+      <AppTemplate>
          <h2>contact page</h2>
-      </div>
+      </AppTemplate>
    );
 };
 

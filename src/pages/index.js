@@ -14,16 +14,13 @@ import Upgrade from "../Upgrade";
 import WeGotCovered from "../WeGotCovered";
 import Footer from "../Footer";
 import VideoRemake from "../VideoRemake";
+import AppTemplate from '../components/templates/AppTemplate'
 
 function Home({ Component, pageProps }) {
    return (
       <>
-         {/* <HambergerMenuWithJQuery/> */}
-         <PreAnimationOnLoad />
-
-         <HambergerMenuWithScriptTag />
-
-         {/* <Navbar/> */}
+         <AppTemplate>
+            {/* <Navbar/> */}
          <div className="section" data-bg="white">
             <TextVideo />
          </div>
@@ -54,12 +51,7 @@ function Home({ Component, pageProps }) {
          <div className="section" data-bg="white">
             <WeGotCovered />
          </div>
-         {/* <Video/> */}
-
-         {/* <VideoScrollTrial1/> */}
-
-         <hr />
-         <Footer />
+         </AppTemplate>
       </>
    );
 }
