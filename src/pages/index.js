@@ -15,12 +15,7 @@ import WeGotCovered from "../WeGotCovered";
 import Quiz from "../Quiz";
 import Footer from "../Footer";
 import VideoRemake from "../VideoRemake";
-import AreYouClinician from "../AreYouClinician";
-import ResearchPapers from "../ResearchPapers";
-import WhyChooseHaystack from "../WhyChooseHaystack";
-import WhyThisTechnology from "../WhyThisTechnology";
 import OurPartnersMain from "../OurPartnersMain";
-import AreYouClinicianTestimonial from "../AreYouClinicianTestimonial";
 
 function Home({ Component, pageProps }) {
    return (
@@ -68,12 +63,6 @@ function Home({ Component, pageProps }) {
          {/* <Video/> */}
 
          {/* <VideoScrollTrial1/> */}
-         <AreYouClinician />
-         <AreYouClinicianTestimonial />
-         <ResearchPapers />
-         <WhyChooseHaystack />
-         <WhyThisTechnology />
-         {/* <Quiz /> */}
          <Footer />
       </>
    );

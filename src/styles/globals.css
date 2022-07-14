@@ -1534,11 +1534,13 @@ body {
 
 /* Clinical */
 
-.are-you-clinician {
-   position: relative;
+#clinician,
+#diagnostic {
+   background-color: var(--secondary-bg);
 }
 
-.are-you-clinician-heading {
+.are-you-clinician-heading,
+.are-you-diagnostic-heading {
    color: #3470D3;
    font-family: var(--font-main);
    font-weight: 800 !important;
@@ -1546,15 +1548,25 @@ body {
    line-height: 60px !important;
 }
 
-.are-you-clinician-sub-heading {
+.are-you-diagnostic-heading {
+   line-height: 50px !important;
+}
+
+.are-you-clinician-sub-heading,
+.are-you-diagnostic-sub-heading {
    font-family: var(--font-main);
    font-weight: 800 !important;
-   font-size: 49px !important;
+   font-size: 40px !important;
    line-height: 60px !important;
    width: 95%
 }
 
-.are-you-clinician-para {
+.are-you-diagnostic-sub-heading {
+   width: 100%;
+}
+
+.are-you-clinician-para,
+.are-you-diagnostic-para {
    font-family: var(--font-main);
    font-weight: 600 !important;
    font-size: 24px !important;
@@ -1562,6 +1574,7 @@ body {
 }
 
 .are-you-clinician-btn-left,
+.are-you-diagnostic-btn-left,
 .quiz-btn {
    background-color: #04B454;
    color: #fff;
@@ -1576,21 +1589,28 @@ body {
    border-radius: 40px;
 }
 
-.are-you-clinician-btn-right {
+.are-you-clinician-btn-right,
+.are-you-diagnostic-btn-right {
    background-color: transparent;
    color: #27AE60;
    border: 2px solid#27AE60;
 }
 
-.are-you-clinician-img {
+.are-you-clinician-img,
+.are-you-diagnostic-img {
    background-image: url("../are-you-clinician.png");
-   width: 500px;
-   height: 520px;
-   background-size: cover;
+   width: 489px;
+   height: 396.8px;
+   background-size: contain;
+   background-repeat: no-repeat;
    background-position: center;
 }
 
-.are-you-clinician-img-bg {
+.are-you-diagnostic-img {
+   background-image: url("../are-you-diagnostic.png");
+}
+
+/* .are-you-clinician-img-bg {
    position: absolute;
    right: 530px;
    bottom: 65px;
@@ -1599,7 +1619,7 @@ body {
    height: 200px;
    background: #27AE6080;
    border-radius: 100%;
-}
+} */
 
 .are-you-clinician-testimonial {
    height: 450px;
@@ -1665,6 +1685,7 @@ body {
 
 .research-papers-inner-container {
    padding-left: 0;
+   padding-right: 0;
 }
 
 .research-papers-inner-container>.row {
@@ -1685,6 +1706,11 @@ body {
    line-height: 25px !important;
    color: #3470D3;
    text-decoration: underline;
+   width: 95%;
+}
+
+.research-papers-text {
+   width: 90%;
 }
 
 .research-papers-text-1,
@@ -1698,6 +1724,10 @@ body {
 
 .research-papers-text-2 {
    width: 170px;
+}
+
+#why-choose-haystack {
+   background-color: #fff;
 }
 
 .why-choose-haystack-heading {
@@ -1744,6 +1774,10 @@ body {
 .why-this-technology-card {
    width: 250px !important;
    height: 300px;
+   background-color: #fff;
+   border-radius: 5px;
+   border: 0.5px solid #E5E5E5;
+   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .why-this-technology-text-1 {
@@ -1887,24 +1921,27 @@ body {
 
    /* Clinical */
 
-   .are-you-clinician-heading {
+   .are-you-clinician-heading,
+   .are-you-diagnostic-heading {
       font-size: 40px !important;
    }
 
-   .are-you-clinician-sub-heading {
+   .are-you-clinician-sub-heading,
+   .are-you-diagnostic-sub-heading {
       font-size: 42px !important;
       line-height: 55px !important;
    }
 
-   .are-you-clinician-img {
+   .are-you-clinician-img,
+   .are-you-diagnostic-img {
       width: 470px;
       height: 470px;
    }
 
-   .are-you-clinician-img-bg {
+   /* .are-you-clinician-img-bg {
       right: 350px;
       bottom: 50px;
-   }
+   } */
 
    /* .research-papers-img {
       width: 110px !important;
@@ -2177,7 +2214,8 @@ body {
 
    /* Clinical */
 
-   .are-you-clinician-heading {
+   .are-you-clinician-heading,
+   .are-you-diagnostic-heading {
       font-size: 35px !important;
    }
 

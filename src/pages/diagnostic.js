@@ -1,16 +1,16 @@
 import React from "react";
 import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
-import AreYouClinician from "../AreYouClinician";
 import ResearchPapers from "../ResearchPapers";
 import WhyChooseHaystack from "../WhyChooseHaystack";
 import WhyThisTechnology from "../WhyThisTechnology";
 import Footer from "../Footer";
+import AreYouDiagnostic from "../AreYouDiagnostic";
 
-function Clinician() {
+function Diagnostic() {
    return (
-      <div id="clinician">
+      <div id="diagnostic">
          <HambergerMenuWithScriptTag />
-         <AreYouClinician />
+         <AreYouDiagnostic />
          <ResearchPapers />
          <WhyChooseHaystack />
          <WhyThisTechnology />
@@ -19,4 +19,4 @@ function Clinician() {
    );
 }
 
-export default Clinician;
+export default Diagnostic;
