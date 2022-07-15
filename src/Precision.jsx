@@ -1,6 +1,17 @@
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import styled from "@emotion/styled";
+import img from './precision-bg-true.png'
+
+const StyledWrapper = styled.div`
+.precision-bg {
+   background-image: url(${img.src});
+}
+.img {
+   aspect-ratio: 16/9;
+}
+`
 
 const topBottomVariants = {
    visible: {
@@ -21,7 +32,7 @@ const Precision = () => {
       }
    }, [controls, inView]);
    return (
-      <>
+      <StyledWrapper>
          <motion.div
             ref={ref}
             animate={controls}
@@ -44,7 +55,7 @@ const Precision = () => {
                </div>
             </div>
          </motion.div>
-      </>
+      </StyledWrapper>
    );
 };
 
