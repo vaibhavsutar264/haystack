@@ -1,8 +1,8 @@
 function WhyChooseHaystack() {
     return (
         <>
-            <section name="why-choose-haystack">
-                <div className="container why-choose-haystack my-xl-5 my-lg-5 my-md-4 mt-sm-4">
+            <section name="why-choose-haystack" id="why-choose-haystack">
+                <div className="container why-choose-haystack my-xl-5 my-lg-5 my-md-4 mt-sm-4 py-xl-5 py-lg-5 py-md-4 pt-sm-4">
                     <p className="h2 font-weight-normal why-choose-haystack-heading">
                         Why Choose Haystack
                     </p>

@@ -1,5 +1,7 @@
 import "../styles/globals.css";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+// Bootstrap
+import "bootstrap/dist/css/bootstrap.css";
+// Bootstrap
 
 function MyApp({ Component, pageProps }) {
    return (

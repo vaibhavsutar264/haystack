@@ -3,67 +3,70 @@ import "../src";
 import "../Footer";
 import data from "../data/data.json";
 import PreAnimationOnLoad from "../PreAnimationOnLoad";
-import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
+// import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
 // import NavbarContent from "../NavbarContent";
-// import Navbar from "../src/components/Navbar";
+import Navbar from "../Navbar";
 import OurPartners from "../OurPartners";
 import TextVideo from "../TextVideo";
 // import About from "./About";
 import Precision from "../Precision";
 import Upgrade from "../Upgrade";
 import WeGotCovered from "../WeGotCovered";
-import Quiz from "../Quiz";
 import Footer from "../Footer";
 import VideoRemake from "../VideoRemake";
-import AppTemplate from '../components/templates/AppTemplate'
-import AreYouClinician from "../AreYouClinician";
-import ResearchPapers from "../ResearchPapers";
-import WhyChooseHaystack from "../WhyChooseHaystack";
-import WhyThisTechnology from "../WhyThisTechnology";
+import VideoRemakeByPratikSir from "../VideoRemakeByPratikSir";
 import OurPartnersMain from "../OurPartnersMain";
 
 function Home({ Component, pageProps }) {
    return (
       <>
-         <AppTemplate>
-            {/* <HambergerMenuWithJQuery/> */}
-            {/* <Navbar/> */}
-            <div className="section" data-bg="white">
-               <TextVideo />
-            </div>
-            {/* <NavbarContent/> */}
-            {/* <div className="section" data-bg="white">
-               <VideoRemake />
-            </div> */}
+         {/* <HambergerMenuWithJQuery/> */}
+         <PreAnimationOnLoad />
 
-            {/* <VideoScrollTrial/> */}
-            {/* <ScrollContainer>
-            <ScrollPage>
-            <Animator animation={ZoomOutScrollOut}> */}
-            <div className="section" data-bg="rgb(20, 20, 20)">
-               <Upgrade />
-            </div>
-            {/* </Animator>
-            </ScrollPage>
-            </ScrollContainer> */}
+         {/* <HambergerMenuWithScriptTag /> */}
 
-            {/* <div className="section" data-bg="rgb(36, 101, 237)">
-               <OurPartnersMain />
-            </div> */}
+         <Navbar />
+         <div className="section" data-bg="white">
+            <TextVideo />
+         </div>
+         {/* <NavbarContent/> */}
+         {/* <div className="section" data-bg="white">
+            <VideoRemake />
+         </div> */}
+         <div className="section" data-bg="white">
+            <VideoRemakeByPratikSir />
+         </div>
 
-            <div className="section" data-bg="rgb(36, 101, 237)">
-               <OurPartners ourPartner={data.ourPartner} />
-            </div>
-            {/* <MouseMoveScroll/> */}
+         {/* <VideoScrollTrial/> */}
+         {/* <ScrollContainer>
+        <ScrollPage>
+          <Animator animation={ZoomOutScrollOut}> */}
+         <div className="section" data-bg="rgb(20, 20, 20)">
+            <Upgrade />
+         </div>
+         {/* </Animator>
+      </ScrollPage>
+      </ScrollContainer> */}
 
-            <div className="section">
-               <Precision />
-            </div>
-            <div className="section" data-bg="white">
-               <WeGotCovered />
-            </div>
-            {/* <Video/> */}
-         </AppTemplate>
+         {/* <div className="section" data-bg="rgb(36, 101, 237)">
+            <OurPartnersMain />
+         </div> */}
+
+         <div className="section" data-bg="rgb(36, 101, 237)">
+            <OurPartners ourPartner={data.ourPartner} />
+         </div>
+         {/* <MouseMoveScroll/> */}
+
+         <div className="section">
+            <Precision />
+         </div>
+         <div className="section" data-bg="white">
+            <WeGotCovered />
+         </div>
+         {/* <Video/> */}
+
+         {/* <VideoScrollTrial1/> */}
+         <Footer />
       </>
    );
 }

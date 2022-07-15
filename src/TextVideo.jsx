@@ -23,7 +23,7 @@ const textVideo = () => {
                rel="stylesheet"
                type="text/css"
             ></link>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+            {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script> */}
          </Head>
          <main className="flexbox" id="flexbox">
             <div className="button-wrapper link" id="button-wrapper">
@@ -84,7 +84,7 @@ const textVideo = () => {
                   {/* <video src="istockphoto-454669794-640_adpp_is.mp4" id="banner" type="video/mp4" muted loop autoPlay></video> */}
                </div>
                <div>
-                  <h2 id="text-video-h6" className="text-capitalize font-weight-normal">
+                  <h2 id="text-video-h6" className="text-capitalize w-50 font-weight-normal">
                      {" "}
                      400+ bacteria and fungi tested and reported in 12 hours
                   </h2>
