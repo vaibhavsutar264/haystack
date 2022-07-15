@@ -1,5 +1,5 @@
 import React from "react";
-import { ClinicianImg } from "./are-you-clinician.png";
+// import { ClinicianImg } from "./are-you-clinician.png";
 
 function AreYouClinician() {
     return (
@@ -23,7 +23,7 @@ function AreYouClinician() {
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6 are-you-clinician-img">
-                            <img src={ClinicianImg} alt="" />
+                            {/* <img src={ClinicianImg} alt="" /> */}
                         </div>
                     </div>
                 </div>
