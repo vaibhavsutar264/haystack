@@ -28,27 +28,27 @@ function AreYouClinician() {
                     </div>
                 </div>
                 <div className="are-you-clinician-testimonial py-xl-5 py-lg-5 py-md-5">
-                    <div className="container w-75 d-flex p-lg-3 p-md-3 p-sm-2 mb-lg-5 mb-md-4 mb-sm-3 are-you-clinician-testimonial-1">
-                        <div className="mt-sm-2 mt-xs-3 are-you-clinician-testimonial-img-1"></div>
-                        <div className="w-75 mt-xl-4 mt-lg-4 mt-md-4 mt-sm-3 mt-xs-4 ms-xl-4 ms-lg-4 ms-md-3 ms-sm-3 ms-xs-3">
+                    <div className="container w-75 d-flex align-items-center p-lg-3 p-md-3 p-sm-2 ps-xl-5 ps-lg-5 ps-md-5 ps-sm-5 py-xl-4 py-lg-4 py-md-4 py-sm-4 mb-lg-5 mb-md-4 mb-sm-3 are-you-clinician-testimonial-1">
+                        <div className="are-you-clinician-testimonial-img-1"></div>
+                        <div className="w-75 ms-3">
                             <p className="h5 font-weight-normal are-you-clinician-testimonial-1-heading">
                                 Dr. Savitri
                             </p>
-                            <p className="are-you-clinician-testimonial-1-para font-weight-normal">
+                            <p className="mb-0 are-you-clinician-testimonial-1-para font-weight-normal">
                                 How genomics technology helped her save patients from excessive use of antibiotices. He now recommends Universal ID test to all his patients.
                             </p>
                         </div>
                     </div>
-                    <div className="container w-75 d-flex justify-content-end p-lg-3 p-md-3 p-sm-2 are-you-clinician-testimonial-2">
-                        <div className="w-75 mt-xl-4 mt-lg-4 mt-md-4 mt-sm-3 mt-xs-4 me-xl-4 me-lg-4 me-md-3 me-sm-3 me-xs-3">
+                    <div className="container w-75 d-flex justify-content-end align-items-center p-lg-3 p-md-3 p-sm-2 pe-xl-5 pe-lg-5 pe-md-5 pe-sm-5 py-xl-4 py-lg-4 py-md-4 py-sm-4 are-you-clinician-testimonial-2">
+                        <div className="w-75 me-3">
                             <p className="h5 font-weight-normal are-you-clinician-testimonial-2-heading">
                                 Karan Mathur
                             </p>
-                            <p className="font-weight-normal are-you-clinician-testimonial-2-para">
+                            <p className="mb-0 font-weight-normal are-you-clinician-testimonial-2-para">
                                 From diagnostic nightmare to miracle solution, how Univesal ID Test changed his life. He not only identified the problem on time, but also found the perfect medication.
                             </p>
                         </div>
-                        <div className="mt-lg-4 mt-md-4 are-you-clinician-testimonial-img-2">
+                        <div className="align-items-center are-you-clinician-testimonial-img-2">
                             {/* <img src={ clinician } /> */}
                         </div>
                     </div>

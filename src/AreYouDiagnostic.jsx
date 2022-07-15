@@ -24,6 +24,22 @@ function AreYouDiagnostic() {
                         </div>
                     </div>
                 </div>
+                <div className="d-flex w-50 justify-content-between automated-bioinformatics-absolute-div">
+                    <p className="font-weight-normal text-capitalize automated-bioinformatics-absolute-text automated-bioinformatics-absolute-text-1">
+                        One click Vieweing
+                    </p>
+                    <p className="font-weight-normal text-capitalize automated-bioinformatics-absolute-text automated-bioinformatics-absolute-text-2">
+                        User Existing Systems
+                    </p>
+                </div>
+                <div className="d-flex justify-content-between automated-bioinformatics-absolute-div">
+                    <div className="automated-bioinformatics-absolute-img-1">
+                        {/* <img src="" alt="" />> */}
+                    </div>
+                    <div className="automated-bioinformatics-absolute-img-2">
+                        {/* <img src="" alt="" /> */}
+                    </div>
+                </div>
                 <div className="automated-bioinformatics container">
                     <div className="row justify-content-center">
                         <div className="col-xl-6 col-lg-6 col-md-6 automated-bioinformatics-img">
@@ -54,6 +70,14 @@ function AreYouDiagnostic() {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="automated-bioinformatics-absolute-img-3">
+                    {/* <img src="" alt="" /> */}
+                </div>
+                <div className="">
+                    <p className="font-weight-normal text-capitalize automated-bioinformatics-absolute-text automated-bioinformatics-absolute-text-1">
+                        One click Vieweing
+                    </p>
                 </div>
             </section>
         </>

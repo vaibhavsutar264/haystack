@@ -27,7 +27,7 @@ const textVideo = () => {
          </Head>
          <main className="flexbox" id="flexbox">
             <div className="button-wrapper link" id="button-wrapper">
-               <div className="relative">
+               <div className="relative container">
                   <h2 id="text-video-h2">
                      <div className="text-1 text-video-text">
                         <span>I</span>

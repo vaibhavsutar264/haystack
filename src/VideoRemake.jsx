@@ -6,7 +6,7 @@ const VideoRemake = () => {
    return (
       <div>
          <div className="title-animation-box-video-remake">
-            <h1 className="text-center title-animation-video-remake">
+            <h1 className="text-center text-capitalize title-animation-video-remake">
                A Revolutionary technology to aid microbiology <br /> A
                Revolutionary technology to aid microbiology{" "}
             </h1>

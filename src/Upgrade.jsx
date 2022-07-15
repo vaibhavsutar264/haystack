@@ -29,16 +29,16 @@ function Upgrade() {
             initial="hidden"
             variants={topBottomVariants}
             className="upgrade-main">
-            <div className="row">
-               <div className="upgrade-content m-auto col-lg-6 col-md-6 col-sm-6">
+            <div className="container row align-items-center justify-content-around m-auto gap-32">
+               <div className="col-lg-6 col-md-6 col-sm-6">
                   <h2 className="upgrade-heading text-uppercase">
                      Upgrade your lab<br />
                      without hassle
                   </h2>
-                  <p className="upgrade-para w-75">A Cutting edge health tech platform and genomic testing rolled into one</p>
-                  <button className="btn-test">View UID Test</button>
+                  <p className="upgrade-para w-75 font-weight-normal py-3">A Cutting edge health tech platform and genomic testing rolled into one</p>
+                  <button className="px-5 btn-test">View UID Test</button>
                </div>
-               <div className="upgrade-img m-auto col-lg-6 col-md-6 col-sm-6"></div>
+               <div className="upgrade-img col-lg-6 col-md-6 col-sm-6"></div>
             </div>
          </motion.div >
       </section >

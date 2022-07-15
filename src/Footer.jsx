@@ -15,11 +15,11 @@ import {
 
 function Footer() {
    return (
-      <div className="width-75 container-fluid d-flex justify-content-center footer-container">
+      <div className="container">
          <div className="footer-inner-container row justify-content-between w-80 border-top border-dark border-4 pt-4">
             <div className="col-6">
                <p className="footer-text">hello@haystackanalytics.in</p>
-               <div className="justify-content-center">
+               <div className="d-flex gap-2">
                   <a href="#facebook">
                      <FontAwesomeIcon id="icons" className="text-dark" icon={faFacebook} />
                   </a>
