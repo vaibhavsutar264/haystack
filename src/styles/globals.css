@@ -985,7 +985,6 @@ padding: 1vmax; */
 }
 
 .upgrade-img {
-   background-image: url("../box.png");
    width: 200px !important;
    height: 200px;
    background-size: contain;
@@ -994,7 +993,6 @@ padding: 1vmax; */
 }
 
 .we-got-covered-img {
-   background-image: url("../box-2.png");
    width: 300px;
    height: 250px;
 }
@@ -1620,8 +1618,8 @@ body {
 
 .are-you-clinician-img,
 .are-you-diagnostic-img-1 {
-   width: 489px;
-   height: 396.8px;
+   width: 600px;
+   width: 500px;
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
@@ -1663,7 +1661,6 @@ body {
 }
 
 .are-you-clinician-testimonial-img-1 {
-   background-image: url("../Dr. Savitri.png");
    width: 120px;
    height: 120px;
    background-position: center;
@@ -1671,7 +1668,6 @@ body {
 }
 
 .are-you-clinician-testimonial-img-2 {
-   background-image: url("../Karan Mathur.png");
    width: 120px;
    height: 120px;
    float: right;
@@ -1700,7 +1696,6 @@ body {
 }
 
 .research-papers-img {
-   background-image: url("../research-papers.png");
    width: 120px !important;
    height: 150px;
 }
@@ -1754,22 +1749,6 @@ body {
    background-repeat: no-repeat;
 }
 
-.why-choose-haystack-img-1 {
-   background-image: url("../easy-access.png");
-}
-
-.why-choose-haystack-img-2 {
-   background-image: url("../sample-collection.png");
-}
-
-.why-choose-haystack-img-3 {
-   background-image: url("../easy-to-read.png");
-}
-
-.why-choose-haystack-img-4 {
-   background-image: url("../digital-age.png");
-}
-
 .why-this-technology-heading {
    font-family: var(--font-main);
    font-weight: 800 !important;
@@ -1801,6 +1780,7 @@ body {
    color: #04B454;
 }
 
+/* 
 .quiz-img {
    background-image: url("../quiz-question-mark.png");
    width: 300px;
@@ -1819,7 +1799,7 @@ body {
 .quiz-inner-container {
    box-shadow: 0px 2px 2px 0px #0000001A;
    padding-top: 300px;
-}
+} */
 
 /* input[type="radio"] {
    display: none;
@@ -1974,10 +1954,8 @@ body {
    }
 
    .upgrade-img {
-      background-image: url(../box.png);
       width: 200px !important;
       height: 199px !important;
-      padding: 70px;
       background-repeat: no-repeat;
       background-position: center;
    }
