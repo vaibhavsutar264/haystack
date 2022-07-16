@@ -115,12 +115,12 @@ header {
    align-items: center;
 }
 
-.navbar-content-part{
+.navbar-content-part {
    /* background-color: red; */
    color: #000;
 }
 
-@media screen and (min-width: 1600px) {
+/* @media screen and (min-width: 1600px) {
    .nav__menu-bar {
       display: block;
       padding-left: 1200px;
@@ -167,7 +167,7 @@ header {
    .nav__link.active::before {
       width: 100%;
    }
-}
+} */
 
 /* text-video-style */
 
