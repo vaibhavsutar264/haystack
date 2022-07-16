@@ -59,12 +59,17 @@ header {
    flex-direction: column;
    row-gap: 6px;
    cursor: pointer;
+   background-color: black;
+   color: white;
+   padding: 13px;
+   border-radius: 50%;
+   z-index: 9999
 }
 
 .nav__menu-bar div {
-   width: 40px;
+   width: 33px;
    height: 4px;
-   background-color: black;
+   background-color: white;
    border-radius: 2px;
 }
 
@@ -74,15 +79,15 @@ header {
    justify-content: center;
    align-items: center;
    position: fixed;
-   top: 60px;
+   top: 0px;
    width: 288px;
    row-gap: 24px;
    padding: 24px 16px;
    right: -1588px;
    min-height: calc(100vh - 60px);
-   min-width: 100vw;
-   background-color: #eee;
-   transition: all 0.3s;
+   min-width: 40vw;
+   background-color: rgb(36, 101, 237);
+   transition: all 0.6s;
 }
 
 .nav__menu-list.active {
@@ -108,6 +113,11 @@ header {
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+.navbar-content-part{
+   /* background-color: red; */
+   color: #000;
 }
 
 @media screen and (min-width: 1600px) {
@@ -691,6 +701,7 @@ header {
 }
 
 .precision-bg {
+   background-image: url("../waste-jsx-files/precision-bg-true.png");
    background-repeat: no-repeat;
 }
 
@@ -974,6 +985,7 @@ padding: 1vmax; */
 }
 
 .upgrade-img {
+   background-image: url("../box.png");
    width: 200px !important;
    height: 200px;
    background-size: contain;
@@ -982,6 +994,7 @@ padding: 1vmax; */
 }
 
 .we-got-covered-img {
+   background-image: url("../box-2.png");
    width: 300px;
    height: 250px;
 }
@@ -1158,7 +1171,7 @@ body {
 .nav-menu {
    display: flex;
    background-color: #2465ed;
-   padding: 40px 150px;
+   padding: 100px 50px;
    height: 100vh;
    color: #f9f7e6;
 }
@@ -1166,7 +1179,7 @@ body {
 .nav-menu-inner-container-1 {
    display: flex;
    flex-direction: column;
-   border-right: 2px solid #f9f7e6;
+   /* border-right: 2px solid #f9f7e6; */
    justify-content: space-between;
    padding-right: 80px;
 }
@@ -1182,7 +1195,7 @@ body {
 
 .nav-link-wrapper>a {
    font-family: "Test sohne mono", sans-serif;
-   font-size: 64px;
+   font-size: 50px;
    line-height: 1;
    font-weight: 400;
    text-decoration: none;
@@ -1486,7 +1499,7 @@ body {
    /* margin: 30px 0px; */
    /* margin: 20px 10px; */
    /* background-color: #000000;
-  background-blend-mode: screen; 
+  background-blend-mode: screen;
   mix-blend-mode: screen;  */
 }
 
@@ -1607,10 +1620,8 @@ body {
 
 .are-you-clinician-img,
 .are-you-diagnostic-img-1 {
-   /* width: 489px !important;
-   height: 396.8px; */
-   width: 600px;
-   width: 500px;
+   width: 489px;
+   height: 396.8px;
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
@@ -1652,6 +1663,7 @@ body {
 }
 
 .are-you-clinician-testimonial-img-1 {
+   background-image: url("../Dr. Savitri.png");
    width: 120px;
    height: 120px;
    background-position: center;
@@ -1659,6 +1671,7 @@ body {
 }
 
 .are-you-clinician-testimonial-img-2 {
+   background-image: url("../Karan Mathur.png");
    width: 120px;
    height: 120px;
    float: right;
@@ -1687,6 +1700,7 @@ body {
 }
 
 .research-papers-img {
+   background-image: url("../research-papers.png");
    width: 120px !important;
    height: 150px;
 }
@@ -1738,6 +1752,22 @@ body {
    background-size: contain;
    background-position: center;
    background-repeat: no-repeat;
+}
+
+.why-choose-haystack-img-1 {
+   background-image: url("../easy-access.png");
+}
+
+.why-choose-haystack-img-2 {
+   background-image: url("../sample-collection.png");
+}
+
+.why-choose-haystack-img-3 {
+   background-image: url("../easy-to-read.png");
+}
+
+.why-choose-haystack-img-4 {
+   background-image: url("../digital-age.png");
 }
 
 .why-this-technology-heading {
@@ -1944,8 +1974,10 @@ body {
    }
 
    .upgrade-img {
+      background-image: url(../box.png);
       width: 200px !important;
       height: 199px !important;
+      padding: 70px;
       background-repeat: no-repeat;
       background-position: center;
    }
