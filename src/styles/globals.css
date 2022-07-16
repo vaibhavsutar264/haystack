@@ -701,7 +701,6 @@ header {
 }
 
 .precision-bg {
-   background-image: url("../waste-jsx-files/precision-bg-true.png");
    background-repeat: no-repeat;
 }
 
@@ -3335,7 +3334,6 @@ body {
    }
 
    .upgrade-img {
-      background-image: url("../box.png");
       width: 317px;
       height: 310px;
    }
@@ -3620,7 +3618,6 @@ body {
    }
 
    .upgrade-img {
-      background-image: url("../box.png");
       width: 317px;
       height: 310px;
    }
