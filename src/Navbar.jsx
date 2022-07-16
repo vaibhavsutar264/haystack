@@ -42,7 +42,7 @@ const Navbar = () => {
                 </div> */}
 
             {/* {
-                  let abc = document.getElementsByClassName('menu_container'); 
+                  let abc = document.getElementsByClassName('menu_container');
 
                   document.addEventListener("DOMContentLoaded", function(){
                       var navToggle = document.getElementById("bgtoggle");
@@ -51,13 +51,13 @@ const Navbar = () => {
                         navMenu.classList.toggle("open");
                         navMenu.style.opacity="1";
                       });
-                    });  
+                    });
                 } */}
             <div className={`${navActive ? "active" : ""} nav__menu-list`}>
                {MENU_LIST.map((menu, idx) => {
                   // here menu means item in MENU_LIST
                   return (
-                     <div
+                     <div className="navbar-content-part"
                         onClick={() => {
                            setActiveIdx(idx);
                            setNavActive(false);

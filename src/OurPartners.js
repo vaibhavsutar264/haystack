@@ -2,24 +2,9 @@ import React, { useEffect } from "react";
 import OurPartner from "./OurPartner";
 
 import Script from "next/script";
-
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
-const topBottomVariants = {
-   visible: { opacity: 1, scale: 1, transition: { delay: 0, duration: 2 } },
-   hidden: { opacity: 0.5, scale: 0.5 },
-};
 // import "../styles/Offers.css"
 
 const OurPartners = ({ ourPartner }) => {
-   const controls = useAnimation();
-   const [ref, inView] = useInView();
-   useEffect(() => {
-      if (inView) {
-         controls.start("visible");
-      }
-   }, [controls, inView]);
    return (
       <>
          <div className="container our-partners-main pt-5 mb-5">
@@ -55,11 +40,7 @@ const OurPartners = ({ ourPartner }) => {
          <div className="carousel" data-ride="true">
             <div className="carousel-item"></div>
          </div>
-         <motion.div
-            ref={ref}
-            animate={controls}
-            initial="hidden"
-            variants={topBottomVariants}
+         <div
             className="page-container"
          >
             <div className="page-back">
@@ -78,7 +59,7 @@ const OurPartners = ({ ourPartner }) => {
             </div>
             <Script src="jquerry.js"></Script>
             <Script src="src.js"></Script>
-         </motion.div>
+         </div>
       </>
    );
 };

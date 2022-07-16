@@ -3,6 +3,7 @@ import WeGotCoveredImg from "./box-2.png";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const topBottomVariants = {
    visible: { scale: 1, opacity: 1, transition: { delay: 0, duration: 2 } },

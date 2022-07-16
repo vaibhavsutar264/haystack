@@ -244,3 +244,32 @@ if (typeof window !== "undefined") {
       }
    }
 }
+
+// video remake by pratik sir
+if (typeof document !== "undefined") {
+   $(document).scroll((e) => {
+      // How much the user has scrolled
+      let percentScrolled = window.scrollY / window.innerHeight;
+
+      let minWidth = 900;
+      let maxWidth = 1200;
+      // How wide the image should be
+      let width = percentScrolled * (maxWidth - minWidth) + minWidth;
+
+      let minHeight = 150;
+      let maxHeight = 300;
+      // How tall the image should be
+      let height = percentScrolled * (maxHeight - minHeight) + minHeight;
+
+      // The starting position
+      let originalPosition = [100, 150];
+
+      // Update width and height
+      $(".fake-image").css("width", width + "px");
+      $(".fake-image").css("height", height + "px");
+
+      // Move the image so the center stays the same
+      $(".fake-image").css("left", originalPosition[0] - (width - minWidth) / 2 + "px");
+      $(".fake-image").css("top", originalPosition[1] - (height - minHeight) / 2 + "px");
+    });
+   }
