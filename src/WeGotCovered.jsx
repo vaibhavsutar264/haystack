@@ -1,3 +1,5 @@
+import Image from "next/image";
+import WeGotCoveredImg from "./box-2.png";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -30,28 +32,36 @@ function WeGotCovered() {
             >
                <div className="row pb-5 mt-3">
                   <div className="we-got-covered-card col-lg-3 col-md-4 col-sm-6 col-xs-6">
-                     <div className="we-got-covered-img"></div>
+                     <div className="we-got-covered-img">
+                        <Image src={WeGotCoveredImg} />
+                     </div>
                      <h3 className="we-got-covered-headings w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
                      <p className="we-got-covered-read-more font-weight-normal">
                         <a href="#read-more">Read more &gt;&gt;</a>
                      </p>
                   </div>
                   <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-                     <div className="we-got-covered-img"></div>
+                     <div className="we-got-covered-img">
+                        <Image src={WeGotCoveredImg} />
+                     </div>
                      <h3 className="we-got-covered-headings w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
                      <p className="we-got-covered-read-more font-weight-normal">
                         <a href="#read-more">Read more &gt;&gt;</a>
                      </p>
                   </div>
                   <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-                     <div className="we-got-covered-img"></div>
+                     <div className="we-got-covered-img">
+                        <Image src={WeGotCoveredImg} />
+                     </div>
                      <h3 className="we-got-covered-headings w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
                      <p className="we-got-covered-read-more font-weight-normal">
                         <a href="#read-more">Read more &gt;&gt;</a>
                      </p>
                   </div>
                   <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-                     <div className="we-got-covered-img"></div>
+                     <div className="we-got-covered-img">
+                        <Image src={WeGotCoveredImg} />
+                     </div>
                      <h3 className="we-got-covered-headings w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
                      <p className="we-got-covered-read-more font-weight-normal">
                         <a href="#read-more">Read more &gt;&gt;</a>

@@ -1,5 +1,8 @@
 import React from "react";
-// import { ClinicianImg } from "./are-you-clinician.png";
+import Image from "next/image";
+import ClinicianImg from "./are-you-clinician.png";
+import SavitriImg from "./savitri.png";
+import KaranImg from "./karan-mathur.png";
 
 function AreYouClinician() {
     return (
@@ -23,13 +26,15 @@ function AreYouClinician() {
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6 are-you-clinician-img">
-                            {/* <img src={ClinicianImg} alt="" /> */}
+                            <Image src={ClinicianImg} />
                         </div>
                     </div>
                 </div>
                 <div className="are-you-clinician-testimonial py-xl-5 py-lg-5 py-md-5">
                     <div className="container w-75 d-flex align-items-center p-lg-3 p-md-3 p-sm-2 ps-xl-5 ps-lg-5 ps-md-5 ps-sm-5 py-xl-4 py-lg-4 py-md-4 py-sm-4 mb-lg-5 mb-md-4 mb-sm-3 are-you-clinician-testimonial-1">
-                        <div className="are-you-clinician-testimonial-img-1"></div>
+                        <div className="are-you-clinician-testimonial-img-1">
+                            <Image src={SavitriImg} />
+                        </div>
                         <div className="w-75 ms-3">
                             <p className="h5 font-weight-normal are-you-clinician-testimonial-1-heading">
                                 Dr. Savitri
@@ -49,7 +54,7 @@ function AreYouClinician() {
                             </p>
                         </div>
                         <div className="align-items-center are-you-clinician-testimonial-img-2">
-                            {/* <img src={ clinician } /> */}
+                            <Image src={KaranImg} />
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,9 @@
+import Image from "next/image";
 import React from "react";
-// import DiagnosticImg1 from "./are-you-diagnostic-img.png";
+import DiagnosticImg1 from "./are-you-diagnostic-img.png";
+// import AbsoluteImg1 from "./automated-bioinformatics-absolute-img-1.png";
+// import AbsoluteImg2 from "./automated-bioinformatics-absolute-img-2.png";
+// import AbsoluteImg3 from "./automated-bioinformatics-absolute-img-3.png";
 
 function AreYouDiagnostic() {
     return (
@@ -20,7 +24,7 @@ function AreYouDiagnostic() {
                             </p>
                         </div>
                         <div className="col-lg-5 col-md-6 are-you-diagnostic-img">
-                            {/* <img src={DiagnosticImg1} alt="" /> */}
+                            <Image src={DiagnosticImg1} />
                         </div>
                     </div>
                 </div>
@@ -34,10 +38,10 @@ function AreYouDiagnostic() {
                 </div>
                 <div className="d-flex justify-content-between automated-bioinformatics-absolute-div">
                     <div className="automated-bioinformatics-absolute-img-1">
-                        {/* <img src="" alt="" />> */}
+                        {/* <Image src={AbsoluteImg1} /> */}
                     </div>
                     <div className="automated-bioinformatics-absolute-img-2">
-                        {/* <img src="" alt="" /> */}
+                        {/* <Image src={AbsoluteImg2} /> */}
                     </div>
                 </div>
                 <div className="automated-bioinformatics container">
@@ -72,7 +76,7 @@ function AreYouDiagnostic() {
                     </div>
                 </div>
                 <div className="automated-bioinformatics-absolute-img-3">
-                    {/* <img src="" alt="" /> */}
+                    {/* <Image src={AbsoluteImg3} /> */}
                 </div>
                 <div className="">
                     <p className="font-weight-normal text-capitalize automated-bioinformatics-absolute-text automated-bioinformatics-absolute-text-1">

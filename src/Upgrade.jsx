@@ -1,3 +1,5 @@
+import Image from "next/image";
+import UpgradeImg from "./box.png";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -38,7 +40,9 @@ function Upgrade() {
                   <p className="upgrade-para w-75 font-weight-normal py-3">A Cutting edge health tech platform and genomic testing rolled into one</p>
                   <button className="px-5 btn-test">View UID Test</button>
                </div>
-               <div className="upgrade-img col-lg-6 col-md-6 col-sm-6"></div>
+               <div className="upgrade-img col-lg-6 col-md-6 col-sm-6">
+                  <Image src={UpgradeImg}/>
+               </div>
             </div>
          </motion.div >
       </section >
