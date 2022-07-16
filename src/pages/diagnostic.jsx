@@ -1,21 +1,27 @@
 import React from "react";
-import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
+import "../jquerry";
+import "../src";
+import PreAnimationOnLoad from "../PreAnimationOnLoad";
+import NavbarBgGrey from "../NavbarBgGrey";
 import ResearchPapers from "../ResearchPapers";
 import WhyChooseHaystack from "../WhyChooseHaystack";
 import WhyThisTechnology from "../WhyThisTechnology";
 import Footer from "../Footer";
 import AreYouDiagnostic from "../AreYouDiagnostic";
+import Template from "../Template";
 
 function Diagnostic() {
    return (
-      <div id="diagnostic">
-         <HambergerMenuWithScriptTag />
-         <AreYouDiagnostic />
-         <ResearchPapers />
-         <WhyChooseHaystack />
-         <WhyThisTechnology />
-         <Footer />
-      </div>
+      <>
+         <div id="diagnostic">
+            <Template>
+               <AreYouDiagnostic />
+               <ResearchPapers />
+               <WhyChooseHaystack />
+               <WhyThisTechnology />
+            </Template>
+         </div>
+      </>
    );
 }
 
