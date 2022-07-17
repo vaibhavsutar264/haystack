@@ -1902,20 +1902,29 @@ body {
 }
 
 .automated-bioinformatics-absolute-text-1 {
-   padding-left: 180px;
+   padding-left: 120px;
 }
 
-/* .automated-bioinformatics-absolute-img-1 {
-   background-image: url("../automated-bioinformatics-absolute-img-1");
+.automated-bioinformatics-absolute-img-1 {
+   width: 10px;
+   height: 73px;
+   top: 35px;
+   left: 265px;
 }
 
 .automated-bioinformatics-absolute-img-2 {
-   background-image: url("../automated-bioinformatics-absolute-img-2");
+   width: 35px;
+   height: 73px;
+   top: 35px;
+   left: 560px;
 }
 
 .automated-bioinformatics-absolute-img-3 {
-   background-image: url("../automated-bioinformatics-absolute-img-3");
-} */
+   width: 10px;
+   height: 73px;
+   bottom: 35px;
+   left: 414px;
+}
 
 /* End Diagnostic */
 

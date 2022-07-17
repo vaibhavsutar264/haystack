@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import DiagnosticImg1 from "./are-you-diagnostic-img.png";
-// import AbsoluteImg1 from "./automated-bioinformatics-absolute-img-1.png";
-// import AbsoluteImg2 from "./automated-bioinformatics-absolute-img-2.png";
-// import AbsoluteImg3 from "./automated-bioinformatics-absolute-img-3.png";
+import AbsoluteImg1 from "./automated-bioinformatics-absolute-img-1.png";
+import AbsoluteImg2 from "./automated-bioinformatics-absolute-img-2.png";
+import AbsoluteImg3 from "./automated-bioinformatics-absolute-img-3.png";
 
 function AreYouDiagnostic() {
     return (
@@ -28,20 +28,18 @@ function AreYouDiagnostic() {
                         </div>
                     </div>
                 </div>
-                <div className="d-flex w-50 justify-content-between automated-bioinformatics-absolute-div">
+                <div className="d-flex w-50 justify-content-between position-relative automated-bioinformatics-absolute-div">
                     <p className="font-weight-normal text-capitalize automated-bioinformatics-absolute-text automated-bioinformatics-absolute-text-1">
                         One click Vieweing
                     </p>
                     <p className="font-weight-normal text-capitalize automated-bioinformatics-absolute-text automated-bioinformatics-absolute-text-2">
                         User Existing Systems
                     </p>
-                </div>
-                <div className="d-flex justify-content-between automated-bioinformatics-absolute-div">
-                    <div className="automated-bioinformatics-absolute-img-1">
-                        {/* <Image src={AbsoluteImg1} /> */}
+                    <div className="position-absolute automated-bioinformatics-absolute-img-1">
+                        <Image src={AbsoluteImg1} />
                     </div>
-                    <div className="automated-bioinformatics-absolute-img-2">
-                        {/* <Image src={AbsoluteImg2} /> */}
+                    <div className="position-absolute automated-bioinformatics-absolute-img-2">
+                        <Image src={AbsoluteImg2} />
                     </div>
                 </div>
                 <div className="automated-bioinformatics container">
@@ -75,12 +73,14 @@ function AreYouDiagnostic() {
                         </div>
                     </div>
                 </div>
-                <div className="automated-bioinformatics-absolute-img-3">
-                    {/* <Image src={AbsoluteImg3} /> */}
-                </div>
-                <div className="">
-                    <p className="font-weight-normal text-capitalize automated-bioinformatics-absolute-text automated-bioinformatics-absolute-text-1">
-                        One click Vieweing
+                <div className="position-relative w-50">
+                    <div className="position-absolute automated-bioinformatics-absolute-img-3">
+                        <Image src={AbsoluteImg3} />
+                    </div>
+                    <br />
+                    <br />
+                    <p className="font-weight-normal text-center text-capitalize automated-bioinformatics-absolute-text automated-bioinformatics-absolute-text-3">
+                        One click Report Generation
                     </p>
                 </div>
             </section>
