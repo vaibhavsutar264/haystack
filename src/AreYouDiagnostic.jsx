@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import DiagnosticImg1 from "./are-you-diagnostic-img.png";
+import AutomatedBioinformaticsImg from "./automated-bioinformatics-img.png";
 import AbsoluteImg1 from "./automated-bioinformatics-absolute-img-1.png";
 import AbsoluteImg2 from "./automated-bioinformatics-absolute-img-2.png";
 import AbsoluteImg3 from "./automated-bioinformatics-absolute-img-3.png";
@@ -45,6 +46,7 @@ function AreYouDiagnostic() {
                 <div className="automated-bioinformatics container">
                     <div className="row justify-content-center">
                         <div className="col-xl-6 col-lg-6 col-md-6 automated-bioinformatics-img">
+                            <Image src={AutomatedBioinformaticsImg} />
                         </div>
                         <div className="col-xl-6 col-lg-6 col-md-6">
                             <p className="h3 font-weight-normal mt-xl-5 mt-lg-5 mt-md-5 mt-sm-4 automated-bioinformatics-heading">
