@@ -25,19 +25,19 @@ const NavbarContent = () => {
       >
          <div className="nav-menu-inner-container-1">
             <div className="nav-link-wrapper">
-               <a href="#ecosystem" className="nav-link">
+               <a href="./science-corner" className="nav-link">
                   <strong>SCIENCE CORNER</strong>
                </a>
-               <a href="#founders" className="nav-link">
+               <a href="./product" className="nav-link">
                   <strong>PRODUCT</strong>
                </a>
-               <a href="#investors" className="nav-link">
+               <a href="./about-us" className="nav-link">
                   <strong>ABOUT US</strong>
                </a>
-               <a href="#events" className="nav-link">
+               <a href="./latest-news" className="nav-link">
                   <strong>LATEST NEWS</strong>
                </a>
-               <a href="#about" className="nav-link">
+               <a href="./blog" className="nav-link">
                   <strong>BLOG</strong>
                </a>
             </div>

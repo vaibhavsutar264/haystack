@@ -1,5 +1,5 @@
 import React from "react";
-import Template from "../Template";
+import ProductTemplate from "../ProductTemplate";
 import PowerOfOneTest from "../PowerOfOneTest";
 import UniversalIdTestWorks from "../UniversalIdTestWorks";
 import Benefits from "../Benefits";
@@ -8,11 +8,11 @@ function UniversalId() {
    return (
       <>
          <div id="universal">
-            <Template>
+            <ProductTemplate>
                <PowerOfOneTest />
                <UniversalIdTestWorks />
                <Benefits />
-            </Template>
+            </ProductTemplate>
          </div>
       </>
    );

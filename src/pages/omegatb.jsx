@@ -1,5 +1,6 @@
 import React from "react";
-import Template from "../Template";
+import ProductTemplate from "../ProductTemplate";
+
 import OmegaTb from "../OmegaTb";
 import WhyChoose from "../WhyChoose";
 import OmegaTbTestWorks from "../OmegaTbTestWorks";
@@ -8,11 +9,11 @@ function OmegaTB() {
     return (
         <>
             <div id="omega">
-                <Template>
+                <ProductTemplate>
                     <OmegaTb />
                     <WhyChoose />
                     <OmegaTbTestWorks />
-                </Template>
+                </ProductTemplate>
             </div>
         </>
     );

@@ -26,7 +26,7 @@ const Precision = () => {
                      </a>{" "}
                   </button>
                   <button className="button precision-button-right">
-                     <a href="c/diagnostic">
+                     <a href="./diagnostic">
                         I am a <br /> Diagnostician
                      </a>{" "}
                   </button>
