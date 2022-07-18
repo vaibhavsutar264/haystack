@@ -1,3 +1,6 @@
+import React from "react";
+import "./jquerry";
+import "./src";
 import PreAnimationOnLoad from "./PreAnimationOnLoad";
 import NavbarBgGrey from "./NavbarBgGrey";
 import Footer from "./Footer";

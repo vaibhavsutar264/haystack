@@ -173,7 +173,8 @@ header {
 
 :root {
    --bc: #0e0d0f;
-   --primary: rgb(161, 166, 252);
+   --primary-color: #3470D3;
+   --secondary-color: #04B454;
    --white: #ffffff;
    --black: #000000;
    --secondary-bg: #DDF3FD;
@@ -595,7 +596,7 @@ header {
    text-transform: capitalize;
    animation: titleAnimationVideoRemakeRise 1s;
    animation-fill-mode: forwards;
-   color: #04B454;
+   color: var(--secondary-color);
 }
 
 .title-animation-video-remake:hover {
@@ -731,7 +732,7 @@ header {
 }
 
 .precision-button-right {
-   background-color: #04B454;
+   background-color: var(--secondary-color);
    padding-left: 2rem;
    padding-right: 2rem;
 }
@@ -999,7 +1000,7 @@ padding: 1vmax; */
 .we-got-covered-main-heading {
    font-family: var(--font-main);
    font-weight: 700;
-   color: #3470D3;
+   color: var(--primary-color);
 }
 
 .we-got-covered-headings {
@@ -1015,7 +1016,7 @@ padding: 1vmax; */
    font-size: 1.2rem;
    line-height: 30px;
    text-decoration: none;
-   color: #3470D3;
+   color: var(--primary-color);
 }
 
 .upgrade-main {
@@ -1056,7 +1057,7 @@ padding: 1vmax; */
 .btn-test {
    font-family: var(--font-main);
    background-color: #f9f7e8;
-   color: #3470d3;
+   color: var(--primary-color);
    border-radius: 40px;
    font-weight: 600;
    font-size: 25px;
@@ -1550,7 +1551,7 @@ body {
 
 /* End Homepage */
 
-/* Clinical */
+/* Clinical/Diagnostic/Univeral/Omega */
 
 #clinician,
 #diagnostic {
@@ -1558,8 +1559,10 @@ body {
 }
 
 .are-you-clinician-heading,
-.are-you-diagnostic-heading {
-   color: #3470D3;
+.are-you-diagnostic-heading,
+.power-of-one-test-heading,
+.omega-tb-heading {
+   color: var(--primary-color);
    font-family: var(--font-main);
    font-weight: 800 !important;
    font-size: 3rem !important;
@@ -1571,7 +1574,8 @@ body {
 }
 
 .are-you-clinician-sub-heading,
-.are-you-diagnostic-sub-heading {
+.are-you-diagnostic-sub-heading,
+.omega-tb-sub-heading {
    font-family: var(--font-main);
    font-weight: 800 !important;
    font-size: 3rem !important;
@@ -1595,7 +1599,7 @@ body {
 .are-you-diagnostic-btn-left,
 .quiz-btn,
 .automated-informatics-btn {
-   background-color: #04B454;
+   background-color: var(--secondary-color);
    color: #fff;
    font-style: var(--font-main);
    font-weight: 700;
@@ -1704,7 +1708,7 @@ body {
    font-weight: 600 !important;
    font-size: 18px !important;
    line-height: 25px !important;
-   color: #3470D3;
+   color: var(--primary-color);
    text-decoration: underline;
    width: 95%;
 }
@@ -1776,7 +1780,7 @@ body {
    font-weight: 700;
    font-size: 15px;
    line-height: 22px;
-   color: #04B454;
+   color: var(--secondary-color);
 }
 
 /* 
@@ -1830,10 +1834,6 @@ body {
    font-size: 18px;
    line-height: 27px;
 }
-
-/* End Clinical */
-
-/* Diagnostic */
 
 .automated-bioinformatics {
    background-color: #71BED7;
@@ -1927,7 +1927,96 @@ body {
    left: 414px;
 }
 
-/* End Diagnostic */
+.power-of-one-test-sub-heading {
+   font-family: var(--font-main);
+   font-weight: 700 !important;
+   font-size: 1.5rem !important;
+}
+
+.power-of-one-test-sub-heading>span {
+   color: var(--secondary-color);
+   font-size: 2rem;
+}
+
+.power-of-one-test-para {
+   background-color: #DDF3FB;
+   font-weight: 400 !important;
+   font-size: 1rem;
+   line-height: 24px;
+}
+
+.universal-id-test-works-heading {
+   font-family: var(--font-main);
+   font-weight: 700 !important;
+   font-size: 2rem !important;
+   line-height: 2.3rem !important;
+}
+
+.universal-id-test-works-img-container {
+   background-color: #A6D1F4;
+}
+
+.universal-id-test-works-img {
+   width: 266.11px;
+   /* height: 266.11px; */
+}
+
+#benefits {
+   background: #DDF3FB;
+}
+
+.why-choose-us-heading {
+   font-family: var(--font-main);
+   font-size: var(--section-heading) !important;
+   font-weight: 600 !important;
+   line-height: 3.8rem !important;
+}
+
+.why-choose-us-sub-heading {
+   font-family: var(--font-main);
+   font-size: var(--section-sub-heading) !important;
+   font-weight: 600 !important;
+   line-height: 2.5rem !important;
+   color: var(--secondary-color);
+}
+
+.why-choose-us-para {
+   font-family: var(--font-main);
+   font-size: 1rem !important;
+   font-weight: 400 !important;
+   line-height: 1.5rem !important;
+}
+
+.dual-tab {
+   width: 20%;
+}
+
+.tab {
+   background-color: #fff;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   width: 250px;
+}
+
+.benefits-img {
+   width: 150px;
+   height: 168px;
+}
+
+.omega-tb-img {
+   width: 735px;
+   height: 360px;
+}
+
+#why-choose {
+   background-color: var(--secondary-bg);
+}
+
+.omega-tb-test-works-img {
+   width: 1000px;
+   height: 609.38px;
+}
+
+/* Clinical/Diagnostic/Univeral/Omega */
 
 /* Responsiveness */
 
