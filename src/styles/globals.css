@@ -995,7 +995,7 @@ padding: 1vmax; */
 /* sahu work */
 
 .upgrade {
-   margin-top: 500px;
+   margin-top: 180px;
 }
 
 .upgrade-img {
@@ -1006,7 +1006,8 @@ padding: 1vmax; */
    background-position: center;
 }
 
-.we-got-covered-img {
+.we-got-covered-img,
+.blog-listing-page-img {
    width: 300px;
    height: 250px;
 }
@@ -1017,14 +1018,16 @@ padding: 1vmax; */
    color: var(--primary-color);
 }
 
-.we-got-covered-headings {
+.we-got-covered-headings,
+.blog-listing-page-heading {
    font-family: var(--font-main);
    font-weight: 600;
    font-size: 16px;
    line-height: 20px;
 }
 
-.we-got-covered-read-more>a {
+.we-got-covered-read-more>a,
+.blog-listing-page-read-more>a {
    font-family: var(--font-main);
    font-weight: 700;
    font-size: 1.2rem;
@@ -1096,22 +1099,22 @@ padding: 1vmax; */
    padding-left: 6%;
 } */
 
-.we-got-covered-inner-container {
+/* .we-got-covered-inner-container {
    display: flex;
    justify-content: center;
-}
+} */
 
 /* .we-got-covered-inner-container>div>img {
    margin-right: 30px;
 } */
 
-.we-got-covered-card {
+/* .we-got-covered-card {
    width: 50%;
-}
+} */
 
-.we-got-covered-inner-container>div>h3 {
+/* .we-got-covered-inner-container>div>h3 {
    width: 30vh;
-}
+} */
 
 .footer-container>div {
    width: 85%;
@@ -2032,6 +2035,60 @@ body {
 
 /* Clinical/Diagnostic/Univeral/Omega */
 
+/* Blog */
+
+.blog-listing-page-main-heading {
+   font-family: var(--font-main);
+   font-size: var(--section-heading) !important;
+   font-weight: 700 !important;
+}
+
+.blog-title {
+   font-family: var(--font-main);
+   font-size: var(--section-heading) !important;
+   font-weight: 700 !important;
+}
+
+.blog-header-author-name {
+   font-family: var(--font-main);
+   font-size: 1rem;
+   color: #C1C0B3;
+   border-right: 2px solid #C1C0B3;
+}
+
+.blog-header-date {
+   font-family: var(--font-main);
+   font-size: 1rem;
+   color: #C1C0B3;
+}
+
+.blog-featured-image {
+   background-position: center;
+}
+
+.blog-content {
+   max-width: 990px;
+}
+
+.blog-content-text {
+   font-family: var(--font-main);
+   font-size: 1rem;
+}
+
+.blog-author-name {
+   font-family: var(--font-main);
+   font-size: 1.2rem;
+   font-weight: 600;
+}
+
+.blog-author-description {
+   font-family: var(--font-main);
+   font-size: 1.2rem;
+   line-height: 1.3rem;
+}
+
+/* End Blog */
+
 /* Responsiveness */
 
 @media (max-width: 1700px) {
@@ -2096,7 +2153,7 @@ body {
 
    .we-got-covered-img {
       width: 260px;
-      height: 250px;
+      height: 220px;
    }
 
    /* End Homepage */

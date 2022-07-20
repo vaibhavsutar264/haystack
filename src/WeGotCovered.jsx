@@ -3,7 +3,6 @@ import WeGotCoveredImg from "./box-2.png";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-// import { Swiper, SwiperSlide } from 'swiper/react';
 
 const topBottomVariants = {
    visible: { scale: 1, opacity: 1, transition: { delay: 0, duration: 2 } },
@@ -32,7 +31,7 @@ function WeGotCovered() {
                className="we-got-covered-inner-container"
             >
                <div className="row pb-5 mt-3">
-                  <div className="we-got-covered-card col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                  <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                      <div className="we-got-covered-img">
                         <Image src={WeGotCoveredImg} />
                      </div>

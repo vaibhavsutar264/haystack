@@ -2,7 +2,7 @@ import React from "react";
 import "./jquerry";
 import "./src";
 import PreAnimationOnLoad from "./PreAnimationOnLoad";
-import NavbarBgGrey from "./NavbarBgGrey";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const Template = ({ children }) => {
@@ -10,7 +10,7 @@ const Template = ({ children }) => {
         <>
             <div className="content">
                 <PreAnimationOnLoad />
-                <NavbarBgGrey />
+                <Navbar />
                 {children}
                 <Footer />
                 <div className="cursor"></div>
