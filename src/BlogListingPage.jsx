@@ -11,7 +11,7 @@ function BlogListingPage() {
                         <p className="h1 font-weight-normal text-uppercase blog-listing-page-main-heading">Blogs</p>
                     </div>
                     <div className="row mt-3">
-                        <div className="col-lg-4 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
@@ -20,7 +20,7 @@ function BlogListingPage() {
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-lg-4 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
@@ -29,7 +29,7 @@ function BlogListingPage() {
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-lg-4 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
@@ -38,9 +38,7 @@ function BlogListingPage() {
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                    </div>
-                    <div className="row mt-3">
-                        <div className="col-lg-4 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
@@ -49,7 +47,7 @@ function BlogListingPage() {
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-lg-4 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
@@ -58,7 +56,7 @@ function BlogListingPage() {
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-lg-4 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
@@ -67,9 +65,7 @@ function BlogListingPage() {
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                    </div>
-                    <div className="row mt-3">
-                        <div className="col-lg-4 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
@@ -78,7 +74,7 @@ function BlogListingPage() {
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-lg-4 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
@@ -87,7 +83,7 @@ function BlogListingPage() {
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-lg-4 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>

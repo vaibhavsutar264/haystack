@@ -1,9 +1,7 @@
-// import "./app.css";
+
 import React from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-// import { faCode, faHighlighter } from '@fortawesome/free-solid-svg-icons';
 
 import {
    faYoutube,
@@ -38,11 +36,11 @@ function Footer() {
                </div>
             </div>
             <div className="footer-pages width-75 col-6 d-flex flex-column align-items-end">
-               <a href="#science-corner">SCIENCE CORNER</a>
-               <a href="#product">PRODUCT</a>
-               <a href="#about-us">ABOUT US</a>
-               <a href="#latest-news">LATEST NEWS</a>
-               <a href="#blog">BLOG</a>
+               <a href="./science-corner">SCIENCE CORNER</a>
+               <a href="./universal">PRODUCT</a>
+               <a href="./about-us">ABOUT US</a>
+               <a href="./latest-news">LATEST NEWS</a>
+               <a href="./blogs">BLOG</a>
             </div>
          </div>
       </div>

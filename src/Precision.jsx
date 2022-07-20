@@ -23,12 +23,12 @@ const Precision = () => {
                   <button className="button precision-button-left me-lg-5 me-md-4 me-sm-3 me-xs-1 mb-sm-2">
                      <a href="./clinician">
                         I am a <br /> Clinician
-                     </a>{" "}
+                     </a>
                   </button>
                   <button className="button precision-button-right">
                      <a href="./diagnostic">
                         I am a <br /> Diagnostician
-                     </a>{" "}
+                     </a>
                   </button>
                </div>
             </div>

@@ -28,7 +28,7 @@ const NavbarContent = () => {
                <a href="./science-corner" className="nav-link">
                   <strong>SCIENCE CORNER</strong>
                </a>
-               <a href="./product" className="nav-link">
+               <a href="./universal" className="nav-link">
                   <strong>PRODUCT</strong>
                </a>
                <a href="./about-us" className="nav-link">
@@ -37,7 +37,7 @@ const NavbarContent = () => {
                <a href="./latest-news" className="nav-link">
                   <strong>LATEST NEWS</strong>
                </a>
-               <a href="./blog" className="nav-link">
+               <a href="./blogs" className="nav-link">
                   <strong>BLOG</strong>
                </a>
             </div>
