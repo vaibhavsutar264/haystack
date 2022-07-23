@@ -39,7 +39,7 @@ const HambergerMenuWithScriptTag = () => {
          {/* <Helmet>
                     <script src=
                         "https://github.com/vaibhavsutar264/hamberger-menu-animation/blob/main/app.js"
-                        type="text/javascript" 
+                        type="text/javascript"
                         />
                 </Helmet> */}
          {/* Call the function to add a library */}

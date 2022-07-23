@@ -1,0 +1,57 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+body {
+   margin: 0;
+   padding: 0;
+}
+
+.container{
+    max-width: 1300px;
+}
+
+.welcome-div,.message-page-div{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    /* padding-left: 50px; */
+}
+
+.welcome-title{
+    color: rgb(37, 37, 146);
+}
+
+.welcome-title-para{
+    font-weight: bold;
+}
+
+
+.message-page-heading{
+    color: rgb(37, 37, 146);
+}
+
+/* .message-search-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+} */
+
+.paddingleft{
+    /* padding-left: 50px; */
+}
+
+
+.background-color-for-header-jsx-file-header{
+    background-color: #3c3c3c;
+    color: white;
+}
+
+.admin-header-header-jsx ,.logout-header-header-jsx{
+    color: white;
+    
+}
