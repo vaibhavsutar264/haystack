@@ -12,7 +12,7 @@ function BlogPageContent() {
                         <p className="h1 font-weight-normal text-uppercase blog-title">
                             Women in Technology World Series Comes to Houston in 2022
                         </p>
-                        <div className="d-flex">
+                        <div className="d-flex my-1">
                             <p className="px-2 font-weight-normal text-capitalize blog-header-author-name">Noah Fons</p>
                             <p className="px-2 font-weight-normal text-capitalize blog-header-date">April 21, 2022</p>
                         </div>

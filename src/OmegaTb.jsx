@@ -8,7 +8,7 @@ function OmegaTb() {
             <section name="omega-tb">
                 <div className="d-flex justify-content-center">
                     <div className="container row">
-                        <div className="col-lg-6 col-md-6 d-flex flex-column justify-content-center">
+                        <div className="col-lg-6 col-md-6 my-3 d-flex flex-column justify-content-center">
                             <p className="h2 font-weight-normal text-uppercase omega-tb-heading">
                                 Omega TB :
                             </p>
@@ -16,8 +16,10 @@ function OmegaTb() {
                                 Doing our part for TB Free world
                             </p>
                         </div>
-                        <div className="col-lg-6 col-md-6 omega-tb-img">
-                            <Image src={OmegaTbImg} />
+                        <div className="col-lg-6 col-md-6 my-3">
+                            <div className="omega-tb-img">
+                                <Image src={OmegaTbImg} />
+                            </div>
                         </div>
                     </div>
                 </div>

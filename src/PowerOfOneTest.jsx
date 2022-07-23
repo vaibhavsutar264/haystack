@@ -9,13 +9,13 @@ function PowerOfOneTest() {
                 <div className="d-flex justify-content-center py-5">
                     <div className="container row">
                         <div className="col-lg-6 col-md-6 d-flex flex-column justify-content-center">
-                            <p className="h2 font-weight-normal text-uppercase power-of-one-test-heading">
+                            <p className="h2 font-weight-normal text-capitalize power-of-one-test-heading">
                                 Power of One Test
                             </p>
-                            <p className="h2 font-weight-normal text-capitalize power-of-one-test-sub-heading">
+                            <p className="h2 font-weight-normal text-capitalize p-lg-2 p-md-1 p-sm-1 power-of-one-test-sub-heading">
                                 <span>400+</span> Bacteria and Fungii in<br /><span>12 hours</span> on a single platform
                             </p>
-                            <p className="font-weight-normal p-4 power-of-one-test-para">
+                            <p className="font-weight-normal p-xl-4 p-lg-4 p-md-3 p-sm-2 power-of-one-test-para">
                                 UID A life saving product, we’re proud of
                                 culture-free platform that can be directly used to analyse blood and works effectively on the rapid and portable ONT.
 

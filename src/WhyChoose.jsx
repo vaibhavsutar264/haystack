@@ -9,7 +9,7 @@ function WhyChoose() {
     return (
         <>
             <section name="why-choose" id="why-choose">
-                <div className="container py-xl-5 py-lg-5 py-md-5 py-sm-4">
+                <div className="container py-xl-5 py-lg-5 py-md-5 py-sm-4 py-4">
                     <div className="container row align-items-center mt-xl-5 mt-lg-4 mt-md-3 mt-sm-3">
                         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
                             <div className="mx-auto why-choose-haystack-img-1">

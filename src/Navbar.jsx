@@ -17,7 +17,7 @@ const Navbar = () => {
          <nav className="navbar-main container">
             <Link href={"/"}>
                <a onClick={() => setActiveIdx(0)}>
-                  <img src={data.logo} alt="" />
+                  <img src={data.logo} alt="" className="navbar-logo" />
                </a>
             </Link>
             <div

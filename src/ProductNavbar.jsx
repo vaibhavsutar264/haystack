@@ -17,16 +17,16 @@ const Navbar = () => {
          <nav className="navbar-main container">
             <Link href={"/"}>
                <a onClick={() => setActiveIdx(0)}>
-                  <img src={data.logo} alt="" />
+                  <img src={data.logo} alt="" className="navbar-logo" />
                </a>
             </Link>
             <div className="d-flex justify-content-around">
-               <p className="font-weight-normal align-self-center m-0 px-4 nav-universal">
+               <p className="font-weight-normal align-self-center m-0 px-xl-4 px-lg-4 px-md-3 px-sm-2 nav-universal">
                   <a href="./universal">
                      Universal ID
                   </a>
                </p>
-               <p className="font-weight-normal align-self-center m-0 px-4 ps-1 nav-omega">
+               <p className="font-weight-normal align-self-center me-1 m-0 px-xl-4 px-lg-4 px-md-3 px-sm-2 ps-1 nav-omega">
                   <a href="./omegatb">
                      Omega TB
                   </a>

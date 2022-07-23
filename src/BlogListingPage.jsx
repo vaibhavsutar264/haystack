@@ -7,87 +7,87 @@ function BlogListingPage() {
         <>
             <section name="blog-component">
                 <div className="container">
-                    <div className="py-4">
+                    <div className="py-xl-4 py-lg-4 py-md-2 py-sm-2">
                         <p className="h1 font-weight-normal text-uppercase blog-listing-page-main-heading">Blogs</p>
                     </div>
                     <div className="row mt-3">
-                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
-                            <h3 className="blog-listing-page-heading w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
+                            <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
                             <p className="blog-listing-page-read-more font-weight-normal">
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
-                            <h3 className="blog-listing-page-heading w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
+                            <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
                             <p className="blog-listing-page-read-more font-weight-normal">
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
-                            <h3 className="blog-listing-page-heading w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
+                            <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
                             <p className="blog-listing-page-read-more font-weight-normal">
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
-                            <h3 className="blog-listing-page-heading w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
+                            <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
                             <p className="blog-listing-page-read-more font-weight-normal">
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
-                            <h3 className="blog-listing-page-heading w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
+                            <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
                             <p className="blog-listing-page-read-more font-weight-normal">
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
-                            <h3 className="blog-listing-page-heading w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
+                            <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
                             <p className="blog-listing-page-read-more font-weight-normal">
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
-                            <h3 className="blog-listing-page-heading w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
+                            <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
                             <p className="blog-listing-page-read-more font-weight-normal">
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
-                            <h3 className="blog-listing-page-heading w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
+                            <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
                             <p className="blog-listing-page-read-more font-weight-normal">
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                             <div className="blog-listing-page-img">
                                 <Image src={FeaturedImg} />
                             </div>
-                            <h3 className="blog-listing-page-heading w-75 my-2">Haystack Analytics and faster genomics diagnostics</h3>
+                            <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
                             <p className="blog-listing-page-read-more font-weight-normal">
                                 <a href="#read-more">Read more &gt;&gt;</a>
                             </p>
