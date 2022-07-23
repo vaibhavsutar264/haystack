@@ -19,7 +19,13 @@ const Navbar = () => {
                <a onClick={() => setActiveIdx(0)}>
                   <img src={data.logo} alt="" className="navbar-logo" />
                </a>
-            </Link>
+               </Link>
+            <a href="./Admin">
+                        Admin <br /> Panel
+                     </a>
+            {/* <a href="./Admin2">
+                        Admin <br /> Panel
+                     </a> */}
             <div
                onClick={() => setNavActive(!navActive)}
                className="nav__menu-bar"

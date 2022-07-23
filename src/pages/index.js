@@ -8,6 +8,7 @@ import PreAnimationOnLoad from "../PreAnimationOnLoad";
 import Navbar from "../Navbar";
 import OurPartners from "../OurPartners";
 import TextVideo from "../TextVideo";
+// import Admin2 from "./Admin2";
 // import About from "./About";
 import Precision from "../Precision";
 import Upgrade from "../Upgrade";
@@ -18,6 +19,7 @@ import VideoRemakeByPratikSir from "../VideoRemakeByPratikSir";
 import OurPartnersMain from "../OurPartnersMain";
 
 function Home({ Component, pageProps }) {
+   if (typeof document !== "undefined") {
    return (
       <>
          {/* <HambergerMenuWithJQuery/> */}
@@ -29,6 +31,9 @@ function Home({ Component, pageProps }) {
          <div className="section" data-bg="white">
             <TextVideo />
          </div>
+         {/* <div className="section" data-bg="white">
+            <Admin2 />
+         </div> */}
          {/* <NavbarContent/> */}
          {/* <div className="section" data-bg="white">
             <VideoRemake />
@@ -69,6 +74,7 @@ function Home({ Component, pageProps }) {
          <Footer />
       </>
    );
+}
 }
 
 export default Home;
