@@ -11,6 +11,7 @@ function Diagnostic() {
          <div id="diagnostic">
             <Template>
                <AreYouDiagnostic />
+               <ResearchPapers />
                <WhyChooseHaystack />
                <WhyThisTechnology />
             </Template>

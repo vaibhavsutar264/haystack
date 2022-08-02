@@ -2,14 +2,14 @@ import Image from "next/image";
 import React from "react";
 import DiagnosticImg1 from "./are-you-diagnostic-img.png";
 import AutomatedBioinformaticsImg from "./automated-bioinformatics-img.png";
-// import AbsoluteImg1 from "./automated-bioinformatics-absolute-img-1.png";
-// import AbsoluteImg2 from "./automated-bioinformatics-absolute-img-2.png";
-// import AbsoluteImg3 from "./automated-bioinformatics-absolute-img-3.png";
+import AbsoluteImg1 from "./automated-bioinformatics-absolute-img-1.png";
+import AbsoluteImg2 from "./automated-bioinformatics-absolute-img-2.png";
+import AbsoluteImg3 from "./automated-bioinformatics-absolute-img-3.png";
 
 function AreYouDiagnostic() {
     return (
         <>
-            <section name="are-you-diagnostic" className="section-padding section-margin">
+            <section name="are-you-diagnostic">
                 <div className="are-you-diagnostic d-flex justify-content-center">
                     <div className="container row">
                         <div className="col-lg-7 col-md-6 d-flex flex-column justify-content-center">
@@ -20,16 +20,16 @@ function AreYouDiagnostic() {
                                 Be Ahead of competition with Revolutionary
                                 Technology
                             </p>
-                            <p className="h5 font-weight-normal text-capitalize w-75 are-you-diagnostic-para">
+                            <p className="h5 font-weight-normal text-capitalize w-lg-75 w-md-50 are-you-diagnostic-para">
                                 Easy to onboard Tech
                             </p>
                         </div>
-                        <div className="col-lg-5 col-md-6 p-lg-4 are-you-diagnostic-img">
+                        <div className="col-lg-5 col-md-6 are-you-diagnostic-img">
                             <Image src={DiagnosticImg1} />
                         </div>
                     </div>
                 </div>
-                {/* <div className="d-flex w-50 justify-content-between position-relative automated-bioinformatics-absolute-div">
+                <div className="d-flex w-50 justify-content-between position-relative automated-bioinformatics-absolute-div">
                     <p className="font-weight-normal text-capitalize automated-bioinformatics-absolute-text automated-bioinformatics-absolute-text-1">
                         One click Vieweing
                     </p>
@@ -42,8 +42,8 @@ function AreYouDiagnostic() {
                     <div className="position-absolute automated-bioinformatics-absolute-img-2">
                         <Image src={AbsoluteImg2} />
                     </div>
-                </div> */}
-                <div className="automated-bioinformatics container section-padding section-margin">
+                </div>
+                <div className="automated-bioinformatics container">
                     <div className="row justify-content-center">
                         <div className="col-xl-6 col-lg-6 col-md-6 automated-bioinformatics-img">
                             <Image src={AutomatedBioinformaticsImg} />
@@ -75,7 +75,7 @@ function AreYouDiagnostic() {
                         </div>
                     </div>
                 </div>
-                {/* <div className="position-relative w-50">
+                <div className="position-relative w-50">
                     <div className="position-absolute automated-bioinformatics-absolute-img-3">
                         <Image src={AbsoluteImg3} />
                     </div>
@@ -84,7 +84,7 @@ function AreYouDiagnostic() {
                     <p className="font-weight-normal text-center text-capitalize automated-bioinformatics-absolute-text automated-bioinformatics-absolute-text-3">
                         One click Report Generation
                     </p>
-                </div> */}
+                </div>
             </section>
         </>
     );

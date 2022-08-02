@@ -7,9 +7,9 @@ import BenefitsImg3 from "./benefits-img-3.png";
 function Benefits() {
     return (
         <>
-            <section name="universal-id-benefits" id="benefits" className="section-padding">
+            <section name="universal-id-benefits" id="benefits">
                 <div className="container row justify-content-center align-items-center m-auto mb-xl-5 mb-lg-5 mb-md-5 mb-sm-4 py-xl-5 py-lg-5 py-md-5 py-sm-4">
-                    <div className="col-xl-8 col-lg-8 col-md-8 d-flex flex-column justify-content-center align-items-center why-choose-us">
+                    <div className="col-xl-8 col-lg-8 col-md-8 w-50 d-flex flex-column justify-content-center align-items-center why-choose-us">
                         <div className="why-choose-us-content">
                             <p className="h5 font-weight-normal text-capitalize why-choose-us-sub-heading">
                                 Why Choose Us?
@@ -41,7 +41,7 @@ function Benefits() {
                             </p>
                         </div>
                     </div>
-                    <div className="col-xl-3 col-lg-3 col-md-3 d-flex flex-column justify-content-center align-items-center single-tab">
+                    <div className="col-xl-3 col-lg-3 col-md-3 d-flex justify-content-center align-items-center single-tab">
                         <div className="tab mx-xl-2 mx-lg-2 mx-md-2 mx-sm-1 my-xl-2 my-lg-2 my-md-1 my-sm-1 p-2">
                             <div className="benefits-img">
                                 <Image src={BenefitsImg3} />

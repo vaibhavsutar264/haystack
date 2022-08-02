@@ -31,43 +31,7 @@ function WeGotCovered() {
                className="we-got-covered-inner-container"
             >
                <div className="row pb-5 mt-3">
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={WeGotCoveredImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={WeGotCoveredImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={WeGotCoveredImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={WeGotCoveredImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  {/* <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                  <div className="col-lg-3 col-md-4 col-sm-6 col-xs-6">
                      <div className="we-got-covered-img">
                         <Image src={WeGotCoveredImg} />
                      </div>
@@ -102,7 +66,7 @@ function WeGotCovered() {
                      <p className="we-got-covered-read-more font-weight-normal">
                         <a href="#read-more">Read more &gt;&gt;</a>
                      </p>
-                  </div> */}
+                  </div>
                </div>
             </motion.div>
          </section>

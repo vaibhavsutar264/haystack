@@ -8,8 +8,8 @@ import UniversalIdTestWorksImg4 from "./universal-id-test-works-img-4.jpg";
 function UniversalIdTestWorks() {
     return (
         <>
-            <section name="universal-id-test-works" className="section-padding">
-                <div className="container py-xl-5 py-lg-5 py-md-5 py-sm-4 universal-id-test-works">
+            <section name="universal-id-test-works">
+                <div className="container py-xl-5 py-lg-5 py-md-5 py-sm-4">
                     <p className="h2 font-weight-normal text-capitalize mb-xl-5 mb-lg-5 universal-id-test-works-heading">
                         How Does Universal ID Test Work?
                     </p>

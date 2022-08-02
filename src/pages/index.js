@@ -20,60 +20,61 @@ import OurPartnersMain from "../OurPartnersMain";
 
 function Home({ Component, pageProps }) {
    if (typeof document !== "undefined") {
-      return (
-         <>
-            {/* <HambergerMenuWithJQuery/> */}
-            <PreAnimationOnLoad />
+   return (
+      <>
+         {/* <HambergerMenuWithJQuery/> */}
+         <PreAnimationOnLoad />
 
-            {/* <HambergerMenuWithScriptTag /> */}
+         {/* <HambergerMenuWithScriptTag /> */}
 
-            <Navbar />
-            <div className="section" data-bg="white">
-               <TextVideo />
-            </div>
-            {/* <div className="section" data-bg="white">
+         <Navbar />
+         <div className="section" data-bg="white">
+            <TextVideo />
+         </div>
+         {/* <div className="section" data-bg="white">
             <Admin2 />
          </div> */}
-            {/* <NavbarContent/> */}
-            {/* <div className="section" data-bg="white">
-               <VideoRemake />
-            </div> */}
-            <div className="section" data-bg="white">
-               <VideoRemakeByPratikSir />
-            </div>
-            {/* <VideoScrollTrial/> */}
-            {/* <ScrollContainer>
+         {/* <NavbarContent/> */}
+         {/* <div className="section" data-bg="white">
+            <VideoRemake />
+         </div> */}
+         <div className="section" data-bg="white">
+            <VideoRemakeByPratikSir />
+         </div>
+
+         {/* <VideoScrollTrial/> */}
+         {/* <ScrollContainer>
         <ScrollPage>
           <Animator animation={ZoomOutScrollOut}> */}
-            <div className="section" data-bg="rgb(20, 20, 20)">
-               <Upgrade />
-            </div>
-            {/* </Animator>
+         <div className="section" data-bg="rgb(20, 20, 20)">
+            <Upgrade />
+         </div>
+         {/* </Animator>
       </ScrollPage>
       </ScrollContainer> */}
 
-            {/* <div className="section" data-bg="rgb(36, 101, 237)">
+         {/* <div className="section" data-bg="rgb(36, 101, 237)">
             <OurPartnersMain />
          </div> */}
 
-            <div className="section" data-bg="rgb(36, 101, 237)">
-               <OurPartners ourPartner={data.ourPartner} />
-            </div>
-            {/* <MouseMoveScroll/> */}
+         <div className="section" data-bg="rgb(36, 101, 237)">
+            <OurPartners ourPartner={data.ourPartner} />
+         </div>
+         {/* <MouseMoveScroll/> */}
 
-            <div className="section">
-               <Precision />
-            </div>
-            <div className="section" data-bg="white">
-               <WeGotCovered />
-            </div>
-            {/* <Video/> */}
+         <div className="section">
+            <Precision />
+         </div>
+         <div className="section" data-bg="white">
+            <WeGotCovered />
+         </div>
+         {/* <Video/> */}
 
-            {/* <VideoScrollTrial1/> */}
-            <Footer />
-         </>
-      );
-   }
+         {/* <VideoScrollTrial1/> */}
+         <Footer />
+      </>
+   );
+}
 }
 
 export default Home;
