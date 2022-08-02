@@ -269,7 +269,13 @@ if (typeof document !== "undefined") {
       $(".fake-image").css("height", height + "px");
 
       // Move the image so the center stays the same
-      $(".fake-image").css("left", originalPosition[0] - (width - minWidth) / 2 + "px");
-      $(".fake-image").css("top", originalPosition[1] - (height - minHeight) / 2 + "px");
-    });
-   }
+      $(".fake-image").css(
+         "left",
+         originalPosition[0] - (width - minWidth) / 2 + "px"
+      );
+      $(".fake-image").css(
+         "top",
+         originalPosition[1] - (height - minHeight) / 2 + "px"
+      );
+   });
+}
