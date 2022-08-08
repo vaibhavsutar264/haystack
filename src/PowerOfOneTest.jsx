@@ -5,7 +5,7 @@ import PowerOfOneTestImg from "./power-of-one-test.png";
 function PowerOfOneTest() {
     return (
         <>
-            <section name="power-of-one-test" >
+            <section name="power-of-one-test" className="section-padding">
                 <div className="d-flex justify-content-center py-5">
                     <div className="container row">
                         <div className="col-lg-6 col-md-6 d-flex flex-column justify-content-center">

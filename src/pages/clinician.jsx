@@ -1,16 +1,19 @@
 import React from "react";
+import Template from "../Template";
+import AreYouClinician from "../AreYouClinician";
+import AreYouClinicianTestimonials from "../AreYouClinicianTestimonials";
 import ResearchPapers from "../ResearchPapers";
 import WhyChooseHaystack from "../WhyChooseHaystack";
 import WhyThisTechnology from "../WhyThisTechnology";
-import AreYouDiagnostic from "../AreYouDiagnostic";
-import Template from "../Template";
 
-function Diagnostic() {
+function Clinician() {
    return (
       <>
-         <div id="diagnostic">
+         <div id="clinician">
             <Template>
-               <AreYouDiagnostic />
+               <AreYouClinician />
+               <AreYouClinicianTestimonials />
+               <ResearchPapers />
                <WhyChooseHaystack />
                <WhyThisTechnology />
             </Template>
@@ -19,4 +22,4 @@ function Diagnostic() {
    );
 }
 
-export default Diagnostic;
+export default Clinician;

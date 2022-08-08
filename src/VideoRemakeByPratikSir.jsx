@@ -18,7 +18,7 @@ const VideoRemakeByPratikSir = () => {
     return (
         <div className="video-remake-again">
             <div className="title-animation-box-video-remake w-100">
-                <h1 className="text-center title-animation-video-remake w-100">
+                <h1 className="text-center text-capitalize title-animation-video-remake w-100">
                     A Revolutionary technology to aid microbiology <br /> A
                     Revolutionary technology to aid microbiology{" "}
                 </h1>

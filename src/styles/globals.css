@@ -226,6 +226,20 @@ header {
    --section-heading: 3rem;
    /* Sub Heading */
    --scetion-sub-heading: 1.8rem;
+   /* Padding */
+   --section-padding: 2rem;
+   /* Margin */
+   --section-margin: 2rem;
+}
+
+.section-padding {
+   padding-top: var(--section-padding);
+   padding-bottom: var(--section-padding);
+}
+
+.section-margin {
+   margin-top: var(--section-margin);
+   margin-bottom: var(--section-margin);
 }
 
 * {
@@ -395,7 +409,7 @@ header {
    /* top: 0;
       left: 0; */
    width: 60vw;
-   height: 60vh;
+   height: 59vh;
    /* margin-top: -100px; */
    object-fit: cover;
    pointer-events: none;
@@ -405,7 +419,7 @@ header {
    mix-blend-mode: screen;
    /* background-blend-mode: screen; */
    /* background-blend-mode: darken; */
-   margin-top: 45px;
+   margin-top: 30px;
 }
 
 /* #banner{
@@ -436,11 +450,11 @@ header {
    position: absolute;
    left: 35px;
    width: 100%;
-   height: 70vh;
+   height: 80vh;
    margin: 0;
    font-weight: 1000;
    font-size: 6vw;
-   line-height: 1.5;
+   line-height: 1.3;
    letter-spacing: 5px;
    top: 250px;
    /* text-align: center; */
@@ -456,13 +470,13 @@ header {
    justify-content: left;
    align-items: center;
    /* font-size: 40px; */
-   width: 70%;
+   width: 55%;
    padding-left: 57px;
    /* padding-top: 150px; */
-   /* margin-top: 5px; */
+   margin-top: -5px;
    font-family: var(--font-main);
    font-weight: 600;
-   font-size: 25px;
+   font-size: 1.6rem;
    line-height: 40px;
 }
 
@@ -485,6 +499,7 @@ header {
 } */
 
 #text-video-h2 span {
+   font-family: var(--font-main);
    font-kerning: initial;
    /* text-decoration-color: black; */
    -webkit-text-fill-color: black;
@@ -640,6 +655,10 @@ header {
 
 /* our partner css */
 
+/* .our-partners {
+   background-color: rgb(36, 101, 237);
+} */
+
 .ourPartner {
    display: flex;
    justify-content: center;
@@ -647,14 +666,14 @@ header {
    padding: 1vmax;
 }
 
-.ourPartner img {
+.ourPartner>a>img {
    margin: 0 1vmax;
    transition: all 1s;
-   max-width: 200px;
+   width: 250px;
    height: auto;
 }
 
-.ourPartner img:hover {
+.ourPartner>a>img:hover {
    box-shadow: 6px 6px 15px rgba(53, 53, 53, 0.363);
 }
 
@@ -699,14 +718,14 @@ header {
    color: #fff;
    font-family: var(--font-main);
    font-weight: 700;
-   font-size: 50px;
+   font-size: 2.3rem;
 }
 
 .our-partners-text {
    color: #fff;
    font-family: var(--font-main);
    font-weight: 700;
-   font-size: 18px;
+   font-size: 1.1rem;
    line-height: 27px;
 }
 
@@ -994,7 +1013,7 @@ padding: 1vmax; */
 /* sahu work */
 
 .upgrade {
-   margin-top: 350px;
+   margin-top: 500px;
 }
 
 .upgrade-img {
@@ -1048,6 +1067,7 @@ padding: 1vmax; */
 .upgrade-heading {
    font-style: normal;
    font-weight: 800;
+   font-family: var(--font-main);
    font-size: var(--section-heading) !important;
    line-height: 60px;
    letter-spacing: 1.5px;
@@ -1059,7 +1079,7 @@ padding: 1vmax; */
    font-weight: 500;
    font-size: var(--scetion-sub-heading) !important;
    line-height: 40px;
-   width: 98%;
+   width: 100%;
 }
 
 .floating-purpose {
@@ -1581,7 +1601,7 @@ body {
    color: var(--primary-color);
    font-family: var(--font-main);
    font-weight: 800 !important;
-   font-size: 3rem !important;
+   font-size: 3.2rem !important;
    line-height: 1.2 !important;
 }
 
@@ -1636,7 +1656,7 @@ body {
 }
 
 .are-you-clinician-img,
-.are-you-diagnostic-img-1 {
+.are-you-diagnostic-img {
    width: 600px;
    width: 500px;
    background-size: contain;
@@ -1667,16 +1687,16 @@ body {
 .are-you-clinician-testimonial-2-heading {
    font-family: var(--font-main);
    font-weight: 600 !important;
-   font-size: 20px !important;
-   line-height: 30px !important;
+   font-size: 1.2rem !important;
+   line-height: 1.5 !important;
 }
 
 .are-you-clinician-testimonial-1-para,
 .are-you-clinician-testimonial-2-para {
    font-family: var(--font-main);
    font-weight: 400;
-   font-size: 20px;
-   line-height: 30px;
+   font-size: 1.2rem;
+   line-height: 1.5;
 }
 
 .are-you-clinician-testimonial-img-1 {
@@ -1705,28 +1725,31 @@ body {
 }
 
 .research-papers-inner-container {
-   padding-left: 0;
-   padding-right: 0;
+   padding-left: 0 !important;
+   padding-right: 0 !important;
 }
 
-.research-papers-inner-container>.row {
-   margin-top: 0;
-   padding-left: 0;
+.research-papers-content {
+   padding-left: 0 !important;
+   padding-right: 0 !important;
 }
 
 .research-papers-img {
    width: 120px !important;
    height: 150px;
+   padding-left: 0 !important;
+   padding-right: 0 !important;
 }
 
 .research-papers-sub-heading {
    font-family: var(--font-main);
    font-weight: 600 !important;
-   font-size: 18px !important;
+   font-size: 1.1rem !important;
    line-height: 25px !important;
    color: var(--primary-color);
    text-decoration: underline;
    width: 95%;
+   margin-bottom: 0.5rem;
 }
 
 .research-papers-text {
@@ -1737,7 +1760,7 @@ body {
 .research-papers-text-2 {
    font-family: var(--font-main);
    font-weight: 400;
-   font-size: 15px;
+   font-size: 0.9rem;
    line-height: 22px;
    width: 90px;
 }
@@ -1766,6 +1789,14 @@ body {
    background-size: contain;
    background-position: center;
    background-repeat: no-repeat;
+}
+
+.why-choose-haystack-img-3 {
+   height: 75px;
+}
+
+.why-choose-us-text {
+   width: 50%;
 }
 
 .why-this-technology-heading {
@@ -1924,7 +1955,7 @@ body {
    width: 10px;
    height: 73px;
    top: 35px;
-   left: 240px;
+   left: 255px;
    z-index: 1;
 }
 
@@ -1932,7 +1963,7 @@ body {
    width: 35px;
    height: 73px;
    top: 35px;
-   left: 540px;
+   left: 550px;
    z-index: 1;
 }
 
@@ -1940,7 +1971,7 @@ body {
    width: 10px;
    height: 73px;
    bottom: 35px;
-   left: 400px;
+   left: 410px;
 }
 
 .power-of-one-test-sub-heading {
@@ -1962,10 +1993,15 @@ body {
    line-height: 24px;
 }
 
+.universal-id-test-works {
+   text-align: -webkit-center;
+}
+
 .universal-id-test-works-heading {
    font-family: var(--font-main);
    font-weight: 700 !important;
    font-size: var(--section-heading) !important;
+   text-align: -webkit-left;
 }
 
 .universal-id-test-works-img-container {
@@ -2113,7 +2149,7 @@ body {
    #banner {
       /* position: absolute; */
       width: 60vw;
-      height: 60vh;
+      height: 59vh;
       /* margin-top: -100px; */
       -o-object-fit: cover;
       object-fit: cover;
@@ -2124,7 +2160,7 @@ body {
       mix-blend-mode: screen;
       /* background-blend-mode: screen; */
       /* background-blend-mode: darken; */
-      margin-top: 45px;
+      margin-top: 30px;
    }
 
    .title-animation-box-video-remake {
@@ -2137,6 +2173,16 @@ body {
       margin-top: 130px;
    }
 
+   .video-visibility-hidden {
+      display: none;
+      visibility: hidden;
+   }
+
+   .video-visibility {
+      display: contents;
+      visibility: visible;
+   }
+
    .upgrade-img {
       width: 200px !important;
       height: 199px !important;
@@ -2145,7 +2191,7 @@ body {
    }
 
    .upgrade-heading {
-      font-size: 50px;
+      font-size: 3rem;
    }
 
    .upgrade-main .floating-purpose {
@@ -2174,6 +2220,18 @@ body {
       width: 75%
    }
 
+   .video-remake-again {
+      margin-top: 560px !important;
+   }
+
+   .upgrade {
+      margin-top: 400px;
+   }
+
+   .ourPartner>a>img {
+      width: 215px !important;
+   }
+
    .we-got-covered-img {
       width: 260px;
       height: 220px;
@@ -2185,13 +2243,13 @@ body {
 
    .are-you-clinician-heading,
    .are-you-diagnostic-heading {
-      font-size: 40px !important;
+      font-size: 3.1rem !important;
    }
 
    .are-you-clinician-sub-heading,
    .are-you-diagnostic-sub-heading {
-      font-size: 42px !important;
-      line-height: 55px !important;
+      font-size: 2.5rem !important;
+      line-height: 47px !important;
    }
 
    .are-you-clinician-img,
@@ -2209,15 +2267,6 @@ body {
       width: 110px !important;
       height: 140px;
    } */
-
-   .research-papers-sub-heading>.row {
-      padding-left: 0;
-   }
-
-   .research-papers-sub-heading {
-      font-size: 18px !important;
-      line-height: 25px !important;
-   }
 
    .universal-id-test-works-heading {
       font-size: 2.5rem !important;
@@ -2267,7 +2316,7 @@ body {
 
 @media (max-width: 1300px) {
    .research-papers-sub-heading {
-      font-size: 16px !important;
+      font-size: 1rem !important;
       line-height: 23px !important;
    }
 }
@@ -2297,6 +2346,7 @@ body {
    .text-3,
    .text-4 {
       width: 80%;
+      font-family: var(--font-main);
    }
 
    #text-video-h2 {
@@ -2307,15 +2357,21 @@ body {
    }
 
    #text-video-h6 {
-      margin-top: 90px;
+      margin-top: 5px;
       width: 70%;
-      font-size: 33px;
+      font-size: 1.6rem;
+      padding-left: 57px;
    }
 
    #banner {
-      width: 90vw;
-      height: 50vh;
+      width: 60vw;
+      height: 48vh;
       margin-top: 42px;
+   }
+
+   .video-remake-again {
+      height: 67vh !important;
+      margin-top: 530px !important;
    }
 
    .showing {
@@ -2325,29 +2381,39 @@ body {
       padding: 4%;
    }
 
+   /* .video-visibility {
+      display: none;
+      visibility: hidden;
+   }
+
+   .video-visibility-hidden {
+      display: contents;
+      visibility: visible;
+   } */
+
    .title-animation-box-video-remake {
-      height: 3rem;
+      height: 2.5rem;
       overflow: hidden;
       margin: auto;
       display: block;
       width: 80%;
       margin-top: 80px;
-      margin-bottom: -10px;
+      margin-bottom: 10px;
    }
 
    .title-animation-video-remake {
       transform: translateY(2.5rem);
       transition: all 0.4s;
       margin: 0;
-      line-height: 1.5;
-      font-size: 2rem;
-      margin-left: 86px;
+      font-family: var(--font-main);
+      font-size: 1.8rem;
+      line-height: 1.3;
+      margin-bottom: 5rem;
       text-transform: uppercase;
       -webkit-animation: titleAnimationVideoRemakeRise 1s;
       animation: titleAnimationVideoRemakeRise 1s;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-      color: lightgreen;
    }
 
    #scroll-video-increase {
@@ -2356,6 +2422,10 @@ body {
       display: block;
       /* padding-left: 500px; */
       margin: auto;
+   }
+
+   .fake-image {
+      margin-top: 30px !important;
    }
 
    /* .upgrade-main {
@@ -2458,14 +2528,18 @@ body {
       font-size: 18px; */
    /* } */
 
+   .upgrade {
+      margin-top: 350px;
+   }
+
    .upgrade-heading {
-      font-size: 45px;
-      line-height: 60px;
+      font-size: 2.47rem !important;
+      line-height: 50px;
    }
 
    .upgrade-para {
-      font-size: 20px;
-      line-height: 25px;
+      font-size: 1.5rem !important;
+      line-height: 30px;
    }
 
    .upgrade-img {
@@ -2478,9 +2552,24 @@ body {
       height: 40px;
    }
 
+   .our-partners-main {
+      margin-top: 6rem;
+   }
+
+   .ourPartner>a>img {
+      width: 180px !important;
+   }
+
    .our-partner-heading {
-      font-size: 45px;
-      line-height: 100px;
+      font-size: 2.8rem;
+   }
+
+   .our-partners-sub-heading {
+      font-size: 1.8rem !important;
+   }
+
+   .our-partners-value {
+      font-size: 2.3rem;
    }
 
    /* .we-got-covered-inner-container {
@@ -2521,7 +2610,26 @@ body {
 
    .are-you-clinician-heading,
    .are-you-diagnostic-heading {
-      font-size: 35px !important;
+      font-size: 2.6rem !important;
+   }
+
+   .are-you-clinician-sub-heading,
+   .are-you-diagnostic-sub-heading {
+      font-size: 2.2rem !important;
+      line-height: 45px !important;
+   }
+
+   .are-you-clinician-testimonial-1-para,
+   .are-you-clinician-testimonial-2-para {
+      font-size: 1.1rem;
+   }
+
+   .are-you-diagnostic-img {
+      height: 405px;
+   }
+
+   .are-you-clinician-img {
+      height: 400px;
    }
 
    .research-papers-heading,
@@ -2530,8 +2638,23 @@ body {
       line-height: 55px !important;
    }
 
+   .research-papers-img {
+      width: 108px !important;
+   }
+
+   .research-paper-text-1,
+   .research-papers-text-2 {
+      font-size: 0.7rem !important;
+   }
+
    .research-papers-sub-heading {
-      font-size: 18px;
+      font-size: 0.8rem !important;
+      width: 90% !important;
+   }
+
+   .research-papers-text-1,
+   .research-papers-text-2 {
+      font-size: 0.8rem !important;
    }
 
    .power-of-one-test-heading {
@@ -2595,7 +2718,7 @@ body {
    /* End Blog */
 }
 
-@media (max-width: 990px) {
+@media (max-width: 992px) {
 
    /* Homepage */
 
@@ -2603,7 +2726,7 @@ body {
    .text-2,
    .text-3,
    .text-4 {
-      width: 60%;
+      width: 80% !important;
    }
 
    #text-video-h2 {
@@ -2611,17 +2734,20 @@ body {
       font-size: 4rem;
       line-height: 1.7;
       letter-spacing: 4px;
+      left: -15px;
    }
 
    #text-video-h6 {
       width: 70%;
-      font-size: 30px;
+      font-size: 1.6rem;
+      padding-left: 30px;
    }
 
    #banner {
-      width: 90vw;
-      height: 50vh;
+      width: 60vw;
+      height: 48vh;
       margin-top: 36px;
+      margin-left: -15px;
    }
 
    .title-animation-box-video-remake {
@@ -2632,7 +2758,6 @@ body {
       width: 80%;
       margin-bottom: 2px;
       margin-top: 50px;
-      margin-left: 150px;
    }
 
    .title-animation-video-remake {
@@ -2640,14 +2765,13 @@ body {
       transition: all 0.4s;
       margin: 0;
       line-height: 1.5;
-      font-size: 2rem;
+      font-size: 1.8rem;
       /* margin-bottom: 33px; */
       text-transform: uppercase;
       -webkit-animation: titleAnimationVideoRemakeRise 1s;
       animation: titleAnimationVideoRemakeRise 1s;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-      color: lightgreen;
    }
 
    .showing {
@@ -2663,6 +2787,10 @@ body {
       display: block;
       /* padding-left: 500px; */
       margin: auto;
+   }
+
+   .video-remake-again {
+      height: 50vh !important;
    }
 
    /* .upgrade-main {
@@ -2777,13 +2905,13 @@ body {
 } */
 
    .upgrade-heading {
-      font-size: 33px;
-      line-height: 50px;
+      font-size: 2.3rem !important;
+      line-height: 40px;
    }
 
    .upgrade-para {
-      font-size: 17px;
-      line-height: 20px;
+      font-size: 1.3rem !important;
+      line-height: 30px;
    }
 
    .upgrade-img {
@@ -2796,18 +2924,20 @@ body {
       height: 40px;
    }
 
+   .ourPartner>a>img {
+      width: 144px !important;
+   }
+
    .our-partner-heading {
-      padding-right: 40px;
-      font-size: 40px;
-      line-height: 95px;
+      font-size: 2.7rem;
    }
 
    .our-partners-sub-heading {
-      font-size: 29px;
+      font-size: 1.6rem !important;
    }
 
    .our-partners-value {
-      font-size: 45px;
+      font-size: 2.3rem;
    }
 
    .precision-text {
@@ -2861,6 +2991,48 @@ body {
 
    /* Clinical/Diagnostic/Univeral/Omega */
 
+   .are-you-clinician-heading,
+   .are-you-diagnostic-heading {
+      font-size: 1.7rem !important;
+      line-height: 35px !important;
+   }
+
+   .are-you-clinician-sub-heading,
+   .are-you-diagnostic-sub-heading {
+      font-size: 1.9rem !important;
+      line-height: 35px !important;
+   }
+
+   .are-you-diagnostic-img {
+      height: 340px;
+   }
+
+   .are-you-clinician-para {
+      font-size: 20px !important;
+      line-height: 25px !important;
+   }
+
+   .are-you-clinician-btn {
+      display: flex;
+   }
+
+   .are-you-clinician-btn-left {
+      font-size: 16px;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+   }
+
+   .are-you-clinician-img {
+      height: 375px;
+   }
+
+   .are-you-clinician-testimonial-1-para,
+   .are-you-clinician-testimonial-2-para {
+      font-size: 1rem;
+   }
+
    .research-papers-heading,
    .why-this-technology-heading {
       font-size: 35px !important;
@@ -2868,7 +3040,7 @@ body {
    }
 
    .research-papers-sub-heading {
-      font-size: 15px !important;
+      font-size: 0.9rem !important;
    }
 
    .research-papers-text-1,
@@ -2970,13 +3142,9 @@ body {
 
    /* Homepage */
 
-   #text-video-h2 {
-      top: 260px;
-   }
-
    .upgrade-heading {
-      font-size: 30px;
-      line-height: 50px;
+      font-size: 1.8rem !important;
+      line-height: 40px;
    }
 
    .btn-test {
@@ -2984,15 +3152,6 @@ body {
       width: 170px;
       height: 40px;
    }
-
-   .our-partner-heading {
-      font-size: 35px;
-      line-height: 90px;
-   }
-
-   /* .our-partners-sub-heading {
-      font-size: ;
-   } */
 
    /* End Homepage */
 
@@ -3067,14 +3226,18 @@ body {
    .text-2,
    .text-3,
    .text-4 {
-      width: 100%;
+      width: 100% !important;
+   }
+
+   .relative {
+      margin-left: 30px !important;
    }
 
    #text-video-h2 {
       font-size: 4rem;
       line-height: 1.7;
       letter-spacing: 4px;
-      margin-left: -25px;
+      margin-left: -5px;
       top: 250px;
    }
 
@@ -3085,9 +3248,10 @@ body {
    }
 
    #banner {
-      width: 90vw;
-      height: 43vh;
-      margin-top: 35px;
+      width: 66vw;
+      height: 45vh;
+      margin-top: 30px;
+      margin-left: -20px;
    }
 
    .title-animation-box-video-remake {
@@ -3099,7 +3263,6 @@ body {
       /* margin-bottom: 100px; */
       /* font-size: 1.5rem; */
       margin-top: 25px;
-      margin-left: 19px;
    }
 
    .title-animation-video-remake {
@@ -3107,8 +3270,10 @@ body {
       transition: all 0.4s;
       margin: 0;
       padding: 0;
-      line-height: 1.5;
-      font-size: 1.5rem;
+      /* line-height: 1.5;
+      font-size: 1.5rem; */
+      line-height: 1.7;
+      font-size: 1.2rem;
       margin: 0;
       /* padding-bottom: 100px; */
       /* margin-bottom: 100px; */
@@ -3117,10 +3282,12 @@ body {
       animation: titleAnimationVideoRemakeRise 1s;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-      color: lightgreen;
       width: 100%;
-      margin-left: 75px;
       margin-top: 0px;
+   }
+
+   .video-remake-again {
+      margin-top: 500px !important;
    }
 
    .showing {
@@ -3129,6 +3296,10 @@ body {
       margin: auto;
       padding: 4%;
       margin-left: 112px;
+   }
+
+   #scroll-video {
+      min-width: 0;
    }
 
    #scroll-video-increase {
@@ -3265,10 +3436,25 @@ body {
       font-size: 18px; */
    /* } */
 
+   .upgrade-heading {
+      font-size: 1.8rem !important;
+      line-height: 40px;
+   }
+
+   .ourPartner>a>img {
+      width: 101px !important;
+   }
+
    .our-partner-heading {
-      padding-right: 30px;
-      font-size: 35px;
-      line-height: 90px;
+      font-size: 2.4rem;
+   }
+
+   .our-partners-sub-heading {
+      font-size: 1.3rem !important;
+   }
+
+   .our-partners-value {
+      font-size: 2rem;
    }
 
    .precision-text {
@@ -3328,11 +3514,19 @@ body {
       line-height: 40px !important;
    }
 
+   .are-you-clinician-testimonial-1-para,
+   .are-you-clinician-testimonial-2-para {
+      font-size: 0.9rem;
+   }
+
+   .are-you-clinician-testimonial-1-heading,
+   .are-you-clinician-testimonial-2-heading {
+      font-size: 1.1rem !important;
+   }
+
    .tab {
       width: 160px;
    }
-
-
 
    /* End Clinical/Diagnostic/Univeral/Omega */
 
@@ -3347,7 +3541,37 @@ body {
 
 @media (max-width: 768px) {
 
+   /* Homepage */
+
+   #text-video-h2 {
+      font-size: 3.6rem;
+   }
+
+   #text-video-h6 {
+      font-size: 1.3rem;
+      line-height: 1.6;
+   }
+
+   #banner {
+      height: 40vh;
+   }
+
+   .video-remake-again {
+      margin-top: 460px !important;
+   }
+
+   .upgrade-heading {
+      font-size: 1.5rem !important;
+      line-height: 28px;
+   }
+
+   /* End Homepage */
+
    /* Clinical/Diagnostic/Univeral/Omega */
+
+   .are-you-clinician-heading {
+      font-size: 2rem !important;
+   }
 
    .universal-id-test-works-heading {
       font-size: 1.8rem !important;
@@ -3362,8 +3586,6 @@ body {
    .tab {
       width: 240px;
    }
-
-
 
    /* End Clinical/Diagnostic/Univeral/Omega */
 
@@ -3389,18 +3611,23 @@ body {
    /* End Blog */
 }
 
-@media (max-width: 760px) {
+@media (max-width: 762px) {
+
+   .section-padding {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+   }
+
+   .section-margin {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+   }
 
    /* Homepage */
 
-   .upgrade-heading {
-      font-size: 22px;
-      line-height: 35px;
-   }
-
    .upgrade-para {
-      font-size: 13px;
-      line-height: 15px;
+      font-size: 1rem !important;
+      line-height: 22px;
    }
 
    .upgrade-img {
@@ -3435,14 +3662,32 @@ body {
 
    /* Clinical/Diagnostic/Univeral/Omega */
 
+   .research-papers-sub-heading {
+      margin-bottom: 0 !important;
+   }
+
    .research-papers-text-1,
    .research-papers-text-2 {
       font-size: 15px;
       line-height: 25px;
    }
 
+   .research-papers-heading,
+   .why-this-technology-heading {
+      font-size: 29px !important;
+      line-height: 40px !important;
+   }
+
    .why-choose-us {
       width: 80% !important;
+   }
+
+   .why-choose-us-content {
+      width: 100% !important;
+   }
+
+   .why-choose-us-para {
+      width: 100% !important;
    }
 
    .single-tab {
@@ -3535,6 +3780,10 @@ body {
       width: 90%;
    }
 
+   .relative {
+      margin-left: 0 !important;
+   }
+
    #text-video-h2 {
       font-size: 2.8rem;
       line-height: 2;
@@ -3544,18 +3793,20 @@ body {
       padding: 0px;
       padding-top: 154px;
       margin-left: -56px;
+      padding-left: 20px;
    }
 
    #text-video-h6 {
-      width: 100%;
-      font-size: 20px;
+      width: 78%;
+      font-size: 1.2rem;
       padding: 0px;
+      margin-left: -30px;
    }
 
    #banner {
-      width: 90vw;
-      height: 30vh;
-      margin-top: 11px;
+      width: 65vw;
+      height: 34vh;
+      margin-left: -70px;
    }
 
    .title-animation-box-video-remake {
@@ -3567,7 +3818,7 @@ body {
       /* margin-bottom: 100px; */
       /* font-size: 1.5rem; */
       margin-top: -351px;
-      margin-left: 19px;
+      /* margin-left: 19px; */
    }
 
    .title-animation-video-remake {
@@ -3576,7 +3827,7 @@ body {
       margin: 0;
       padding: 0;
       line-height: 1;
-      font-size: 0.9rem;
+      font-size: 1rem;
       margin: 0;
       /* padding-bottom: 100px; */
       /* margin-bottom: 100px; */
@@ -3585,10 +3836,16 @@ body {
       animation: titleAnimationVideoRemakeRise 1s;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-      color: lightgreen;
       width: 100%;
-      margin-left: 50px;
       margin-top: 0px;
+   }
+
+   #scroll-video {
+      width: 100%;
+   }
+
+   .video-remake-again {
+      margin-top: 750px !important;
    }
 
    .showing {
@@ -3766,10 +4023,20 @@ body {
       font-size: 18px; */
    /* } */
 
+   .upgrade {
+      margin-top: 105px;
+   }
+
    .our-partner-heading {
-      padding-right: 20px;
-      font-size: 32px;
-      line-height: 85px;
+      font-size: 2.2rem;
+   }
+
+   .our-partners-sub-heading {
+      font-size: 1.2rem !important;
+   }
+
+   .our-partners-value {
+      font-size: 1.8rem;
    }
 
    .precision-text {
@@ -3850,18 +4117,29 @@ body {
 }
 
 @media (max-width: 572px) {
+
+   /* Homepage */
+
+   #text-video-h6 {
+      width: 75%;
+   }
+
+   .upgrade {
+      margin-top: 70px;
+   }
+
    .upgrade-content {
       left: 60%;
       bottom: 50px;
    }
 
    .upgrade-heading {
-      font-size: 35px;
-      line-height: 50px;
+      font-size: 2rem !important;
+      line-height: 45px;
    }
 
    .upgrade-para {
-      font-size: 20px;
+      font-size: 1.2rem !important;
       line-height: 25px;
    }
 
@@ -3876,12 +4154,24 @@ body {
       height: 310px;
    }
 
+   .ourPartner>a>img {
+      width: 83px !important;
+   }
+
    .precision-button-left {
       margin-bottom: 10px;
       margin-right: 10px;
    }
 
+   /* End Homepage */
+
    /* Clinical/Diagnostic/Univeral/Omega */
+
+   .research-papers-heading,
+   .why-this-technology-heading {
+      font-size: 26px !important;
+      line-height: 40px !important;
+   }
 
    .universal-id-test-works-img {
       width: 208.11px !important;
@@ -3889,6 +4179,11 @@ body {
 
    .power-of-one-test-para {
       padding: 8px;
+   }
+
+   .omega-tb-test-works-img {
+      width: 460px;
+      height: 280.38px;
    }
 
    .single-tab {
@@ -3938,6 +4233,7 @@ body {
 @media (max-width: 480px) {
 
    /* Homepage */
+
    #hamberger-menu-logo {
       width: 50%;
       margin-left: 100px;
@@ -3981,8 +4277,12 @@ body {
       /* margin-top: 13px; */
       /* padding-top: 37px; */
       padding: 0px;
-      padding-top: 54px;
+      /* padding-top: 150px;
       margin-left: -56px;
+      left: 0; */
+      padding-top: 144px;
+      margin-left: -56px;
+      padding-left: 20px;
    }
 
    #text-video-h6 {
@@ -3990,6 +4290,7 @@ body {
       font-size: 20px;
       padding: 0px;
       margin: 1px 0px;
+      margin-left: -30px;
    }
 
    #banner {
@@ -4019,7 +4320,6 @@ body {
       /* margin-bottom: 100px; */
       /* font-size: 1.5rem; */
       margin-top: -326px;
-      margin-left: 19px;
    }
 
    .title-animation-video-remake {
@@ -4037,9 +4337,7 @@ body {
       animation: titleAnimationVideoRemakeRise 1s;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-      color: lightgreen;
       width: 100%;
-      margin-left: 50px;
       margin-top: 0px;
    }
 
@@ -4055,6 +4353,10 @@ body {
       width: 100%;
       height: 100%;
       padding-left: 0px;
+   }
+
+   .video-remake-again {
+      margin-top: 670px !important;
    }
 
    /* .upgrade-main {
@@ -4192,14 +4494,18 @@ body {
       font-size: 18px;
    } */
 
+   .upgrade {
+      margin-top: 20px;
+   }
+
    .upgrade-heading {
-      font-size: 30px;
-      line-height: 40px;
+      font-size: 1.8rem !important;
+      line-height: 35px;
    }
 
    .upgrade-para {
-      font-size: 17px;
-      line-height: 20px;
+      font-size: 1.05rem !important;
+      line-height: 22px;
    }
 
    .btn-test {
@@ -4213,10 +4519,20 @@ body {
       height: 310px;
    }
 
-   .our-partners-heading {
-      padding-right: 10px;
-      font-size: 25px;
-      line-height: 80px;
+   .ourPartner>a>img {
+      width: 71px !important;
+   }
+
+   .our-partner-heading {
+      font-size: 2em;
+   }
+
+   .our-partners-sub-heading {
+      font-size: 1.1rem !important;
+   }
+
+   .our-partners-value {
+      font-size: 1.6rem;
    }
 
    /* .we-got-covered-inner-container {
@@ -4253,6 +4569,12 @@ body {
 
    /* Clinical/Diagnostic/Univeral/Omega */
 
+   .research-papers-heading,
+   .why-this-technology-heading {
+      font-size: 23px !important;
+      line-height: 30px !important;
+   }
+
    .single-tab {
       width: 63% !important;
    }
@@ -4272,7 +4594,15 @@ body {
    /* Navbar */
 
    .navbar-logo {
-      width: 225px;
+      width: 185px;
+   }
+
+   .nav__menu-bar>div {
+      width: 21px;
+   }
+
+   .nav__menu-bar {
+      padding: 10px;
    }
 
    /* End Navbar */
@@ -4295,16 +4625,77 @@ body {
    /* End Blog */
 }
 
-@media (max-width: 425px) {
+@media (min-width: 350px) and (max-width: 425px) {
+
+   .section-padding {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+   }
+
+   .section-margin {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+   }
 
    /* Homepage */
+
+   .button-wrapper {
+      padding-left: 55px;
+   }
+
+   #banner {
+      width: 80vw;
+      height: 20vh;
+      margin-top: 5px;
+      margin-left: -25px;
+   }
+
+   #text-video-h2 {
+      font-size: 2.1rem;
+      padding-top: 120px;
+   }
+
+   #text-video-h6 {
+      width: 90%;
+      font-size: 1rem;
+   }
+
+   .video-remake-again {
+      margin-top: 575px !important;
+   }
+
+   .upgrade {
+      margin-top: 0px;
+   }
+
+   .upgrade-heading {
+      font-size: 1.6rem !important;
+      line-height: 35px;
+   }
+
+   .our-partners-sub-heading {
+      font-size: 1rem !important;
+   }
+
+   .our-partners-value {
+      font-size: 1.3rem;
+   }
+
+   .our-partners-text {
+      font-size: 0.9rem;
+   }
+
+   .ourPartner>a>img {
+      width: 56px !important;
+   }
+
    #icons {
       width: 15px;
       margin-right: 6px;
    }
 
    .footer-text {
-      font-size: 15px;
+      font-size: 13px;
       line-height: 10px;
       margin-bottom: 3px;
    }
@@ -4314,19 +4705,84 @@ body {
       line-height: 18px;
    }
 
+   /* .showing {
+      margin-left: 0;
+   }
+
+   #scroll-video {
+      width: 100vw !important;
+      margin-top: 500px;
+      margin-left: 0;
+   } */
+
    /* End Homepage */
 
    /* Clinical/Diagnostic/Univeral/Omega */
 
+   .research-papers-heading,
+   .why-this-technology-heading {
+      font-size: 19px !important;
+      line-height: 20px !important;
+   }
 
+   .universal-id-test-works-heading {
+      font-size: 1.2rem !important;
+   }
+
+   .are-you-diagnostic-img {
+      height: 300px;
+   }
+
+   .why-choose-haystack-heading {
+      font-size: 1.5rem !important;
+   }
+
+   .why-choose-us {
+      width: 100% !important;
+   }
+
+   .why-choose-us-content {
+      width: 100%;
+   }
+
+   .why-choose-us-para {
+      width: 100%;
+   }
+
+   .omega-tb-img {
+      width: 310px;
+      height: 175px;
+   }
+
+   .why-choose-haystack-img-1,
+   .why-choose-haystack-img-2,
+   .why-choose-haystack-img-3,
+   .why-choose-haystack-img-4 {
+      width: 75px;
+      height: 80px;
+   }
+
+   .why-choose-haystack-img-3 {
+      height: 60px !important;
+   }
+
+   .why-choose-us-text {
+      font-size: 0.8rem;
+      width: 100% !important;
+   }
+
+   .omega-tb-test-works-img {
+      width: 330px;
+      height: 200.38px;
+   }
 
    /* End Clinical/Diagnostic/Univeral/Omega */
 
    /* Blog */
 
    .blog-listing-page-img {
-      width: 180px;
-      height: 150px;
+      width: 160px;
+      height: 130px;
    }
 
    .blog-title {
@@ -4352,6 +4808,27 @@ body {
    }
 
    /* End Blog */
+
+   /* Navbar */
+
+   .navbar-logo {
+      width: 150px;
+   }
+
+   .nav__menu-bar {
+      row-gap: 5px;
+      padding: 7px;
+   }
+
+   .nav-universal>a {
+      font-size: 0.6rem !important;
+   }
+
+   .nav-omega>a {
+      font-size: 0.6rem !important;
+   }
+
+   /* End Navbar */
 }
 
 /* End Responsiveness */
@@ -4361,10 +4838,10 @@ body {
 
 .video-remake-again {
    /* This just makes sure the whole page is scrollable */
-   height: 200vh;
+   height: 75vh;
    /* width: 100vh; */
    /* position: relative; */
-   margin-top: 800px;
+   margin-top: 650px;
    max-width: 100vw;
    /* overflow: hidden; */
 }
@@ -4385,29 +4862,26 @@ body {
    min-width: 100%;
 }
 
-
-#layoutSidenav{
-   background-color:red;
+#layoutSidenav {
+   background-color: red;
 }
-
-
 
 .App {
    text-align: center;
- }
+}
 
- .App-logo {
+.App-logo {
    height: 40vmin;
    pointer-events: none;
- }
+}
 
- @media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
    .App-logo {
-     animation: App-logo-spin infinite 20s linear;
+      animation: App-logo-spin infinite 20s linear;
    }
- }
+}
 
- .App-header {
+.App-header {
    background-color: #282c34;
    min-height: 100vh;
    display: flex;
@@ -4416,18 +4890,18 @@ body {
    justify-content: center;
    font-size: calc(10px + 2vmin);
    color: white;
- }
+}
 
- .App-link {
+.App-link {
    color: #61dafb;
- }
+}
 
- @keyframes App-logo-spin {
+@keyframes App-logo-spin {
    from {
-     transform: rotate(0deg);
+      transform: rotate(0deg);
    }
-   to {
-     transform: rotate(360deg);
-   }
- }
 
+   to {
+      transform: rotate(360deg);
+   }
+}

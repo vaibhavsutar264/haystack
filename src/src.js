@@ -235,12 +235,12 @@ if (typeof window !== "undefined") {
 
          const section = window.sections
             .map((section) => {
-               const el = section;
-               const rect = el.getBoundingClientRect();
-               return { el, rect };
+               const e = section;
+               const rect = e.getBoundingClientRect();
+               return { e, rect };
             })
             .find((section) => section.rect.bottom >= window.innerHeight * 0.5);
-         document.body.style.background = section.el.getAttribute("data-bg");
+         document.body.style.background = section.e.getAttribute("data-bg");
       }
    }
 }
@@ -269,7 +269,13 @@ if (typeof document !== "undefined") {
       $(".fake-image").css("height", height + "px");
 
       // Move the image so the center stays the same
-      $(".fake-image").css("left", originalPosition[0] - (width - minWidth) / 2 + "px");
-      $(".fake-image").css("top", originalPosition[1] - (height - minHeight) / 2 + "px");
-    });
-   }
+      $(".fake-image").css(
+         "left",
+         originalPosition[0] - (width - minWidth) / 2 + "px"
+      );
+      $(".fake-image").css(
+         "top",
+         originalPosition[1] - (height - minHeight) / 2 + "px"
+      );
+   });
+}

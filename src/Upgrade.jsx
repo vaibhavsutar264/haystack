@@ -34,13 +34,12 @@ function Upgrade() {
             <div className="container row align-items-center justify-content-around m-auto gap-32">
                <div className="col-lg-6 col-md-6 col-sm-6">
                   <h2 className="upgrade-heading text-uppercase">
-                     Upgrade your lab<br />
-                     without hassle
+                     Upgrade your lab without hassle
                   </h2>
-                  <p className="upgrade-para w-75 font-weight-normal py-3">A Cutting edge health tech platform and genomic testing rolled into one</p>
-                  <button className="px-5 btn-test">View UID Test</button>
+                  <p className="upgrade-para font-weight-normal py-xl-3 py-lg-3 py-md-2">A Cutting edge health tech platform and genomic testing rolled into one</p>
+                  <button className="px-xl-5 px-lg-4 btn-test">View UID Test</button>
                </div>
-               <div className="upgrade-img col-lg-6 col-md-6 col-sm-6">
+               <div className="upgrade-img col-lg-6 col-md-6 col-sm-6 mt-3">
                   <Image src={UpgradeImg}/>
                </div>
             </div>

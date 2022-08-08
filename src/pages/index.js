@@ -1,6 +1,6 @@
 import "../jquerry";
 import "../src";
-import "../Footer";
+// import "../Footer";
 import data from "../data/data.json";
 import PreAnimationOnLoad from "../PreAnimationOnLoad";
 // import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
@@ -14,67 +14,67 @@ import Precision from "../Precision";
 import Upgrade from "../Upgrade";
 import WeGotCovered from "../WeGotCovered";
 import Footer from "../Footer";
-import VideoRemake from "../VideoRemake";
+import VideoRemakeByPratikSir2 from "../VideoRemakeByPratikSir2";
 import VideoRemakeByPratikSir from "../VideoRemakeByPratikSir";
 import OurPartnersMain from "../OurPartnersMain";
 
 function Home({ Component, pageProps }) {
    if (typeof document !== "undefined") {
-   return (
-      <>
-         {/* <HambergerMenuWithJQuery/> */}
-         <PreAnimationOnLoad />
+      return (
+         <>
+            {/* <HambergerMenuWithJQuery/> */}
+            <PreAnimationOnLoad />
 
-         {/* <HambergerMenuWithScriptTag /> */}
+            {/* <HambergerMenuWithScriptTag /> */}
 
-         <Navbar />
-         <div className="section" data-bg="white">
-            <TextVideo />
-         </div>
-         {/* <div className="section" data-bg="white">
+            <Navbar />
+            <div className="section" data-bg="#fff">
+               <TextVideo />
+            </div>
+            {/* <div className="section" data-bg="#fff">
             <Admin2 />
          </div> */}
-         {/* <NavbarContent/> */}
-         {/* <div className="section" data-bg="white">
-            <VideoRemake />
-         </div> */}
-         <div className="section" data-bg="white">
-            <VideoRemakeByPratikSir />
-         </div>
-
-         {/* <VideoScrollTrial/> */}
-         {/* <ScrollContainer>
+            {/* <NavbarContent/> */}
+            {/* <div className="section video-visibility-hidden" data-bg="#fff">
+               <VideoRemakeByPratikSir2 />
+            </div> */}
+            {/* <div className="section video-visibility" data-bg="#fff"> */}
+            <div className="section" data-bg="#fff">
+               <VideoRemakeByPratikSir />
+            </div>
+            {/* <VideoScrollTrial/> */}
+            {/* <ScrollContainer>
         <ScrollPage>
           <Animator animation={ZoomOutScrollOut}> */}
-         <div className="section" data-bg="rgb(20, 20, 20)">
-            <Upgrade />
-         </div>
-         {/* </Animator>
+            <div className="section" data-bg="rgb(20, 20, 20)">
+               <Upgrade />
+            </div>
+            {/* </Animator>
       </ScrollPage>
       </ScrollContainer> */}
 
-         {/* <div className="section" data-bg="rgb(36, 101, 237)">
+            {/* <div className="section" data-bg="rgb(36, 101, 237)">
             <OurPartnersMain />
          </div> */}
 
-         <div className="section" data-bg="rgb(36, 101, 237)">
-            <OurPartners ourPartner={data.ourPartner} />
-         </div>
-         {/* <MouseMoveScroll/> */}
+            <div className="section" data-bg="rgb(36, 101, 237)">
+               <OurPartners ourPartner={data.ourPartner} />
+            </div>
+            {/* <MouseMoveScroll/> */}
 
-         <div className="section">
-            <Precision />
-         </div>
-         <div className="section" data-bg="white">
-            <WeGotCovered />
-         </div>
-         {/* <Video/> */}
+            <div className="section">
+               <Precision />
+            </div>
+            <div className="section" data-bg="#fff">
+               <WeGotCovered />
+            </div>
+            {/* <Video/> */}
 
-         {/* <VideoScrollTrial1/> */}
-         <Footer />
-      </>
-   );
-}
+            {/* <VideoScrollTrial1/> */}
+            <Footer />
+         </>
+      );
+   }
 }
 
 export default Home;
