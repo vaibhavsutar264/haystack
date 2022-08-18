@@ -89,7 +89,7 @@ export default class SubCategory extends Component {
                         <h2 className="mt-30 page-title">Categories</h2>
                     </div>
                     <div className="col-lg-5 col-md-3 col-lg-6 back-btn">
-                        <Button variant="contained" onClick={(e) => this.handleBack()}><i class="fas fa-arrow-left" /> Back</Button>
+                        <Button variant="contained" onClick={(e) => this.handleBack()}><i className="fas fa-arrow-left" /> Back</Button>
                     </div>
                 </div>
                 <ol className="breadcrumb mb-30">
