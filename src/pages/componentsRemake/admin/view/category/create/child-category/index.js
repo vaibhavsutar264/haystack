@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {
     Button
 } from "@material-ui/core";
+import Link from 'next/link';
 // import MainCategorylist from '../../../../../common/category/main-category';
 // import SubCategorylist from '../../../../../common/category/sub-category';
 // import { GetCategoryDetails } from '../../../../../services';
@@ -96,7 +97,7 @@ export default class SubChildCategory extends Component {
                     </div>
                 </div>
                 <ol className="breadcrumb mb-30">
-                    <li className="breadcrumb-item"><a href="/">Dashboard</a></li>
+                    <li className="breadcrumb-item"><Link href="/">Dashboard</Link></li>
                     <li className="breadcrumb-item active">Category</li>
                 </ol>
                 <div className="row">

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {
     Button
 } from "@material-ui/core";
+import Link from 'next/link';
 // import { GetCategoryDetails } from '../../../../services';
 // import swal from 'sweetalert';
 
@@ -62,12 +63,12 @@ export default class List extends Component {
                     </div>
                 </div>
                 <ol className="breadcrumb mb-30">
-                    <li className="breadcrumb-item"><a href="/">Dashboard</a></li>
+                    <li className="breadcrumb-item"><Link href="/">Dashboard</Link></li>
                     <li className="breadcrumb-item active">Categories</li>
                 </ol>
                 <div className="row justify-content-between">
                     <div className="col-lg-12">
-                        <a href="add_category.html" className="add-btn hover-btn">Add New</a>
+                        <Link href="add_category.html" className="add-btn hover-btn">Add New</Link>
                     </div>
                     <div className="col-lg-3 col-md-4">
                         <div className="bulk-section mt-30">

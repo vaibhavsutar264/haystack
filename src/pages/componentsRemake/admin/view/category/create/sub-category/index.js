@@ -6,6 +6,7 @@ import MainCategorylist from '../../../../../common/category/main-category';
 import { GetCategoryDetails } from '../../../../../services';
 import SubEdit from './sub-edit';
 import swal from 'sweetalert';
+import Link from 'next/link';
 
 export default class SubCategory extends Component {
     constructor(props) {
@@ -92,7 +93,7 @@ export default class SubCategory extends Component {
                     </div>
                 </div>
                 <ol className="breadcrumb mb-30">
-                    <li className="breadcrumb-item"><a href="/">Dashboard</a></li>
+                    <li className="breadcrumb-item"><Link href="/">Dashboard</Link></li>
                     <li className="breadcrumb-item active">Category</li>
                 </ol>
                 <div className="row">

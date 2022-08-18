@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { Component } from 'react'
 // import {
 //     Button
@@ -70,7 +71,7 @@ export default class MainCategory extends Component {
                     </div>
                 </div>
                 <ol className="breadcrumb mb-30">
-                    <li className="breadcrumb-item"><a href="/">Dashboard</a></li>
+                    <li className="breadcrumb-item"><Link href="/">Dashboard</Link></li>
                     <li className="breadcrumb-item active">Category</li>
                 </ol>
                 <div className="row">

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {
     Button
 } from "@material-ui/core";
+import Link from 'next/link';
 // import { GetCategoryList } from '../../../../services';
 // import Edit from './edit'
 // import swal from 'sweetalert';
@@ -74,7 +75,7 @@ export default class MainCategory extends Component {
                     </div>
                 </div>
                 <ol className="breadcrumb mb-30">
-                    <li className="breadcrumb-item"><a href="/">Dashboard</a></li>
+                    <li className="breadcrumb-item"><Link href="/">Dashboard</Link></li>
                     <li className="breadcrumb-item active">Category</li>
                 </ol>
                 <div className="row">
