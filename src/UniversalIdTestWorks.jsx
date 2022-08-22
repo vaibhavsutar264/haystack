@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import UniversalIdTestWorksImg1 from "./universal-id-test-works-img-1.jpg";
-import UniversalIdTestWorksImg2 from "./universal-id-test-works-img-2.jpg";
-import UniversalIdTestWorksImg3 from "./universal-id-test-works-img-3.jpg";
-import UniversalIdTestWorksImg4 from "./universal-id-test-works-img-4.jpg";
+import UniversalIdTestWorksImg1 from "./universal-id-test-works-img-1.png";
+import UniversalIdTestWorksImg2 from "./universal-id-test-works-img-2.png";
+import UniversalIdTestWorksImg3 from "./universal-id-test-works-img-3.png";
+import UniversalIdTestWorksImg4 from "./universal-id-test-works-img-4.png";
 
 function UniversalIdTestWorks() {
     return (

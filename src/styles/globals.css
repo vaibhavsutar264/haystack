@@ -2004,9 +2004,9 @@ body {
    text-align: -webkit-left;
 }
 
-.universal-id-test-works-img-container {
+/* .universal-id-test-works-img-container {
    background-color: #A6D1F4;
-}
+} */
 
 .universal-id-test-works-img {
    width: 266.11px;
@@ -2078,7 +2078,7 @@ body {
 
 .omega-tb-test-works-img {
    width: 1000px;
-   height: 609.38px;
+   height: 222px;
 }
 
 /* End Clinical/Diagnostic/Univeral/Omega */
