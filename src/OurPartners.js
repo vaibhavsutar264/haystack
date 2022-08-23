@@ -24,7 +24,10 @@ export const ClientsCarousel = ({ items }) => {
          spaceBetween={50}
          slidesPerView={5}
          loop={true}
-         autoplay={true}
+         autoplay={{
+            delay: 4500,
+            disableOnInteraction: false,
+         }}
          onSlideChange={() => console.log('slide change')}
          onSwiper={(swiper) => console.log(swiper)}
       >
