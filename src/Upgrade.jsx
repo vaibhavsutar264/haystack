@@ -55,19 +55,3 @@ function Upgrade() {
 }
 
 export default Upgrade;
-
-// @media(max - width: 356px) {
-//     .upgrade - main {
-//       padding: 10px;
-//    }
-
-//     .upgrade - content {
-//       width: 70 %;
-//    }
-
-//     .upgrade - img {
-//       width: 100px;
-//       height: 100px;
-//       background - color: yellow;
-//    }
-// }

@@ -12,8 +12,8 @@ import {
 
 function Footer() {
    return (
-      <div className="container">
-         <div className="footer-inner-container row justify-content-between w-80 border-top border-dark border-4 pt-4">
+      <div className="container bg-white">
+         <div className="footer-inner-container row justify-content-between w-80 border-top border-dark border-4 border-t-0 pb-0 pt-4">
             <div className="col-6">
                <p className="footer-text">hello@haystackanalytics.in</p>
                <div className="d-flex gap-2">

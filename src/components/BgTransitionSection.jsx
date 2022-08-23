@@ -8,21 +8,25 @@ const sizes = {
    lg: '3.5rem 0',
 }
 const StyledBgTransitionSection = styled(motion.section)`
-   padding: ${sizes.md}
+   padding: ${props => props.padding ?? sizes.md};
+   transition: background 1s ease;
 `
 
-const exampleVariant = {
-   visible: { opacity: 1, backgroundColor: '#3570d3', transition: { delay: 1 } },
-   hidden: { opacity: 0, backgroundColor: 'white', transition: { delay: 0.5 } },
-}
-export default function BgTransitionSection({ children, ...props }) {
+
+export default function BgTransitionSection({ children, fromBg, toBg, ...props }) {
+   const exampleVariant = {
+      visible: { opacity: 1, transition: { delay: 1, duration: 1 } },
+      hidden: {  opacity: 0, transition: { delay: 0 } },
+   }
    const control = useAnimation()
    const [ref, inView] = useInView()
    useEffect(() => {
       if (inView) {
         control.start("visible");
+        document.body.setAttribute('style', '--current-bg-color: ' + toBg)
       } else {
          control.start("hidden");
+         document.body.setAttribute('style', '--current-bg-color: ' + fromBg)
       }
     }, [control, inView]);
 

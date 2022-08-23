@@ -4,7 +4,7 @@ import OurPartner from "./OurPartner";
 import Script from "next/script";
 // import "../styles/Offers.css"
 
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
@@ -18,14 +18,15 @@ import styled from "@emotion/styled";
 export const ClientsCarousel = ({ items }) => {
    return (
       <Swiper
-         // modules={[Pagination]}
+         modules={[ Autoplay ]}
          // pagination={{ clickable: true }}
          scrollbar={{ draggable: true }}
          spaceBetween={50}
          slidesPerView={5}
-         loop={true}
+         centeredSlides={true}
+         loop={false}
          autoplay={{
-            delay: 4500,
+            delay: 3000,
             disableOnInteraction: false,
          }}
          onSlideChange={() => console.log('slide change')}
@@ -57,8 +58,8 @@ const StyledCarousel = styled.section`
 const OurPartners = ({ ourPartner }) => {
    return (
       <>
-         <StyledCarousel className="our-partners">
-            <div className="container our-partners-main pt-5 mb-5">
+         <StyledCarousel className="our-partners mb-0">
+            <div className="container our-partners-main mb-5">
                <h1 className="our-partner-heading">OUR PARTNERS </h1>
                <h4 className="font-weight-normal our-partners-sub-heading">
                   Make precision med a reality for millions
@@ -93,10 +94,10 @@ const OurPartners = ({ ourPartner }) => {
             <div className="carousel" data-ride="true">
                <div className="carousel-item"></div>
             </div>
-            <div className="page-container">
+            <div className="page-container bg-white">
                <div className="page-back">
                   <div id="example">
-                     <div className="container mx-auto">
+                     <div className="container-mx-auto">
                         <ClientsCarousel items={ourPartner} />
                      </div>
                   </div>

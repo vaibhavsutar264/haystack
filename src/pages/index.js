@@ -27,39 +27,41 @@ function Home({ Component, pageProps }) {
             {/* <HambergerMenuWithJQuery/> */}
             <PreAnimationOnLoad />
             <Navbar />
-            <div className="section" data-bg="#fff">
+            <div className="section" >
                <TextVideo />
             </div>
-            {/* <div className="section" data-bg="#fff">
+            {/* <div className="section" >
             <Admin2 />
          </div> */}
             {/* <NavbarContent/> */}
-            {/* <div className="section video-visibility-hidden" data-bg="#fff">
+            {/* <div className="section video-visibility-hidden" >
                <VideoRemakeByPratikSir2 />
             </div> */}
-            {/* <div className="section video-visibility" data-bg="#fff"> */}
-            <div className="section" data-bg="#fff">
+            {/* <div className="section video-visibility" > */}
+            <div className="section" >
                <VideoRemakeByPratikSir />
             </div>
-            <BgTransitionSection>
+            <BgTransitionSection fromBg="white" toBg="black">
                <Upgrade />
             </BgTransitionSection>
 
-            <div className="section" data-bg="rgb(36, 101, 237)">
+            <BgTransitionSection fromBg="black" toBg="#3570d3" padding={0}>
                <OurPartners ourPartner={data.ourPartner} />
-            </div>
+            </BgTransitionSection>
             {/* <MouseMoveScroll/> */}
 
             <div className="section">
                <Precision />
             </div>
-            <div className="section" data-bg="#fff">
+            <div className="section bg-white" data-bg="#fff">
                <WeGotCovered />
             </div>
             {/* <Video/> */}
 
             {/* <VideoScrollTrial1/> */}
-            <Footer />
+            <div className="bg-white">
+               <Footer />
+            </div>
          </>
       );
    }

@@ -11,6 +11,7 @@ body {
    /* transition is used for pre animation */
    /* max-width: 1120px;
    margin: auto; */
+   background-color: var(--current-bg-color, white) !important;
 }
 
 * {
