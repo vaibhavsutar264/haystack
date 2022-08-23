@@ -1,12 +1,12 @@
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
-import React from 'react'
+import { css } from "@emotion/react";
+import styled from "@emotion/styled";
+import React from "react";
 // import PropTypes from 'prop-types'
 
 export const StyledInputField = styled.div`
    display: flex;
    align-items: center;
-   --border-color: rgba(0,0,0, .2);
+   --border-color: rgba(0, 0, 0, 0.2);
    --focus-ring-color: rgba(29, 78, 216, 50%);
    gap: 0.5rem;
    line-height: var(--size);
@@ -31,7 +31,8 @@ export const StyledInputField = styled.div`
       flex: 1;
       max-width: 100%;
    }
-   span, div {
+   span,
+   div {
       display: flex;
       align-items: center;
       svg {
@@ -39,40 +40,40 @@ export const StyledInputField = styled.div`
          color: gray;
       }
    }
-   ${props => {
-      if(props.size === 'small') {
+   ${(props) => {
+      if (props.size === "small") {
          return css`
             --size: 28px;
-            padding: 0.1rem .5rem;
-            font-size: .9rem;
+            padding: 0.1rem 0.5rem;
+            font-size: 0.9rem;
             border-radius: 7px;
-         `
+         `;
       }
-      if(props.size === 'large') {
+      if (props.size === "large") {
          return css`
             --size: 44px;
-            padding: 0 .5rem;
+            padding: 0 0.5rem;
             font-size: 1.4rem;
             border-radius: 15px;
-         `
+         `;
       }
       return css`
-         padding: 0 .5rem;
+         padding: 0 0.5rem;
          font-size: 1rem;
          --size: 36px;
          border-radius: 10px;
-      `
+      `;
    }}
-   ${props => {
-      if(props.disabled) {
+   ${(props) => {
+      if (props.disabled) {
          return css`
-            opacity: .5;
+            opacity: 0.5;
             cursor: readonly;
             background: #eceff1;
-         `
+         `;
       }
    }}
-`
+`;
 const StyledTextInput = styled.input`
    outline: none;
    border: none;
@@ -82,34 +83,32 @@ const StyledTextInput = styled.input`
    max-width: 100%;
    font-weight: medium;
    background-image: none !important;
-   ${props => {
-      if(props.disabled) {
+   ${(props) => {
+      if (props.disabled) {
          return css`
             cursor: readonly;
-         `
+         `;
       }
    }}
-`
+`;
 const TextInput = React.forwardRef(({ prepend, append, ...props }, ref) => {
    //
    return (
       <StyledInputField disabled={props.disabled} size={props.size}>
-         {prepend && <div className={'input_prepend'}>{prepend()}</div>}
-         {props.prefix && (
-            <span>{props.prefix}</span>
-         )}
-         <StyledTextInput ref={ref} autoComplete={'off'} {...props} />
-         {append && <div className={'input_append'}>{append()}</div>}
+         {prepend && <div className={"input_prepend"}>{prepend()}</div>}
+         {props.prefix && <span>{props.prefix}</span>}
+         <StyledTextInput ref={ref} autoComplete={"off"} {...props} />
+         {append && <div className={"input_append"}>{append()}</div>}
       </StyledInputField>
-   )
-})
+   );
+});
 
 TextInput.propTypes = {
    // prop: PropTypes.string
-}
+};
 
 TextInput.defaultProps = {
-   type: 'text'
-}
+   type: "text",
+};
 
-export default TextInput
+export default TextInput;

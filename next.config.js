@@ -3,8 +3,8 @@ const nextConfig = {
    // flags: {
    //    DEV_SSR: false,
    //  },
-  reactStrictMode: true,
-  amp: false,
-}
+   reactStrictMode: true,
+   amp: false,
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

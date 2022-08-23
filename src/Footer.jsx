@@ -1,4 +1,3 @@
-
 import React from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,19 +18,39 @@ function Footer() {
                <p className="footer-text">hello@haystackanalytics.in</p>
                <div className="d-flex gap-2">
                   <a href="#facebook">
-                     <FontAwesomeIcon id="icons" className="text-dark" icon={faFacebook} />
+                     <FontAwesomeIcon
+                        id="icons"
+                        className="text-dark"
+                        icon={faFacebook}
+                     />
                   </a>
                   <a href="#instagram">
-                     <FontAwesomeIcon id="icons" className="text-dark" icon={faInstagram} />
+                     <FontAwesomeIcon
+                        id="icons"
+                        className="text-dark"
+                        icon={faInstagram}
+                     />
                   </a>
                   <a href="#linkedin">
-                     <FontAwesomeIcon id="icons" className="text-dark" icon={faLinkedin} />
+                     <FontAwesomeIcon
+                        id="icons"
+                        className="text-dark"
+                        icon={faLinkedin}
+                     />
                   </a>
                   <a href="#youtube">
-                     <FontAwesomeIcon id="icons" className="text-dark" icon={faYoutube} />
+                     <FontAwesomeIcon
+                        id="icons"
+                        className="text-dark"
+                        icon={faYoutube}
+                     />
                   </a>
                   <a href="#twitter">
-                     <FontAwesomeIcon id="icons" className="text-dark" icon={faTwitter} />
+                     <FontAwesomeIcon
+                        id="icons"
+                        className="text-dark"
+                        icon={faTwitter}
+                     />
                   </a>
                </div>
             </div>

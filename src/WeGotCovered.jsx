@@ -35,7 +35,9 @@ function WeGotCovered() {
                      <div className="blog-listing-page-img">
                         <Image src={WeGotCoveredImg} />
                      </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
+                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
+                        Haystack Analytics and faster genomics diagnostics
+                     </h3>
                      <p className="blog-listing-page-read-more font-weight-normal">
                         <a href="#read-more">Read more &gt;&gt;</a>
                      </p>
@@ -44,7 +46,9 @@ function WeGotCovered() {
                      <div className="blog-listing-page-img">
                         <Image src={WeGotCoveredImg} />
                      </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
+                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
+                        Haystack Analytics and faster genomics diagnostics
+                     </h3>
                      <p className="blog-listing-page-read-more font-weight-normal">
                         <a href="#read-more">Read more &gt;&gt;</a>
                      </p>
@@ -53,7 +57,9 @@ function WeGotCovered() {
                      <div className="blog-listing-page-img">
                         <Image src={WeGotCoveredImg} />
                      </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
+                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
+                        Haystack Analytics and faster genomics diagnostics
+                     </h3>
                      <p className="blog-listing-page-read-more font-weight-normal">
                         <a href="#read-more">Read more &gt;&gt;</a>
                      </p>
@@ -62,7 +68,9 @@ function WeGotCovered() {
                      <div className="blog-listing-page-img">
                         <Image src={WeGotCoveredImg} />
                      </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">Haystack Analytics and faster genomics diagnostics</h3>
+                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
+                        Haystack Analytics and faster genomics diagnostics
+                     </h3>
                      <p className="blog-listing-page-read-more font-weight-normal">
                         <a href="#read-more">Read more &gt;&gt;</a>
                      </p>

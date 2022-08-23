@@ -19,10 +19,10 @@ const Navbar = () => {
                <a onClick={() => setActiveIdx(0)}>
                   <img src={data.logo} alt="" className="navbar-logo" />
                </a>
-               </Link>
+            </Link>
             <a href="./Admin">
-                        Admin <br /> Panel
-                     </a>
+               Admin <br /> Panel
+            </a>
             {/* <a href="./Admin2">
                         Admin <br /> Panel
                      </a> */}
@@ -63,7 +63,8 @@ const Navbar = () => {
                {MENU_LIST.map((menu, idx) => {
                   // here menu means item in MENU_LIST
                   return (
-                     <div className="navbar-content-part"
+                     <div
+                        className="navbar-content-part"
                         onClick={() => {
                            setActiveIdx(idx);
                            setNavActive(false);

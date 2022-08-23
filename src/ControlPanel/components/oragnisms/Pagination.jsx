@@ -2,7 +2,7 @@
 // import { route } from "../../utils"
 
 export default function Pagination({ pagination }) {
-   console.log({ pagination })
+   console.log({ pagination });
    return (
       // <div className="flex items-center gap-3">
       //    <InertiaLink href={pagination.prev_page_url} >Prev</InertiaLink>
@@ -132,7 +132,6 @@ export default function Pagination({ pagination }) {
                </div>
             </div>
          </div>
-
       </>
-   )
+   );
 }

@@ -20,40 +20,48 @@ export default function show({ message, errors, ...props }) {
                   <div className="border-t border-gray-200">
                      <dl>
                         <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                           <dt className="text-sm font-medium text-gray-500">{'Receipent name'}</dt>
+                           <dt className="text-sm font-medium text-gray-500">
+                              {"Receipent name"}
+                           </dt>
                            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                               {message.receipent_name}
                            </dd>
                         </div>
                         <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                           <dt className="text-sm font-medium text-gray-500">{'Receipent email'}</dt>
+                           <dt className="text-sm font-medium text-gray-500">
+                              {"Receipent email"}
+                           </dt>
                            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                               {message.receipent_email}
                            </dd>
                         </div>
                         <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                           <dt className="text-sm font-medium text-gray-500">{'Receipt mobile number'}</dt>
+                           <dt className="text-sm font-medium text-gray-500">
+                              {"Receipt mobile number"}
+                           </dt>
                            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                               {message.receipent_mobile_number}
                            </dd>
                         </div>
                         <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                            <dt className="text-sm font-medium text-gray-500">
-                              {'Order ID'}
+                              {"Order ID"}
                            </dt>
                            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                               {message.order_id}
                            </dd>
                         </div>
                         <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                           <dt className="text-sm font-medium text-gray-500">{'Attachment (audio/video)'}</dt>
+                           <dt className="text-sm font-medium text-gray-500">
+                              {"Attachment (audio/video)"}
+                           </dt>
                            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                               {message.attachment_url}
                            </dd>
                         </div>
                         <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                            <dt className="text-sm font-medium text-gray-500">
-                              {'Created at'}
+                              {"Created at"}
                            </dt>
                            <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                               {message.created_at}
@@ -63,8 +71,7 @@ export default function show({ message, errors, ...props }) {
                   </div>
                </div>
             </>
-
          </Page.Section>
       </Page>
-   )
+   );
 }

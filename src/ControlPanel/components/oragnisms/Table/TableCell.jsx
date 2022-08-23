@@ -1,7 +1,7 @@
-import { useFocusRing } from '@react-aria/focus';
-import { useTableCell } from '@react-aria/table';
-import { mergeProps } from '@react-aria/utils';
-import { useRef } from 'react';
+import { useFocusRing } from "@react-aria/focus";
+import { useTableCell } from "@react-aria/table";
+import { mergeProps } from "@react-aria/utils";
+import { useRef } from "react";
 
 export default function TableCell({ cell, state }) {
    let ref = useRef();
@@ -13,14 +13,12 @@ export default function TableCell({ cell, state }) {
          {...mergeProps(gridCellProps, focusProps)}
          className="border-b border-slate-100 dark:border-slate-700 p-3 text-slate-500 dark:text-slate-400"
          style={{
-            outline: isFocusVisible ? '2px solid orange' : 'none',
-            cursor: 'default'
+            outline: isFocusVisible ? "2px solid orange" : "none",
+            cursor: "default",
          }}
          ref={ref}
       >
-         <div className='whitespace-nowrap'>
-            {cell.rendered}
-         </div>
+         <div className="whitespace-nowrap">{cell.rendered}</div>
       </td>
    );
 }

@@ -10,8 +10,7 @@ const NavItem = ({ href, text, active }) => {
           nav__link ${active ? "active" : ""}
           `}
          >
-         <NavbarContent />
-
+            <NavbarContent />
          </div>
       </Link>
    );

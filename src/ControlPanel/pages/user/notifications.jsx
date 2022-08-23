@@ -1,26 +1,28 @@
-import { Item } from '@react-stately/collections'
-import { Cell, Column, Row, TableBody, TableHeader } from '@react-stately/table'
-import React from 'react'
-import { ResourcePicker, Table } from '../../components/oragnisms'
-import { Page } from '../../components/templates'
+import { Item } from "@react-stately/collections";
+import {
+   Cell,
+   Column,
+   Row,
+   TableBody,
+   TableHeader,
+} from "@react-stately/table";
+import React from "react";
+import { ResourcePicker, Table } from "../../components/oragnisms";
+import { Page } from "../../components/templates";
 
 const NotificationItem = ({ ...props }) => {
-   return (
-      <div>
-
-      </div>
-   )
-}
+   return <div></div>;
+};
 
 export default function notifications({ notifications }) {
    return (
-      <Page title={'Notifications'}>
+      <Page title={"Notifications"}>
          <Page.Section>
             {/* {JSON.stringify(notifications)} */}
             <Table
                aria-label="Example static collection table"
                selectionMode="multiple"
-               >
+            >
                <TableHeader>
                   <Column>Name</Column>
                   <Column>Type</Column>
@@ -52,5 +54,5 @@ export default function notifications({ notifications }) {
             {/* <ResourcePicker /> */}
          </Page.Section>
       </Page>
-   )
+   );
 }

@@ -209,6 +209,5 @@ export default function PageHeader() {
             </div>
          </div>
       </>
-
-   )
+   );
 }

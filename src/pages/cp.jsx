@@ -6,16 +6,18 @@ import Script from "next/script";
 export default function cp() {
    return (
       <>
+         <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+            referrerpolicy="no-referrer"
+         />
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
-
-
-      <div>
-         <div id="root"></div>
-         <Script strategy="lazyOnload" src="/static/manifest.js"></Script>
-         <Script strategy="lazyOnload" src="/static/vendor.js"></Script>
-         <Script strategy="lazyOnload" src="/static/main.js"></Script>
-      </div>
+         <div>
+            <div id="root"></div>
+            <Script strategy="lazyOnload" src="/static/manifest.js"></Script>
+            <Script strategy="lazyOnload" src="/static/vendor.js"></Script>
+            <Script strategy="lazyOnload" src="/static/main.js"></Script>
+         </div>
       </>
-   )
+   );
 }

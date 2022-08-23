@@ -1,16 +1,16 @@
-import styled from "@emotion/styled"
-import React, { forwardRef } from "react"
-import Spinner from "./Spinner"
+import styled from "@emotion/styled";
+import React, { forwardRef } from "react";
+import Spinner from "./Spinner";
 
 const StyledButton = styled.button`
    --label-color: var(--dark-8);
    --cursor: pointer;
    --border-color: var(--dark-2);
    font-weight: 500;
-   ${props => {
-      let style = ''
+   ${(props) => {
+      let style = "";
       switch (props.variant) {
-         case 'primary':
+         case "primary":
             style += `
                --accent-color: var(--primary-color);
                --label-color: white;
@@ -18,9 +18,9 @@ const StyledButton = styled.button`
                &:focus {
                   box-shadow: 0 0 0 4px var(--accent-color);
                }
-            `
+            `;
             break;
-         case 'danger':
+         case "danger":
             style += `
                --accent-color: var(--danger-color);
                --label-color: white;
@@ -28,7 +28,7 @@ const StyledButton = styled.button`
                &:focus {
                   box-shadow: 0 0 0 4px var(--accent-color);
                }
-            `
+            `;
             break;
          default:
             style += `
@@ -42,7 +42,7 @@ const StyledButton = styled.button`
             &:hover {
                color: var(--primary-color);
             }
-            `
+            `;
             break;
       }
       if (props.loading) {
@@ -54,7 +54,7 @@ const StyledButton = styled.button`
             .btn-loading {
                opacity: 1 !important
             }
-         `
+         `;
       }
       if (props.disabled) {
          style += `
@@ -62,27 +62,27 @@ const StyledButton = styled.button`
             --label-color: black;
             --cursor: not-allowed;
             opacity: 0.5;
-         `
+         `;
       }
       switch (props.size) {
-         case 'small':
-         case 'sm':
+         case "small":
+         case "sm":
             style += `
             --padding: 0.4rem 0.7rem;
-            `
+            `;
             break;
-         case 'xs':
+         case "xs":
             style += `
             --padding: 0.25rem 0.7rem;
-            `
+            `;
             break;
          default:
             style += `
                --padding: 0.5rem 1.25rem;
-            `
+            `;
             break;
       }
-      return style
+      return style;
    }}
    cursor: var(--cursor);
    position: relative;
@@ -108,23 +108,45 @@ const StyledButton = styled.button`
    &:focus {
       outline: 1px solid white;
    }
-`
-const Button = React.forwardRef(({ rightElement, leftElement, title, type, variant, loading = false, ...props }, ref) => {
-   return (
-      <StyledButton title={title} variant={variant} type={type} loading={loading} {...props} ref={ref} >
-         {leftElement && leftElement()}
-         <span className="sr-label">{title}</span>
-         {loading && <span className="btn-loading"><Spinner size={20} strokeWidth={2} /></span>}
-         {rightElement && rightElement()}
-      </StyledButton>
-   )
-})
+`;
+const Button = React.forwardRef(
+   (
+      {
+         rightElement,
+         leftElement,
+         title,
+         type,
+         variant,
+         loading = false,
+         ...props
+      },
+      ref
+   ) => {
+      return (
+         <StyledButton
+            title={title}
+            variant={variant}
+            type={type}
+            loading={loading}
+            {...props}
+            ref={ref}
+         >
+            {leftElement && leftElement()}
+            <span className="sr-label">{title}</span>
+            {loading && (
+               <span className="btn-loading">
+                  <Spinner size={20} strokeWidth={2} />
+               </span>
+            )}
+            {rightElement && rightElement()}
+         </StyledButton>
+      );
+   }
+);
 
 Button.defaultProps = {
-   type: 'button',
-}
-Button.propTypes = {
+   type: "button",
+};
+Button.propTypes = {};
 
-}
-
-export default Button
+export default Button;

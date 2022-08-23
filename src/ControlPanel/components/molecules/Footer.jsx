@@ -6,14 +6,10 @@ export default function Footer() {
                <div className="w-auto">
                   Copyright (C). Code by @akshayjumbade
                </div>
-               <div className="flex-1">
-                  {/* center */}
-               </div>
-               <div className="md:w-3/12">
-                  {/* right */}
-               </div>
+               <div className="flex-1">{/* center */}</div>
+               <div className="md:w-3/12">{/* right */}</div>
             </div>
          </div>
       </footer>
-   )
+   );
 }

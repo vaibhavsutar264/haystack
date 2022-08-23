@@ -1,9 +1,7 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-   content: [
-,
-   ],
+   content: [,],
 
    theme: {
       extend: {
@@ -15,7 +13,7 @@ module.exports = {
 
    variants: {
       extend: {
-         opacity: ['disabled'],
+         opacity: ["disabled"],
       },
    },
 

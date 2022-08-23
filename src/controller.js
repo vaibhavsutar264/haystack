@@ -244,7 +244,7 @@ ScrollMagic.Controller = function (options) {
          scene.refresh();
       });
       scheduleRefresh();
-   };  // (BUILD) - REMOVE IN MINIFY - START
+   }; // (BUILD) - REMOVE IN MINIFY - START
    /**
     * Send a debug message to the console.
     * provided publicly with _log for plugins

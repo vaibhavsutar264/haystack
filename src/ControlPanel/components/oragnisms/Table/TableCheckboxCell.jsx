@@ -1,7 +1,7 @@
-import { useTableCell, useTableSelectionCheckbox } from '@react-aria/table';
-import { useToggleState } from '@react-stately/toggle';
-import { useCheckbox } from '@react-aria/checkbox';
-import { useRef } from 'react';
+import { useTableCell, useTableSelectionCheckbox } from "@react-aria/table";
+import { useToggleState } from "@react-stately/toggle";
+import { useCheckbox } from "@react-aria/checkbox";
+import { useRef } from "react";
 
 export default function TableCheckboxCell({ cell, state }) {
    let ref = useRef();
@@ -22,7 +22,7 @@ export default function TableCheckboxCell({ cell, state }) {
       <td
          {...gridCellProps}
          className="border-b border-slate-100 dark:border-slate-700 p-3 pl-6 text-slate-500 dark:text-slate-400"
-         style={{ width: '20px' }}
+         style={{ width: "20px" }}
          ref={ref}
       >
          <input {...inputProps} />

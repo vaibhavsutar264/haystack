@@ -1,5 +1,5 @@
-import { useTableHeaderRow } from '@react-aria/table';
-import { useRef } from 'react';
+import { useTableHeaderRow } from "@react-aria/table";
+import { useRef } from "react";
 
 export default function TableHeaderRow({ item, state, children }) {
    let ref = useRef();

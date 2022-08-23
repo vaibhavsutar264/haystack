@@ -1,7 +1,3 @@
 export default function TableFilters() {
-   return (
-      <div>
-
-      </div>
-   )
+   return <div></div>;
 }
