@@ -240,7 +240,9 @@ if (typeof window !== "undefined") {
                return { e, rect };
             })
             .find((section) => section.rect.bottom >= window.innerHeight * 0.5);
-         document.body.style.background = section.e.getAttribute("data-bg");
+            if (section) {
+               document.body.style.background = section.e.getAttribute("data-bg");
+            }
       }
    }
 }

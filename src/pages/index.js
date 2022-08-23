@@ -18,15 +18,13 @@ import VideoRemakeByPratikSir2 from "../VideoRemakeByPratikSir2";
 import VideoRemakeByPratikSir from "../VideoRemakeByPratikSir";
 import OurPartnersMain from "../OurPartnersMain";
 
+
 function Home({ Component, pageProps }) {
    if (typeof document !== "undefined") {
       return (
          <>
             {/* <HambergerMenuWithJQuery/> */}
             <PreAnimationOnLoad />
-
-            {/* <HambergerMenuWithScriptTag /> */}
-
             <Navbar />
             <div className="section" data-bg="#fff">
                <TextVideo />

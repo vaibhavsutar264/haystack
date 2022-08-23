@@ -20,12 +20,6 @@ const Navbar = () => {
                   <img src={data.logo} alt="" className="navbar-logo" />
                </a>
             </Link>
-            <a href="./Admin">
-               Admin <br /> Panel
-            </a>
-            {/* <a href="./Admin2">
-                        Admin <br /> Panel
-                     </a> */}
             <div
                onClick={() => setNavActive(!navActive)}
                className="nav__menu-bar"
@@ -34,31 +28,7 @@ const Navbar = () => {
                <div></div>
                <div></div>
             </div>
-            {/* <div>
 
-                    <div onload="Animation:none">
-                        <input onclick="no" type="checkbox" id="bgtoggle" />
-                        <div class="frame">
-                            <label for="bgtoggle" class="menu"></label>
-                            <div class="menu_container" id="menu_container">
-                                <h1>hystack content will be shown here</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
-
-            {/* {
-                  let abc = document.getElementsByClassName('menu_container');
-
-                  document.addEventListener("DOMContentLoaded", function(){
-                      var navToggle = document.getElementById("bgtoggle");
-                      var navMenu = document.getElementById("menu_container");
-                      navToggle.addEventListener("click", function(e){
-                        navMenu.classList.toggle("open");
-                        navMenu.style.opacity="1";
-                      });
-                    });
-                } */}
             <div className={`${navActive ? "active" : ""} nav__menu-list`}>
                {MENU_LIST.map((menu, idx) => {
                   // here menu means item in MENU_LIST

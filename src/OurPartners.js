@@ -4,10 +4,57 @@ import OurPartner from "./OurPartner";
 import Script from "next/script";
 // import "../styles/Offers.css"
 
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import styled from "@emotion/styled";
+// import Image from "next/image";
+
+export const ClientsCarousel = ({ items }) => {
+   return (
+      <Swiper
+         modules={[Pagination]}
+         pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+         spaceBetween={50}
+         slidesPerView={5}
+         loop={true}
+         autoplay={true}
+         onSlideChange={() => console.log('slide change')}
+         onSwiper={(swiper) => console.log(swiper)}
+      >
+         {items.map((item, index) => (
+            <SwiperSlide key={`slide_${index}`}>
+               {/* {JSON.stringify({ items })} */}
+               <img src={item.image} alt={`${index} offer`} style={{ width: '180px', height: '180px', objectFit: 'contain' }} />
+               {/* <Image src={item.src} alt={`${index} offer`} /> */}
+            </SwiperSlide>
+         ))}
+      </Swiper>
+   );
+};
+
+const StyledCarousel = styled.section`
+   .swiper-button-prev {
+      background: white;
+      padding: 1.5rem;
+   }
+   .swiper-button-next {
+      background: white;
+      padding: 1.5rem;
+   }
+
+`
+
 const OurPartners = ({ ourPartner }) => {
    return (
       <>
-         <section className="our-partners">
+         <StyledCarousel className="our-partners">
             <div className="container our-partners-main pt-5 mb-5">
                <h1 className="our-partner-heading">OUR PARTNERS </h1>
                <h4 className="font-weight-normal our-partners-sub-heading">
@@ -46,22 +93,15 @@ const OurPartners = ({ ourPartner }) => {
             <div className="page-container">
                <div className="page-back">
                   <div id="example">
-                     <div className="ourPartner mousemove-img our-partners-images">
-                        {ourPartner.map((item, index) => (
-                           <OurPartner
-                              key={item.image}
-                              index={index}
-                              src={item.image}
-                              link={item.url}
-                           />
-                        ))}
+                     <div className="container mx-auto">
+                        <ClientsCarousel items={ourPartner} />
                      </div>
                   </div>
                </div>
                <Script src="jquerry.js"></Script>
                <Script src="src.js"></Script>
             </div>
-         </section>
+         </StyledCarousel>
       </>
    );
 };
