@@ -17,6 +17,7 @@ import Footer from "../Footer";
 import VideoRemakeByPratikSir2 from "../VideoRemakeByPratikSir2";
 import VideoRemakeByPratikSir from "../VideoRemakeByPratikSir";
 import OurPartnersMain from "../OurPartnersMain";
+import BgTransitionSection from "../components/BgTransitionSection";
 
 
 function Home({ Component, pageProps }) {
@@ -40,20 +41,9 @@ function Home({ Component, pageProps }) {
             <div className="section" data-bg="#fff">
                <VideoRemakeByPratikSir />
             </div>
-            {/* <VideoScrollTrial/> */}
-            {/* <ScrollContainer>
-        <ScrollPage>
-          <Animator animation={ZoomOutScrollOut}> */}
-            <div className="section" data-bg="rgb(20, 20, 20)">
+            <BgTransitionSection>
                <Upgrade />
-            </div>
-            {/* </Animator>
-      </ScrollPage>
-      </ScrollContainer> */}
-
-            {/* <div className="section" data-bg="rgb(36, 101, 237)">
-            <OurPartnersMain />
-         </div> */}
+            </BgTransitionSection>
 
             <div className="section" data-bg="rgb(36, 101, 237)">
                <OurPartners ourPartner={data.ourPartner} />

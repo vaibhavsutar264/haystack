@@ -3,8 +3,8 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const topBottomVariants = {
-   visible: { y: 0, opacity: 1, transition: { delay: 1, duration: 1.5 } },
-   hidden: { y: -50, opacity: 0 },
+   visible: { y: 0, opacity: 1, transition: { delay: 0, duration: 0.5 } },
+   hidden: { y: 0, opacity: 0 },
 };
 
 const NavbarContent = () => {
