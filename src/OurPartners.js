@@ -18,9 +18,9 @@ import styled from "@emotion/styled";
 export const ClientsCarousel = ({ items }) => {
    return (
       <Swiper
-         modules={[Pagination]}
-         pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+         // modules={[Pagination]}
+         // pagination={{ clickable: true }}
+         scrollbar={{ draggable: true }}
          spaceBetween={50}
          slidesPerView={5}
          loop={true}
