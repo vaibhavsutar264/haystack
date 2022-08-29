@@ -5,6 +5,9 @@ const nextConfig = {
    //  },
    reactStrictMode: true,
    amp: false,
+   experimental: {
+      externalDir: true,
+   },
 };
 
 module.exports = nextConfig;

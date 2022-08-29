@@ -1,5 +1,8 @@
 import "../jquerry";
 import "../src";
+
+// Bootstrap
+
 // import "../Footer";
 import data from "../data/data.json";
 import PreAnimationOnLoad from "../PreAnimationOnLoad";
@@ -18,50 +21,33 @@ import VideoRemakeByPratikSir2 from "../VideoRemakeByPratikSir2";
 import VideoRemakeByPratikSir from "../VideoRemakeByPratikSir";
 import OurPartnersMain from "../OurPartnersMain";
 import BgTransitionSection from "../components/BgTransitionSection";
+import AppTemplate from "../components/templates/AppTemplate";
 
 
 function Home({ Component, pageProps }) {
    if (typeof document !== "undefined") {
       return (
          <>
-            {/* <HambergerMenuWithJQuery/> */}
-            <PreAnimationOnLoad />
-            <Navbar />
+         <AppTemplate>
             <div className="section" >
                <TextVideo />
             </div>
-            {/* <div className="section" >
-            <Admin2 />
-         </div> */}
-            {/* <NavbarContent/> */}
-            {/* <div className="section video-visibility-hidden" >
-               <VideoRemakeByPratikSir2 />
-            </div> */}
-            {/* <div className="section video-visibility" > */}
             <div className="section" >
                <VideoRemakeByPratikSir />
             </div>
             <BgTransitionSection fromBg="white" toBg="black">
                <Upgrade />
             </BgTransitionSection>
-
             <BgTransitionSection fromBg="black" toBg="#3570d3" padding={0}>
                <OurPartners ourPartner={data.ourPartner} />
             </BgTransitionSection>
-            {/* <MouseMoveScroll/> */}
-
             <div className="section">
                <Precision />
             </div>
             <div className="section bg-white" data-bg="#fff">
                <WeGotCovered />
             </div>
-            {/* <Video/> */}
-
-            {/* <VideoScrollTrial1/> */}
-            <div className="bg-white">
-               <Footer />
-            </div>
+         </AppTemplate>
          </>
       );
    }

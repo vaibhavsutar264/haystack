@@ -14,10 +14,15 @@ body {
    background-color: var(--current-bg-color, white) !important;
 }
 
-* {
+.AppTemplate {
    margin: 0;
    padding: 0;
    border: none;
+   box-sizing: border-box;
+   user-select: none;
+   cursor: none;
+   padding: 0px;
+   margin: 0px;
 }
 
 @keyframes intro {
@@ -243,13 +248,6 @@ header {
    margin-bottom: var(--section-margin);
 }
 
-* {
-   box-sizing: border-box;
-   user-select: none;
-   cursor: none;
-   padding: 0px;
-   margin: 0px;
-}
 
 /* html, body {
   margin: 0;
