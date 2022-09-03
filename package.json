@@ -61,7 +61,6 @@
     "react-scroll-motion": "^0.3.0",
     "react-scrolling-color-background": "^1.0.2",
     "run": "^1.4.0",
-    "scroll-background": "^1.0.5",
     "scrollmagic": "^2.0.8",
     "serverless-mysql": "^1.5.4",
     "suneditor-react": "^3.4.1",
