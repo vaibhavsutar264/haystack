@@ -24,7 +24,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
-    "@material-ui/icons": "^4.11.3",
     "@react-aria/checkbox": "^3.4.1",
     "@react-aria/focus": "^3.6.1",
     "@react-aria/interactions": "^3.9.1",
