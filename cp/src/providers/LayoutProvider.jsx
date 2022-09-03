@@ -1,5 +1,12 @@
 import { useMemo } from "react"
+import styled from "@emotion/styled"
 
+const StyledLayout = styled.div`
+   min-height: 100vh;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+`
 export default function LayoutProvider({ children }) {
    const mainSafeAreaPadding = useMemo(() => {
       return {
@@ -8,8 +15,8 @@ export default function LayoutProvider({ children }) {
    }, [ ])
 
    return (
-      <main style={{...mainSafeAreaPadding}}>
+      <StyledLayout style={{...mainSafeAreaPadding}}>
          {children}
-      </main>
+      </StyledLayout>
    )
 }

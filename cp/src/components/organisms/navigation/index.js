@@ -35,10 +35,10 @@ const Navigation = (props) => {
          <Navicon />
          <Container className={'container'}>
             <Menu inline={true} onAction={onNavClick}>
-               <Menu.Item key={'cp/posts'} children={'Posts'} />
-               <Menu.Item key={'cp/news'} children={'News'} />
-               <Menu.Item key={'cp/categories'} children={'Categories'} />
-               <Menu.Item key={'cp/settings'} children={'Settings'} />
+               <Menu.Item key={'/cp/posts'} children={'Posts'} />
+               <Menu.Item key={'/cp/news'} children={'News'} />
+               <Menu.Item key={'/cp/categories'} children={'Categories'} />
+               <Menu.Item key={'/cp/settings'} children={'Settings'} />
             </Menu>
          </Container>
          <div>

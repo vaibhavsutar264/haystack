@@ -6,7 +6,6 @@ import "../src";
 // import "../Footer";
 import data from "../data/data.json";
 import PreAnimationOnLoad from "../PreAnimationOnLoad";
-// import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
 // import NavbarContent from "../NavbarContent";
 import Navbar from "../Navbar";
 import OurPartners from "../OurPartners";
@@ -22,6 +21,7 @@ import VideoRemakeByPratikSir from "../VideoRemakeByPratikSir";
 import OurPartnersMain from "../OurPartnersMain";
 import BgTransitionSection from "../components/BgTransitionSection";
 import AppTemplate from "../components/templates/AppTemplate";
+import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
 
 
 function Home({ Component, pageProps }) {
@@ -32,9 +32,9 @@ function Home({ Component, pageProps }) {
             <div className="section" >
                <TextVideo />
             </div>
-            <div className="section" >
+            <BgTransitionSection fromBg="white" toBg="white">
                <VideoRemakeByPratikSir />
-            </div>
+            </BgTransitionSection>
             <BgTransitionSection fromBg="white" toBg="black">
                <Upgrade />
             </BgTransitionSection>

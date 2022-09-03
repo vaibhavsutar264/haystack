@@ -74,18 +74,6 @@ export default function posts({ posts }) {
 }
 
 export async function getStaticProps(context) {
-   const fs = require('fs');
-   const path = require('path');
-   fs.readFile(path.resolve('../../../../database/content/posts'), function read(err, data) {
-      if (err) {
-         throw err;
-      }
-      const content = data;
-
-      // Invoke the next step here however you like
-      console.log(content);   // Put all of the code here (not the best solution)
-      processFile(content);   // Or put the next step in a function and invoke it
-   });
    const data = await excuteQuery({
       query: "SELECT * FROM posts ORDER BY id DESC"
    })

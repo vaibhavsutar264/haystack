@@ -9,15 +9,7 @@ function AppTemplate({ children, pageProps }) {
          {/* <HambergerMenuWithJQuery/> */}
          <PreAnimationOnLoad />
          <Navbar />
-
-         <HambergerMenuWithScriptTag />
-
          {children}
-         {/* <Video/> */}
-
-         {/* <VideoScrollTrial1/> */}
-
-         <hr />
          <div className="bg-white">
             <Footer />
          </div>

@@ -7,6 +7,7 @@ const StyledButton = styled.button`
    --cursor: pointer;
    --border-color: var(--dark-2);
    font-weight: 500;
+   --rounded-md: 0.6rem;
    ${props => {
       let style = ''
       switch (props.variant) {

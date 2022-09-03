@@ -75,6 +75,7 @@ export const StyledInputField = styled.div`
          `
       }
    }}
+   border: 1px solid lightgray;
 `
 const StyledTextInput = styled.input`
    outline: none;
@@ -84,6 +85,7 @@ const StyledTextInput = styled.input`
    font-family: inherit;
    max-width: 100%;
    background-image: none !important;
+
    ${props => {
       if(props.disabled) {
          return css`

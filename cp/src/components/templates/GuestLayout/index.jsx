@@ -3,14 +3,12 @@ import { LayoutProvider } from "../../../providers";
 import { Breadcrumb, Container } from "../../atoms";
 import { Footer, Navigation } from "../../organisms";
 
-export default function AppLayout({ children }) {
+export default function GuestLayout({ children }) {
    return (
       <LayoutProvider>
-         <Navigation />
          <Container className="flex-1">
             {children}
          </Container>
-         <Footer />
       </LayoutProvider>
    )
 }

@@ -5,6 +5,7 @@ import {useLabel} from '@react-aria/label';
 import Label from "../atoms/Label"
 import styled from "@emotion/styled";
 import { useField } from "formik";
+// import { ContentEditor } from "../organisms";
 
 
 const StyledField = styled.div`
@@ -37,3 +38,5 @@ Field.defaultProps = {
    required: false,
    type: 'text',
 }
+
+// Field.ContentEditor = ContentEditor
