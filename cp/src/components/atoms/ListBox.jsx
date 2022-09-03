@@ -25,7 +25,7 @@ const ListBox = (props) => {
                margin: '5px 0',
                listStyle: 'none',
                border: '1px solid gray',
-               maxWidth: 250
+               // maxWidth: 250
             }}
          >
             {/* {JSON.stringify({ items: [...state.collection].map(row => row.rendered) })} */}

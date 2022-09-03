@@ -46,7 +46,7 @@ export default function Menu(props) {
          style={{
             padding: 0,
             listStyle: 'none',
-            maxWidth: 250
+            // maxWidth: 250
          }}>
          {[...state.collection].map(item => (
             <>

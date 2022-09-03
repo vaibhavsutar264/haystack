@@ -16,5 +16,5 @@ export default function Navicon({ image, url }) {
 }
 
 Navicon.defaultProps = {
-   image: '//placehold.it/144'
+   image: 'https://haystackanalytics.in/images/Group%2079.svg'
 }

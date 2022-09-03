@@ -1,97 +1,52 @@
 import Link from "next/link";
 import Script from "next/script";
 import { Bootstrap } from "../../../../cp/src";
+import { ErrorBoundary } from "../../../../cp/src/components/molecules";
 import { Table } from "../../../../cp/src/components/organisms";
-import excuteQuery from "../../../db";
-// import { Bootstrap, Screen } from "../../../cp/src";
-// import { ErrorBoundary } from "../../../cp/src/components/molecules";
+import { getPostFiles } from "../../../utils/posts";
 
 export default function posts({ posts }) {
    // const posts = {}
    return (
       <Bootstrap >
-         {(posts && posts.length) ? (
-         <Table>
-            <Table.Header>
-               <Table.Col key={'title'} >
-                  Title
-               </Table.Col>
-               <Table.Col key={'slug'} >
-                  Slug
-               </Table.Col>
-               <Table.Col key={'description'} >
-                  Description
-               </Table.Col>
-               <Table.Col key={'author_name'} >
-                  Author
-               </Table.Col>
-               <Table.Col key={'status'} >
-                  Status
-               </Table.Col>
-               <Table.Col key={'created_at'} >
-                  Created at
-               </Table.Col>
-               <Table.Col key={'_action'} >
+         {/* {JSON.stringify({ posts })} */}
+         <ErrorBoundary>
+            {(posts && posts.length) ? (
+            <Table>
+               <Table.Header>
+                  <Table.Col key={'title'} >
+                     Title
+                  </Table.Col>
+                  <Table.Col key={'_action'} >
 
-               </Table.Col>
-            </Table.Header>
-            <Table.Body>
-               {posts?.map(row => (
-               <Table.Row key={`post_${row.id}`} >
-                  <Table.Cell>
-                     <Link href={`/cp/posts/${row.id}`}>{row.title}</Link>
-                  </Table.Cell>
-                  <Table.Cell>
-                     {row.slug}
-                  </Table.Cell>
-                  <Table.Cell>
-                     {row.description}
-                  </Table.Cell>
-                  <Table.Cell>
-                     {row.author_name}
-                  </Table.Cell>
-                  <Table.Cell>
-                     {row.status}
-                  </Table.Cell>
-                  <Table.Cell>
-                     {row.description}
-                  </Table.Cell>
-                  <Table.Cell>
-                     <Link href={`/cp/posts/${row.id}`}>{'Edit'}</Link>
-                  </Table.Cell>
-               </Table.Row>
-               ))}
-            </Table.Body>
-         </Table>
-         ) : (
-            <>
-            No posts yet
-            </>
-         )}
+                  </Table.Col>
+               </Table.Header>
+               <Table.Body>
+                  {posts?.map(row => (
+                  <Table.Row key={`post_${row.id}`} >
+                     <Table.Cell>
+                        <Link href={`/cp/posts/${row.id}`}>{row.title}</Link>
+                     </Table.Cell>
+                     <Table.Cell>
+                        <Link href={`/cp/posts/${row.id}`}>{'Edit'}</Link>
+                     </Table.Cell>
+                  </Table.Row>
+                  ))}
+               </Table.Body>
+            </Table>
+            ) : (
+               <>
+               No posts yet
+               </>
+            )}
+         </ErrorBoundary>
 
       </Bootstrap>
    );
 }
 
 export async function getStaticProps(context) {
-   const fs = require('fs');
-   const path = require('path');
-   fs.readFile(path.resolve('../../../../database/content/posts'), function read(err, data) {
-      if (err) {
-         throw err;
-      }
-      const content = data;
-
-      // Invoke the next step here however you like
-      console.log(content);   // Put all of the code here (not the best solution)
-      processFile(content);   // Or put the next step in a function and invoke it
-   });
-   const data = await excuteQuery({
-      query: "SELECT * FROM posts ORDER BY id DESC"
-   })
-   // data.
-   const posts = data
-   console.dir({ posts })
+   let posts = getPostFiles()
    return {
      props: {
       posts: JSON.parse(JSON.stringify(posts))

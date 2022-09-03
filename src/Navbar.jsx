@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import NavItem from "./NavItem";
 import data from "./data/data.json";
+import Image from "next/image";
+// import logoUri from './assets'
 
 const MENU_LIST = [
    {
@@ -9,6 +11,7 @@ const MENU_LIST = [
       href: "/Home",
    },
 ];
+
 const Navbar = () => {
    const [navActive, setNavActive] = useState(false);
    const [activeIdx, setActiveIdx] = useState(0);
@@ -17,6 +20,7 @@ const Navbar = () => {
          <nav className="navbar-main container">
             <Link href={"/"}>
                <a onClick={() => setActiveIdx(0)}>
+                  {/* <Image src={logoUri} /> */}
                   <img src={data.logo} alt="" className="navbar-logo" />
                </a>
             </Link>

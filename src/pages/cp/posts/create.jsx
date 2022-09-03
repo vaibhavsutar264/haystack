@@ -13,13 +13,15 @@ export default function create({ post }) {
          <div className="border p-4 rounded-lg shadow-sm mb-6">
             <Form url="/api/posts" primaryAction={{ title: 'Create post', onClick: handleSubmit }}>
                {/* <Form.Field name={'title'} /> */}
-               <Field required={true} name={'title'} label={'title'} />
-               <Field required={true} name={'slug'} label={'slug'} />
+               <Field required={true} name={'title'} label={'Title'} />
+               <Field required={true} name={'slug'} label={'Slug'} />
                {/* <Field required={false} name={'description'} label={'description'} Component={ContentEditor} /> */}
-               <Field required={true} name={'author_name'} label={'author_name'} />
-               <Field required={false} name={'author_bio'} label={'author_bio'} />
-               <Field required={false} name={'status'} label={'status'} />
-               <Form.Actions />
+               <div>
+                  <Field required={true} name={'author_name'} label={'Author name'} />
+                  <Field required={false} name={'author_bio'} label={'Author bio'} />
+               </div>
+               <Field required={false} name={'status'} label={'Status'} />
+               <Form.Actions submitLabel="Save post" />
             </Form>
          </div>
       </Bootstrap>
