@@ -25,10 +25,10 @@ export default function posts({ posts }) {
                   {posts?.map(row => (
                   <Table.Row key={`post_${row.id}`} >
                      <Table.Cell>
-                        <Link href={`/cp/posts/${row.id}`}>{row.title}</Link>
+                        <Link href={`/cp/posts/${row.slug}`}>{row.title}</Link>
                      </Table.Cell>
                      <Table.Cell>
-                        <Link href={`/cp/posts/${row.id}`}>{'Edit'}</Link>
+                        <Link href={`/cp/posts/${row.slug}`}>{'Edit'}</Link>
                      </Table.Cell>
                   </Table.Row>
                   ))}

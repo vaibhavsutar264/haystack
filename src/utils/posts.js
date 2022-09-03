@@ -1,24 +1,26 @@
 const fs = require('fs');
 const path = require('path');
 
+const jsonDirectory = path.join(process.cwd(), 'json');
+
 export const getPostFiles = () => {
-   const directoryPath = path.join(__dirname, '../../../../database/content/posts');
    let posts = []
    //passsing directoryPath and callback function
    // fs.readdirSync
-   const fileNames = fs.readdirSync(directoryPath);
+   const fileNames = fs.readdirSync(jsonDirectory + '/posts');
    fileNames.map(fname => {
       posts.push({
          id: fname,
          title: fname,
          file: fname,
+         slug: fname.replace('.json', ''),
       })
    })
    return posts
 }
 
 export const getPostFile = (fileName) => {
-   const filePath = path.resolve(__dirname, '../../../../database/content/posts/' + fileName)
+   const filePath = jsonDirectory + '/posts/' + fileName + '.json'
    const fileContent = fs.readFileSync(filePath)
-   return fileContent;
+   return JSON.parse(fileContent.toString());
 }

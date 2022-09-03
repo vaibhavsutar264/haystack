@@ -2,13 +2,16 @@ import "../styles/globals.css";
 import "./index.css";
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.css";
-import {SSRProvider} from 'react-aria';
+import { SSRProvider } from "@react-aria/ssr";
+// import {SSRProvider} from '@react-aria/';
 
 
 function MyApp({ Component, pageProps }) {
    return (
       <>
-         <Component {...pageProps} />
+         <SSRProvider>
+            <Component {...pageProps} />
+         </SSRProvider>
       </>
    );
 }

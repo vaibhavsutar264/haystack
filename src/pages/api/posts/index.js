@@ -2,10 +2,12 @@
 const fs = require('fs')
 const path = require('path')
 
+const jsonDirectory = path.join(process.cwd(), 'json');
+
 export default async function handler(req, res) {
    try {
       const postSlug = req.body.slug
-      const filePath = path.resolve(__dirname, '../../../../database/content/posts/' + postSlug + '.json')
+      const filePath = jsonDirectory + '/posts/' + postSlug + '.json'
       console.log('filename: ', filePath)
       const isAlreadyExist = fs.existsSync(filePath)
       if (isAlreadyExist) {
