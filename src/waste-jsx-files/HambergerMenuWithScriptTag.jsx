@@ -1,5 +1,4 @@
 import React from "react";
-// import ScriptTag from 'react-script-tag';
 // import { Helmet } from "react-helmet";
 // import $ from 'jquery';
 import Script from "next/script";
@@ -34,7 +33,7 @@ const HambergerMenuWithScriptTag = () => {
          {/* <Helmet>
                     <script src=
                         "https://github.com/vaibhavsutar264/hamberger-menu-animation/blob/main/app.js"
-                        type="text/javascript" 
+                        type="text/javascript"
                         />
                 </Helmet> */}
          {/* Call the function to add a library */}
