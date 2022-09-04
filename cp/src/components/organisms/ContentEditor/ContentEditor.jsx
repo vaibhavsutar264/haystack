@@ -1,15 +1,6 @@
 import styled from "@emotion/styled";
-// import { Editor } from "@toast-ui/react-editor";
-// import React, { useState } from "react";
-// import { useEffect } from "react";
 import React, { useState, useRef, useMemo, useEffect } from 'react';
-// import '@toast-ui/editor/dist/toastui-editor.css'; // Editor's Style
 import JoditEditor from 'jodit-react';
-// import SunEditor from 'suneditor-react';
-// import 'suneditor/dist/css/suneditor.min.css';
-// import 'suneditor/src/assets/css'
-// import 'suneditor/dist/css/suneditor.min.css';
-// globalThis.navigator = {}
 const StyledEditor = styled.div`
    textarea {
       width: 100%;
