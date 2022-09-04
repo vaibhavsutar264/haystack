@@ -1,7 +1,11 @@
+import dynamic from "next/dynamic";
 import { Bootstrap } from "../../../../cp/src";
 import { Field } from "../../../../cp/src/components/molecules";
 import { Form } from "../../../../cp/src/components/organisms";
+
 import { getPostFile, getPostFiles } from "../../../utils/posts";
+const ContentEditor = dynamic(() => import('../../../../cp/src/components/organisms/ContentEditor/ContentEditor'))
+globalThis.self = globalThis
 // import excuteQuery from "../../../db";
 
 export default function post({ post }) {
@@ -16,7 +20,7 @@ export default function post({ post }) {
                {/* <Form.Field name={'title'} /> */}
                <Field required={true} name={'title'} label={'Title'} />
                <Field required={true} name={'slug'} label={'Slug'} />
-               {/* <Field required={false} name={'description'} label={'description'} Component={ContentEditor} /> */}
+               <Field required={false} name={'description'} label={'Description'} Component={ContentEditor} />
                <div>
                   <Field required={true} name={'author_name'} label={'Author name'} />
                   <Field required={false} name={'author_bio'} label={'Author bio'} />
