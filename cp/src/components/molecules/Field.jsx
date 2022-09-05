@@ -24,6 +24,7 @@ export default function Field({ label, required, name, type, description, error,
          <Label {...labelProps} label={label} required={required} />
          {/* <div>{children}</div> */}
          <div>{Component && <Component {...inputProps} {...field} {...fieldProps} />}</div>
+         {children && children({...field, ...fieldProps})}
          {meta.touched && meta.error ? (
          // <div className="error">{meta.error}</div>
          <ErrorMessage error={meta.error} />

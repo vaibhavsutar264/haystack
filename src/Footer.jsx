@@ -9,43 +9,44 @@ import {
    faLinkedin,
    faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
-function Footer() {
+function Footer({ settings = {} }) {
    return (
       <div className="container bg-white">
          <div className="footer-inner-container row justify-content-between w-80 border-top border-dark border-4 border-t-0 pb-0 pt-4">
             <div className="col-6">
-               <p className="footer-text">hello@haystackanalytics.in</p>
+               <p className="footer-text">{settings.email}</p>
                <div className="d-flex gap-2">
-                  <a href="#facebook">
+                  <a href={settings.facebook_url}>
                      <FontAwesomeIcon
                         id="icons"
                         className="text-dark"
                         icon={faFacebook}
                      />
                   </a>
-                  <a href="#instagram">
+                  <a href={settings.instagram_url}>
                      <FontAwesomeIcon
                         id="icons"
                         className="text-dark"
                         icon={faInstagram}
                      />
                   </a>
-                  <a href="#linkedin">
+                  <a href={settings.linkedin_url}>
                      <FontAwesomeIcon
                         id="icons"
                         className="text-dark"
                         icon={faLinkedin}
                      />
                   </a>
-                  <a href="#youtube">
+                  <a href={settings.youtube_url}>
                      <FontAwesomeIcon
                         id="icons"
                         className="text-dark"
                         icon={faYoutube}
                      />
                   </a>
-                  <a href="#twitter">
+                  <a href={settings.twitter_url}>
                      <FontAwesomeIcon
                         id="icons"
                         className="text-dark"
@@ -57,9 +58,9 @@ function Footer() {
             <div className="footer-pages width-75 col-6 d-flex flex-column align-items-end">
                <a href="./science-corner">SCIENCE CORNER</a>
                <a href="./universal">PRODUCT</a>
-               <a href="./about-us">ABOUT US</a>
-               <a href="./latest-news">LATEST NEWS</a>
-               <a href="./blogs">BLOG</a>
+               <Link href={'/about'}>ABOUT US</Link>
+               <Link href="/">LATEST NEWS</Link>
+               <Link href={'/blog'}>BLOG</Link>
             </div>
          </div>
       </div>

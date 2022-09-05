@@ -19,6 +19,34 @@ export const getPostFiles = () => {
    return posts
 }
 
+export const getAllPosts = () => {
+   let posts = []
+   const cats = getPostFiles()
+   cats?.map(catItem => {
+      const cat = getPostFile(catItem.slug)
+      posts.push({
+         ...catItem,
+         ...cat
+      })
+   })
+   return posts
+}
+
+export const getActivePosts = () => {
+   let posts = []
+   const cats = getPostFiles()
+   cats?.map(catItem => {
+      const cat = getPostFile(catItem.slug)
+      if (cat && cat.status.includes('active')) {
+         posts.push({
+            ...catItem,
+            ...cat
+         })
+      }
+   })
+   return posts
+}
+
 export const getPostFile = (fileName) => {
    const filePath = jsonDirectory + '/posts/' + fileName + '.json'
    const fileContent = fs.readFileSync(filePath)

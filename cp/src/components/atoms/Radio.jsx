@@ -85,3 +85,14 @@ function RadioItem(props) {
 }
 
 Radio.Item = RadioItem
+
+
+export const RadioField = ({ options, ...props }) => {
+   return (
+      <Radio {...props}>
+         {options?.map(op => (
+         <Radio.Item key={op.value} value={op.value}>{op.label}</Radio.Item>
+         ))}
+      </Radio>
+   )
+}

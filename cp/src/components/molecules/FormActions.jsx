@@ -22,7 +22,7 @@ export default function FormActions({ submitLabel = 'Submit' }){
    }
    return (
       <StyledField>
-         {JSON.stringify(formik.values)}
+         {/* {JSON.stringify(formik.values)} */}
          {primaryAction && <Button disabled={formik.isSubmitting} variant="primary" type="submit" title={formik.isSubmitting ? 'Submitting...' : submitLabel} {...primaryAction} />}
       </StyledField>
    )

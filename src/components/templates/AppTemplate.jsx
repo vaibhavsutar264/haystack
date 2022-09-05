@@ -1,19 +1,31 @@
+import styled from "@emotion/styled";
 import Footer from "../../Footer";
 import HambergerMenuWithScriptTag from "../../HambergerMenuWithScriptTag";
 import Navbar from "../../Navbar";
 import PreAnimationOnLoad from "../../PreAnimationOnLoad";
 
-function AppTemplate({ children, pageProps }) {
+const StyledTemplate = styled.div`
+   margin: 0;
+   padding: 0;
+   border: none;
+   box-sizing: border-box;
+   user-select: none;
+   cursor: none;
+   padding: 0px;
+   margin: 0px;
+`
+
+function AppTemplate({ children, pageProps, settings = {}, ...props }) {
    return (
-      <div className="AppTemplate">
+      <StyledTemplate {...props}>
          {/* <HambergerMenuWithJQuery/> */}
          <PreAnimationOnLoad />
          <Navbar />
          {children}
          <div className="bg-white">
-            <Footer />
+            <Footer settings={settings} />
          </div>
-      </div>
+      </StyledTemplate>
    );
 }
 

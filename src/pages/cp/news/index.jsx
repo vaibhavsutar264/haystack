@@ -1,21 +1,20 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Script from "next/script";
 import { Bootstrap } from "../../../../cp/src";
 import { ErrorBoundary } from "../../../../cp/src/components/molecules";
 import { Table } from "../../../../cp/src/components/organisms";
 import PageHeader from "../../../components/organisms/PageHeader";
-import { getPostFile, getPostFiles } from "../../../utils/posts";
+import { getNewsFiles } from "../../../utils/news";
 
-export default function posts({ posts }) {
+export default function news({ news }) {
    const router = useRouter()
-   // const posts = {}
+   // const news = {}
    return (
       <Bootstrap >
-         {/* {JSON.stringify({ posts })} */}
-         <PageHeader title={'Posts'} primaryAction={{ title: 'New post', onClick: () => router.push(`/cp/posts/create`) }} />
+         {/* {JSON.stringify({ news })} */}
+         <PageHeader title={'News'} primaryAction={{ title: 'New category', onClick: () => router.push(`/cp/news/create`) }} />
          <ErrorBoundary>
-            {(posts && posts.length) ? (
+            {(news && news.length) ? (
             <Table>
                <Table.Header>
                   <Table.Col key={'title'} >
@@ -26,13 +25,13 @@ export default function posts({ posts }) {
                   </Table.Col>
                </Table.Header>
                <Table.Body>
-                  {posts?.map(row => (
+                  {news?.map(row => (
                   <Table.Row key={`post_${row.id}`} >
                      <Table.Cell>
-                        <Link href={`/cp/posts/${row.slug}`}>{row.title}</Link>
+                        <Link href={`/cp/news/${row.slug}`}>{row.title}</Link>
                      </Table.Cell>
                      <Table.Cell>
-                        <Link href={`/cp/posts/${row.slug}`}>{'Edit'}</Link>
+                        <Link href={`/cp/news/${row.slug}`}>{'Edit'}</Link>
                      </Table.Cell>
                   </Table.Row>
                   ))}
@@ -50,11 +49,10 @@ export default function posts({ posts }) {
 }
 
 export async function getStaticProps(context) {
-   let posts = getPostFiles()
-
+   let news = getNewsFiles()
    return {
      props: {
-      posts: JSON.parse(JSON.stringify(posts))
+      news: JSON.parse(JSON.stringify(news))
      }, // will be passed to the page component as props
    }
 }

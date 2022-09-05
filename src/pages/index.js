@@ -22,14 +22,30 @@ import OurPartnersMain from "../OurPartnersMain";
 import BgTransitionSection from "../components/BgTransitionSection";
 import AppTemplate from "../components/templates/AppTemplate";
 import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
+import { getActivePosts, getPostFile, getPostFiles } from "../utils/posts";
+import { getSettings } from "../utils/settings";
+import { getActiveNews } from "../utils/news";
+import styled from "@emotion/styled";
+import heroBg from '../assets/haystack-body-bg.png'
+import '../styles/index.module.css'
+const StyledHome = styled(AppTemplate)`
+   .hero-section {
+      main {
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center right;
 
+         background-image: url(${heroBg.src});
+      }
+   }
+`
 
-function Home({ Component, pageProps }) {
+function Home({ Component, pageProps, news, settings }) {
    if (typeof document !== "undefined") {
       return (
          <>
-         <AppTemplate>
-            <div className="section" >
+         <StyledHome settings={settings}>
+            <div className="section hero-section" >
                <TextVideo />
             </div>
             <BgTransitionSection fromBg="white" toBg="white">
@@ -45,12 +61,25 @@ function Home({ Component, pageProps }) {
                <Precision />
             </div>
             <div className="section bg-white" data-bg="#fff">
-               <WeGotCovered />
+               <WeGotCovered news={news} />
             </div>
-         </AppTemplate>
+         </StyledHome>
          </>
       );
    }
 }
+
+export async function getStaticProps(context) {
+   let news = getActiveNews()
+   const settings = getSettings()
+
+   return {
+     props: {
+      news: JSON.parse(JSON.stringify(news)),
+      settings: JSON.parse(JSON.stringify(settings))
+     }, // will be passed to the page component as props
+   }
+}
+
 
 export default Home;

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "@emotion/styled";
-import img from "./precision-bg-true.png";
+import img from "./assets/section-bg.png";
 
 const StyledWrapper = styled.div`
    .precision-bg {

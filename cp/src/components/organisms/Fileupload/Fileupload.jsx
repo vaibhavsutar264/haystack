@@ -91,7 +91,7 @@ export default function Fileupload({ name, maxFiles = 3, ...props }) {
    return (
       <Fragment>
          <ErrorBoundary>
-            {/* <FileUploader /> */}
+            <FileUploader />
          </ErrorBoundary>
          {/* <StyledDiv {...getRootProps({ refKey: 'innerRef' })} css={[tw`flex items-center text-center`]}>
             <input {...getInputProps()} />

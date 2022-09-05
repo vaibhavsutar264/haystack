@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import styled from "@emotion/styled";
+import Link from "next/link";
 // import Image from "next/image";
 
 export const BlogCarousel = ({ items }) => {
@@ -36,13 +37,14 @@ export const BlogCarousel = ({ items }) => {
             <SwiperSlide key={`slide_${index}`}>
                {/* {JSON.stringify({ items })} */}
                <div className="blog-listing-page-img">
-                  <Image src={WeGotCoveredImg} />
+                  <img src={item.image_url} layout="fill" className="w-full" />
                </div>
-               <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
-                  Haystack Analytics and faster genomics diagnostics
+               {/* {JSON.stringify(item)} */}
+               <h3 className="blog-listing-page-heading my-sm-2 my-1">
+                  {item.title}
                </h3>
                <p className="blog-listing-page-read-more font-weight-normal">
-                  <a href="#read-more">Read more &gt;&gt;</a>
+                  <a target={'_blank'} href={item.url}>Read more &gt;&gt;</a>
                </p>
             </SwiperSlide>
          ))}
@@ -58,7 +60,7 @@ const topBottomVariants = {
 
 
 
-function WeGotCovered({ posts }) {
+function WeGotCovered({ news }) {
    const controls = useAnimation();
    const [ref, inView] = useInView();
    useEffect(() => {
@@ -79,7 +81,7 @@ function WeGotCovered({ posts }) {
                variants={topBottomVariants}
                className="we-got-covered-inner-container"
             >
-               <BlogCarousel items={posts} />
+               <BlogCarousel items={news} />
             </motion.div>
          </section>
       </>
@@ -114,5 +116,5 @@ const samplePosts = [
    },
 ]
 WeGotCovered.defaultProps = {
-   posts: samplePosts
+   // posts: samplePosts
 }

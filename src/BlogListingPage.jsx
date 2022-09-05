@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import FeaturedImg from "./box-2.png";
 
-function BlogListingPage() {
+function BlogListingPage({ categories }) {
    return (
       <>
          <section name="blog-component">
@@ -13,111 +14,26 @@ function BlogListingPage() {
                   </p>
                </div>
                <div className="row mt-3">
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={FeaturedImg} />
+                  {categories?.map(cat => (
+                     <div key={cat.slug} className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                        <div className="blog-listing-page-img">
+                           <Image src={FeaturedImg} />
+                        </div>
+                        <h3 className="blog-listing-page-heading my-sm-2 my-1">
+                           {cat.title}
+                        </h3>
+                        <p className="blog-listing-page-read-more font-weight-normal">
+                           <Link href={`/blog/${cat.slug}`}>Read more &gt;&gt;</Link>
+                        </p>
                      </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
-                        Haystack Analytics and faster genomics diagnostics
-                     </h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={FeaturedImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
-                        Haystack Analytics and faster genomics diagnostics
-                     </h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={FeaturedImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
-                        Haystack Analytics and faster genomics diagnostics
-                     </h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={FeaturedImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
-                        Haystack Analytics and faster genomics diagnostics
-                     </h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={FeaturedImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
-                        Haystack Analytics and faster genomics diagnostics
-                     </h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={FeaturedImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
-                        Haystack Analytics and faster genomics diagnostics
-                     </h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={FeaturedImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
-                        Haystack Analytics and faster genomics diagnostics
-                     </h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={FeaturedImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
-                        Haystack Analytics and faster genomics diagnostics
-                     </h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
-                     <div className="blog-listing-page-img">
-                        <Image src={FeaturedImg} />
-                     </div>
-                     <h3 className="blog-listing-page-heading my-xl-2 my-lg-2 mx-md-2 my-sm-2 my-1">
-                        Haystack Analytics and faster genomics diagnostics
-                     </h3>
-                     <p className="blog-listing-page-read-more font-weight-normal">
-                        <a href="#read-more">Read more &gt;&gt;</a>
-                     </p>
-                  </div>
+                  ))}
+
                </div>
-               <div className="d-flex justify-content-ceenter align-items-center my-3">
+               {/* <div className="d-flex justify-content-ceenter align-items-center my-3">
                   <button id="load-more-btn" className="btn btn-primary m-auto">
                      Load More
                   </button>
-               </div>
+               </div> */}
             </div>
          </section>
       </>
