@@ -8,6 +8,9 @@ export const getNewsFiles = () => {
    //passsing directoryPath and callback function
    // fs.readdirSync
    const fileNames = fs.readdirSync(jsonDirectory + '/news');
+   if(!fs.existsSync(fileNames)) {
+      return false
+   }
    fileNames.map(fname => {
       news.push({
          id: fname,
@@ -36,6 +39,9 @@ export const getActiveNews = () => {
 
 export const getNewsFile = (fileName) => {
    const filePath = jsonDirectory + '/news/' + fileName + '.json'
+   if(!fs.existsSync(filePath)) {
+      return false
+   }
    const fileContent = fs.readFileSync(filePath)
    return JSON.parse(fileContent.toString());
 }

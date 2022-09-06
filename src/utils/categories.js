@@ -8,6 +8,9 @@ export const getCategoryFiles = () => {
    //passsing directoryPath and callback function
    // fs.readdirSync
    const fileNames = fs.readdirSync(jsonDirectory + '/categories');
+   if(!fs.existsSync(fileNames)) {
+      return categories
+   }
    fileNames.map(fname => {
       categories.push({
          id: fname,
@@ -34,6 +37,9 @@ export const getAllCategories = () => {
 
 export const getCategoryFile = (fileName) => {
    const filePath = jsonDirectory + '/categories/' + fileName + '.json'
+   if(!fs.existsSync(filePath)) {
+      return false
+   }
    const fileContent = fs.readFileSync(filePath)
    return JSON.parse(fileContent.toString());
 }

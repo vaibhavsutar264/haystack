@@ -59,6 +59,12 @@ function BlogCategory({ posts, category }) {
 export async function getStaticPaths() {
    // const slugs = paths
    let slugs = getCategoryFiles()
+   if (!slugs) {
+      return {
+         paths: [],
+         fallback: true,
+      }
+   }
    slugs = slugs?.map(slg => {
       return {
          params: { 'category-slug': slg.slug }

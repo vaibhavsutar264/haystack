@@ -8,6 +8,9 @@ export const getPostFiles = () => {
    //passsing directoryPath and callback function
    // fs.readdirSync
    const fileNames = fs.readdirSync(jsonDirectory + '/posts');
+   if(!fs.existsSync(fileNames)) {
+      return posts
+   }
    fileNames.map(fname => {
       posts.push({
          id: fname,
@@ -48,7 +51,14 @@ export const getActivePosts = () => {
 }
 
 export const getPostFile = (fileName) => {
-   const filePath = jsonDirectory + '/posts/' + fileName + '.json'
-   const fileContent = fs.readFileSync(filePath)
-   return JSON.parse(fileContent.toString());
+   try {
+      const filePath = jsonDirectory + '/posts/' + fileName + '.json'
+      if(!fs.existsSync(filePath)) {
+         return false
+      }
+      const fileContent = fs.readFileSync(filePath)
+      return JSON.parse(fileContent.toString());
+   } catch (error) {
+      return {}
+   }
 }
