@@ -28,23 +28,19 @@ import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import heroBg from '../assets/haystack-body-bg.png'
 import '../styles/index.module.css'
+import { useEffect } from "react";
 const StyledHome = styled(AppTemplate)`
    .hero-section {
-      main {
-         background-size: cover;
-         background-repeat: no-repeat;
-         background-position: center right;
 
-         background-image: url(${heroBg.src});
-      }
    }
 `
 
 function Home({ Component, pageProps, news, settings }) {
+   // useEffect
    if (typeof document !== "undefined") {
       return (
          <>
-         <StyledHome settings={settings}>
+         <StyledHome bodyClassName="home" settings={settings}>
             <div className="section hero-section" >
                <TextVideo />
             </div>

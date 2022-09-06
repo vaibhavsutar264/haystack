@@ -21,6 +21,8 @@ export default function BgTransitionSection({ children, fromBg, toBg, ...props }
    const control = useAnimation()
    const [ref, inView] = useInView()
    useEffect(() => {
+      document.body.classList.add('body--home')
+
       if (inView) {
         control.start("visible");
         document.body.setAttribute('style', '--current-bg-color: ' + toBg)

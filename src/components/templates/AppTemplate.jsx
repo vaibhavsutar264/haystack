@@ -15,7 +15,7 @@ const StyledTemplate = styled.div`
    margin: 0px;
 `
 
-function AppTemplate({ children, pageProps, settings = {}, ...props }) {
+function AppTemplate({ children, pageProps, bodyClassName, settings = {}, ...props }) {
    return (
       <StyledTemplate {...props}>
          {/* <HambergerMenuWithJQuery/> */}
