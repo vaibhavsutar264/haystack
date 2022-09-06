@@ -5,6 +5,9 @@ const jsonDirectory = path.join(process.cwd(), 'json');
 
 export function getSettings() {
    const filePath = jsonDirectory + '/settings.json'
+   if (!fs.existsSync(filePath)) {
+      return {}
+   }
    const fileContent = fs.readFileSync(filePath)
    return JSON.parse(fileContent.toString());
 }
