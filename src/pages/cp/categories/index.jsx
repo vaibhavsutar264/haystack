@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import { Bootstrap } from "../../../../cp/src";
 import { ErrorBoundary } from "../../../../cp/src/components/molecules";
 import { Table } from "../../../../cp/src/components/organisms";
@@ -7,12 +7,12 @@ import PageHeader from "../../../components/organisms/PageHeader";
 import { getCategoryFiles } from "../../../utils/categories";
 
 export default function categories({ categories }) {
-   const router = useRouter()
+   // const router = useRouter()
    // const categories = {}
    return (
       <Bootstrap >
          {/* {JSON.stringify({ categories })} */}
-         <PageHeader title={'Categories'} primaryAction={{ title: 'New category', onClick: () => router.push(`/cp/categories/create`) }} />
+         <PageHeader title={'Categories'} primaryAction={{ title: 'New category', onClick: () => globalThis.location?.push(`/cp/categories/create`) }} />
          <ErrorBoundary>
             {(categories && categories.length) ? (
             <Table>

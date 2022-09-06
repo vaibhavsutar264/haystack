@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useMemo } from "react";
@@ -6,6 +5,7 @@ import { Bootstrap } from "../../../../cp/src";
 import axios from 'axios'
 // import excuteQuery from "../../../db";
 // import { useQuery } from 'react-query'
+// react-hooks/rules-of-hooks
 
 // const usePostQuery = (id) => useQuery('/api/posts?id='+id)
 
