@@ -10,12 +10,7 @@ export default function post({ post }) {
 
 export async function getStaticPaths() {
    // const slugs = paths
-   let slugs = await excuteQuery({
-      query: "SELECT slug FROM posts WHERE status = 'active'",
-      // values: [ 1 ],
-   })
-   console.log({ slugs })
-   slugs = slugs?.map(slg => slg.slug)
+   let slugs = []
 
    return {
      paths: slugs,
@@ -25,18 +20,11 @@ export async function getStaticPaths() {
 
 
 export async function getStaticProps(context) {
-   console.log('context: ', { context })
-   const data = await excuteQuery({
-      query: "SELECT * FROM posts WHERE id = ?",
-      values: [ 1 ],
-   })
 
-   const post = data[0]
-   console.dir({ post, })
    return {
      props: {
       // paths: slugs,
-      post: JSON.parse(JSON.stringify(post)),
+      // post: JSON.parse(JSON.stringify(post)),
       fallback: true,
      }, // will be passed to the page component as props
    }
