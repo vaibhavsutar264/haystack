@@ -1,5 +1,4 @@
 import { Bootstrap } from "../../../../cp/src";
-import excuteQuery from "../../../db";
 
 export default function edit({ post }) {
    return (

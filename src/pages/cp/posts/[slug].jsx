@@ -9,7 +9,6 @@ import { Fileupload, Form } from "../../../../cp/src/components/organisms";
 import { getPostFile, getPostFiles } from "../../../utils/posts";
 const ContentEditor = dynamic(() => import('../../../../cp/src/components/organisms/ContentEditor/ContentEditor'))
 globalThis.self = globalThis
-// import excuteQuery from "../../../db";
 const statusOptions = [
    { label: 'Draft', value: 'draft' },
    { label: 'Pending', value: 'pending' },
