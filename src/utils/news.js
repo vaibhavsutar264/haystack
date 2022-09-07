@@ -1,16 +1,18 @@
+import { jsonDirectory } from '.';
+
 const fs = require('fs');
 const path = require('path');
-
-const jsonDirectory = path.join(process.cwd(), 'json');
 
 export const getNewsFiles = () => {
    let news = []
    //passsing directoryPath and callback function
    // fs.readdirSync
+   // console.log({jsonDirectory})
    const fileNames = fs.readdirSync(jsonDirectory + '/news');
    if(!fs.existsSync(fileNames)) {
-      return false
+      return news
    }
+   console.log({ fileNames })
    fileNames.map(fname => {
       news.push({
          id: fname,
