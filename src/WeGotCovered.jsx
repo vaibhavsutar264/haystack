@@ -30,8 +30,8 @@ export const BlogCarousel = ({ items }) => {
             delay: 3000,
             disableOnInteraction: false,
          }}
-         onSlideChange={() => console.log('slide change')}
-         onSwiper={(swiper) => console.log(swiper)}
+         // onSlideChange={() => console.log('slide change')}
+         // onSwiper={(swiper) => console.log(swiper)}
       >
          {items.map((item, index) => (
             <SwiperSlide key={`slide_${index}`}>
@@ -71,7 +71,7 @@ function WeGotCovered({ news }) {
    return (
       <>
          <section className="we-got-covered m-auto container py-5">
-            <h3 className="d-block text-capitalize we-got-covered-main-heading">
+            <h3 className="heading">
                We got Covered
             </h3>
             <motion.div

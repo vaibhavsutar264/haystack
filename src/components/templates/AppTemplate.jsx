@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import Footer from "../../Footer";
+import Footer from "../Footer";
 import HambergerMenuWithScriptTag from "../../HambergerMenuWithScriptTag";
-import Navbar from "../../Navbar";
+import Navbar from "../Navbar";
 import PreAnimationOnLoad from "../../PreAnimationOnLoad";
 
 const StyledTemplate = styled.div`
@@ -9,15 +9,14 @@ const StyledTemplate = styled.div`
    padding: 0;
    border: none;
    box-sizing: border-box;
-   user-select: none;
-   cursor: none;
+
    padding: 0px;
    margin: 0px;
 `
 
-function AppTemplate({ children, pageProps, bodyClassName, settings = {}, ...props }) {
+function AppTemplate({ children, pageProps = {}, bodyClassName = '', settings = {}, ...props }) {
    return (
-      <StyledTemplate {...props}>
+      <StyledTemplate {...props} className={`body__content ${bodyClassName}`}>
          {/* <HambergerMenuWithJQuery/> */}
          <PreAnimationOnLoad />
          <Navbar />

@@ -3,109 +3,113 @@ import Link from "next/link";
 import Head from "next/head";
 
 import React from "react";
-{
-   /* <Link to="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css" />   */
-}
+import styled from "@emotion/styled";
 
-// next.config.js
+const StyledHeroSection = styled.div`
+   padding-top: var(--layout-offset-top, 100px);
+   #text-video-h2 {
+      font-weight: 1000;
+      font-size: 6vw;
+      line-height: 1.3;
+      letter-spacing: 5px;
+      .text-video-text {
+         margin: -35px 0;
+      }
+      margin-bottom: 2.5rem;
+   }
+   #text-video-h6 {
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 40px;
+   }
+   video {
+      width: 60vw;
+      height: 59vh;
+      -o-object-fit: cover;
+      object-fit: cover;
+      pointer-events: none;
+      cursor: none;
+      background-color: #000;
+      color: red;
+      mix-blend-mode: screen;
+      margin-top: 30px;
+      position: absolute;
+      pointer-events: none;
+      display: none;
+   }
+`
 
-const textVideo = () => {
+const TextVideo = () => {
    return (
-      <>
-         <Head>
-            <script
-               src="https://code.jquery.com/jquery-3.5.1.js"
-               integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-               crossorigin="anonymous"
-            ></script>
-            <link
-               href="https://www.jqueryscript.net/css/jquerysctipttop.css"
-               rel="stylesheet"
-               type="text/css"
-            ></link>
-            {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script> */}
-         </Head>
-         <main className="flexbox" id="flexbox">
-            <div className="button-wrapper link" id="button-wrapper">
-               <div className="relative container">
-                  <h2 id="text-video-h2">
-                     <div className="text-1 text-video-text">
-                        <span>I</span>
-                        <span>n</span>
-                        <span>f</span>
-                        <span>e</span>
-                        <span>c</span>
-                        <span>t</span>
-                        <span>i</span>
-                        <span>o</span>
-                        <span>u</span>
-                        <span>s </span>
-                     </div>
-                     <div className="text-2 text-video-text">
-                        <span>D</span>
-                        <span>i</span>
-                        <span>s</span>
-                        <span>e</span>
-                        <span>a</span>
-                        <span>s</span>
-                        <span>e</span>
-                        <span>s </span>
-                     </div>
-                     <div className="text-3 text-video-text">
-                        <span className="spacing">W</span>
-                        <span>o</span>
-                        <span>u</span>
-                        <span>l</span>
-                        <span>d</span>
-                        <span>n</span>
-                        <span>'</span>
-                        <span>t </span>
-                     </div>
-                     <div className="text-4 text-video-text">
-                        <span className="spacing">K</span>
-                        <span>i</span>
-                        <span>l</span>
-                        <span>l </span>
-                        <span className="spacing">A</span>
-                        <span>n</span>
-                        <span>y</span>
-                        <span>m</span>
-                        <span>o</span>
-                        <span>r</span>
-                        <span>e</span>
-                     </div>
-                  </h2>
-                  <video id="banner" type="video/mp4" muted autoPlay loop>
-                     <source src="https://media.istockphoto.com/videos/cloning-bacteria-loop-video-id473038835" />
-                  </video>
-
-                  {/* <video src={require('./istockphoto-454669794-640_adpp_is.mp4')}  id="banner" type="video/mp4" autoPlay loop /> */}
-
-                  {/* <video src="istockphoto-454669794-640_adpp_is.mp4" id="banner" type="video/mp4" muted loop autoPlay></video> */}
-               </div>
-               <div>
-                  <h2
-                     id="text-video-h6"
-                     className="text-capitalize font-weight-normal"
-                  >
-                     {" "}
-                     400+ bacteria and fungi tested and reported in 12 hours
-                  </h2>
-               </div>
-
-               <div className="btn-secondary"></div>
+      <StyledHeroSection>
+         <div className="button-wrapper link" id="button-wrapper">
+            <div className="relative container">
+               <h2 id="text-video-h2">
+                  <div className="text-1 text-video-text">
+                     <span>I</span>
+                     <span>n</span>
+                     <span>f</span>
+                     <span>e</span>
+                     <span>c</span>
+                     <span>t</span>
+                     <span>i</span>
+                     <span>o</span>
+                     <span>u</span>
+                     <span>s </span>
+                  </div>
+                  <div className="text-2 text-video-text">
+                     <span>D</span>
+                     <span>i</span>
+                     <span>s</span>
+                     <span>e</span>
+                     <span>a</span>
+                     <span>s</span>
+                     <span>e</span>
+                     <span>s </span>
+                  </div>
+                  <div className="text-3 text-video-text">
+                     <span className="spacing">W</span>
+                     <span>o</span>
+                     <span>u</span>
+                     <span>l</span>
+                     <span>d</span>
+                     <span>n</span>
+                     <span>'</span>
+                     <span>t </span>
+                  </div>
+                  <div className="text-4 text-video-text">
+                     <span className="spacing">K</span>
+                     <span>i</span>
+                     <span>l</span>
+                     <span>l </span>
+                     <span className="spacing">A</span>
+                     <span>n</span>
+                     <span>y</span>
+                     <span>m</span>
+                     <span>o</span>
+                     <span>r</span>
+                     <span>e</span>
+                  </div>
+               </h2>
+               <video id="banner" type="video/mp4" muted autoPlay loop>
+                  <source src="https://media.istockphoto.com/videos/cloning-bacteria-loop-video-id473038835" />
+               </video>
             </div>
-         </main>
+            <div>
+               <h2
+                  id="text-video-h6"
+                  className="text-capitalize font-weight-normal"
+               >
+                  {" "}
+                  400+ bacteria and fungi tested and reported in 12 hours
+               </h2>
+            </div>
 
+            <div className="btn-secondary"></div>
+         </div>
          <div className="cursor"></div>
-
-         <Script src="src.js" strategy="lazyOnload"></Script>
-         <Script src="gsapMin.js" strategy="lazyOnload"></Script>
-         <Script src="jquerry.js" strategy="lazyOnload"></Script>
-         {/* <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></Script> */}
-         {/* <Script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></Script> */}
-      </>
+      </StyledHeroSection>
    );
 };
 
-export default textVideo;
+export default TextVideo;

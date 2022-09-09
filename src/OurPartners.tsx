@@ -29,8 +29,8 @@ export const ClientsCarousel = ({ items }) => {
             delay: 3000,
             disableOnInteraction: false,
          }}
-         onSlideChange={() => console.log('slide change')}
-         onSwiper={(swiper) => console.log(swiper)}
+         // onSlideChange={() => console.log('slide change')}
+         // onSwiper={(swiper) => console.log(swiper)}
       >
          {items.map((item, index) => (
             <SwiperSlide key={`slide_${index}`}>
@@ -58,13 +58,15 @@ const StyledCarousel = styled.section`
 const OurPartners = ({ ourPartner }) => {
    return (
       <>
-         <StyledCarousel className="our-partners mb-0">
-            <div className="container our-partners-main mb-5">
-               <h1 className="our-partner-heading">OUR PARTNERS </h1>
-               <h4 className="font-weight-normal our-partners-sub-heading">
-                  Make precision med a reality for millions
-               </h4>
-               <div className="d-flex pt-2 justify-content-end">
+         <StyledCarousel>
+            <div className="container mx-auto mb-5 py-10">
+               <div className="text-right mb-6">
+                  <h1 className="text-6xl font-bold mb-3">OUR PARTNERS </h1>
+                  <h4 className="font-weight-normal our-partners-sub-heading">
+                     Make precision med a reality for millions
+                  </h4>
+               </div>
+               <div className="flex pt-2 justify-end text-2xl font-bold">
                   <div className="px-lg-5 px-md-4 px-sm-4 px-3 our-partners-tabs">
                      <p className="font-weight-normal our-partners-value m-0">
                         100+
@@ -91,9 +93,6 @@ const OurPartners = ({ ourPartner }) => {
                   </div>
                </div>
             </div>
-            <div className="carousel" data-ride="true">
-               <div className="carousel-item"></div>
-            </div>
             <div className="page-container bg-white">
                <div className="page-back">
                   <div id="example">
@@ -102,8 +101,6 @@ const OurPartners = ({ ourPartner }) => {
                      </div>
                   </div>
                </div>
-               <Script src="jquerry.js"></Script>
-               <Script src="src.js"></Script>
             </div>
          </StyledCarousel>
       </>

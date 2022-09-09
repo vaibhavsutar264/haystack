@@ -1,10 +1,10 @@
 import { kebabCase } from 'lodash';
+import { jsonDirectory } from '../../../utils';
 
 // import excuteQuery from "../../../db"
 const fs = require('fs')
 const path = require('path')
 
-const jsonDirectory = path.join(process.cwd(), 'json');
 
 export default async function handler(req, res) {
    try {

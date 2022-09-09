@@ -3,6 +3,7 @@ import UpgradeImg from "./box.png";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import styled from "@emotion/styled";
 
 const topBottomVariants = {
    visible: {
@@ -14,7 +15,10 @@ const topBottomVariants = {
    hidden: { x: 200, opacity: 0.5, scale: 0.8 },
 };
 
-function Upgrade() {
+const StyledComponent = styled.div`
+`
+
+export default function Upgrade() {
    const controls = useAnimation();
    const [ref, inView] = useInView();
    useEffect(() => {
@@ -24,7 +28,7 @@ function Upgrade() {
    }, [controls, inView]);
 
    return (
-      <section className="upgrade">
+      <StyledComponent className="upgrade">
          <motion.div
             ref={ref}
             animate={controls}
@@ -32,26 +36,29 @@ function Upgrade() {
             variants={topBottomVariants}
             className="upgrade-main"
          >
-            <div className="container row align-items-center justify-content-around m-auto gap-32">
-               <div className="col-lg-6 col-md-6 col-sm-6">
-                  <h2 className="upgrade-heading text-uppercase">
-                     Upgrade your lab without hassle
-                  </h2>
-                  <p className="upgrade-para font-weight-normal py-xl-3 py-lg-3 py-md-2">
-                     A Cutting edge health tech platform and genomic testing
-                     rolled into one
-                  </p>
-                  <button className="px-xl-5 px-lg-4 btn-test">
-                     View UID Test
-                  </button>
-               </div>
-               <div className="upgrade-img col-lg-6 col-md-6 col-sm-6 mt-3">
-                  <Image src={UpgradeImg} />
+            <div className="container mx-auto px-3 md:px-0">
+               <div className="md:grid grid-cols-6 gap-4 items-center">
+                  <div className="col-span-4">
+                     <div className="mb-6">
+                        <h2 className="upgrade-heading text-4xl font-extrabold uppercase mb-3">
+                           Upgrade your lab <br /> without hassle
+                        </h2>
+                        <p className="upgrade-para text-xl font-weight-normal py-xl-3 py-lg-3 py-md-2 mb-4">
+                           A Cutting edge health tech platform and genomic testing
+                           rolled into one
+                        </p>
+                        <button className="px-xl-5 px-lg-4 btn-test bg-white text-blue-400 font-bold px-6 py-3 rounded-full border">
+                           View UID Test
+                        </button>
+                     </div>
+
+                  </div>
+                  <div className="col-span-2">
+                     <Image src={UpgradeImg} />
+                  </div>
                </div>
             </div>
          </motion.div>
-      </section>
+      </StyledComponent>
    );
 }
-
-export default Upgrade;

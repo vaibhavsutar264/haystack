@@ -2,9 +2,9 @@ import React from "react";
 import "./jquerry";
 import "./src";
 import PreAnimationOnLoad from "./PreAnimationOnLoad";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 import styled from "@emotion/styled";
+import Navbar from "./components/Navbar";
 
 const Styled = styled.div`
    .img-responsive {

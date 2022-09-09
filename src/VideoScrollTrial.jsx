@@ -11,8 +11,6 @@ const VideoScrollTrial = () => {
          <div>
             <h1>abcsdjk</h1>
          </div>
-         <Script src="jquerry.js"></Script>
-         <Script src="src.js"></Script>
       </div>
    );
 };

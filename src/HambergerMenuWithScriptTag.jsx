@@ -3,7 +3,7 @@ import React from "react";
 // import $ from 'jquery';
 import Script from "next/script";
 import data from "../src/data/data.json";
-import NavbarContent from "./NavbarContent";
+import NavbarContent from "./components/NavbarContent";
 import Image from "next/image";
 // import Head from 'next/head';
 // Create the function
