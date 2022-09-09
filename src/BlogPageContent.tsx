@@ -23,7 +23,7 @@ function BlogPageContent({ post, }: any) {
                   </div>
                </div>
                <div className="container py-3 text-center blog-featured-image">
-                  <img src={post.image_url} layout={'fill'} className="img-responsive" />
+                  <img src={post.image_url} alt="post" className="img-responsive" />
                </div>
                <div className="m-auto py-4 blog-content">
                   <div className="font-weight-normal blog-content-text" dangerouslySetInnerHTML={{ __html: post.description }}></div>
