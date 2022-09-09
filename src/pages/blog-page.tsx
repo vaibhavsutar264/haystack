@@ -1,14 +1,12 @@
 import React from "react";
-import Template from "../Template";
 import BlogPageContent from "../BlogPageContent";
+import AppTemplate from "../components/templates/AppTemplate";
 
 function BlogPage() {
    return (
-      <>
-         <Template>
-            <BlogPageContent />
-         </Template>
-      </>
+      <AppTemplate>
+         <BlogPageContent />
+      </AppTemplate>
    );
 }
 

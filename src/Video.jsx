@@ -35,7 +35,7 @@ const Video = () => {
 <Script src='./scrollMagicGsap.js' strategy="lazyOnload"></Script>
 <Script src="./scrollMagicAnimationGsap.js" strategy="lazyOnload"></Script>
 <Script src="./script.js" strategy="lazyOnload"></Script> */}
-            <Script src="./src.js" strategy="lazyOnload"></Script>
+            {/* <Script src="./src.js" strategy="lazyOnload"></Script> */}
          </div>
       </>
    );

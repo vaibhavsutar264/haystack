@@ -34,7 +34,7 @@ export default function MediaPicker({ values, }) {
    const primaryAction = {
       title: 'Done choosing files',
       onClick: () => {
-         if (!window.confirm('Confirm')) {
+         if (!globalThis.confirm('Confirm')) {
             return
          }
          modal.close()

@@ -52,7 +52,7 @@ const NotificationsDrawer = () => {
 };
 
 const NavbarRight = () => {
-   const user = window.user;
+   const user = globalThis?.user;
    return (
       <div className="flex items-center gap-1 text-gray-600">
          {/* <svg xmlns="http://www.w3.org/2000/svg" className="text-gray-600 h-9 w-9" viewBox="0 0 20 20" fill="currentColor">

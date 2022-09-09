@@ -17,7 +17,6 @@ const StyledTemplate = styled.div`
 function AppTemplate({ children, pageProps = {}, bodyClassName = '', settings = {}, ...props }) {
    return (
       <StyledTemplate {...props} className={`body__content ${bodyClassName}`}>
-         {/* <HambergerMenuWithJQuery/> */}
          <PreAnimationOnLoad />
          <Navbar />
          {children}

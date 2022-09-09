@@ -54,7 +54,7 @@ const VideoScrollTrial1 = () => {
             <Script src={'https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js?v=3.3.0-3'}></Script> */}
          <Script src="gsapMinVideoScrollTrial1.js"></Script>
          <Script src="scrollTriggerMinVideoScrollTrial1.js"></Script>
-         <Script src="src.js"></Script>
+         {/* <Script src="src.js"></Script> */}
 
          {/* </Html> */}
       </>

@@ -3,7 +3,7 @@ import React from "react";
 import BlogFeaturedImg from "./blog-featured-image.jpg";
 import AuthorImg from "./blog-author-img.jpg";
 
-function BlogPageContent({ post, }: any) {
+function BlogPageContent({ post = {}, }: any) {
    const { title } = post
    return (
       <>
@@ -43,6 +43,10 @@ function BlogPageContent({ post, }: any) {
          </section>
       </>
    );
+}
+
+BlogPageContent.defaultProps = {
+   post: {}
 }
 
 export default BlogPageContent;

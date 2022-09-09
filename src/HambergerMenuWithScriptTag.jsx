@@ -28,7 +28,7 @@ const HambergerMenuWithScriptTag = () => {
                   <NavbarContent />
                </div>
             </div>
-            <Script src="src.js" strategy="lazyOnload"></Script>
+            {/* <Script src="src.js" strategy="lazyOnload"></Script> */}
          </div>
       </>
    );

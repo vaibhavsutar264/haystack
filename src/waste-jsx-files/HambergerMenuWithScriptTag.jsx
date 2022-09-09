@@ -25,7 +25,7 @@ const HambergerMenuWithScriptTag = () => {
                   <h1>hystack content will be shown here</h1>
                </div>
             </div>
-            <Script src="src.js" strategy="lazyOnload"></Script>
+            {/* <Script src="src.js" strategy="lazyOnload"></Script> */}
          </div>
          {/* <ScriptTag isHydrating={true} type="text/javascript"
                 src=
