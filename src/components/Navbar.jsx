@@ -7,8 +7,7 @@ import useHeadroom from "react-useheadroom";
 import styled from "@emotion/styled";
 import settings from '../json/settings.json'
 import { SidebarNav } from "./index";
-// import ReactHeadroom from 'react-headroom'
-// import logoUri from './assets'
+
 
 const MENU_LIST = [
    {
