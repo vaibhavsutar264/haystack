@@ -3,19 +3,15 @@ import ResearchPapers from "../ResearchPapers";
 import WhyChooseHaystack from "../WhyChooseHaystack";
 import WhyThisTechnology from "../WhyThisTechnology";
 import AreYouDiagnostic from "../AreYouDiagnostic";
-import Template from "../Template";
+import AppTemplate from "../components/templates/AppTemplate";
 
 function Diagnostic() {
    return (
-      <>
-         <div id="diagnostic">
-            <Template>
-               <AreYouDiagnostic />
-               <WhyChooseHaystack />
-               <WhyThisTechnology />
-            </Template>
-         </div>
-      </>
+      <AppTemplate>
+         <AreYouDiagnostic />
+         <WhyChooseHaystack />
+         <WhyThisTechnology />
+      </AppTemplate>
    );
 }
 

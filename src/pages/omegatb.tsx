@@ -3,18 +3,15 @@ import ProductTemplate from "../ProductTemplate";
 import OmegaTb from "../OmegaTb";
 import WhyChoose from "../WhyChoose";
 import OmegaTbTestWorks from "../OmegaTbTestWorks";
+import AppTemplate from "../components/templates/AppTemplate";
 
 function OmegaTB() {
    return (
-      <>
-         <div id="omega">
-            <ProductTemplate>
-               <OmegaTb />
-               <WhyChoose />
-               <OmegaTbTestWorks />
-            </ProductTemplate>
-         </div>
-      </>
+      <AppTemplate>
+         <OmegaTb />
+         <WhyChoose />
+         <OmegaTbTestWorks />
+      </AppTemplate>
    );
 }
 

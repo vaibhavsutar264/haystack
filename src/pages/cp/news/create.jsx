@@ -1,8 +1,8 @@
 import dynamic from "next/dynamic";
 import { Bootstrap } from "../../../../cp/src";
-import { Field } from "../../../../cp/src/components/molecules";
+import { ErrorBoundary, Field } from "../../../../cp/src/components/molecules";
 import { Form } from "../../../../cp/src/components/organisms";
-const ContentEditor = dynamic(() => import('../../../../cp/src/components/organisms/ContentEditor/ContentEditor'))
+const ContentEditor = dynamic(() => import('../../../../cp/src/components/organisms/ContentEditor/ContentEditor'), { ssr: false })
 import { Field as FormikField } from 'formik'
 
 const statusOptions = [
@@ -23,7 +23,9 @@ export default function create({ news }) {
                {/* <Form.Field name={'title'} /> */}
                <Field required={true} name={'title'} label={'Title'} />
                <Field required={true} name={'slug'} label={'Slug'} />
-               <Field required={true} name={'description'} label={'Description'} Component={ContentEditor} />
+               <ErrorBoundary>
+                  <Field required={true} name={'description'} label={'Description'} Component={ContentEditor} />
+               </ErrorBoundary>
                <Field required={true} name={'url'} label={'URL'} />
                <div className="mb-3">
                   <label htmlFor="">Status</label>

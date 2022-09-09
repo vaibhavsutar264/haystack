@@ -7,7 +7,7 @@ import { Field as FormikField } from 'formik'
 import { Form } from "../../../../cp/src/components/organisms";
 
 import { getPostFile, getPostFiles } from "../../../utils/posts";
-const ContentEditor = dynamic(() => import('../../../../cp/src/components/organisms/ContentEditor/ContentEditor'))
+const ContentEditor = dynamic(() => import('../../../../cp/src/components/organisms/ContentEditor/ContentEditor'), { ssr: false })
 globalThis.self = globalThis
 // import excuteQuery from "../../../db";
 const statusOptions = [
