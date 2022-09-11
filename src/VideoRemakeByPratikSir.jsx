@@ -8,10 +8,17 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
+import Section from "./components/atoms/Section";
 
 const StyledVideoSection = styled.div`
    video {
-      transform: scale(0.5);
+   }
+   .textSlides {
+      max-height: 60px;
+      @media screen and (min-width: 800px)
+      {
+         height: 35px;
+      }
    }
 `
 
@@ -28,7 +35,7 @@ const TextSlides = ({ items }) => {
             delay: 3000,
             disableOnInteraction: false,
          }}
-         style={{ height: '35px' }}
+         className="textSlides"
       >
          {items?.map((txt, txtIndex) => (
          <SwiperSlide key={'txt_'+txtIndex}>
@@ -44,29 +51,32 @@ const TextSlides = ({ items }) => {
 const VideoRemakeByPratikSir = () => {
    return (
       <StyledVideoSection>
-         <div className="video-remake-again container mx-auto">
-            <div className="title-animation-box-video-remake w-100 mb-6">
-               <TextSlides
-                  items={[
-                     { text: `A Revolutionary technology to aid microbiology` },
-                     { text: `A Revolutionary technology to aid microbiology` },
-                  ]}
-               />
+         <Section containerClass={''} className="py-6" fromBg="white" toBg="black">
+            <div className="video-remake-again container mx-auto">
+               <div data-aos="fade-up" className="title-animation-box-video-remake w-100 mb-6">
+                  <TextSlides
+                     items={[
+                        { text: `A Revolutionary technology to aid microbiology` },
+                        { text: `A Revolutionary technology to aid microbiology` },
+                     ]}
+                  />
+               </div>
             </div>
-            <div className="fake-image">
-               <video
-                  id="scroll-video"
-                  className="w-full"
-                  src={
-                     "https://media.istockphoto.com/videos/medical-science-laboratory-beautiful-black-scientist-looking-under-video-id1297574801"
-                  }
-                  type="video/mp4"
-                  autoPlay
-                  muted
-                  loop
-               ></video>
-            </div>
-         </div>
+            <video
+               id="scroll-video"
+               className="w-full"
+               src={
+                  "https://media.istockphoto.com/videos/medical-science-laboratory-beautiful-black-scientist-looking-under-video-id1297574801"
+               }
+               type="video/mp4"
+               data-aos="zoom-in"
+               data-aos-delay="300"
+               data-aos-duration="1600"
+               autoPlay
+               muted
+               loop
+            ></video>
+         </Section>
       </StyledVideoSection>
    );
 };

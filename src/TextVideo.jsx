@@ -9,11 +9,16 @@ const StyledHeroSection = styled.div`
    padding-top: var(--layout-offset-top, 100px);
    #text-video-h2 {
       font-weight: 1000;
-      font-size: 6vw;
+      font-size: 10vw;
       line-height: 1.3;
       letter-spacing: 5px;
-      .text-video-text {
-         margin: -35px 0;
+
+      @media screen and (min-width: 800px)
+      {
+         .text-video-text {
+            margin: -35px 0;
+         }
+         font-size: 6vw;
       }
       margin-bottom: 2.5rem;
    }
@@ -43,7 +48,7 @@ const TextVideo = () => {
    return (
       <StyledHeroSection>
          <div className="button-wrapper link" id="button-wrapper">
-            <div className="relative container">
+            <div className="relative container mx-auto px-3 md:px-0">
                <h2 id="text-video-h2">
                   <div className="text-1 text-video-text">
                      <span>I</span>
@@ -95,7 +100,7 @@ const TextVideo = () => {
                   <source src="https://media.istockphoto.com/videos/cloning-bacteria-loop-video-id473038835" />
                </video>
             </div>
-            <div>
+            <div className="px-3 md:px-0">
                <h2
                   id="text-video-h6"
                   className="text-capitalize font-weight-normal"

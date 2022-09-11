@@ -12,7 +12,7 @@ const topBottomVariants = {
       scale: 1,
       transition: { delay: 0, duration: 1 },
    },
-   hidden: { x: 200, opacity: 0.5, scale: 0.8 },
+   hidden: { x: 0, opacity: 0.5, scale: 1 },
 };
 
 const StyledComponent = styled.div`

@@ -61,14 +61,14 @@ const OurPartners = ({ ourPartner }) => {
          <StyledCarousel>
             <div className="container mx-auto mb-5 py-10 px-3 md:px-0">
                <div className="text-right mb-6">
-                  <h1 className="text-5xl font-bold mb-6">OUR PARTNERS </h1>
-                  <h4 className="font-weight-normal our-partners-sub-heading text-xl">
+                  <h1 className="text-5xl font-bold mb-6" data-aos="fade-in">OUR PARTNERS </h1>
+                  <h4 className="font-weight-normal our-partners-sub-heading text-xl" data-aos="fade-in">
                      Make precision med a reality for millions
                   </h4>
                </div>
                <div className="flex items-center justify-end gap-8 divide-x-2 divide-black">
                   <div className="grid__col pr-3 md:pr-6">
-                     <h4 className="text-lg md:text-4xl font-bold">
+                     <h4 className="text-lg md:text-4xl font-bold" data-aos="fade-in">
                         100+
                      </h4>
                      <p className="text-xl">
@@ -76,7 +76,7 @@ const OurPartners = ({ ourPartner }) => {
                      </p>
                   </div>
                   <div className="grid__col pl-3 mr-3 md:pl-6 md:mr-6">
-                     <h4 className="text-lg md:text-4xl font-bold">
+                     <h4 className="text-lg md:text-4xl font-bold" data-aos="fade-in">
                      500+
                      </h4>
                      <p className="text-xl">
@@ -84,7 +84,7 @@ const OurPartners = ({ ourPartner }) => {
                      </p>
                   </div>
                   <div className="grid__col pl-3 mr-3 md:pl-6 md:mr-6">
-                     <h4 className="text-lg md:text-4xl font-bold">
+                     <h4 className="text-lg md:text-4xl font-bold" data-aos="fade-in">
                         100+
                      </h4>
                      <p className="text-xl">
@@ -96,7 +96,7 @@ const OurPartners = ({ ourPartner }) => {
             <div className="page-container bg-white">
                <div className="page-back">
                   <div id="example">
-                     <div className="container-mx-auto">
+                     <div className="container-mx-auto" data-aos="fade-in">
                         <ClientsCarousel items={ourPartner} />
                      </div>
                   </div>

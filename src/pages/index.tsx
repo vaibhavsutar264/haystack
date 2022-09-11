@@ -36,10 +36,8 @@ function Home({ Component, pageProps, news, settings }) {
          <HeroSection>
             <TextVideo />
          </HeroSection>
-         <Section className="py-6" fromBg="white" toBg="white">
-            <VideoRemakeByPratikSir />
-         </Section>
-         <Section fromBg="white" toBg="black">
+         <VideoRemakeByPratikSir />
+         <Section className="py-10" fromBg="white" toBg="black">
             <Upgrade />
          </Section>
          <Section fromBg="black" toBg="#3570d3" className="py-10">
@@ -48,7 +46,7 @@ function Home({ Component, pageProps, news, settings }) {
          <Precision />
          {/* <Section>
          </Section> */}
-         <Section className="py-10 pb-16 _">
+         <Section className="bg-white py-10 pb-16 _" fromBg="white" toBg="white">
             <WeGotCovered news={news} />
          </Section>
       </StyledHome>

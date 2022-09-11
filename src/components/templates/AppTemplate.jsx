@@ -3,7 +3,9 @@ import Footer from "../Footer";
 import HambergerMenuWithScriptTag from "../../HambergerMenuWithScriptTag";
 import Navbar from "../Navbar";
 import PreAnimationOnLoad from "../../PreAnimationOnLoad";
-
+import { useEffect } from "react";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 const StyledTemplate = styled.div`
    margin: 0;
    padding: 0;
@@ -15,6 +17,11 @@ const StyledTemplate = styled.div`
 `
 
 function AppTemplate({ children, pageProps = {}, bodyClassName = '', settings = {}, ...props }) {
+   useEffect(() => {
+      if (AOS) {
+         AOS.init();
+      }
+   }, [])
    return (
       <StyledTemplate {...props} className={`body__content ${bodyClassName}`}>
          <PreAnimationOnLoad />
