@@ -15,7 +15,11 @@ body, html {
 }
 
 body {
-   background: var(--current-bg-color);
+   background-color: var(--current-bg-color);
+   /* background-color: #AD310B; */
+   -webkit-transition: background-color 1000ms linear;
+   -ms-transition: background-color 1000ms linear;
+   transition: background-color 1000ms linear;
 }
 .body__content .heading {
    font-size: var(--heading-size);

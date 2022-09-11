@@ -22,10 +22,10 @@ export default function Section({ children, fromBg, toBg, ...props }) {
       document.body.classList.add('body--home')
 
       if (inView) {
-        control.start("visible");
+      //   control.start("visible");
         document.body.setAttribute('style', '--current-bg-color: ' + toBg)
       } else {
-         control.start("hidden");
+         // control.start("hidden");
          document.body.setAttribute('style', '--current-bg-color: ' + fromBg)
       }
     }, [control, inView]);
