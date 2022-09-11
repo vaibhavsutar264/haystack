@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-   --primary-color: blue;
+   --primary-color: #3570d3;
 }
 
 body, html {

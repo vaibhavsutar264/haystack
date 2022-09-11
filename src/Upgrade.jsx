@@ -40,21 +40,23 @@ export default function Upgrade() {
                <div className="md:grid grid-cols-6 gap-4 items-center">
                   <div className="col-span-4">
                      <div className="mb-6">
-                        <h2 className="upgrade-heading text-4xl font-extrabold uppercase mb-3">
+                        <h2 className="upgrade-heading text-5xl font-extrabold uppercase mb-6">
                            Upgrade your lab <br /> without hassle
                         </h2>
-                        <p className="upgrade-para text-xl font-weight-normal py-xl-3 py-lg-3 py-md-2 mb-4">
-                           A Cutting edge health tech platform and genomic testing
+                        <p className="upgrade-para text-2xl font-weight-normal py-xl-3 py-lg-3 py-md-2 mb-6">
+                           A Cutting edge health tech platform and <br /> genomic testing
                            rolled into one
                         </p>
-                        <button className="px-xl-5 px-lg-4 btn-test bg-white text-blue-400 font-bold px-6 py-3 rounded-full border">
+                        <button className="px-xl-5 px-lg-4 btn-test bg-white text-blue-400 font-bold px-6 py-3 rounded-full border hover:bg-blue-600 hover:text-white hover:border-transparent">
                            View UID Test
                         </button>
                      </div>
 
                   </div>
                   <div className="col-span-2">
-                     <Image src={UpgradeImg} />
+                     <div className="w-6/12 mx-auto">
+                        <Image src={UpgradeImg} className="max-full" />
+                     </div>
                   </div>
                </div>
             </div>

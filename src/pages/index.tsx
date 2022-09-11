@@ -24,6 +24,7 @@ const StyledHome = styled(AppTemplate)`
 
 const HeroSection = styled(Section)`
    background-image: url(${heroBg.src});
+   background-size: cover;
    min-height: 100vh;
    display: flex;
    align-items: center;
@@ -47,7 +48,7 @@ function Home({ Component, pageProps, news, settings }) {
          <Precision />
          {/* <Section>
          </Section> */}
-         <Section className="py-10 pb-16">
+         <Section className="py-10 pb-16 _">
             <WeGotCovered news={news} />
          </Section>
       </StyledHome>

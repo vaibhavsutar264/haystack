@@ -59,36 +59,36 @@ const OurPartners = ({ ourPartner }) => {
    return (
       <>
          <StyledCarousel>
-            <div className="container mx-auto mb-5 py-10">
+            <div className="container mx-auto mb-5 py-10 px-3 md:px-0">
                <div className="text-right mb-6">
-                  <h1 className="text-6xl font-bold mb-3">OUR PARTNERS </h1>
-                  <h4 className="font-weight-normal our-partners-sub-heading">
+                  <h1 className="text-5xl font-bold mb-6">OUR PARTNERS </h1>
+                  <h4 className="font-weight-normal our-partners-sub-heading text-xl">
                      Make precision med a reality for millions
                   </h4>
                </div>
-               <div className="flex pt-2 justify-end text-2xl font-bold">
-                  <div className="px-lg-5 px-md-4 px-sm-4 px-3 our-partners-tabs">
-                     <p className="font-weight-normal our-partners-value m-0">
+               <div className="flex items-center justify-end gap-8 divide-x-2 divide-black">
+                  <div className="grid__col pr-3 md:pr-6">
+                     <h4 className="text-lg md:text-4xl font-bold">
                         100+
-                     </p>
-                     <p className="font-weight-normal our-partners-text">
+                     </h4>
+                     <p className="text-xl">
                         Cities
                      </p>
                   </div>
-                  <div className="px-lg-5 px-md-4 px-sm-4 px-3 our-partners-tabs">
-                     <p className="font-weight-normal our-partners-value m-0">
-                        500+
-                     </p>
-                     <p className="font-weight-normal our-partners-text">
-                        Hospitals
+                  <div className="grid__col pl-3 mr-3 md:pl-6 md:mr-6">
+                     <h4 className="text-lg md:text-4xl font-bold">
+                     500+
+                     </h4>
+                     <p className="text-xl">
+                     Hospitals
                      </p>
                   </div>
-                  <div className="ps-lg-5 ps-md-4 ps-sm-4 ps-3">
-                     <p className="font-weight-normal our-partners-value m-0">
+                  <div className="grid__col pl-3 mr-3 md:pl-6 md:mr-6">
+                     <h4 className="text-lg md:text-4xl font-bold">
                         100+
-                     </p>
-                     <p className="font-weight-normal our-partners-text">
-                        Doctors
+                     </h4>
+                     <p className="text-xl">
+                     Doctors
                      </p>
                   </div>
                </div>

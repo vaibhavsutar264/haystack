@@ -70,7 +70,7 @@ function WeGotCovered({ news }) {
    }, [controls, inView]);
    return (
       <>
-         <section className="we-got-covered m-auto container py-5">
+         <section className="we-got-covered m-auto container py-5 px-3 md:px-0" >
             <h3 className="heading">
                We got Covered
             </h3>
