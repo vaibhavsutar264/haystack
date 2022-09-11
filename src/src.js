@@ -34,51 +34,24 @@ if (typeof window !== "undefined") {
    //   foo = window.localStorage.getItem("foo");
 
    $($).ready(function () {
-      var cursor = $(".cursor");
-      var src = $("#banner").attr("src");
+      const dom = globalThis.document
+      const cursor = dom.querySelector(".cursor");
+      dom.addEventListener('mousemove', e => {
+         cursor.style.top = e.clientY - cursor.height() / 2
+         cursor.style.left = e.clientX - cursor.width() / 2
+         if (e.target.tagName == 'A') {
+            cursor.style.transform = `scale(10.2)`
+         } else {
+            cursor.style.transform = `scale(1)`
+         }
+      })
+      dom.addEventListener('mouseleave', e => {
+         cursor.style.opacity = 0
+      })
+      dom.addEventListener('mouseenter', e => {
+         cursor.style.opacity = 1
+      })
 
-      $(window).mousemove(function (e) {
-         cursor.css({
-            top: e.clientY - cursor.height() / 2,
-            left: e.clientX - cursor.width() / 2,
-         });
-      });
-
-      $(window)
-         .mouseleave(function () {
-            cursor.css({
-               opacity: "0",
-            });
-         })
-         .mouseenter(function () {
-            cursor.css({
-               opacity: "1",
-            });
-         });
-
-      $(".link")
-         .mouseenter(function () {
-            cursor.css({
-               transform: "scale(10.2)",
-            });
-         })
-         .mouseleave(function () {
-            cursor.css({
-               transform: "scale(1)",
-            });
-         });
-
-      $(window)
-         .mousedown(function () {
-            cursor.css({
-               transform: "scale(.2)",
-            });
-         })
-         .mouseup(function () {
-            cursor.css({
-               transform: "scale(1)",
-            });
-         });
    });
 
    let updateScrollPos = function (e) {
