@@ -51,9 +51,15 @@ const StyledHeroSection = styled.div`
          mask-image: url(${textImage.src} );
          -webkit-mask-repeat: no-repeat;
          mask-repeat: no-repeat;
-         width: 30vw;
-         height: 30vw;
-         mask-size: 30vw;
+         width: 54vw;
+         height: 67vw;
+         mask-size: 54vw;
+         @media screen and (min-width: 800px)
+         {
+            width: 30vw;
+            height: 30vw;
+            mask-size: 30vw;
+         }
          background: black;
       }
    }

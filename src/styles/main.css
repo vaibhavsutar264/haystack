@@ -67,3 +67,9 @@ section {
    object-fit: cover;
    border-radius: 100000px;
 }
+
+@media screen and (max-width: 1200px) {
+   .container {
+      max-width: 1000px;
+   }
+}
