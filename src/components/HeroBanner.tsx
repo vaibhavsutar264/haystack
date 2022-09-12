@@ -1,8 +1,8 @@
 import Image from 'next/image'
-export default function HeroBanner({ title, description, content, image, children, primaryAction, secondaryAction }) {
+export default function HeroBanner({ title, description, content, image, children, primaryAction, secondaryAction, bgColor = 'bg-blue-100' }) {
    return (
       <section
-         className="py-16 bg-blue-100"
+         className={`py-16 ${bgColor}`}
       >
          <div className="container px-3 md:px-0 mx-auto flex justify-center mb-8">
             <div className="grid md:grid-cols-2 gap-6 items-center">
