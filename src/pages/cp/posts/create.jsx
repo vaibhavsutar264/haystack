@@ -1,7 +1,7 @@
 import { Bootstrap } from "../../../../cp/src";
 import { Field } from "../../../../cp/src/components/molecules";
 import { Form } from "../../../../cp/src/components/organisms";
-const ContentEditor = dynamic(() => import('../../../../cp/src/components/organisms/ContentEditor/ContentEditor'))
+const ContentEditor = dynamic(() => import('../../../../cp/src/components/organisms/ContentEditor/ContentEditor'), { ssr: false })
 // import excuteQuery from "../../../db";
 import { Field as FormikField } from 'formik'
 import dynamic from "next/dynamic";

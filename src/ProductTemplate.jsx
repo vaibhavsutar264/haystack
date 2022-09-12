@@ -3,7 +3,7 @@ import "./jquerry";
 import "./src";
 import PreAnimationOnLoad from "./PreAnimationOnLoad";
 import ProductNavbar from "./ProductNavbar";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 const Template = ({ children }) => {
    return (

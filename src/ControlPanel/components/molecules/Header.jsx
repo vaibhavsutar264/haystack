@@ -1,6 +1,6 @@
 // import { InertiaLink } from "@inertiajs/inertia-react";
 import { route } from "../../utils";
-import Headroom from "react-headroom";
+// import Headroom from "react-headroom";
 
 const Navicon = () => {
    return (
@@ -52,7 +52,7 @@ const NotificationsDrawer = () => {
 };
 
 const NavbarRight = () => {
-   const user = window.user;
+   const user = globalThis?.user;
    return (
       <div className="flex items-center gap-1 text-gray-600">
          {/* <svg xmlns="http://www.w3.org/2000/svg" className="text-gray-600 h-9 w-9" viewBox="0 0 20 20" fill="currentColor">
@@ -88,7 +88,7 @@ const NavbarRight = () => {
 export default function Header() {
    // const
    return (
-      <Headroom>
+      <>
          <nav className="background-color-for-header-jsx-file-header border-b border-gray-200">
             <div className="container mx-auto py-3 px-3 md:px-0">
                <div className="flex flex-col md:flex-row md:items-center gap-3">
@@ -121,6 +121,6 @@ export default function Header() {
                </div>
             </div>
          </nav>
-      </Headroom>
+      </>
    );
 }

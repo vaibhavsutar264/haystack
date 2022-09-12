@@ -29,6 +29,6 @@ mix.js(ADMIN_MAIN_FILE, "public/static/").react().extract([
    // '@inertiajs/inertia',
    // '@inertiajs/inertia-react',
    "formik",
-   "react-headroom",
+   // "react-headroom",
 ]);
 // mix.postCss(ADMIN_CSS_FILE, 'public/static/', postCssConfig);

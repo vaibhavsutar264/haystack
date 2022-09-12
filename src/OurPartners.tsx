@@ -29,8 +29,8 @@ export const ClientsCarousel = ({ items }) => {
             delay: 3000,
             disableOnInteraction: false,
          }}
-         onSlideChange={() => console.log('slide change')}
-         onSwiper={(swiper) => console.log(swiper)}
+         // onSlideChange={() => console.log('slide change')}
+         // onSwiper={(swiper) => console.log(swiper)}
       >
          {items.map((item, index) => (
             <SwiperSlide key={`slide_${index}`}>
@@ -58,52 +58,49 @@ const StyledCarousel = styled.section`
 const OurPartners = ({ ourPartner }) => {
    return (
       <>
-         <StyledCarousel className="our-partners mb-0">
-            <div className="container our-partners-main mb-5">
-               <h1 className="our-partner-heading">OUR PARTNERS </h1>
-               <h4 className="font-weight-normal our-partners-sub-heading">
-                  Make precision med a reality for millions
-               </h4>
-               <div className="d-flex pt-2 justify-content-end">
-                  <div className="px-lg-5 px-md-4 px-sm-4 px-3 our-partners-tabs">
-                     <p className="font-weight-normal our-partners-value m-0">
+         <StyledCarousel>
+            <div className="container mx-auto mb-5 py-10 px-3 md:px-0">
+               <div className="text-right mb-6">
+                  <h1 className="text-5xl font-bold mb-6" data-aos="fade-in">OUR PARTNERS </h1>
+                  <h4 className="font-weight-normal our-partners-sub-heading text-xl" data-aos="fade-in">
+                     Make precision med a reality for millions
+                  </h4>
+               </div>
+               <div className="flex items-center justify-end gap-8 divide-x-2 divide-black">
+                  <div className="grid__col pr-3 md:pr-6">
+                     <h4 className="text-lg md:text-4xl font-bold" data-aos="fade-in">
                         100+
-                     </p>
-                     <p className="font-weight-normal our-partners-text">
+                     </h4>
+                     <p className="text-xl">
                         Cities
                      </p>
                   </div>
-                  <div className="px-lg-5 px-md-4 px-sm-4 px-3 our-partners-tabs">
-                     <p className="font-weight-normal our-partners-value m-0">
-                        500+
-                     </p>
-                     <p className="font-weight-normal our-partners-text">
-                        Hospitals
+                  <div className="grid__col pl-3 mr-3 md:pl-6 md:mr-6">
+                     <h4 className="text-lg md:text-4xl font-bold" data-aos="fade-in">
+                     500+
+                     </h4>
+                     <p className="text-xl">
+                     Hospitals
                      </p>
                   </div>
-                  <div className="ps-lg-5 ps-md-4 ps-sm-4 ps-3">
-                     <p className="font-weight-normal our-partners-value m-0">
+                  <div className="grid__col pl-3 mr-3 md:pl-6 md:mr-6">
+                     <h4 className="text-lg md:text-4xl font-bold" data-aos="fade-in">
                         100+
-                     </p>
-                     <p className="font-weight-normal our-partners-text">
-                        Doctors
+                     </h4>
+                     <p className="text-xl">
+                     Doctors
                      </p>
                   </div>
                </div>
-            </div>
-            <div className="carousel" data-ride="true">
-               <div className="carousel-item"></div>
             </div>
             <div className="page-container bg-white">
                <div className="page-back">
                   <div id="example">
-                     <div className="container-mx-auto">
+                     <div className="container-mx-auto" data-aos="fade-in">
                         <ClientsCarousel items={ourPartner} />
                      </div>
                   </div>
                </div>
-               <Script src="jquerry.js"></Script>
-               <Script src="src.js"></Script>
             </div>
          </StyledCarousel>
       </>

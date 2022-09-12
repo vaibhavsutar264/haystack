@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import NavItem from "./NavItem";
 import data from "./data/data.json";
+import NavItem from "./components/NavItem";
 
 const MENU_LIST = [
    {

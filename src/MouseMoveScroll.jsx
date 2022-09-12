@@ -66,9 +66,6 @@ const MouseMoveScroll = () => {
                   </ul>
                </div>
             </div>
-
-            <Script src="jquerry.js"></Script>
-            <Script src="src.js"></Script>
          </motion.div>
       </>
    );

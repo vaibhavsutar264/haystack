@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+   --primary-color: #3570d3;
+}
+
+body, html {
+   --font-family: "Poppins", sans-serif;
+   font-family: var(--font-family);
+   --heading-size: 2rem;
+   cursor: none;
+}
+
+body {
+   background-color: var(--current-bg-color);
+   /* background-color: #AD310B; */
+   -webkit-transition: background-color 1000ms linear;
+   -ms-transition: background-color 1000ms linear;
+   transition: background-color 1000ms linear;
+}
+.body__content .heading {
+   font-size: var(--heading-size);
+   font-weight: bold;
+   margin-bottom: 1.5rem;
+
+}
+
+.body__content:not(.home) {
+   padding-top: 80px !important;
+}
+
+section {
+   transition: opacity 1 ease;
+}
+.sidebar-opened section {
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 0.4 ease;
+}
+
+.cursor {
+   position: fixed;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background-color: white;
+   /* background-blend-mode: exclusion; */
+   /* background: url(https://pixabay.com/photos/lotus-water-lily-pink-flower-flower-7063576/); */
+   pointer-events: none;
+   mix-blend-mode: difference;
+   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+   z-index: 99999999999999;
+}
+
+.playing-bg {
+   /* background-color: red; */
+}
+
+.mask1 img {
+   --size: 200px;
+   width: var(--size);
+   height: var(--size);
+   object-fit: cover;
+   border-radius: 100000px;
+}
+
+@media screen and (max-width: 1200px) {
+   .container {
+      max-width: 1000px;
+   }
+}

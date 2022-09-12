@@ -1,16 +1,14 @@
 import React from "react";
-import Template from "../Template";
 import BlogListingPage from "../BlogListingPage";
+import AppTemplate from "../components/templates/AppTemplate";
 import { getCategoryFile, getCategoryFiles } from "../utils/categories";
 import { getSettings } from "../utils/settings";
 
 function Blog({ categories }) {
    return (
-      <>
-         <Template>
-            <BlogListingPage categories={categories} />
-         </Template>
-      </>
+      <AppTemplate>
+         <BlogListingPage categories={categories} />
+      </AppTemplate>
    );
 }
 

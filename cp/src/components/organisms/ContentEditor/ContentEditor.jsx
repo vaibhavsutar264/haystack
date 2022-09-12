@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import React, { useState, useRef, useMemo, useEffect } from 'react';
-import JoditEditor from 'jodit-react';
+// import JoditEditor from 'jodit-react';
+import dynamic from "next/dynamic";
+const JoditEditor = dynamic(() => import('jodit-react'), { ssr: false })
 const StyledEditor = styled.div`
    textarea {
       width: 100%;

@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 import toast from "react-hot-toast";
-import { isBrowser } from "../../../src/utils";
 import { Button, Checkbox, EmailInput, Flex, NumberInput, PhoneNumberInput, Radio, SearchInput, Section, Select, Spinner, Switch, Tabs, Text, TextInput } from "../components/atoms";
 import Meter from "../components/atoms/Meter";
 import { Card, ErrorBoundary, MediaPicker, Menu, Popover, Prompt, TagsInput } from "../components/molecules";

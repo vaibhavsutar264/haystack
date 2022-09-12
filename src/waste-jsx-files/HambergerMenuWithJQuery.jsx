@@ -1,6 +1,5 @@
 import React, { componentDidMount } from "react";
 import $ from "jquery";
-// window.jQuery = $;
 
 const HambergerMenuWithJQuery = () => {
    if (process.browser) {
