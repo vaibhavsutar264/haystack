@@ -45,7 +45,7 @@ function ResearchPapers() {
                <div className="grid__col" key={`rp_${rpIndex}`}>
                   <figure className="flex items-center gap-3">
                      <div className="w-5/12">
-                        <img src="" alt={'Research paper'} className="bg-gray-100" />
+                        <img src="" alt={'Research paper'} className="bg-gray-100 aspect-square w-56 h-56" />
                      </div>
                      <figcaption>
                         <p>
@@ -190,7 +190,7 @@ export default function Clinician() {
                <div className="flex items-center gap-4 p-8">
                   <Image src={testiImg1} alt="" className="w-8 h-8 rounded-full" width={120} height={120} />
                   <div>
-                     <p className="mb-3 text-bold">Dr. Savitri</p>
+                     <p className="mb-3 font-bold">Dr. Savitri</p>
                      <p>
                      How genomics technology helped her save patients from excessive use of antibiotices. He now recommends Universal ID test to all his patients.
                      </p>
@@ -201,7 +201,7 @@ export default function Clinician() {
                <div className="flex flex-row-reverse justify-end text-right items-center gap-4 p-8">
                   <Image src={testiImg1} alt="" className="w-8 h-8 rounded-full" width={120} height={120} />
                   <div>
-                     <p className="mb-3 text-bold">Dr. Savitri</p>
+                     <p className="mb-3 font-bold">Dr. Savitri</p>
                      <p>
                      How genomics technology helped her save patients from excessive use of antibiotices. He now recommends Universal ID test to all his patients.
                      </p>
