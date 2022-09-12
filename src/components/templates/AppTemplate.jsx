@@ -24,11 +24,17 @@ const cursorAnimation = (  ) => {
       cursor.style.top = e.clientY - cursor.clientHeight / 2 + 'px'
       cursor.style.left = e.clientX - cursor.clientWidth / 2 + 'px'
       console.log(e)
+      cursor.classList.remove('playing-bg')
       if (e.target.tagName == 'A') {
          cursor.style.transform = `scale(10.2)`
       } else if (e.target.localName == 'span' && e.target.classList.contains('letter')) {
          cursor.style.transform = `scale(10.2)`
-      } else if (e.target.classList.contains('text--masked')) {
+      } else if (e.target.classList.contains('js-hover')) {
+         const maskImg = document.querySelector('.mask1 img')
+         maskImg.style.position = 'absolute'
+         maskImg.style.top = (e.clientY - 285) + 'px'
+         maskImg.style.left = (e.clientX - 180) + 'px'
+         cursor.classList.add('playing-bg')
          cursor.style.transform = `scale(10.2)`
       } else {
          cursor.style.transform = `scale(1)`

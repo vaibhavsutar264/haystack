@@ -6,6 +6,8 @@ import React from "react";
 import styled from "@emotion/styled";
 // import videoBg from './assets/mask-text-video.mp4'
 import textmask from './assets/mask-text-video_AdobeExpress.gif'
+import textImage from './assets/the_title.png'
+
 const StyledHeroSection = styled.div`
    padding-top: var(--layout-offset-top, 100px);
    #text-video-h2 {
@@ -43,6 +45,18 @@ const StyledHeroSection = styled.div`
       pointer-events: none;
       display: none;
    }
+   .masked_text {
+      .mask1 {
+         -webkit-mask-image: url(${textImage.src} );
+         mask-image: url(${textImage.src} );
+         -webkit-mask-repeat: no-repeat;
+         mask-repeat: no-repeat;
+         width: 30vw;
+         height: 30vw;
+         mask-size: 30vw;
+         background: black;
+      }
+   }
 `
 
 const Text = styled.div`
@@ -66,8 +80,19 @@ const Text = styled.div`
       background: linear-gradient(to right, black 0% 1.19em, red 1.19em 1.9em, black 1.9em 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
+   }
+
 `
+
+const MaskedText = () => {
+   return (
+      <div className="masked_text">
+         <div className="mask1 js-hover">
+            <img src={textmask.src} alt="Cursor" width="200" height="200" className="js-hover" />
+         </div>
+      </div>
+   )
+}
 
 const TextVideo = () => {
    return (
@@ -75,14 +100,15 @@ const TextVideo = () => {
 
          <div className="button-wrapper link" id="button-wrapper">
             <div className="relative container mx-auto px-3 md:px-0">
-               <Text>
-                  <div className="c1 text text--masked mb-6">
+               <MaskedText />
+               {/* <Text>
+                  <div className=" text text--masked mb-6">
                      Infectious <br />
                      Diseases<br />
                      Wouldn't<br />
                      Kill Anymore
                   </div>
-               </Text>
+               </Text> */}
                {/* <h2 id="text-video-h2">
                   <div className="text-1 text-video-text">
                      <span className="letter">I</span>

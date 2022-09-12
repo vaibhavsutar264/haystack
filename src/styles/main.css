@@ -56,3 +56,14 @@ section {
    z-index: 99999999999999;
 }
 
+.playing-bg {
+   /* background-color: red; */
+}
+
+.mask1 img {
+   --size: 200px;
+   width: var(--size);
+   height: var(--size);
+   object-fit: cover;
+   border-radius: 100000px;
+}
