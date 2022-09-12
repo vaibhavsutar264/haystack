@@ -7,9 +7,14 @@ module.exports = {
    ],
    theme: {
       extend: {
+         aspectRatio: {
+            '3/4': '3 / 4',
+         },
          colors: {
             'blue': {
-               600: '#3570d3'
+               100: '#DDF3FD',
+               300: '#71BED7',
+               600: '#3570d3',
             },
          }
       },
