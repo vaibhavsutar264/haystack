@@ -23,7 +23,12 @@ const cursorAnimation = (  ) => {
       // console.log(e.clientY - cursor.clientHeight)
       cursor.style.top = e.clientY - cursor.clientHeight / 2 + 'px'
       cursor.style.left = e.clientX - cursor.clientWidth / 2 + 'px'
+      console.log(e)
       if (e.target.tagName == 'A') {
+         cursor.style.transform = `scale(10.2)`
+      } else if (e.target.localName == 'span' && e.target.classList.contains('letter')) {
+         cursor.style.transform = `scale(10.2)`
+      } else if (e.target.classList.contains('text--masked')) {
          cursor.style.transform = `scale(10.2)`
       } else {
          cursor.style.transform = `scale(1)`

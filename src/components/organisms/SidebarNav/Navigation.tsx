@@ -20,7 +20,9 @@ export const Navigation = () => (
 );
 
 const items = [
-   { label: 'Home', url: '/' },
-   { label: 'About', url: '/about' },
-   { label: 'Contact', url: '/contact' },
+   { label: 'SCIENCE CORNER', url: '/science-corner' },
+   { label: 'ABOUT US', url: '/about' },
+   { label: 'PRODUCT', url: '/universal' },
+   { label: 'LATEST NEWS', url: '/news' },
+   { label: 'BLOG', url: '/blog' },
 ]

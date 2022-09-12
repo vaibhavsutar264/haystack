@@ -36,12 +36,13 @@ const StyledComponent = styled(motion.div)`
       bottom: 0;
       width: 100vw;
       height: 100vh;
-      background: var(--primary-color);
+      background-color: transparent;
       z-index: 999;
+      transition: background-color .3s ease;
    }
    &.open {
-
       .background {
+         background-color: var(--primary-color);
          width: 100vw;
       }
    }
