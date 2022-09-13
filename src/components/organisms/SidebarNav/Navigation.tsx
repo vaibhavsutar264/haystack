@@ -12,7 +12,7 @@ const variants = {
 };
 
 export const Navigation = () => (
-  <motion.ul variants={variants}>
+  <motion.ul className="px-4 py-6" variants={variants}>
     {items.map((i, index) => (
       <MenuItem item={i} key={`mi_${index}`} />
     ))}

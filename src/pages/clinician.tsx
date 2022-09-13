@@ -37,7 +37,7 @@ function ResearchPapers() {
          className="py-10 bg-blue-100"
       >
          <div className="container px-3 md:px-0 mx-auto">
-            <h3 className="text-5xl font-bold text-black mb-4">
+            <h3 className="text-4xl md:text-5xl font-bold text-black mb-4">
                Research papers
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-7 my-10">
@@ -72,7 +72,7 @@ export function WhyChooseHaystack() {
             className="py-10"
          >
             <div className="container mx-auto px-3 md:px-0">
-               <p className="text-5xl font-bold mb-6 text-black">
+               <p className="text-4xl md:text-5xl font-bold mb-6 text-black">
                   Why Choose Haystack
                </p>
                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-end my-10">
@@ -145,7 +145,7 @@ export const FeatureCards = () => {
    return (
       <section className="py-10 bg-blue-100">
          <div className="container mx-auto px-3 md:px-0">
-            <h3 className="text-5xl font-bold mb-5 text-black">
+            <h3 className="text-4xl md:text-5xl font-bold mb-5 text-black">
                WHY THIS TECHNOLOGY FOR YOU?
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 my-10">
@@ -187,9 +187,9 @@ export default function Clinician() {
             secondaryAction={{  }}
          >
             <div className="bg-white container px-3 md:px-0 mb-8 ml-auto">
-               <div className="flex items-center gap-4 p-8">
+               <div className="flex items-center gap-4 p-4 md:p-8">
                   <Image src={testiImg1} alt="" className="w-8 h-8 rounded-full" width={120} height={120} />
-                  <div>
+                  <div className="md:w-8/12 w-11/12">
                      <p className="mb-3 font-bold">Dr. Savitri</p>
                      <p>
                      How genomics technology helped her save patients from excessive use of antibiotices. He now recommends Universal ID test to all his patients.
@@ -198,9 +198,9 @@ export default function Clinician() {
                </div>
             </div>
             <div className="bg-white container px-3 md:px-0 mb-8 mr-auto">
-               <div className="flex flex-row-reverse justify-end text-right items-center gap-4 p-8">
+               <div className="flex flex-row-reverse  text-right items-center gap-4 p-4 md:p-8">
                   <Image src={testiImg1} alt="" className="w-8 h-8 rounded-full" width={120} height={120} />
-                  <div>
+                  <div className="md:w-8/12 w-11/12">
                      <p className="mb-3 font-bold">Dr. Savitri</p>
                      <p>
                      How genomics technology helped her save patients from excessive use of antibiotices. He now recommends Universal ID test to all his patients.

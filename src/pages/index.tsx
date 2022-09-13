@@ -1,5 +1,5 @@
 import data from "../data/data.json";
-import OurPartners from "../OurPartners";
+import OurPartners, { ClientsCarousel } from "../OurPartners";
 import TextVideo from "../TextVideo";
 import Precision from "../Precision";
 import Upgrade from "../Upgrade";
@@ -37,11 +37,14 @@ function Home({ Component, pageProps, news, settings }) {
             <TextVideo />
          </HeroSection>
          <VideoRemakeByPratikSir />
-         <Section className="py-10" fromBg="white" toBg="black">
+         <Section className="py-10" fromBg="#000" toBg="#000">
             <Upgrade />
          </Section>
-         <Section fromBg="black" toBg="#3570d3" className="py-10">
+         <Section containerClass="" fromBg="#3570d3" toBg="#3570d3" className="py-10 pb-0 ">
             <OurPartners ourPartner={data.ourPartner} />
+         </Section>
+         <Section containerClass="" className="py-10 pb-0 bg-white">
+            <ClientsCarousel items={data.ourPartner} />
          </Section>
          <Precision />
          {/* <Section>

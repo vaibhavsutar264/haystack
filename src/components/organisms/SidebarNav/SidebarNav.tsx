@@ -104,7 +104,7 @@ const SidebarNav = () => {
     <StyledComponent
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className={isOpen ? "open" : "closed"}
+      className={isOpen ? "open" : "closed" + " px-3"}
       custom={height}
       ref={containerRef}
     >

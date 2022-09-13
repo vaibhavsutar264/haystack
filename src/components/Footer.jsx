@@ -20,7 +20,7 @@ function Footer({ settings = {} }) {
    return (
       <StyledFooter>
          <div className="container mx-auto border-t-4 border-black py-6 px-3 md:px-0">
-            <div className="flex flex-col md:flex-row justify-between gap-6">
+            <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
                <div className="flex__col">
                   <p className="text-xl mb-3">
                   {settings.email}
@@ -63,8 +63,8 @@ function Footer({ settings = {} }) {
                      </a>
                   </div>
                </div>
-               <div className="flex__col self-end">
-                  <ul className="flex flex-col gap-3 justify-end text-right text-3xl font-bold">
+               <div className="flex__col md:self-end">
+                  <ul className="flex flex-col gap-3 md:justify-end text-center md:text-right text-xl md:text-3xl font-bold">
                      <li>
                         <Link href="/science-corner">SCIENCE CORNER</Link>
                      </li>

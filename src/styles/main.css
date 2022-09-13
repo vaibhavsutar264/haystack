@@ -78,3 +78,10 @@ section {
       max-width: 1200px;
    }
 }
+
+.body__content.home {
+   --navbar-bg: transparent;
+}
+.body__content.home .header-pinned {
+   /* --navbar-bg: white; */
+}

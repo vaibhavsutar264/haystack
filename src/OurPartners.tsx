@@ -22,13 +22,26 @@ export const ClientsCarousel = ({ items }) => {
          // pagination={{ clickable: true }}
          scrollbar={{ draggable: true }}
          spaceBetween={50}
-         slidesPerView={5}
-         centeredSlides={true}
-         loop={false}
+         slidesPerView={3}
+         // centeredSlides={true}
+         loop={true}
          autoplay={{
             delay: 3000,
             disableOnInteraction: false,
          }}
+         breakpoints={{
+         // when window width is >= 640px
+            640: {
+               width: 640,
+               slidesPerView: 3,
+            },
+            // when window width is >= 768px
+            768: {
+               width: 768,
+               slidesPerView: 5,
+            },
+         }}
+
          // onSlideChange={() => console.log('slide change')}
          // onSwiper={(swiper) => console.log(swiper)}
       >
@@ -60,13 +73,13 @@ const OurPartners = ({ ourPartner }) => {
       <>
          <StyledCarousel>
             <div className="container mx-auto mb-5 py-10 px-3 md:px-0">
-               <div className="text-right mb-6">
+               <div className="text-white text-right mb-6">
                   <h1 className="text-5xl font-bold mb-6" data-aos="fade-in">OUR PARTNERS </h1>
                   <h4 className="font-weight-normal our-partners-sub-heading text-xl" data-aos="fade-in">
                      Make precision med a reality for millions
                   </h4>
                </div>
-               <div className="flex items-center justify-end gap-8 divide-x-2 divide-black">
+               <div className="text-white flex items-center justify-end gap-8 divide-x-2 divide-white">
                   <div className="grid__col pr-3 md:pr-6">
                      <h4 className="text-lg md:text-4xl font-bold" data-aos="fade-in">
                         100+
@@ -90,15 +103,6 @@ const OurPartners = ({ ourPartner }) => {
                      <p className="text-xl">
                      Doctors
                      </p>
-                  </div>
-               </div>
-            </div>
-            <div className="page-container bg-white">
-               <div className="page-back">
-                  <div id="example">
-                     <div className="container-mx-auto" data-aos="fade-in">
-                        <ClientsCarousel items={ourPartner} />
-                     </div>
                   </div>
                </div>
             </div>

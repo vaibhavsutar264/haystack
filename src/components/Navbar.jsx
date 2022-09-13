@@ -20,13 +20,14 @@ const MENU_LIST = [
 const StyledNavbar = styled.nav`
    transition: all 0.4s;
    transform: ${props => props.isPinned ? `translate3d(0,0px,0)` : `translate3d(0,-100px,0)`};
-   background-color: ${props => props.isPinned ? `transparent` : `white`};
+   background-color: ${props => props.isPinned ? `var(--navbar-bg, white)` : `transparent`};
    height: 40;
    width: 100%;
    position: fixed;
    top: 0;
    left: 0;
    padding: 0.5rem 0 0.5rem 0;
+   z-index: 999;
 `
 
 const Navbar = () => {
@@ -36,21 +37,26 @@ const Navbar = () => {
       fixAt: 100,
       onPin: () => {
          // set("pinned")
+         document.body?.classList?.add('header-is-pinned')
       },
-      onUnpin: () => {},
+      onUnpin: () => {
+         document.body?.classList?.remove('header-is-pinned')
+      },
       onFix: (fixedAt) => {
          // set(`fixed at ${fixedAt}`)
+         document.body?.classList?.add('header-is-fixed')
       },
       onUnfix: (fixedAt) => {
          // set(["unpinned", ` and unfixed from ${fixedAt}`])
+         document.body?.classList?.remove('header-is-fixed')
       }
     });
    return (
-      <StyledNavbar isPinned={isPinned} >
+      <StyledNavbar isPinned={isPinned} className={`${isPinned ? 'header-pinned': ''}`} >
          <nav className="navbar-main container mx-auto flex justify-between gap-4">
             <div className="navbar-brand">
                <Link href={"/"}>
-                  <a className="flex">
+                  <a className="flex px-3 md:px-0">
                      <Image src={settings.logo_url} alt="" className="navbar-logo" width={'250'} height={'60'} />
                   </a>
                </Link>
