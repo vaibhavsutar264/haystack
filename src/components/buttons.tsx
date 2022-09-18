@@ -1,4 +1,4 @@
-export const KnowMoreButton = ({ title, ...props }) => {
+export const KnowMoreButton = ({ title, ...props }: { title: String, }) => {
    return (
       <button {...props}>
          <span>

@@ -26,6 +26,7 @@ export default function create({ news }) {
                <ErrorBoundary>
                   <Field required={true} name={'description'} label={'Description'} Component={ContentEditor} />
                </ErrorBoundary>
+               <Field required={false} name={'image_url'} label={'Featured image'} />
                <Field required={true} name={'url'} label={'URL'} />
                <div className="mb-3">
                   <label htmlFor="">Status</label>

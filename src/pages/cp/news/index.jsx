@@ -12,7 +12,7 @@ export default function news({ news }) {
    return (
       <Bootstrap >
          {/* {JSON.stringify({ news })} */}
-         <PageHeader title={'News'} primaryAction={{ title: 'New category', onClick: () => router.push(`/cp/news/create`) }} />
+         <PageHeader title={'News'} primaryAction={{ title: 'New news', onClick: () => router.push(`/cp/news/create`) }} />
          <ErrorBoundary>
             {(news && news.length) ? (
             <Table>

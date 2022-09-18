@@ -1,0 +1,27 @@
+{
+   "features": [
+      {
+         "id": "1",
+         "title": "First Time Right Diagnostics",
+         "thumbnail_url": "//placehold.it/400"
+      },
+      {
+         "id": "2",
+         "title": "Accessible & Afforable",
+         "thumbnail_url": "//placehold.it/400"
+      },
+      {
+         "id": "3",
+         "title": "Cutting Edge Technology",
+         "thumbnail_url": "//placehold.it/400"
+      },
+      {
+         "id": "4",
+         "title": "Makes Current Diagnostics Faster",
+         "thumbnail_url": "//placehold.it/400"
+      }
+   ],
+   "research_papers": [
+      {}
+   ]
+}

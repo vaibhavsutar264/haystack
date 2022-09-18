@@ -13,7 +13,7 @@ import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import heroBg from '../assets/haystack-body-bg.png'
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import Section from '../components/atoms/Section'
 
 const StyledHome = styled(AppTemplate)`
@@ -31,25 +31,30 @@ const HeroSection = styled(Section)`
 `
 
 function Home({ Component, pageProps, news, settings }) {
+   const onScroll = useMemo((e: any) => {
+      const bgColor = e?.target?.getAttribute('data-body-bg')
+      globalThis.document?.body?.setAttribute(`style`, `--current-bg-color: ${bgColor}`)
+
+   }, [  ])
    return (
       <StyledHome bodyClassName="home" settings={settings}>
          <HeroSection>
             <TextVideo />
          </HeroSection>
          <VideoRemakeByPratikSir />
-         <Section className="py-10" fromBg="#000" toBg="#000">
+         <Section data-aos="fade-in" data-aos-delay="800" data-aos-easing="linear" data-aos-duration="1000" onScroll={onScroll} className="py-10 md:py-28 bg-black" fromBg="#000" toBg="#000">
             <Upgrade />
          </Section>
-         <Section containerClass="" fromBg="#3570d3" toBg="#3570d3" className="py-10 pb-0 ">
+         <Section data-aos="fade-in" data-aos-delay="800" data-aos-easing="linear" data-aos-duration="1000" onScroll={onScroll} containerClass="" fromBg="#3570d3" toBg="#3570d3" className="py-10 md:pt-28 bg-blue-600 pb-0 ">
             <OurPartners ourPartner={data.ourPartner} />
          </Section>
-         <Section containerClass="" className="py-10 pb-0 bg-white">
+         <Section data-aos="fade-in" data-aos-delay="800" data-aos-easing="linear" data-aos-duration="1000" onScroll={onScroll} containerClass="" className="py-10 pb-0 bg-white">
             <ClientsCarousel items={data.ourPartner} />
          </Section>
          <Precision />
-         {/* <Section>
+         {/* <Section onScroll={onScroll}>
          </Section> */}
-         <Section className="bg-white py-10 pb-16 _" fromBg="white" toBg="white">
+         <Section data-aos="fade-in" data-aos-delay="800" data-aos-easing="linear" data-aos-duration="1000" onScroll={onScroll} className="bg-white py-10 pb-16 _" fromBg="white" toBg="white">
             <WeGotCovered news={news} />
          </Section>
       </StyledHome>

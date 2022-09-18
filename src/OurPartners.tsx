@@ -20,25 +20,28 @@ export const ClientsCarousel = ({ items }) => {
       <Swiper
          modules={[ Autoplay ]}
          // pagination={{ clickable: true }}
-         scrollbar={{ draggable: true }}
+         // scrollbar={{ draggable: true }}
+         infinit={true}
          spaceBetween={50}
          slidesPerView={3}
          // centeredSlides={true}
          loop={true}
          autoplay={{
             delay: 3000,
-            disableOnInteraction: false,
+            // disableOnInteraction: false,
          }}
          breakpoints={{
          // when window width is >= 640px
             640: {
                width: 640,
                slidesPerView: 3,
+               loop: true,
             },
             // when window width is >= 768px
             768: {
                width: 768,
-               slidesPerView: 5,
+               slidesPerView: 4,
+               loop: true,
             },
          }}
 

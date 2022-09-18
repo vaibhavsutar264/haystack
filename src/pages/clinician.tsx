@@ -14,6 +14,7 @@ import SampleCollectionImg from "../assets/sample-collection.png";
 import DigitalAgeImg from "../assets/digital-age.png";
 import HeroBanner from "../components/HeroBanner";
 import { KnowMoreButton } from "../components/buttons";
+import { getClinicianFeatures } from '../utils/clinician'
 
 const researchPapers = [
    {
@@ -141,7 +142,7 @@ export const FeatureCard = ({ title, image, url }) => {
    )
 }
 
-export const FeatureCards = () => {
+export const FeatureCards = ({ items }: { items: Array<any> }) => {
    return (
       <section className="py-10 bg-blue-100">
          <div className="container mx-auto px-3 md:px-0">
@@ -149,33 +150,21 @@ export const FeatureCards = () => {
                WHY THIS TECHNOLOGY FOR YOU?
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 my-10">
-               <div className="grid__col">
+               {items?.map((item) => (
+               <div className="grid__col" key={`feat_${item.id}`}>
                   <FeatureCard
-                     title={`First Time Right Diagnostics`}
+                     title={item.title}
                   />
                </div>
-               <div className="grid__col">
-                  <FeatureCard
-                     title={`Accessible & Afforable`}
-                  />
-               </div>
-               <div className="grid__col">
-                  <FeatureCard
-                     title={`Cutting Edge Technology`}
-                  />
-               </div>
-               <div className="grid__col">
-                  <FeatureCard
-                     title={`Makes Current Diagnostics Faster`}
-                  />
-               </div>
+               ))}
             </div>
          </div>
       </section>
    )
 }
 
-export default function Clinician() {
+export default function Clinician({ data = {} }) {
+   const { features } = data || {}
    return (
       <AppTemplate>
          <HeroBanner
@@ -211,7 +200,18 @@ export default function Clinician() {
          </HeroBanner>
          <ResearchPapers />
          <WhyChooseHaystack />
-         <FeatureCards />
+         <FeatureCards items={features} />
       </AppTemplate>
    );
+}
+
+
+export async function getStaticProps(context) {
+   let data = getClinicianFeatures()
+
+   return {
+     props: {
+      data: JSON.parse(JSON.stringify(data)),
+     }, // will be passed to the page component as props
+   }
 }

@@ -51,9 +51,9 @@ const TextSlides = ({ items }) => {
 const VideoRemakeByPratikSir = () => {
    return (
       <StyledVideoSection>
-         <Section containerClass={''} className="py-6" fromBg="white" toBg="white">
+         <Section containerClass={''} className="py-0" fromBg="white" toBg="white">
             <div className="video-remake-again container mx-auto">
-               <div data-aos="fade-up" className="title-animation-box-video-remake w-100 mb-6">
+               <div data-aos="fade-up" className="title-animation-box-video-remake w-100 mb-6 pt-6">
                   <TextSlides
                      items={[
                         { text: `A Revolutionary technology to aid microbiology` },

@@ -29,10 +29,7 @@ export default function post({ post }) {
                <Field required={true} name={'title'} label={'Title'} />
                <Field required={true} name={'slug'} label={'Slug'} />
                <Field required={false} name={'description'} label={'Description'} Component={ContentEditor} />
-               <div>
-                  <Field required={true} name={'author_name'} label={'Author name'} />
-                  <Field required={false} name={'author_bio'} label={'Author bio'} />
-               </div>
+               <Field required={false} name={'image_url'} label={'Featured image'} />
                <div className="mb-3">
                   <label htmlFor="">Status</label>
                   <FormikField as={'select'} name={'status'} className="form-select w-full h-4">

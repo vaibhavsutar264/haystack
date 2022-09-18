@@ -12,7 +12,7 @@ const StyledWrapper = styled.div`
 
 const Precision = () => {
    return (
-      <StyledWrapper className="py-20">
+      <StyledWrapper className="py-20" data-aos="fade-in" data-aos-delay="800">
          <div className="container mx-auto flex items-center justify-center">
             <div className="md:w-8/12 mx-auto">
                <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-6">

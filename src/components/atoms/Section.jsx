@@ -10,11 +10,7 @@ const StyledSection = styled(motion.section)`
       --container-size: 1200px;
    }
 `
-export default function Section({ children, fromBg, toBg, ...props }) {
-   const onScroll = (e) => {
-      const bgColor = e.target.getAttribute('data-body-bg')
-      document?.body?.setAttribute(`style`, `--current-bg-color: ${bgColor}`)
-   }
+export default function Section({ children, fromBg, toBg, onScroll, ...props }) {
    return (
       <InView onChange={onScroll} data-body-bg={toBg}>
          <StyledSection
