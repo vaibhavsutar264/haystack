@@ -37,7 +37,7 @@ export const BlogCarousel = ({ items }) => {
             <SwiperSlide key={`slide_${index}`}>
                {/* {JSON.stringify({ items })} */}
                <div className="blog-listing-page-img">
-                  <img src={item.image_url} layout="fill" className="w-full" />
+                  <img src={item.image_url} layout="fill" className="w-full aspect-square object-cover" />
                </div>
                {/* {JSON.stringify(item)} */}
                <h3 className="blog-listing-page-heading my-sm-2 my-1">
