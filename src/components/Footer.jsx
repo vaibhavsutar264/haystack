@@ -66,7 +66,7 @@ function Footer({ settings = {} }) {
                <div className="flex__col md:self-end">
                   <ul className="flex flex-col gap-3 md:justify-end text-center md:text-right text-xl md:text-3xl font-bold">
                      <li>
-                        <Link href="/science-corner">SCIENCE CORNER</Link>
+                        <Link href="/blog">SCIENCE CORNER</Link>
                      </li>
                      <li>
                         <Link href="/universal">PRODUCT</Link>
@@ -75,10 +75,7 @@ function Footer({ settings = {} }) {
                         <Link href={'/about'}>ABOUT US</Link>
                      </li>
                      <li>
-                        <Link href="/">LATEST NEWS</Link>
-                     </li>
-                     <li>
-                        <Link href={'/blog'}>BLOG</Link>
+                        <Link href="/news">LATEST NEWS</Link>
                      </li>
                   </ul>
                </div>

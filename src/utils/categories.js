@@ -11,6 +11,7 @@ export const getCategoryFiles = () => {
    if(!fs.existsSync(fileNames)) {
       return categories
    }
+   console.log({ fileNames })
    fileNames.map(fname => {
       categories.push({
          id: fname,

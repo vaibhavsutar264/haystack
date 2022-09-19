@@ -77,7 +77,7 @@ const OurPartners = ({ ourPartner }) => {
          <StyledCarousel>
             <div className="container mx-auto mb-5 py-10 px-3 md:px-0">
                <div className="text-white text-right mb-6">
-                  <h1 className="text-5xl font-bold mb-6" data-aos="fade-in">OUR PARTNERS </h1>
+                  <h1 className="text-4xl font-bold mb-6" data-aos="fade-in">OUR PARTNERS </h1>
                   <h4 className="font-weight-normal our-partners-sub-heading text-xl" data-aos="fade-in">
                      Make precision med a reality for millions
                   </h4>

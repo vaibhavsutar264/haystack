@@ -28,6 +28,8 @@ const sidebar = {
 };
 
 const StyledComponent = styled(motion.div)`
+   left: 0;
+   top: 0;
 
    .background {
       position: absolute;
@@ -41,9 +43,28 @@ const StyledComponent = styled(motion.div)`
       transition: background-color .3s ease;
    }
    &.open {
+      display: block;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+
+
       .background {
          background-color: var(--primary-color);
          width: 100vw;
+      }
+      button {
+         color: white;
+         svg {
+            color: white;
+         }
+      }
+
+      .Navigation_list {
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         text-align: center;
       }
    }
 
@@ -63,6 +84,7 @@ const StyledComponent = styled(motion.div)`
       background: transparent;
       z-index: 99999;
    }
+
    ul {
       z-index: 99999999 !important;
       color: white;

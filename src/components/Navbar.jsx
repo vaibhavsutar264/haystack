@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import NavItem from "./NavItem";
 // import data from "./data/data.json";
@@ -7,7 +7,7 @@ import useHeadroom from "react-useheadroom";
 import styled from "@emotion/styled";
 import settings from '../json/settings.json'
 import { SidebarNav } from "./index";
-
+import { useInView } from 'react-intersection-observer'
 
 const MENU_LIST = [
    {
@@ -28,11 +28,30 @@ const StyledNavbar = styled.nav`
    left: 0;
    padding: 0.5rem 0 0.5rem 0;
    z-index: 999;
+   &.bg-white {
+      background: white !important;
+   }
 `
 
 const Navbar = () => {
    const [navActive, setNavActive] = useState(false);
    const [activeIdx, setActiveIdx] = useState(0);
+   const [ inView, setInView ] = useState( false );
+   useEffect(() => {
+      globalThis.addEventListener('scroll', ev => {
+         if ( document.body.getBoundingClientRect().top >= 0 ) {
+            setInView( true )
+         } else {
+            setInView( false )
+         }
+         // console.log({ ev })
+      })
+      if (inView) {
+         // globalThis?.classList.add('bg-white')
+      } else {
+         // globalThis?.classList.remove('bg-white')
+      }
+   }, [  ])
    const isPinned = useHeadroom({
       fixAt: 100,
       onPin: () => {
@@ -49,10 +68,11 @@ const Navbar = () => {
       onUnfix: (fixedAt) => {
          // set(["unpinned", ` and unfixed from ${fixedAt}`])
          document.body?.classList?.remove('header-is-fixed')
-      }
+      },
+
     });
    return (
-      <StyledNavbar isPinned={isPinned} className={`${isPinned ? 'header-pinned': ''}`} >
+      <StyledNavbar isPinned={isPinned} className={`${isPinned ? 'header-pinned': ''} ${inView ? '': 'bg-white'}`} >
          <nav className="navbar-main container mx-auto flex justify-between gap-4">
             <div className="navbar-brand">
                <Link href={"/"}>
