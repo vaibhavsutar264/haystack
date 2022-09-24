@@ -17,5 +17,14 @@
          "url": "/news"
       }
    ],
-   "navbar": []
+   "navbar": [
+      { "label": "SCIENCE CORNER", "url": "/science-corner" },
+      { "label": "ABOUT US", "url": "/about" },
+      { "label": "PRODUCT", "url": "/universal" },
+      { "label": "LATEST NEWS", "url": "/news" },
+      { "label": "BLOG", "url": "/blog" }
+   ],
+   "productsHeader": [
+      {}
+   ]
 }

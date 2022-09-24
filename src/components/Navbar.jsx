@@ -33,7 +33,7 @@ const StyledNavbar = styled.nav`
    }
 `
 
-const Navbar = () => {
+const Navbar = ({ renderMenu }) => {
    const [navActive, setNavActive] = useState(false);
    const [activeIdx, setActiveIdx] = useState(0);
    const [ inView, setInView ] = useState( false );
@@ -83,6 +83,7 @@ const Navbar = () => {
             </div>
 
             <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+               {renderMenu && renderMenu()}
                <SidebarNav />
             </div>
          </nav>

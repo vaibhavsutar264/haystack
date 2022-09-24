@@ -18,10 +18,10 @@ import styled from "@emotion/styled";
 export const ClientsCarousel = ({ items }) => {
    return (
       <Swiper
-         modules={[ Autoplay ]}
+         modules={[ Autoplay, Navigation ]}
+         navigation={true}
          // pagination={{ clickable: true }}
          // scrollbar={{ draggable: true }}
-         infinit={true}
          spaceBetween={50}
          slidesPerView={3}
          // centeredSlides={true}

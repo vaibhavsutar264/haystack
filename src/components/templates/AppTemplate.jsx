@@ -54,7 +54,7 @@ const cursorAnimation = (  ) => {
    })
 }
 
-function AppTemplate({ children, pageProps = {}, bodyClassName = '', settings = {}, ...props }) {
+function AppTemplate({ children, pageProps = {}, bodyClassName = '', settings = {}, renderMenu, ...props  }) {
    useEffect(() => {
       if (AOS) {
          AOS.init();
@@ -65,7 +65,7 @@ function AppTemplate({ children, pageProps = {}, bodyClassName = '', settings = 
       <StyledTemplate {...props} className={`body__content ${bodyClassName}`}>
          <div className="cursor"></div>
          <PreAnimationOnLoad />
-         <Navbar />
+         <Navbar renderMenu={renderMenu} />
          {children}
          <div className="bg-white">
             <Footer settings={settings} />

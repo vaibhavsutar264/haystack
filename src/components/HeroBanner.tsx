@@ -12,7 +12,7 @@ export default function HeroBanner({ title, description, content, image, childre
                   </h3>
                   {renderDescription && renderDescription()}
                   {description && (
-                  <p className="mb-3 text-4xl md:text-5xl font-bold text-black">
+                  <p className="mb-3 text-4xl md:text-5xl font-bold text-black text--title">
                      {description}
                   </p>
                   )}

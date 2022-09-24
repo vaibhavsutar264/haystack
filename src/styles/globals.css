@@ -4902,3 +4902,9 @@ body {
       transform: rotate(360deg);
    }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+   background: var(--primary-color);
+   color: white;
+}

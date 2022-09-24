@@ -48,7 +48,7 @@ function Home({ Component, pageProps, news, settings }) {
          <Section data-aos="fade-in" data-aos-delay="800" data-aos-easing="linear" data-aos-duration="1000" onScroll={onScroll} containerClass="" fromBg="#3570d3" toBg="#3570d3" className="py-10 md:pt-28 bg-blue-600 pb-0 ">
             <OurPartners ourPartner={data.ourPartner} />
          </Section>
-         <Section data-aos="fade-in" data-aos-delay="800" data-aos-easing="linear" data-aos-duration="1000" onScroll={onScroll} containerClass="" className="py-10 pb-0 bg-white">
+         <Section data-aos="fade-in" data-aos-delay="800" data-aos-easing="linear" data-aos-duration="1000" onScroll={onScroll} containerClass="" className="py-10  bg-white">
             <ClientsCarousel items={data.ourPartner} />
          </Section>
          <Precision />

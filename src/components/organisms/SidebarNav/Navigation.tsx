@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
+import menus from '../../../json/menus.json'
 
 const variants = {
   open: {
@@ -11,6 +12,8 @@ const variants = {
   }
 };
 
+const items = menus.navbar
+
 export const Navigation = () => (
   <motion.ul className="px-4 py-6 Navigation_list" variants={variants}>
     {items.map((i, index) => (
@@ -18,11 +21,3 @@ export const Navigation = () => (
     ))}
   </motion.ul>
 );
-
-const items = [
-   { label: 'SCIENCE CORNER', url: '/science-corner' },
-   { label: 'ABOUT US', url: '/about' },
-   { label: 'PRODUCT', url: '/universal' },
-   { label: 'LATEST NEWS', url: '/news' },
-   { label: 'BLOG', url: '/blog' },
-]

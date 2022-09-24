@@ -14,10 +14,21 @@ import UniversalIdTestWorksImg4 from "../assets/universal-id-test-works-img-4.pn
 import BenefitsImg1 from "../assets/benefits-img-1.png";
 import BenefitsImg2 from "../assets/benefits-img-2.png";
 import BenefitsImg3 from "../assets/benefits-img-3.png";
+import Link from "next/link";
 
 function UniversalId() {
    return (
-      <AppTemplate>
+      <AppTemplate
+         renderMenu={() => (
+            <div className="items-center gap-6 py-3 mt-3 hidden md:flex">
+               <Link href="/universal" >
+                  <a className="font-bold text-green-600">Universal ID</a>
+               </Link>
+               <Link href="/omegatb" >
+                  <a className="font-bold text-gray-600">Omega TB</a>
+               </Link>
+            </div>
+         )}>
          <HeroBanner
             bgColor="white"
             title={`Power Of One Test`}

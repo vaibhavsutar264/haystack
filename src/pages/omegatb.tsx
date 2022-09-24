@@ -6,10 +6,22 @@ import OmegaTbTestWorks from "../OmegaTbTestWorks";
 import AppTemplate from "../components/templates/AppTemplate";
 import HeroBanner from "../components/HeroBanner";
 import OmegaTbImg from "../omega-tb.png";
+import Link from "next/link";
+import menus from '../json/menus.json'
 
-function OmegaTB() {
+function OmegaTB({ navbarMenu }) {
    return (
-      <AppTemplate>
+      <AppTemplate
+         renderMenu={() => (
+            <div className="items-center gap-6 py-3 mt-3 hidden md:flex">
+               <Link href="/universal" >
+                  <a className="font-bold text-gray-600">Universal ID</a>
+               </Link>
+               <Link href="/omegatb" >
+                  <a className="font-bold text-green-600">Omega TB</a>
+               </Link>
+            </div>
+         )}>
          <HeroBanner
             bgColor="white"
             title={`OMEGA TB :`}
@@ -22,4 +34,7 @@ function OmegaTB() {
    );
 }
 
+OmegaTB.defaultProps = {
+   navbarMenu: menus.productsHeader,
+}
 export default OmegaTB;
