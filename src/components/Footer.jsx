@@ -11,12 +11,12 @@ import {
    faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
-
+import footerMenus from '../json/menus.json'
 const StyledFooter = styled.footer`
 
 `
 
-function Footer({ settings = {} }) {
+function Footer({ settings = {}, menus }) {
    return (
       <StyledFooter>
          <div className="container mx-auto border-t-4 border-black py-6 px-3 md:px-0">
@@ -65,24 +65,21 @@ function Footer({ settings = {} }) {
                </div>
                <div className="flex__col md:self-end">
                   <ul className="flex flex-col gap-3 md:justify-end text-center md:text-right text-xl md:text-3xl font-bold">
-                     <li>
-                        <Link href="/blog">SCIENCE CORNER</Link>
+                     {menus?.map(menuItem => (
+                     <li key={`min_${menuItem}`}>
+                        <Link href={menuItem.url}>{menuItem.title}</Link>
                      </li>
-                     <li>
-                        <Link href="/universal">PRODUCT</Link>
-                     </li>
-                     <li>
-                        <Link href={'/about'}>ABOUT US</Link>
-                     </li>
-                     <li>
-                        <Link href="/news">LATEST NEWS</Link>
-                     </li>
+                     ))}
                   </ul>
                </div>
             </div>
          </div>
       </StyledFooter>
    );
+}
+
+Footer.defaultProps = {
+   menus: footerMenus.footer
 }
 
 export default Footer;

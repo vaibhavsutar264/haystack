@@ -1,0 +1,21 @@
+{
+   "footer": [
+      {
+         "title": "SCIENCE CORNER",
+         "url": "/"
+      },
+      {
+         "title": "PRODUCT",
+         "url": "/universal"
+      },
+      {
+         "title": "ABOUT US",
+         "url": "/about"
+      },
+      {
+         "title": "LATEST NEWS",
+         "url": "/news"
+      }
+   ],
+   "navbar": []
+}

@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import Section from "./components/atoms/Section";
+import bannerImgSrc from './assets/hero-img-2.jpg'
 
 const StyledVideoSection = styled.div`
    video {
@@ -62,20 +63,14 @@ const VideoRemakeByPratikSir = () => {
                   />
                </div>
             </div>
-            <video
+            <img
                id="scroll-video"
                className="w-full"
-               src={
-                  "https://media.istockphoto.com/videos/medical-science-laboratory-beautiful-black-scientist-looking-under-video-id1297574801"
-               }
-               type="video/mp4"
+               src={bannerImgSrc.src}
                data-aos="zoom-in"
                data-aos-delay="300"
                data-aos-duration="1600"
-               autoPlay
-               muted
-               loop
-            ></video>
+            />
          </Section>
       </StyledVideoSection>
    );
