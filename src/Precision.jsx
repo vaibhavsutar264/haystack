@@ -17,12 +17,12 @@ const Precision = () => {
             <div className="md:w-8/12 mx-auto">
                <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-6">
                   <Link href="/clinician" >
-                     <a className="hover:bg-blue-600 bg-black text-white text-center w-full text-2xl font-medium p-8 py-6">
+                     <a className="rounded-2xl shadow hover:bg-blue-600 bg-black text-white text-center w-full text-2xl font-medium p-8 py-6">
                         I am a <br /> Clinician
                      </a>
                   </Link>
                   <Link href="/diagnostic" >
-                     <a className="hover:bg-blue-600 bg-green-600 text-white text-center w-full text-2xl font-medium p-8 py-6">I am a <br /> Diagnostician</a>
+                     <a className="rounded-2xl shadow hover:bg-blue-600 bg-green-600 text-white text-center w-full text-2xl font-medium p-8 py-6">I am a <br /> Diagnostician</a>
                   </Link>
                </div>
             </div>

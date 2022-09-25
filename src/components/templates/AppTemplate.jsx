@@ -6,6 +6,7 @@ import PreAnimationOnLoad from "../../PreAnimationOnLoad";
 import { useEffect } from "react";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import settings from '../../json/settings.json'
 const StyledTemplate = styled.div`
    margin: 0;
    padding: 0;
@@ -54,7 +55,8 @@ const cursorAnimation = (  ) => {
    })
 }
 
-function AppTemplate({ children, pageProps = {}, bodyClassName = '', settings = {}, renderMenu, ...props  }) {
+function AppTemplate({ children, pageProps = {}, bodyClassName = '', renderMenu, ...props  }) {
+
    useEffect(() => {
       if (AOS) {
          AOS.init();

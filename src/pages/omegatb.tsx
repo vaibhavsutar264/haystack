@@ -8,28 +8,31 @@ import HeroBanner from "../components/HeroBanner";
 import OmegaTbImg from "../omega-tb.png";
 import Link from "next/link";
 import menus from '../json/menus.json'
+import {HowWorkGrid} from "./universal";
 
 function OmegaTB({ navbarMenu }) {
    return (
       <AppTemplate
-         renderMenu={() => (
-            <div className="items-center gap-6 py-3 mt-3 hidden md:flex">
-               <Link href="/universal" >
-                  <a className="font-bold text-gray-600">Universal ID</a>
-               </Link>
-               <Link href="/omegatb" >
-                  <a className="font-bold text-green-600">Omega TB</a>
-               </Link>
-            </div>
+         renderMenu={(rprops = {}) => (
+         <div className={`items-center gap-6 py-3 mt-3 flex md:mr-16 ${rprops.className}`} >
+            {rprops.menuItems?.map((mi, miIndex) => (
+            <Link key={`pmin_${miIndex}`} href={mi.url} >
+               <a className={`font-bold ` + (mi.url.includes('omega')) ? 'text-green-600': 'text-gray-600'}>
+                  {mi.title}
+               </a>
+
+            </Link>
+            ))}
+         </div>
          )}>
          <HeroBanner
             bgColor="white"
-            title={`OMEGA TB :`}
+            title={`Universal Drug Resistance Test for TB:`}
             description={`Doing Our Part For TB Free World`}
             image={OmegaTbImg}
          />
          <WhyChoose />
-         <OmegaTbTestWorks />
+         <HowWorkGrid />
       </AppTemplate>
    );
 }
@@ -37,4 +40,5 @@ function OmegaTB({ navbarMenu }) {
 OmegaTB.defaultProps = {
    navbarMenu: menus.productsHeader,
 }
+
 export default OmegaTB;

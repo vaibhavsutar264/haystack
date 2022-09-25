@@ -42,7 +42,7 @@ const StyledComponent = styled(motion.div)`
       z-index: 999;
       transition: background-color .3s ease;
    }
-   .Navigation_list {
+   &.closed .Navigation_list {
       pointer-events: none;
    }
    &.open {
@@ -69,6 +69,7 @@ const StyledComponent = styled(motion.div)`
          transform: translate(-50%, -50%);
          text-align: center;
          pointer-events: reset;
+         width: 100%;
       }
    }
 

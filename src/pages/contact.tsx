@@ -1,10 +1,14 @@
 import React from "react";
 import AppTemplate from "../components/templates/AppTemplate";
+import Section from '../components/atoms/Section'
+import {Title} from "../components/atoms/Title";
 
 const Contact = () => {
    return (
       <AppTemplate>
-         <h2>contact page</h2>
+         <Section>
+            <Title>Contact Us</Title>
+         </Section>
       </AppTemplate>
    );
 };

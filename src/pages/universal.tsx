@@ -16,19 +16,46 @@ import BenefitsImg2 from "../assets/benefits-img-2.png";
 import BenefitsImg3 from "../assets/benefits-img-3.png";
 import Link from "next/link";
 
+export const HowWorkGrid = (props) => {
+   return (
+      <section className="section py-10">
+         <div className="container px-3 md:px-0 mx-auto">
+            <h3 className="text-4xl md:text-5xl text-black mb-8 font-bold ">
+               How Does Universal ID Test Work?
+            </h3>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+               <div className="grid__col">
+                  <Image src={UniversalIdTestWorksImg1} />
+               </div>
+               <div className="grid__col">
+                  <Image src={UniversalIdTestWorksImg2} />
+               </div>
+               <div className="grid__col">
+                  <Image src={UniversalIdTestWorksImg3} />
+               </div>
+               <div className="grid__col">
+                  <Image src={UniversalIdTestWorksImg4} />
+               </div>
+            </div>
+         </div>
+      </section>
+   )
+}
+
 function UniversalId() {
    return (
       <AppTemplate
-         renderMenu={() => (
-            <div className="items-center gap-6 py-3 mt-3 hidden md:flex">
-               <Link href="/universal" >
-                  <a className="font-bold text-green-600">Universal ID</a>
-               </Link>
-               <Link href="/omegatb" >
-                  <a className="font-bold text-gray-600">Omega TB</a>
-               </Link>
-            </div>
-         )}>
+         renderMenu={(rprops = {}) => (
+         <div className={`items-center gap-6 py-3 mt-3 flex md:mr-16 ${rprops.className}`} >
+            {rprops.menuItems?.map((mi, miIndex) => (
+            <Link key={`pmin_${miIndex}`} href={mi.url} >
+               <a className="font-bold text-gray-600">{mi.title}</a>
+            </Link>
+            ))}
+         </div>
+         )}
+         >
          <HeroBanner
             bgColor="white"
             title={`Power Of One Test`}
@@ -46,28 +73,7 @@ function UniversalId() {
             )}
           />
          {/* <PowerOfOneTest /> */}
-         <section className="section py-10">
-            <div className="container px-3 md:px-0 mx-auto">
-               <h3 className="text-4xl md:text-5xl text-black mb-4 font-bold">
-               How Does Universal ID Test Work?
-               </h3>
-
-               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="grid__col">
-                     <Image src={UniversalIdTestWorksImg1} />
-                  </div>
-                  <div className="grid__col">
-                     <Image src={UniversalIdTestWorksImg2} />
-                  </div>
-                  <div className="grid__col">
-                     <Image src={UniversalIdTestWorksImg3} />
-                  </div>
-                  <div className="grid__col">
-                     <Image src={UniversalIdTestWorksImg4} />
-                  </div>
-               </div>
-            </div>
-         </section>
+         <HowWorkGrid />
          <section className="section py-20 bg-blue-100">
             <div className="container px-3 md:px-0 mx-auto">
                <div className="grid grid-cols-1 md:grid-cols-2 md:w-10/12 items-center gap-8">

@@ -8,7 +8,7 @@ import ClinicianImg from "../are-you-clinician.png";
 import testiImg1 from '../assets/testimonials/savitri.png'
 import ResearchPapersImg from "../assets/research-papers.png";
 
-import EasyAccessImg from "../assets/easy-access.png";
+import EasyAccessImg from "../assets/observation_icon.png";
 import EasyToReadImg from "../assets/easy-to-read.png";
 import SampleCollectionImg from "../assets/sample-collection.png";
 import DigitalAgeImg from "../assets/digital-age.png";
@@ -16,50 +16,76 @@ import HeroBanner from "../components/HeroBanner";
 import { KnowMoreButton } from "../components/buttons";
 import { getClinicianFeatures } from '../utils/clinician'
 
-const researchPapers = [
-   {
-      title: `Highlights on the Application of Genomics and bioinformatics in the fight against infectious diseases - chellaneges and opportunities in africa`,
-      excerpt: `Saikoi Y Bah Collins Misita Moranga`
-   },
-   {
-      title: `Highlights on the Application of Genomics and bioinformatics in the fight against infectious diseases - chellaneges and opportunities in africa`,
-      excerpt: `Saikoi Y Bah Collins Misita Moranga`
-   },
-   {
-      title: `Highlights on the Application of Genomics and bioinformatics in the fight against infectious diseases - chellaneges and opportunities in africa`,
-      excerpt: `Saikoi Y Bah Collins Misita Moranga`
-   },
-]
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import styled from "@emotion/styled";
+
+import allResearchPapers from '../json/research_papers.json'
+import allTestimonials from '../json/testimonials.json'
+import AreYouClinicianTestimonial from "../AreYouClinicianTestimonial";
+import {isEven} from "../utils";
+
+const researchPapers = allResearchPapers.data?.filter(row => row.category == 'clinician')
+const testmonials = allTestimonials.data?.filter(row => row.category == 'clinician')
 
 function ResearchPapers() {
    return (
       <section
-         className="py-10 bg-blue-100"
+         className="py-10 bg-blue-100 ResearchPapers"
       >
          <div className="container px-3 md:px-0 mx-auto">
             <h3 className="text-4xl md:text-5xl font-bold text-black mb-4">
                Research papers
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-7 my-10">
-               {researchPapers?.map(((rp, rpIndex) => (
-               <div className="grid__col" key={`rp_${rpIndex}`}>
-                  <figure className="flex items-center gap-3">
-                     <div className="w-5/12">
-                        <img src="" alt={'Research paper'} className="bg-gray-100 aspect-square w-56 h-56" />
-                     </div>
-                     <figcaption>
-                        <p>
-                           <a href="" className="text-md text-blue-600">{rp.title}</a>
-                        </p>
-                        <p className="text-sm">
-                           {rp.excerpt}
-                        </p>
-                     </figcaption>
-                  </figure>
-               </div>
-               )))}
-            </div>
+            <Swiper
+               modules={[ Autoplay, Navigation ]}
+               navigation={true}
+               spaceBetween={50}
+               slidesPerView={1}
+               loop={false}
+               autoplay={{
+                  delay: 3000,
+               }}
+               breakpoints={{
+                  300: {
+                     slidesPerView: 1,
+                     loop: false,
+                     navigation: true,
+                  },
+                  // when window width is >= 768px
+                  768: {
+                     slidesPerView: 3,
+                     loop: false,
+                     navigation: false,
+                  },
+               }}
+
+               // onSlideChange={() => console.log('slide change')}
+               // onSwiper={(swiper) => console.log(swiper)}
+               >
+               {researchPapers.map((item, index) => (
+                  <SwiperSlide key={`slide_${index}`}>
+                     <figure className="flex items-center gap-3">
+                        <div className="w-5/12">
+                           <img src={item.thumbnail_url} alt={'Research paper'} className="bg-gray-100 aspect-square w-56 h-56" />
+                        </div>
+                        <figcaption>
+                           <p>
+                              <a href={item.url} className="text-md text-blue-600">{item.title}</a>
+                           </p>
+                           <p className="text-sm">
+                              {item.excerpt}
+                           </p>
+                        </figcaption>
+                     </figure>
+                  </SwiperSlide>
+                  ))}
+            </Swiper>
          </div>
       </section>
    );
@@ -133,7 +159,7 @@ export const FeatureCard = ({ title, image, url }) => {
             </p>
          </div>
          <div>
-            <img src={image} alt="image" className="w-full aspect-square" />
+            <Image src={require(`../assets/icons/${image}`)} alt="image" className="w-full aspect-square" />
          </div>
          <div className="text-center">
             <KnowMoreButton className="text-green-600 flex items-center gap-3 justify-center align-self-center mx-auto" />
@@ -154,6 +180,7 @@ export const FeatureCards = ({ items }: { items: Array<any> }) => {
                <div className="grid__col" key={`feat_${item.id}`}>
                   <FeatureCard
                      title={item.title}
+                     image={item.thumbnail_url}
                   />
                </div>
                ))}
@@ -163,10 +190,26 @@ export const FeatureCards = ({ items }: { items: Array<any> }) => {
    )
 }
 
+const StyledPage = styled(AppTemplate)`
+   .ResearchPapers {
+.swiper-button-prev,
+.swiper-button-next {
+display: none;
+}
+      @media screen and (min-width: 800px) {
+         .swiper-button-prev,
+         .swiper-button-next {
+            display: none;
+         }
+
+      }
+   }
+`
+
 export default function Clinician({ data = {} }) {
    const { features } = data || {}
    return (
-      <AppTemplate>
+      <StyledPage>
          <HeroBanner
             title={`are you clinician?`}
             image={ClinicianImg}
@@ -175,33 +218,25 @@ export default function Clinician({ data = {} }) {
             primaryAction={{  }}
             secondaryAction={{  }}
          >
-            <div className="bg-white container px-3 md:px-0 mb-8 ml-auto">
-               <div className="flex items-center gap-4 p-4 md:p-8">
-                  <Image src={testiImg1} alt="" className="w-8 h-8 rounded-full" width={120} height={120} />
-                  <div className="md:w-8/12 w-11/12">
-                     <p className="mb-3 font-bold">Dr. Savitri</p>
-                     <p>
-                     How genomics technology helped her save patients from excessive use of antibiotices. He now recommends Universal ID test to all his patients.
-                     </p>
+            {testmonials?.map((testm, testmIndex) => (
+               <div key={`test_${testmIndex}`} className={`bg-white container px-3 md:px-0 mb-8 ${isEven(testmIndex) ? 'ml-auto': 'mr-auto'}`}>
+                  <div className={`flex items-center ${isEven(testmIndex) ? '': 'flex-row-reverse  text-right'} gap-4 p-4 md:p-8`}>
+                     <img src={testm.avatar_url} alt="" className="w-22 h-22 rounded-full" width={120} height={120} />
+                     <div className="md:w-8/12 w-11/12">
+                        <p className="mb-3 font-bold">{testm.author.name}</p>
+                        <p>
+                           {testm.message}
+                        </p>
+                     </div>
                   </div>
                </div>
-            </div>
-            <div className="bg-white container px-3 md:px-0 mb-8 mr-auto">
-               <div className="flex flex-row-reverse  text-right items-center gap-4 p-4 md:p-8">
-                  <Image src={testiImg1} alt="" className="w-8 h-8 rounded-full" width={120} height={120} />
-                  <div className="md:w-8/12 w-11/12">
-                     <p className="mb-3 font-bold">Dr. Savitri</p>
-                     <p>
-                     How genomics technology helped her save patients from excessive use of antibiotices. He now recommends Universal ID test to all his patients.
-                     </p>
-                  </div>
-               </div>
-            </div>
+            ))}
+
          </HeroBanner>
          <ResearchPapers />
          <WhyChooseHaystack />
          <FeatureCards items={features} />
-      </AppTemplate>
+      </StyledPage>
    );
 }
 

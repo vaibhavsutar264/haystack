@@ -7,6 +7,8 @@ import useHeadroom from "react-useheadroom";
 import styled from "@emotion/styled";
 import settings from '../json/settings.json'
 import { SidebarNav } from "./index";
+import menus from '../json/menus.json'
+const productHeaderMenu = menus.productsHeader
 import { useInView } from 'react-intersection-observer'
 
 const MENU_LIST = [
@@ -83,10 +85,13 @@ const Navbar = ({ renderMenu }) => {
             </div>
 
             <div className={`${navActive ? "active" : ""} nav__menu-list`}>
-               {renderMenu && renderMenu()}
+               <div className={'hidden md:flex'}>{renderMenu && renderMenu()}</div>
                <SidebarNav />
             </div>
          </nav>
+         <div className={'container mx-auto py-3 flex items-center justify-center md:hidden'}>
+            {renderMenu && renderMenu({ className: 'flex -mt-4', menuItems: productHeaderMenu })}
+         </div>
       </StyledNavbar>
    );
 };

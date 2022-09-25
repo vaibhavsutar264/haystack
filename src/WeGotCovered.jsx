@@ -19,32 +19,38 @@ import Link from "next/link";
 export const BlogCarousel = ({ items }) => {
    return (
       <Swiper
-         modules={[ Autoplay ]}
+         modules={[ Autoplay, Navigation ]}
          // pagination={{ clickable: true }}
+         navigation={true}
          scrollbar={{ draggable: true }}
          spaceBetween={50}
-         slidesPerView={4}
+         slidesPerView={1}
          centeredSlides={false}
          loop={true}
          autoplay={{
             delay: 3000,
             disableOnInteraction: false,
          }}
-         // onSlideChange={() => console.log('slide change')}
-         // onSwiper={(swiper) => console.log(swiper)}
+         breakpoints={{
+            768: {
+//               width: 768,
+               slidesPerView: 4,
+               loop: true,
+            },
+         }}
       >
          {items.map((item, index) => (
             <SwiperSlide key={`slide_${index}`}>
                {/* {JSON.stringify({ items })} */}
                <div className="blog-listing-page-img">
-                  <img src={item.image_url} layout="fill" className="w-full aspect-[4/3] object-cover" />
+                  <img src={item.image_url} layout="fill" className="rounded-xl shadow-sm w-full aspect-[4/3.5] object-cover" />
                </div>
                {/* {JSON.stringify(item)} */}
-               <h3 className="blog-listing-page-heading my-sm-2 my-1 font-medium">
+               <h3 className="blog-listing-page-heading my-sm-2 my-2 font-medium line-clamp-2">
                   {item.title}
                </h3>
                <p className="blog-listing-page-read-more font-weight-normal">
-                  <a target={'_blank'} className="text-blue-600 " href={item.url}>Read more &gt;&gt;</a>
+                  <a target={'_blank'} className="text-blue-600 font-bold text-lg" href={item.url}>Read more &gt;&gt;</a>
                </p>
             </SwiperSlide>
          ))}

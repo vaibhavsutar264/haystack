@@ -2,7 +2,7 @@
    "footer": [
       {
          "title": "SCIENCE CORNER",
-         "url": "/"
+         "url": "/blog"
       },
       {
          "title": "PRODUCT",
@@ -11,20 +11,22 @@
       {
          "title": "ABOUT US",
          "url": "/about"
-      },
-      {
-         "title": "LATEST NEWS",
-         "url": "/news"
       }
    ],
    "navbar": [
       { "label": "SCIENCE CORNER", "url": "/science-corner" },
       { "label": "ABOUT US", "url": "/about" },
-      { "label": "PRODUCT", "url": "/universal" },
-      { "label": "LATEST NEWS", "url": "/news" },
-      { "label": "BLOG", "url": "/blog" }
+      { "label": "PRODUCT", "url": "/universal" }
+
    ],
    "productsHeader": [
-      {}
+      {
+         "title": "Universal ID",
+         "url": "/universal"
+      },
+      {
+         "title": "Omega TB",
+         "url": "/omegatb"
+      }
    ]
 }

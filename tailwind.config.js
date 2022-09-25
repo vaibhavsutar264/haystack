@@ -9,6 +9,7 @@ module.exports = {
       extend: {
          aspectRatio: {
             '3/4': '3 / 4',
+            '3.5/4': '3.5 / 4',
          },
          colors: {
             'blue': {
@@ -19,5 +20,7 @@ module.exports = {
          }
       },
    },
-   plugins: [],
+   plugins: [
+      require('@tailwindcss/line-clamp'),
+   ],
 }
