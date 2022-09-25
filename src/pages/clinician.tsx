@@ -47,7 +47,8 @@ function ResearchPapers() {
                navigation={true}
                spaceBetween={50}
                slidesPerView={1}
-               loop={false}
+               centeredSlides={false}
+               loop={true}
                autoplay={{
                   delay: 3000,
                }}
@@ -56,10 +57,11 @@ function ResearchPapers() {
                      slidesPerView: 1,
                      loop: false,
                      navigation: true,
+
                   },
                   // when window width is >= 768px
                   768: {
-                     slidesPerView: 3,
+                     slidesPerView: 2.7,
                      loop: false,
                      navigation: false,
                   },

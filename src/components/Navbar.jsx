@@ -85,7 +85,7 @@ const Navbar = ({ renderMenu }) => {
             </div>
 
             <div className={`${navActive ? "active" : ""} nav__menu-list`}>
-               <div className={'hidden md:flex'}>{renderMenu && renderMenu()}</div>
+               <div className={'hidden md:flex'}>{renderMenu && renderMenu({ className: 'flex ', menuItems: productHeaderMenu })}</div>
                <SidebarNav />
             </div>
          </nav>

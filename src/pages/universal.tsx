@@ -50,7 +50,9 @@ function UniversalId() {
          <div className={`items-center gap-6 py-3 mt-3 flex md:mr-16 ${rprops.className}`} >
             {rprops.menuItems?.map((mi, miIndex) => (
             <Link key={`pmin_${miIndex}`} href={mi.url} >
-               <a className="font-bold text-gray-600">{mi.title}</a>
+               <a className={`font-bold ${mi.url.includes('universal') ? 'text-green-600': 'text-gray-600'}`}>
+                  {mi.title}
+               </a>
             </Link>
             ))}
          </div>

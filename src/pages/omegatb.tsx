@@ -17,7 +17,7 @@ function OmegaTB({ navbarMenu }) {
          <div className={`items-center gap-6 py-3 mt-3 flex md:mr-16 ${rprops.className}`} >
             {rprops.menuItems?.map((mi, miIndex) => (
             <Link key={`pmin_${miIndex}`} href={mi.url} >
-               <a className={`font-bold ` + (mi.url.includes('omega')) ? 'text-green-600': 'text-gray-600'}>
+               <a className={`font-bold ${mi.url.includes('omega') ? 'text-green-600': 'text-gray-600'}`}>
                   {mi.title}
                </a>
 
