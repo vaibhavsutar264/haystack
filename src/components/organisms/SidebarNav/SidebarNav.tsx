@@ -137,7 +137,7 @@ const SidebarNav = () => {
     >
       <motion.div className="background" variants={sidebar} />
       <Navigation />
-      <MenuToggle toggle={() => toggleOpen()} />
+       <MenuToggle isOpen={isOpen} toggle={() => toggleOpen()} />
     </StyledComponent>
   );
 };

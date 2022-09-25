@@ -42,13 +42,19 @@ function ResearchPapers() {
             <h3 className="text-4xl md:text-5xl font-bold text-black mb-4">
                Research papers
             </h3>
+         </div>
+         <div className={'container container--right-attached ml-auto'}>
             <Swiper
-               modules={[ Autoplay, Navigation ]}
+               className="my-10 research_papers_carousel"
+               modules={[ Autoplay, Navigation, Pagination ]}
+               pagination={{
+                  clickable: true,
+               }}
                navigation={true}
                spaceBetween={50}
                slidesPerView={1}
                centeredSlides={false}
-               loop={true}
+               loop={false}
                autoplay={{
                   delay: 3000,
                }}
@@ -61,7 +67,7 @@ function ResearchPapers() {
                   },
                   // when window width is >= 768px
                   768: {
-                     slidesPerView: 2.7,
+                     slidesPerView: 2.5,
                      loop: false,
                      navigation: false,
                   },
@@ -72,17 +78,22 @@ function ResearchPapers() {
                >
                {researchPapers.map((item, index) => (
                   <SwiperSlide key={`slide_${index}`}>
-                     <figure className="flex items-center gap-3">
+                     <figure className="flex items-start gap-3">
                         <div className="w-5/12">
-                           <img src={item.thumbnail_url} alt={'Research paper'} className="bg-gray-100 aspect-square w-56 h-56" />
+                           <img src={item.thumbnail_url} alt={'Research paper'} className="bg-gray-100 w-32 h-32 aspect-square" />
                         </div>
                         <figcaption>
-                           <p>
-                              <a href={item.url} className="text-md text-blue-600">{item.title}</a>
+                           <p className={'mb-3'}>
+                              <a href={item.url} className="text-md line-clamp-4 text-blue-600 underline ">{item.title}</a>
                            </p>
-                           <p className="text-sm">
-                              {item.excerpt}
-                           </p>
+                           <div className="text-sm flex items-center gap-3">
+                              {item.authors?.map((author, authorIndex) => (
+                                 <div key={`authorIndex_${authorIndex}`} className={'flex items-center gap-2'}>
+                                    <span style={{ width: '10px', height: '10px', }} className={'bg-gray-400 flex rounded-full'}></span>
+                                    <span>{author.name}</span>
+                                 </div>
+                                 ))}
+                           </div>
                         </figcaption>
                      </figure>
                   </SwiperSlide>

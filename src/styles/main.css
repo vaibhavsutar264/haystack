@@ -135,3 +135,17 @@ section {
       right: 100px !important;
    }
 }
+
+
+
+@media screen and (min-width: 1280px)
+{
+   .container--right-attached {
+      --container-width: 1200px;
+      max-width: calc(var(--container-width) + calc(calc(100vw - var(--container-width)) / 2));
+   }
+}
+.research_papers_carousel .swiper-pagination {
+   position: static;
+   margin-top: 2.5rem
+}
