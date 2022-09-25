@@ -4,14 +4,15 @@ import Template from "../../Template";
 import { getCategoryFile, getCategoryFiles } from "../../utils/categories";
 import { getActivePosts, getPostFiles } from "../../utils/posts";
 import { getSettings } from "../../utils/settings";
+import AppTemplate from "../../components/templates/AppTemplate";
 
 function PostsGrid({ posts, category }) {
    return (
       <>
          <section name="blog-component">
-            <div className="container">
+            <div className="container mx-auto">
                <div className="py-xl-4 py-lg-4 py-md-2 py-sm-2">
-                  <p className="h1 font-weight-normal text-uppercase blog-listing-page-main-heading">
+                  <p className="text-4xl font-bold mb-6 h1 font-weight-normal text-uppercase blog-listing-page-main-heading">
                   {category?.title}
                   </p>
                </div>
@@ -48,10 +49,9 @@ function PostsGrid({ posts, category }) {
 function BlogCategory({ posts, category }) {
    return (
       <>
-         <Template>
-            {/* <h1>{category?.title}</h1> */}
+         <AppTemplate>
             <PostsGrid posts={posts} category={category} />
-         </Template>
+         </AppTemplate>
       </>
    );
 }
@@ -85,7 +85,7 @@ export async function getStaticProps(context) {
    const posts = allPosts?.filter(postItem => {
       return postItem.category?.includes(categorySlug)
    })
-   console.log({ posts })
+   console.log({ posts, allPosts,categorySlug })
    return {
       props: {
          posts,

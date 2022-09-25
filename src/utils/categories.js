@@ -8,7 +8,7 @@ export const getCategoryFiles = () => {
    //passsing directoryPath and callback function
    // fs.readdirSync
    const fileNames = fs.readdirSync(jsonDirectory + '/categories');
-   if(!fs.existsSync(fileNames)) {
+   if(!fs.existsSync(jsonDirectory + '/categories')) {
       return categories
    }
    console.log({ fileNames })
