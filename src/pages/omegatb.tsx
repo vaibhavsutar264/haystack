@@ -28,8 +28,17 @@ function OmegaTB({ navbarMenu }) {
          <HeroBanner
             bgColor="white"
             title={`Universal Drug Resistance Test for TB:`}
-            description={`Doing Our Part For TB Free World`}
             image={OmegaTbImg}
+            renderDescription={() => (
+               <>
+               <p className="mb-6 text-xl md:text-2xl font-bold text-black ">
+                  Doing Our Part For TB Free World
+               </p>
+               <div className="bg-blue-100 p-6">
+                  Single test for simultaneous evaluation of all resistance markers as well as differentiate between mixed infection, relapse and reinfection.
+               </div>
+               </>
+               )}
          />
          <WhyChoose />
          <HowWorkGrid />

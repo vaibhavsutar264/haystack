@@ -118,7 +118,7 @@ const TextVideo = () => {
                   className="text-capitalize font-weight-normal"
                >
                   {" "}
-                  400+ bacteria and fungi tested and reported in 12 hours
+                  Introducing Universal Infectious Diseases Test
                </h2>
             </div>
 
