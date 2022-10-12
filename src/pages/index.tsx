@@ -1,4 +1,4 @@
-import data from "../data/data.json";
+import data from "../json/data.json";
 import OurPartners, { ClientsCarousel } from "../OurPartners";
 import TextVideo from "../TextVideo";
 import Precision from "../Precision";

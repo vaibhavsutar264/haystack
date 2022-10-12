@@ -2,7 +2,7 @@ import React from "react";
 // import { Helmet } from "react-helmet";
 // import $ from 'jquery';
 import Script from "next/script";
-import data from "../src/data/data.json";
+import data from "./json/data.json";
 import NavbarContent from "./components/NavbarContent";
 import Image from "next/image";
 // import Head from 'next/head';

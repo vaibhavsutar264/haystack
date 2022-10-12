@@ -22,7 +22,7 @@ function PostsGrid({ posts, category }) {
                         <div className="blog-listing-page-img">
                            {/* <Image src={FeaturedImg} /> */}
                            {/* {JSON.stringify({ cat })} */}
-                           <img src={cat.image_url} className="w-full img-responsive" />
+                           <img src={cat.image_url} className="w-full img-responsive img--cat-thumbnail" />
                         </div>
                         <h3 className="blog-listing-page-heading my-sm-2 my-1">
                            {cat.title}

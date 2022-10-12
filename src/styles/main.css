@@ -149,3 +149,7 @@ section {
    position: static;
    margin-top: 2.5rem
 }
+.img--cat-thumbnail {
+   aspect-ratio: 4/3;
+   object-fit: cover;
+}
