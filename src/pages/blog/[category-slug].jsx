@@ -16,18 +16,18 @@ function PostsGrid({ posts, category }) {
                   {category?.title}
                   </p>
                </div>
-               <div className="row mt-3">
+               <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-3 mb-6">
                   {posts?.map(cat => (
-                     <div key={cat.slug} className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                     <div key={cat.slug} className="grid__col">
                         <div className="blog-listing-page-img">
                            {/* <Image src={FeaturedImg} /> */}
                            {/* {JSON.stringify({ cat })} */}
                            <img src={cat.image_url} className="w-full img-responsive img--cat-thumbnail" />
                         </div>
-                        <h3 className="blog-listing-page-heading my-sm-2 my-1">
+                        <h3 className="blog-listing-page-heading my-sm-2 my-1 text-black">
                            {cat.title}
                         </h3>
-                        <p className="blog-listing-page-read-more font-weight-normal">
+                        <p className="blog-listing-page-read-more font-weight-normal font-semibold text-blue-600">
                            <Link href={`/post/${cat.slug}`}>Read more &gt;&gt;</Link>
                         </p>
                      </div>

@@ -153,3 +153,19 @@ section {
    aspect-ratio: 4/3;
    object-fit: cover;
 }
+.blog-content {
+   --text-size-title: 2.5rem;
+   --text-size-heading: 1.5rem;
+   --text-size-base: 1rem;
+}
+.blog-content img,
+.img-responsive {
+   width: 100%;
+}
+.blog-content h1 {
+   font-size: var(--text-size-title);
+}
+.blog-content h2,
+.blog-content h3 {
+   font-size: var(--text-size-heading);
+}

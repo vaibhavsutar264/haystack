@@ -28,12 +28,12 @@ function BlogPageContent({ post = {}, }: any) {
                <div className="m-auto py-4 blog-content">
                   <div className="font-weight-normal blog-content-text" dangerouslySetInnerHTML={{ __html: post.description }}></div>
                </div>
-               <div className="d-flex border-top border-4 border-dark py-4 blog-author">
+               <div className="flex border-top items-center py-4 blog-author gap-4">
                   <div className="blog-author-img">
-                     <Image alt="logo" src={AuthorImg} className="rounded-circle" width={'144'} height={'144'} />
+                     <Image alt="logo" src={AuthorImg} className="rounded-full" width={'144'} height={'144'} />
                   </div>
-                  <div className="ms-3 m-auto">
-                     <p className="blog-author-name mb-1">{post.author_name}</p>
+                  <div className="ms-3">
+                     <p className="text-xl font-bold blog-author-name mb-1">{post.author_name}</p>
                      <p className="blog-author-description">
                         {post.author_bio}
                      </p>
