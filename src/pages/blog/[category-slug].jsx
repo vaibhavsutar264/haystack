@@ -4,29 +4,30 @@ import Template from "../../Template";
 import { getCategoryFile, getCategoryFiles } from "../../utils/categories";
 import { getActivePosts, getPostFiles } from "../../utils/posts";
 import { getSettings } from "../../utils/settings";
+import AppTemplate from "../../components/templates/AppTemplate";
 
 function PostsGrid({ posts, category }) {
    return (
       <>
          <section name="blog-component">
-            <div className="container">
+            <div className="container mx-auto">
                <div className="py-xl-4 py-lg-4 py-md-2 py-sm-2">
-                  <p className="h1 font-weight-normal text-uppercase blog-listing-page-main-heading">
+                  <p className="text-4xl font-bold mb-6 h1 font-weight-normal text-uppercase blog-listing-page-main-heading">
                   {category?.title}
                   </p>
                </div>
-               <div className="row mt-3">
+               <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-3 mb-6">
                   {posts?.map(cat => (
-                     <div key={cat.slug} className="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                     <div key={cat.slug} className="grid__col">
                         <div className="blog-listing-page-img">
                            {/* <Image src={FeaturedImg} /> */}
                            {/* {JSON.stringify({ cat })} */}
-                           <img src={cat.image_url} className="w-full img-responsive" />
+                           <img src={cat.image_url} className="w-full img-responsive img--cat-thumbnail" />
                         </div>
-                        <h3 className="blog-listing-page-heading my-sm-2 my-1">
+                        <h3 className="blog-listing-page-heading my-sm-2 my-1 text-black">
                            {cat.title}
                         </h3>
-                        <p className="blog-listing-page-read-more font-weight-normal">
+                        <p className="blog-listing-page-read-more font-weight-normal font-semibold text-blue-600">
                            <Link href={`/post/${cat.slug}`}>Read more &gt;&gt;</Link>
                         </p>
                      </div>
@@ -48,10 +49,9 @@ function PostsGrid({ posts, category }) {
 function BlogCategory({ posts, category }) {
    return (
       <>
-         <Template>
-            {/* <h1>{category?.title}</h1> */}
+         <AppTemplate>
             <PostsGrid posts={posts} category={category} />
-         </Template>
+         </AppTemplate>
       </>
    );
 }
@@ -85,7 +85,7 @@ export async function getStaticProps(context) {
    const posts = allPosts?.filter(postItem => {
       return postItem.category?.includes(categorySlug)
    })
-   console.log({ posts })
+   console.log({ posts, allPosts,categorySlug })
    return {
       props: {
          posts,

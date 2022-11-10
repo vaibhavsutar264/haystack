@@ -7,8 +7,9 @@ import AutomatedBioinformaticsImg from "../assets/automated-bioinformatics-img.p
 import AppTemplate from "../components/templates/AppTemplate";
 import { FeatureCards, WhyChooseHaystack } from "./clinician";
 import HeroBanner from "../components/HeroBanner";
+import {getClinicianFeatures} from "../utils/clinician";
 
-function Diagnostic() {
+function Diagnostic({ data }) {
    return (
       <AppTemplate>
          <HeroBanner
@@ -18,7 +19,7 @@ function Diagnostic() {
             content={`Easy To Onboard Tech`}
          >
             <div className="container mx-auto px-3 md:px-10 mb-10 bg-blue-300 py-10">
-               <div className="grid grid-cols-2 gap-6 items-center">
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                   <div className="grid__col">
                      <Image src={AutomatedBioinformaticsImg} />
                   </div>
@@ -38,7 +39,7 @@ function Diagnostic() {
                         <p className="text-black">
                            Book a Detailed Call With Our Expert Today
                         </p>
-                        <button className="text-white border-2 border-black uppercase bg-green-600 px-6 py-3 rounded-full">
+                        <button className="text-white border-2 border-black uppercase bg-green-600 text-sm md:text-base px-3 md:px-6 py-3 rounded-full">
                            Contact us
                         </button>
                      </div>
@@ -48,9 +49,21 @@ function Diagnostic() {
             </div>
          </HeroBanner>
          <WhyChooseHaystack />
-         <FeatureCards />
+         <FeatureCards items={data?.features} />
       </AppTemplate>
    );
 }
+
+
+export async function getStaticProps(context) {
+   let data = getClinicianFeatures()
+
+   return {
+      props: {
+         data: JSON.parse(JSON.stringify(data)),
+      }, // will be passed to the page component as props
+   }
+}
+
 
 export default Diagnostic;

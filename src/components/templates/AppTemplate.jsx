@@ -6,6 +6,7 @@ import PreAnimationOnLoad from "../../PreAnimationOnLoad";
 import { useEffect } from "react";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import settings from '../../json/settings.json'
 const StyledTemplate = styled.div`
    margin: 0;
    padding: 0;
@@ -23,17 +24,23 @@ const cursorAnimation = (  ) => {
       // console.log(e.clientY - cursor.clientHeight)
       cursor.style.top = e.clientY - cursor.clientHeight / 2 + 'px'
       cursor.style.left = e.clientX - cursor.clientWidth / 2 + 'px'
-      console.log(e)
+      // console.log(e)
       cursor.classList.remove('playing-bg')
+      const maskImg = document.querySelector('.mask1 img')
+      if (maskImg) {
+         maskImg.opacity = 0
+         maskImg.style.position = 'fixed'
+      }
       if (e.target.tagName == 'A') {
-         cursor.style.transform = `scale(10.2)`
+         // cursor.style.transform = `scale(10.2)`
       } else if (e.target.localName == 'span' && e.target.classList.contains('letter')) {
          cursor.style.transform = `scale(10.2)`
       } else if (e.target.classList.contains('js-hover')) {
-         const maskImg = document.querySelector('.mask1 img')
-         maskImg.style.position = 'absolute'
-         maskImg.style.top = (e.clientY - 285) + 'px'
-         maskImg.style.left = (e.clientX - 180) + 'px'
+         maskImg.opacity = 1
+
+         maskImg.style.top = (e.clientY - (cursor.clientHeight / 2)) + 10 + 'px'
+         maskImg.style.left = (e.clientX - (cursor.clientWidth / 2)) + 10 + 'px'
+         maskImg.style.transform = `translate(-50%, -50%)`
          cursor.classList.add('playing-bg')
          cursor.style.transform = `scale(10.2)`
       } else {
@@ -48,7 +55,8 @@ const cursorAnimation = (  ) => {
    })
 }
 
-function AppTemplate({ children, pageProps = {}, bodyClassName = '', settings = {}, ...props }) {
+function AppTemplate({ children, pageProps = {}, bodyClassName = '', renderMenu, ...props  }) {
+
    useEffect(() => {
       if (AOS) {
          AOS.init();
@@ -59,7 +67,7 @@ function AppTemplate({ children, pageProps = {}, bodyClassName = '', settings = 
       <StyledTemplate {...props} className={`body__content ${bodyClassName}`}>
          <div className="cursor"></div>
          <PreAnimationOnLoad />
-         <Navbar />
+         <Navbar renderMenu={renderMenu} />
          {children}
          <div className="bg-white">
             <Footer settings={settings} />

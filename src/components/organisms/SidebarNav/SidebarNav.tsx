@@ -28,6 +28,8 @@ const sidebar = {
 };
 
 const StyledComponent = styled(motion.div)`
+   left: 0;
+   top: 0;
 
    .background {
       position: absolute;
@@ -40,10 +42,34 @@ const StyledComponent = styled(motion.div)`
       z-index: 999;
       transition: background-color .3s ease;
    }
+   &.closed .Navigation_list {
+      pointer-events: none;
+   }
    &.open {
+      display: block;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+
+
       .background {
          background-color: var(--primary-color);
          width: 100vw;
+      }
+      button {
+         color: white;
+         svg {
+            color: white;
+         }
+      }
+
+      .Navigation_list {
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         text-align: center;
+         pointer-events: reset;
+         width: 100%;
       }
    }
 
@@ -63,6 +89,7 @@ const StyledComponent = styled(motion.div)`
       background: transparent;
       z-index: 99999;
    }
+
    ul {
       z-index: 99999999 !important;
       color: white;
@@ -104,13 +131,13 @@ const SidebarNav = () => {
     <StyledComponent
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className={isOpen ? "open" : "closed"}
+      className={isOpen ? "open" : "closed" + " px-3"}
       custom={height}
       ref={containerRef}
     >
       <motion.div className="background" variants={sidebar} />
       <Navigation />
-      <MenuToggle toggle={() => toggleOpen()} />
+       <MenuToggle isOpen={isOpen} toggle={() => toggleOpen()} />
     </StyledComponent>
   );
 };

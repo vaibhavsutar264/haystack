@@ -8,7 +8,7 @@ export const getPostFiles = () => {
    //passsing directoryPath and callback function
    // fs.readdirSync
    const fileNames = fs.readdirSync(jsonDirectory + '/posts');
-   if(!fs.existsSync(fileNames)) {
+   if(!fs.existsSync(jsonDirectory + '/posts')) {
       return posts
    }
    fileNames.map(fname => {

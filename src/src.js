@@ -37,13 +37,16 @@ if (typeof window !== "undefined") {
       const dom = globalThis.document
       const cursor = dom.querySelector(".cursor");
       dom.addEventListener('mousemove', e => {
-         cursor.style.top = e.clientY - cursor.height() / 2
-         cursor.style.left = e.clientX - cursor.width() / 2
-         if (e.target.tagName == 'A') {
-            cursor.style.transform = `scale(10.2)`
-         } else {
-            cursor.style.transform = `scale(1)`
+         if (cursor) {
+            cursor.style.top = e.clientY - cursor.height() / 2
+            cursor.style.left = e.clientX - cursor.width() / 2
+            if (e.target.tagName == 'A') {
+               cursor.style.transform = `scale(10.2)`
+            } else {
+               cursor.style.transform = `scale(1)`
+            }
          }
+
       })
       dom.addEventListener('mouseleave', e => {
          cursor.style.opacity = 0

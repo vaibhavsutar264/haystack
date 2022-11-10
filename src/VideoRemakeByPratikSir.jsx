@@ -9,6 +9,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import Section from "./components/atoms/Section";
+import bannerImgSrc from './assets/hero-img-2.jpg'
+import bannerImgSrcMobile from './assets/inforgraphic-01-02.png'
 
 const StyledVideoSection = styled.div`
    video {
@@ -51,9 +53,9 @@ const TextSlides = ({ items }) => {
 const VideoRemakeByPratikSir = () => {
    return (
       <StyledVideoSection>
-         <Section containerClass={''} className="py-6" fromBg="white" toBg="black">
+         <Section containerClass={''} className="py-0" fromBg="white" toBg="white">
             <div className="video-remake-again container mx-auto">
-               <div data-aos="fade-up" className="title-animation-box-video-remake w-100 mb-6">
+               <div data-aos="fade-up" className="title-animation-box-video-remake w-100 mb-6 pt-6">
                   <TextSlides
                      items={[
                         { text: `A Revolutionary technology to aid microbiology` },
@@ -62,20 +64,29 @@ const VideoRemakeByPratikSir = () => {
                   />
                </div>
             </div>
-            <video
-               id="scroll-video"
-               className="w-full"
-               src={
-                  "https://media.istockphoto.com/videos/medical-science-laboratory-beautiful-black-scientist-looking-under-video-id1297574801"
-               }
-               type="video/mp4"
-               data-aos="zoom-in"
-               data-aos-delay="300"
-               data-aos-duration="1600"
-               autoPlay
-               muted
-               loop
-            ></video>
+            <picture>
+            <source
+                  id="scroll-video"
+                  className="w-full"
+                  srcset={bannerImgSrcMobile.src}
+                  media="(max-width: 800px)"
+                  // data-src={bannerImgSrcMobile.src}
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
+                  data-aos-duration="1600"
+               />
+               <img
+                  id="scroll-video"
+                  className="w-full"
+                  src={bannerImgSrc.src}
+                  media="(min-width: 800px)"
+                  data-src={bannerImgSrcMobile.src}
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
+                  data-aos-duration="1600"
+               />
+
+            </picture>
          </Section>
       </StyledVideoSection>
    );

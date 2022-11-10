@@ -34,16 +34,16 @@ export default function Upgrade() {
             animate={controls}
             initial="hidden"
             variants={topBottomVariants}
-            className="upgrade-main"
+            className="upgrade-main "
          >
             <div className="container mx-auto px-3 md:px-0">
-               <div className="md:grid grid-cols-6 gap-4 items-center">
-                  <div className="col-span-4">
+               <div className="md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-6 gap-6 md:gap-4 items-center">
+                  <div className="md:col-span-4">
                      <div className="mb-6">
-                        <h2 className="upgrade-heading text-5xl font-extrabold uppercase mb-6">
+                        <h2 className="upgrade-heading text-4xl text-white font-extrabold uppercase mb-6">
                            Upgrade your lab <br /> without hassle
                         </h2>
-                        <p className="upgrade-para text-2xl font-weight-normal py-xl-3 py-lg-3 py-md-2 mb-6">
+                        <p className="upgrade-para text-2xl text-white font-weight-normal py-xl-3 py-lg-3 py-md-2 mb-6">
                            A Cutting edge health tech platform and <br /> genomic testing
                            rolled into one
                         </p>
@@ -53,7 +53,7 @@ export default function Upgrade() {
                      </div>
 
                   </div>
-                  <div className="col-span-2">
+                  <div className="md:col-span-2">
                      <div className="w-6/12 mx-auto">
                         <Image src={UpgradeImg} className="max-full" />
                      </div>

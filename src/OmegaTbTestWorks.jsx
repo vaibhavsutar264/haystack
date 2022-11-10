@@ -9,7 +9,7 @@ function OmegaTbTestWorks() {
             className="py-10"
          >
             <div className="container px-3 md:px-0 mx-auto">
-               <p className="text-5xl font-bold mb-4 text-black">
+               <p className="text-4xl md:text-5xl font-bold mb-4 text-black">
                   How Does Omega TB Test Work?
                </p>
                <div className="w-10/12 mx-auto my-10">

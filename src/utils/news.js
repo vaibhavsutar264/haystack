@@ -5,14 +5,13 @@ const path = require('path');
 
 export const getNewsFiles = () => {
    let news = []
-   //passsing directoryPath and callback function
-   // fs.readdirSync
-   // console.log({jsonDirectory})
+
    const fileNames = fs.readdirSync(jsonDirectory + '/news');
-   if(!fs.existsSync(fileNames)) {
+   // console.log({ fileNames })
+   if(!fs.existsSync(jsonDirectory + '/news')) {
+      console.warn('not found')
       return news
    }
-   console.log({ fileNames })
    fileNames.map(fname => {
       news.push({
          id: fname,
@@ -21,6 +20,7 @@ export const getNewsFiles = () => {
          slug: fname.replace('.json', ''),
       })
    })
+   console.warn(news)
    return news
 }
 

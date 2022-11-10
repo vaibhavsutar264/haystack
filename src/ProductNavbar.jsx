@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import data from "./data/data.json";
+import data from "./json/data.json";
 import NavItem from "./components/NavItem";
 
 const MENU_LIST = [

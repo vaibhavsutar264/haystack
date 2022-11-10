@@ -1,0 +1,32 @@
+{
+   "footer": [
+      {
+         "title": "SCIENCE CORNER",
+         "url": "/science-corner"
+      },
+      {
+         "title": "PRODUCT",
+         "url": "/universal"
+      },
+      {
+         "title": "ABOUT US",
+         "url": "/about"
+      }
+   ],
+   "navbar": [
+      { "label": "SCIENCE CORNER", "url": "/science-corner" },
+      { "label": "ABOUT US", "url": "/about" },
+      { "label": "PRODUCT", "url": "/universal" }
+
+   ],
+   "productsHeader": [
+      {
+         "title": "Universal ID",
+         "url": "/universal"
+      },
+      {
+         "title": "Omega TB",
+         "url": "/omegatb"
+      }
+   ]
+}

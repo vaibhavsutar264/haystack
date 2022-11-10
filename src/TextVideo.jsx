@@ -107,61 +107,7 @@ const TextVideo = () => {
          <div className="button-wrapper link" id="button-wrapper">
             <div className="relative container mx-auto px-3 md:px-0">
                <MaskedText />
-               {/* <Text>
-                  <div className=" text text--masked mb-6">
-                     Infectious <br />
-                     Diseases<br />
-                     Wouldn't<br />
-                     Kill Anymore
-                  </div>
-               </Text> */}
-               {/* <h2 id="text-video-h2">
-                  <div className="text-1 text-video-text">
-                     <span className="letter">I</span>
-                     <span className="letter">n</span>
-                     <span className="letter">f</span>
-                     <span className="letter">e</span>
-                     <span className="letter">c</span>
-                     <span className="letter">t</span>
-                     <span className="letter">i</span>
-                     <span className="letter">o</span>
-                     <span className="letter">u</span>
-                     <span className="letter">s </span>
-                  </div>
-                  <div className="text-2 text-video-text">
-                     <span className="letter">D</span>
-                     <span className="letter">i</span>
-                     <span className="letter">s</span>
-                     <span className="letter">e</span>
-                     <span className="letter">a</span>
-                     <span className="letter">s</span>
-                     <span className="letter">e</span>
-                     <span className="letter">s </span>
-                  </div>
-                  <div className="text-3 text-video-text">
-                     <span className="spacing">W</span>
-                     <span className="letter">o</span>
-                     <span className="letter">u</span>
-                     <span className="letter">l</span>
-                     <span className="letter">d</span>
-                     <span className="letter">n</span>
-                     <span className="letter">'</span>
-                     <span className="letter">t </span>
-                  </div>
-                  <div className="text-4 text-video-text">
-                     <span className="spacing">K</span>
-                     <span className="letter">i</span>
-                     <span className="letter">l</span>
-                     <span className="letter">l </span>
-                     <span className="spacing">A</span>
-                     <span className="letter">n</span>
-                     <span className="letter">y</span>
-                     <span className="letter">m</span>
-                     <span className="letter">o</span>
-                     <span className="letter">r</span>
-                     <span className="letter">e</span>
-                  </div>
-               </h2> */}
+
                <video id="banner" type="video/mp4" muted autoPlay loop>
                   <source src={"https://media.istockphoto.com/videos/cloning-bacteria-loop-video-id473038835"} />
                </video>
@@ -172,7 +118,7 @@ const TextVideo = () => {
                   className="text-capitalize font-weight-normal"
                >
                   {" "}
-                  400+ bacteria and fungi tested and reported in 12 hours
+                  Introducing Universal Infectious Diseases Test
                </h2>
             </div>
 

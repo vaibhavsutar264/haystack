@@ -1,11 +1,12 @@
 import { Bootstrap } from "../../../../cp/src";
 import { Field } from "../../../../cp/src/components/molecules";
-import { Form } from "../../../../cp/src/components/organisms";
+import { Fileupload, Form } from "../../../../cp/src/components/organisms";
 const ContentEditor = dynamic(() => import('../../../../cp/src/components/organisms/ContentEditor/ContentEditor'), { ssr: false })
 // import excuteQuery from "../../../db";
 import { Field as FormikField } from 'formik'
 import dynamic from "next/dynamic";
 import { getAllCategories, getCategoryFiles } from "../../../utils/categories";
+import Fileuploader from "../../../../cp/src/components/organisms/FileUploader/FileUploader";
 const statusOptions = [
    { label: 'Draft', value: 'draft' },
    { label: 'Pending', value: 'pending' },
@@ -25,7 +26,13 @@ export default function create({ post, categories }) {
                <Field required={true} name={'title'} label={'Title'} />
                <Field required={true} name={'slug'} label={'Slug'} />
                <Field required={false} name={'description'} label={'Description'} Component={ContentEditor} />
-               <Field required={true} name={'image_url'} label={'Featured image'} />
+               <Field required={false} name={'image_url'} label={'Featured image'} />
+               {/* <div className="mb-3">
+                  <label htmlFor="">Featured image*</label>
+                  <FormikField as={'input'} type="file" name={'image_url'} className="form-select w-full">
+
+                  </FormikField>
+               </div> */}
                <Field required={true} name={'meta_title'} label={'Meta title'} />
                <Field required={true} name={'meta_description'} label={'Meta description'} />
                <div>
