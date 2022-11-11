@@ -85,8 +85,16 @@ const Navbar = ({ renderMenu }) => {
             </div>
 
             <div className={`${navActive ? "active" : ""} nav__menu-list`}>
-               <div className={'hidden md:flex'}>{renderMenu && renderMenu({ className: 'flex ', menuItems: productHeaderMenu })}</div>
-               <SidebarNav />
+               <div className="mb-3 text-sm flex gap-6 text-gray-500">
+                  <Link href="/">hello@haystackanalytics.in</Link>
+                  <Link href="/">fb</Link>
+                  <Link href="/">fb</Link>
+               </div>
+               <div className="flex gap-6 ">
+                  <Link className="font-medium" href="/">Science Corner</Link>
+                  <Link className="font-medium" href="/">About Us</Link>
+                  <Link className="font-medium" href="/">Product</Link>
+               </div>
             </div>
          </nav>
          <div className={'container mx-auto py-3 flex items-center justify-center md:hidden'}>
