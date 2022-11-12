@@ -17,41 +17,54 @@ import heroBg from '../assets/haystack-body-bg.png'
 import { useEffect, useMemo } from "react";
 import Section from '../components/atoms/Section'
 import Link from "../../node_modules/next/link";
+import PostItem from "../components/molecules/PostItem";
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
+      background-image: url("https://images.unsplash.com/photo-1659535901690-ab95a8539929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: right center;
+   }
 
+`
+
+const StyledHeroSection = styled(Section)`
+   background-image: url(https://images.unsplash.com/photo-1659535901690-ab95a8539929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+   background-size: 60%;
+   background-repeat: no-repeat;
+   background-position: right center;
+   .section__container {
+      min-height: calc(100vh - var(--safe-top-padding, 100px));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
    }
 `
 
-
 const HeroSection = () => {
    return (
-      <Section className="HeroSection bg-gray-500">
+      <StyledHeroSection className="HeroSection ">
          <Section.Container className="mx-auto ">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col bg-white py-8">
                   <h3 className="mb-4 text-4xl font-extrabold">Infectious Diseases<br/> Should Not Be Fatal</h3>
-                  <p className="text-blue-600 text-lg">Universal Infectious Diseases Test (UID)</p>
-                  <p className="text-gray-800">A Revolutionary Technology to Aid the Clinician</p>
+                  <p className="text-blue-600 text-lg font-bold">Universal Infectious Diseases Test (UID)</p>
+                  <p className="text-muted">A Revolutionary Technology to Aid the Clinician</p>
                   <div className="mt-8">
                      <Link href={'#'} >
-                        <a className="text-blue-600 border-2 font-bold border-blue-600 px-8 py-3">KNOW MORE</a>
+                        <a className="btn-outline-info">KNOW MORE</a>
                      </Link>
                   </div>
                </div>
             </div>
          </Section.Container>
-      </Section>
+      </StyledHeroSection>
    )
 }
 
 function Home({ Component, pageProps, news, settings }) {
-   const onScroll = useMemo((e: any) => {
-      const bgColor = e?.target?.getAttribute('data-body-bg')
-      globalThis.document?.body?.setAttribute(`style`, `--current-bg-color: ${bgColor}`)
 
-   }, [  ])
    return (
       <StyledHome bodyClassName="home" settings={settings}>
          <HeroSection />
@@ -60,7 +73,7 @@ function Home({ Component, pageProps, news, settings }) {
                <h3 className="section-heading">
                   Sepsis And Its Global Impact
                </h3>
-               <p className="text-base text-gray-400">
+               <p className="text-base text-muted">
                {`Sepsis is the body's extreme response to an infection and is potentially life-threatening. This occurs when a pre-existing infection triggers a chain reaction throughout your body, often leading to shock, disability, multi organ failure, or even death.`}
                </p>
                <div className="flex flex-col md:flex-row gap-4 my-8">
@@ -74,12 +87,12 @@ function Home({ Component, pageProps, news, settings }) {
             </Section.Container>
          </Section>
 
-         <Section className=" bg-slate-600 text-white">
+         <Section className=" bg-blue-800 text-white">
             <Section.Container className="container mx-auto py-12">
-               <h3 className="text-white section-heading ">
+               <h3 className="text-white section-heading section-heading--invert">
                   The Universal Infectious Diseases Test
                </h3>
-               <p className="text-base text-gray-400">
+               <p className="text-base text-white">
                {`UID Test is an NGS based culture-free test to identify causative pathogen in quick turn around time`}
                </p>
                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
@@ -150,7 +163,7 @@ function Home({ Component, pageProps, news, settings }) {
                      </tbody>
                   </table>
                </div>
-               <p className="text-xs text-gray-500">
+               <p className="text-xs text-muted">
                   {`*In silico analysis, UID can identify >1200 pathogens, pre-clinical validation has been done for 48 pathogens`}
                </p>
             </Section.Container>
@@ -179,7 +192,7 @@ function Home({ Component, pageProps, news, settings }) {
                </div>
             </Section.Container>
          </Section>
-         <Section className=" bg-gray-200">
+         <Section className=" bg-gray-100">
             <Section.Container className="container mx-auto py-12">
                <div className="w-50">
                   <h3 className="section-heading">
@@ -187,10 +200,10 @@ function Home({ Component, pageProps, news, settings }) {
                   </h3>
                   <div className="flex flex-col md:flex-row gap-8">
                      <Link href={'/'}>
-                        <a className="text-white text-center bg-gray-600 px-8 py-4">I AM A CLINICIAN</a>
+                        <a className="btn-secondary">I AM A CLINICIAN</a>
                      </Link>
                      <Link href={'/'}>
-                        <a className="text-white text-center bg-green-600 px-8 py-4">WE ARE A LAB / HOSPITAL</a>
+                        <a className="btn-primary">WE ARE A LAB / HOSPITAL</a>
                      </Link>
                   </div>
                </div>
@@ -205,52 +218,63 @@ function Home({ Component, pageProps, news, settings }) {
                   </h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                      <div className="grid__col">
-                        <figure>
-                           <picture>
-                              <img src="//unsplash.it" alt="img" />
-                           </picture>
-                           <figcaption>
-                              <p>5TH AUGUST 2022</p>
-                              <p>{`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}</p>
-                           </figcaption>
-                        </figure>
+                        <PostItem
+                           title="5TH AUGUST 2022"
+                           thumbnailUrl="//unsplash.com"
+                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
+                           url={'#'}
+                        />
                      </div>
                      <div className="grid__col">
-                        <figure>
-                           <picture>
-                              <img src="//unsplash.it" alt="img" />
-                           </picture>
-                           <figcaption>
-                              <p>5TH AUGUST 2022</p>
-                              <p>{`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}</p>
-                           </figcaption>
-                        </figure>
+                        <PostItem
+                           title="5TH AUGUST 2022"
+                           thumbnailUrl="//unsplash.com"
+                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
+                           url={'#'}
+                        />
                      </div>
                      <div className="grid__col">
-                        <figure>
-                           <picture>
-                              <img src="//unsplash.it" alt="img" />
-                           </picture>
-                           <figcaption>
-                              <p>5TH AUGUST 2022</p>
-                              <p>{`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}</p>
-                           </figcaption>
-                        </figure>
+                        <PostItem
+                           title="5TH AUGUST 2022"
+                           thumbnailUrl="//unsplash.com"
+                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
+                           url={'#'}
+                        />
                      </div>
                      <div className="grid__col">
-                        <figure>
-                           <picture>
-                              <img src="//unsplash.it" alt="img" />
-                           </picture>
-                           <figcaption>
-                              <p>5TH AUGUST 2022</p>
-                              <p>{`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}</p>
-                           </figcaption>
-                        </figure>
+                        <PostItem
+                           title="5TH AUGUST 2022"
+                           thumbnailUrl="//unsplash.com"
+                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
+                           url={'#'}
+                        />
                      </div>
                   </div>
                </div>
 
+            </Section.Container>
+         </Section>
+         <Section className="">
+            <Section.Container className="container mx-auto py-12">
+               <h3 className="section-heading text-center">
+                  Awards
+               </h3>
+               <div className="md:w-6/12 mx-auto">
+                  <div className="grid grid-cols-3">
+                     <div className="bg-green-600 text-white p-8 text-center flex flex-col items-center justify-center">
+                        <h3 className="text-3xl font-bold">100+</h3>
+                        <p>CITIES</p>
+                     </div>
+                     <div className="bg-blue-600 text-white p-8 text-center flex flex-col items-center justify-center">
+                        <h3 className="text-3xl font-bold">500+</h3>
+                        <p>HOSPITALS</p>
+                     </div>
+                     <div className="bg-gray-600 text-white p-8 text-center flex flex-col items-center justify-center">
+                        <h3 className="text-3xl font-bold">100+</h3>
+                        <p>DOCTORS</p>
+                     </div>
+                  </div>
+               </div>
             </Section.Container>
          </Section>
       </StyledHome>

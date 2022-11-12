@@ -91,8 +91,8 @@ const Navbar = ({ renderMenu }) => {
                   <Link href="/">fb</Link>
                </div>
                <div className="flex gap-6 ">
-                  <Link className="font-medium" href="/">Science Corner</Link>
-                  <Link className="font-medium" href="/">About Us</Link>
+                  <Link className="font-medium" href="/science-corner">Science Corner</Link>
+                  <Link className="font-medium" href="/about">About Us</Link>
                   <Link className="font-medium" href="/">Product</Link>
                </div>
             </div>

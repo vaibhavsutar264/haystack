@@ -18,7 +18,9 @@ interface ISection {
    onScroll?: Function,
    [x: string]: any;
 }
-
+interface ISectionTitleProps {
+   variant: string,
+}
 interface ISectionProps {
    [x: string]: any;
 }
@@ -41,6 +43,16 @@ const Container = (props: ISectionProps) => {
 }
 
 Section.Container = Container
+
+const Title = (props: ISectionTitleProps) => {
+   return (
+      <h3 className={`section__heading ${props.className}`}>
+         {props.children}
+      </h3>
+   )
+}
+
+Section.Title = Title
 
 Section.defaultProps = {
    // containerClass: 'container'

@@ -18,7 +18,9 @@ const nextConfig = {
    },
    images: {
       domains: [
-         'haystackanalytics.in'
+         'haystackanalytics.in',
+         'images.unsplash.com',
+
       ]
    },
    webpack5: true,

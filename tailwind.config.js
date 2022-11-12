@@ -7,6 +7,9 @@ module.exports = {
    ],
    theme: {
       extend: {
+         fontFamily: {
+            sans: 'Poppins'
+         },
          aspectRatio: {
             '3/4': '3 / 4',
             '3.5/4': '3.5 / 4',
@@ -16,7 +19,16 @@ module.exports = {
                100: '#DDF3FD',
                300: '#71BED7',
                600: '#3570d3',
+               800: '#324767',
             },
+            'gray': {
+               100: '#efefef',
+               // 300: '#71BED7',
+               // 500: '#3570d3',
+               // 600: '#3570d3',
+            },
+            light: 'gray',
+            muted: '#5d5d5d',
          }
       },
    },

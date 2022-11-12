@@ -7,29 +7,65 @@
 
 :root {
    --primary-color: #3570d3;
+   --font-family: "Poppins", sans-serif;
+   --heading-size: 2rem;
+   --text-color: #5d5d5d;
 }
 
-body, html {
-   --font-family: "Poppins", sans-serif;
-   font-family: var(--font-family);
-   --heading-size: 2rem;
+@layer base {
+   body, html {
+      font-family: var(--font-family);
+   }
 }
+
 body, #__next {
+   color: var(--text-color);
+}
+.body__content {
+   margin-top: 100px !important;
    display: flex;
    flex-direction: column;
    min-height: 100vh;
 }
-.body__content {
-   margin-top: 100px !important;
-}
 
 .section-heading {
-   @apply text-3xl font-extrabold text-gray-500 mb-5
+   @apply text-3xl font-extrabold text-muted mb-5
+}
+.section-heading--invert {
+   @apply text-white
 }
 .heading {
-   @apply text-xl font-extrabold text-gray-500 mb-3
+   @apply text-xl font-extrabold text-muted mb-3
 }
 
 .table-wrapper table {
    @apply w-full mb-6
+}
+
+.btn {
+   @apply font-semibold
+}
+.btn-primary {
+   @apply btn text-white text-center bg-green-600 px-8 py-4
+}
+.btn-secondary {
+   @apply btn text-white text-center bg-gray-600 px-8 py-4
+}
+.btn-outline-info {
+   @apply btn text-blue-600 text-center bg-white px-8 py-3 border-blue-600
+}
+.hlink {
+   @apply font-medium
+}
+.hlink--success {
+   @apply text-green-600
+}
+.hlink:hover {
+   @apply underline decoration-clone
+}
+.btn-outline-info {
+   border-width: 3px;
+}
+.btn:hover {
+   filter: brightness(0.8);
 }
