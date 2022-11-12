@@ -1,23 +1,10 @@
 // @ts-nocheck
-import data from "../json/data.json";
-import OurPartners, { ClientsCarousel } from "../OurPartners";
-import TextVideo from "../TextVideo";
-import Precision from "../Precision";
-import Upgrade from "../Upgrade";
-import WeGotCovered from "../WeGotCovered";
-import VideoRemakeByPratikSir from "../VideoRemakeByPratikSir";
-import BgTransitionSection from "../components/BgTransitionSection";
-import AppTemplate from "../components/templates/AppTemplate";
-import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
-import { getActivePosts, getPostFile, getPostFiles } from "../utils/posts";
-import { getSettings } from "../utils/settings";
-import { getActiveNews } from "../utils/news";
+import AppTemplate from "../../components/templates/AppTemplate";
+import { getSettings } from "../../utils/settings";
+import { getActiveNews } from "../../utils/news";
 import styled from "@emotion/styled";
-import heroBg from '../assets/haystack-body-bg.png'
-import { useEffect, useMemo } from "react";
-import Section from '../components/atoms/Section'
-import Link from "../../node_modules/next/link";
-import PostItem from "../components/molecules/PostItem";
+import Section from '../../components/atoms/Section'
+import Link from "next/link";
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
@@ -71,7 +58,7 @@ const HeroSection = () => {
    )
 }
 
-export default function Diagnostician({ Component, pageProps, news, settings }) {
+export default function Post({ Component, pageProps, news, settings }) {
 
    return (
       <StyledHome settings={settings}>
@@ -141,6 +128,15 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
 
       </StyledHome>
    )
+}
+
+export async function getStaticPaths(params:any) {
+   const { slug } = params
+   let paths = []
+   return {
+      paths: paths,
+      fallback: 'blocking',
+   }
 }
 
 export async function getStaticProps(context) {

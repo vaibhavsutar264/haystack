@@ -130,6 +130,15 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
    )
 }
 
+export async function getStaticPaths(params:any) {
+   const { slug } = params
+   let paths = []
+   return {
+      paths: paths,
+      fallback: 'blocking',
+   }
+}
+
 export async function getStaticProps(context) {
    let news = getActiveNews()
    console.log({ news })
