@@ -2,14 +2,15 @@
 import Section from "../atoms/Section"
 import styled from "@emotion/styled";
 import Link from "next/link";
+import PostItem from "../molecules/PostItem";
 
-const StyledHeroSection = styled(Section)`
+const StyledComponent = styled(Section)`
 background-image: url(https://images.unsplash.com/photo-1659535901690-ab95a8539929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
 background-size: 60%;
 background-repeat: no-repeat;
 background-position: right center;
 .section__container {
-   min-height: calc(100vh - var(--safe-top-padding, 100px));
+   min-height: calc(60vh - var(--safe-top-padding, 100px));
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -22,39 +23,47 @@ interface IHeroActionProps {
    onClick?: Function,
    href?: string,
 }
-interface IHeroPros {
+
+interface IPostItemProps {
+   title: string,
+   description: string,
+   thumbnailUrl: string,
+   onClick?: Function,
+   url?: string,
+}
+
+interface ISectionPros {
    title?: string|any,
    subtitle?: string|any,
    subtitle?: string,
-   actions?: IHeroActionProps[]
+   actions?: IHeroActionProps[],
+   posts?: IPostItemProps[],
 }
 
-const SectionPosts = (props: IHeroPros) => {
+const SectionPosts = (props: ISectionPros) => {
    return (
-      <StyledHeroSection className="SectionPosts bg-blue-800 text-white ">
-         <Section.Container className="mx-auto ">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col"></div>
-               <div className="grid__col bg-white py-8">
-                  {props.title && (
-                  <h3 className="mb-4 text-4xl font-extrabold">
-                     {props.title}
-                  </h3>
-                  )}
-                  <p className="font-bold text-muted">Stay on top with cutting edge technology</p>
-                  {props.actions?.length ? (
-                  <div className="mt-8 flex items-center gap-4">
-                     {props.actions?.map((act, actIndex) => (
-                     <Link href={'#'} key={`act_${actIndex}`} >
-                        <a className="btn-primary">{act.title}</a>
-                     </Link>
-                     ))}
+      <StyledComponent className="SectionPosts ">
+         <Section.Container className="container mx-auto py-12">
+            <div className="w-50">
+               <h3 className="section-heading">
+               In the news
+               </h3>
+               <div className={`grid grid-cols-2 md:grid-cols-${props.posts?.length ?? 4}  gap-4`}>
+                  {props.posts?.map((postItem, postItemIndex) => (
+                  <div className="grid__col" key={`postItemIndex_${postItemIndex}`}>
+                     <PostItem
+                        title={postItem.title}
+                        thumbnailUrl={postItem.thumbnailUrl}
+                        description={postItem.description}
+                        url={postItem.url}
+                     />
                   </div>
-                  ): null}
+                  ))}
                </div>
             </div>
+
          </Section.Container>
-      </StyledHeroSection>
+      </StyledComponent>
    )
 }
 

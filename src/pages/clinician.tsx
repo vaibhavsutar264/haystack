@@ -18,6 +18,7 @@ import { useEffect, useMemo } from "react";
 import Section from '../components/atoms/Section'
 import Link from "../../node_modules/next/link";
 import PostItem from "../components/molecules/PostItem";
+import SectionPosts from "../components/organisms/SectionPosts";
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
@@ -91,51 +92,10 @@ export default function Clinician({ Component, pageProps, news, settings }) {
                </div>
             </Section.Container>
          </Section>
-         <Section className=" ">
-            <Section.Container className="container mx-auto py-12">
-               <div className="w-50">
-                  <h3 className="section-heading">
-                  In the news
-                  </h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                     <div className="grid__col">
-                        <PostItem
-                           title="5TH AUGUST 2022"
-                           thumbnailUrl="//unsplash.com"
-                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
-                           url={'#'}
-                        />
-                     </div>
-                     <div className="grid__col">
-                        <PostItem
-                           title="5TH AUGUST 2022"
-                           thumbnailUrl="//unsplash.com"
-                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
-                           url={'#'}
-                        />
-                     </div>
-                     <div className="grid__col">
-                        <PostItem
-                           title="5TH AUGUST 2022"
-                           thumbnailUrl="//unsplash.com"
-                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
-                           url={'#'}
-                        />
-                     </div>
-                     <div className="grid__col">
-                        <PostItem
-                           title="5TH AUGUST 2022"
-                           thumbnailUrl="//unsplash.com"
-                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
-                           url={'#'}
-                        />
-                     </div>
-                  </div>
-               </div>
-
-            </Section.Container>
-         </Section>
-
+         <SectionPosts
+            title={`In the news`}
+            posts={news}
+         />
          <Section className=" bg-blue-800 text-white">
             <Section.Container className="container mx-auto py-12">
                <h3 className="text-white section-heading section-heading--invert text-center">

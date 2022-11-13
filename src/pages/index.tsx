@@ -18,6 +18,8 @@ import { useEffect, useMemo } from "react";
 import Section from '../components/atoms/Section'
 import Link from "../../node_modules/next/link";
 import PostItem from "../components/molecules/PostItem";
+import SectionGridItems from "../components/organisms/SectionGridItems";
+import SectionPosts from "../components/organisms/SectionPosts";
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
@@ -86,46 +88,16 @@ function Home({ Component, pageProps, news, settings }) {
                </div>
             </Section.Container>
          </Section>
-
-         <Section className=" bg-blue-800 text-white">
-            <Section.Container className="container mx-auto py-12">
-               <h3 className="text-white section-heading section-heading--invert">
-                  The Universal Infectious Diseases Test
-               </h3>
-               <p className="text-base text-white">
-               {`UID Test is an NGS based culture-free test to identify causative pathogen in quick turn around time`}
-               </p>
-               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
-                  <div className="grid__col">
-                     <figure className="flex gap-4">
-                        <picture className="w-5/12"></picture>
-                        <figcaption className="flex-1">
-                           <h4>1200+ PATHOGENS</h4>
-                           <p>Comprehensive single screening test covering bacteria, fungi, protozoa</p>
-                        </figcaption>
-                     </figure>
-                  </div>
-                  <div className="grid__col">
-                     <figure className="flex gap-4">
-                        <picture className="w-5/12"></picture>
-                        <figcaption className="flex-1">
-                           <h4>1200+ PATHOGENS</h4>
-                           <p>Comprehensive single screening test covering bacteria, fungi, protozoa</p>
-                        </figcaption>
-                     </figure>
-                  </div>
-                  <div className="grid__col">
-                     <figure className="flex gap-4">
-                        <picture className="w-5/12"></picture>
-                        <figcaption className="flex-1">
-                           <h4>1200+ PATHOGENS</h4>
-                           <p>Comprehensive single screening test covering bacteria, fungi, protozoa</p>
-                        </figcaption>
-                     </figure>
-                  </div>
-               </div>
-            </Section.Container>
-         </Section>
+         <SectionGridItems
+            gridClassName={'grid-cols-1 md:grid-cols-3'}
+            title={`The Universal Infectious Diseases Test`}
+            description={`UID Test is an NGS based culture-free test to identify causative pathogen in quick turn around time`}
+            items={[
+               { title: '1200+ PATHOGENS', thumbnailUrl: '#', description: 'Comprehensive single screening test covering bacteria, fungi, protozoa' },
+               { title: '1200+ PATHOGENS', thumbnailUrl: '#', description: 'Comprehensive single screening test covering bacteria, fungi, protozoa' },
+               { title: '1200+ PATHOGENS', thumbnailUrl: '#', description: 'Comprehensive single screening test covering bacteria, fungi, protozoa' },
+            ]}
+         />
          <Section className="">
             <Section.Container className="container mx-auto py-12">
                <h3 className="section-heading">
@@ -199,10 +171,10 @@ function Home({ Component, pageProps, news, settings }) {
                   How may we help you?
                   </h3>
                   <div className="flex flex-col md:flex-row gap-8">
-                     <Link href={'/'}>
+                     <Link href={'/clinician'}>
                         <a className="btn-secondary">I AM A CLINICIAN</a>
                      </Link>
-                     <Link href={'/'}>
+                     <Link href={'/diagnostician'}>
                         <a className="btn-primary">WE ARE A LAB / HOSPITAL</a>
                      </Link>
                   </div>
@@ -210,50 +182,12 @@ function Home({ Component, pageProps, news, settings }) {
 
             </Section.Container>
          </Section>
-         <Section className=" ">
-            <Section.Container className="container mx-auto py-12">
-               <div className="w-50">
-                  <h3 className="section-heading">
-                  In the news
-                  </h3>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                     <div className="grid__col">
-                        <PostItem
-                           title="5TH AUGUST 2022"
-                           thumbnailUrl="//unsplash.com"
-                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
-                           url={'#'}
-                        />
-                     </div>
-                     <div className="grid__col">
-                        <PostItem
-                           title="5TH AUGUST 2022"
-                           thumbnailUrl="//unsplash.com"
-                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
-                           url={'#'}
-                        />
-                     </div>
-                     <div className="grid__col">
-                        <PostItem
-                           title="5TH AUGUST 2022"
-                           thumbnailUrl="//unsplash.com"
-                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
-                           url={'#'}
-                        />
-                     </div>
-                     <div className="grid__col">
-                        <PostItem
-                           title="5TH AUGUST 2022"
-                           thumbnailUrl="//unsplash.com"
-                           description={`Early Detection and Accurate Diagnosis crucial to make India TB Free by 2025 – HaystackAnalytics Insights`}
-                           url={'#'}
-                        />
-                     </div>
-                  </div>
-               </div>
+         {/* {JSON.stringify({ news })} */}
+         <SectionPosts
+            title={`In the news`}
+            posts={news}
+         />
 
-            </Section.Container>
-         </Section>
          <Section className="">
             <Section.Container className="container mx-auto py-12">
                <h3 className="section-heading text-center">

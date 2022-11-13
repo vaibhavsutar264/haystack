@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 // @ts-nocheck
 import Section from "../atoms/Section"
 import styled from "@emotion/styled";
@@ -9,7 +10,7 @@ background-size: 60%;
 background-repeat: no-repeat;
 background-position: right center;
 .section__container {
-   min-height: calc(100vh - var(--safe-top-padding, 100px));
+   min-height: calc(60vh - var(--safe-top-padding, 100px));
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -22,40 +23,58 @@ interface IHeroActionProps {
    onClick?: Function,
    href?: string,
 }
+
+interface ISectionGridItem {
+   thumbnailUrl?: string,
+   title?: string,
+   description?: string,
+}
+
 interface IHeroPros {
+   gridClassName?: string,
    title?: string|any,
    subtitle?: string|any,
    subtitle?: string,
-   actions?: IHeroActionProps[]
+   actions?: IHeroActionProps[],
+   items: ISectionGridItem[],
+}
+
+
+export const SectionGridItem = (props: ISectionGridItem) => {
+   return (
+      <figure className="flex gap-4 SectionGridItem">
+         <picture className="w-5/12">
+            <img src={props.thumbnailUrl} class="img" alt={props.title} />
+         </picture>
+         <figcaption className="flex-1">
+            <h4>{props.title}</h4>
+            <p>{props.description}</p>
+         </figcaption>
+      </figure>
+   )
 }
 
 const SectionGridItems = (props: IHeroPros) => {
    return (
       <StyledHeroSection className="SectionGridItems bg-blue-800 text-white ">
-         <Section.Container className="mx-auto ">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col"></div>
-               <div className="grid__col bg-white py-8">
-                  {props.title && (
-                  <h3 className="mb-4 text-4xl font-extrabold">
-                     {props.title}
-                  </h3>
-                  )}
-                  <p className="font-bold text-muted">Stay on top with cutting edge technology</p>
-                  {props.actions?.length ? (
-                  <div className="mt-8 flex items-center gap-4">
-                     {props.actions?.map((act, actIndex) => (
-                     <Link href={'#'} key={`act_${actIndex}`} >
-                        <a className="btn-primary">{act.title}</a>
-                     </Link>
-                     ))}
-                  </div>
-                  ): null}
+         <Section.Container className="container mx-auto py-12">
+            <h3 className="text-white section-heading section-heading--invert">
+               {props.title}
+            </h3>
+            <p className="text-base text-white">
+            {props.subtitle}
+            </p>
+            <div className={`grid ${props.gridClassName ?? 'grid-cols-1 md:grid-cols-3'}  gap-4 my-8`}>
+               {props.items?.map((pitem, pitemIndex) => (
+               <div className="grid__col" key={`pitemIndex_${pitemIndex}`}>
+                  <SectionGridItem {...pitem} />
                </div>
+               ))}
             </div>
          </Section.Container>
       </StyledHeroSection>
    )
 }
+
 
 export default SectionGridItems

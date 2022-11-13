@@ -1,5 +1,5 @@
+// @ts-nocheck
 import React from "react";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "@emotion/styled";
 import settings from '../json/settings.json'
@@ -7,7 +7,7 @@ import settings from '../json/settings.json'
 import {
    faYoutube,
    faInstagram,
-   faFacebook,
+   faFacebookF,
    faLinkedin,
    faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
@@ -58,7 +58,7 @@ function Footer({ settings = {}, menus }) {
                               <FontAwesomeIcon
                                  id="icons"
                                  className="text-dark"
-                                 icon={faFacebook}
+                                 icon={faFacebookF}
                               />
                            </a>
                         ) : null}

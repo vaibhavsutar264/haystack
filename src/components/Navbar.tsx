@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import NavItem from "./NavItem";
@@ -7,6 +8,16 @@ import useHeadroom from "react-useheadroom";
 import styled from "@emotion/styled";
 import settings from '../json/settings.json'
 import { SidebarNav } from "./index";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+   faYoutube,
+   faInstagram,
+   faFacebookF,
+   faLinkedin,
+   faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+// import iocns from "@f";
+
 import menus from '../json/menus.json'
 const productHeaderMenu = menus.productsHeader
 import { useInView } from 'react-intersection-observer'
@@ -38,13 +49,13 @@ const StyledNavbar = styled.nav`
 const Navbar = ({ renderMenu }) => {
    const [navActive, setNavActive] = useState(false);
    const [activeIdx, setActiveIdx] = useState(0);
-   const [ inView, setInView ] = useState( false );
+   const [inView, setInView] = useState(false);
    useEffect(() => {
       globalThis.addEventListener('scroll', ev => {
-         if ( document.body.getBoundingClientRect().top >= 0 ) {
-            setInView( true )
+         if (document.body.getBoundingClientRect().top >= 0) {
+            setInView(true)
          } else {
-            setInView( false )
+            setInView(false)
          }
          // console.log({ ev })
       })
@@ -53,7 +64,7 @@ const Navbar = ({ renderMenu }) => {
       } else {
          // globalThis?.classList.remove('bg-white')
       }
-   }, [  ])
+   }, [])
    const isPinned = useHeadroom({
       fixAt: 100,
       onPin: () => {
@@ -72,9 +83,9 @@ const Navbar = ({ renderMenu }) => {
          document.body?.classList?.remove('header-is-fixed')
       },
 
-    });
+   });
    return (
-      <StyledNavbar isPinned={isPinned} className={`${isPinned ? 'header-pinned': ''} ${inView ? '': 'bg-white'}`} >
+      <StyledNavbar isPinned={isPinned} className={`${isPinned ? 'header-pinned' : ''} ${inView ? '' : 'bg-white'}`} >
          <nav className="navbar-main container mx-auto flex justify-between gap-4">
             <div className="navbar-brand">
                <Link href={"/"}>
@@ -87,8 +98,53 @@ const Navbar = ({ renderMenu }) => {
             <div className={`${navActive ? "active" : ""} nav__menu-list`}>
                <div className="mb-3 text-sm flex gap-6 text-gray-500">
                   <Link href="/">hello@haystackanalytics.in</Link>
-                  <Link href="/">fb</Link>
-                  <Link href="/">fb</Link>
+                  {settings.facebook_url ? (
+                     <a href={settings.facebook_url}>
+                        <FontAwesomeIcon
+                           id="icons"
+                           className="text-dark"
+                           icon={faFacebookF}
+                        />
+                     </a>
+                  ) : null}
+
+                  {settings.instagram_url ? (
+                     <a href={settings.instagram_url}>
+                        <FontAwesomeIcon
+                           id="icons"
+                           className="text-dark"
+                           icon={faInstagram}
+                        />
+                     </a>
+                  ) : null}
+
+                  {settings.linkedin_url ? (
+                     <a href={settings.linkedin_url}>
+                        <FontAwesomeIcon
+                           id="icons"
+                           className="text-dark"
+                           icon={faLinkedin}
+                        />
+                     </a>
+                  ) : null}
+                  {settings.youtube_url ? (
+                     <a href={settings.youtube_url}>
+                        <FontAwesomeIcon
+                           id="icons"
+                           className="text-dark"
+                           icon={faYoutube}
+                        />
+                     </a>
+                  ) : null}
+                  {settings.twitter_url ? (
+                     <a href={settings.twitter_url}>
+                        <FontAwesomeIcon
+                           id="icons"
+                           className="text-dark"
+                           icon={faTwitter}
+                        />
+                     </a>
+                  ) : null}
                </div>
                <div className="flex gap-6 ">
                   <Link className="font-medium" href="/science-corner">Science Corner</Link>

@@ -18,6 +18,7 @@ import { useEffect, useMemo } from "react";
 import Section from '../components/atoms/Section'
 import Link from "../../node_modules/next/link";
 import PostItem from "../components/molecules/PostItem";
+import SectionGridItems from "../components/organisms/SectionGridItems";
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
@@ -92,52 +93,16 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                </div>
             </Section.Container>
          </Section>
-         <Section className=" bg-blue-800 text-white">
-            <Section.Container className="container mx-auto py-12">
-               <h3 className="text-white section-heading section-heading--invert text-center">
-               Why Choose Haystack
-               </h3>
-               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 my-8">
-                  <div className="grid__col">
-                     <figure className="flex gap-4">
-                        <picture className="w-4/12"></picture>
-                        <figcaption className="flex-1 text-sm">
-                           <h4>1200+ PATHOGENS</h4>
-                           <p>Comprehensive single screening test covering bacteria, fungi, protozoa</p>
-                        </figcaption>
-                     </figure>
-                  </div>
-                  <div className="grid__col">
-                     <figure className="flex gap-4">
-                        <picture className="w-4/12"></picture>
-                        <figcaption className="flex-1 text-sm">
-                           <h4>1200+ PATHOGENS</h4>
-                           <p>Comprehensive single screening test covering bacteria, fungi, protozoa</p>
-                        </figcaption>
-                     </figure>
-                  </div>
-                  <div className="grid__col">
-                     <figure className="flex gap-4">
-                        <picture className="w-4/12"></picture>
-                        <figcaption className="flex-1 text-sm">
-                           <h4>1200+ PATHOGENS</h4>
-                           <p>Comprehensive single screening test covering bacteria, fungi, protozoa</p>
-                        </figcaption>
-                     </figure>
-                  </div>
-                  <div className="grid__col">
-                     <figure className="flex gap-4">
-                        <picture className="w-4/12"></picture>
-                        <figcaption className="flex-1 text-sm">
-                           <h4>1200+ PATHOGENS</h4>
-                           <p>Comprehensive single screening test covering bacteria, fungi, protozoa</p>
-                        </figcaption>
-                     </figure>
-                  </div>
-               </div>
-            </Section.Container>
-         </Section>
-
+         <SectionGridItems
+            gridClassName="grid-cols-1 md:grid-cols-4"
+            title={`Why Choose Haystack`}
+            items={[
+               { title: `1200+ PATHOGENS`, description: `Comprehensive single screening test covering bacteria, fungi, protozoa`  },
+               { title: `1200+ PATHOGENS`, description: `Comprehensive single screening test covering bacteria, fungi, protozoa`  },
+               { title: `1200+ PATHOGENS`, description: `Comprehensive single screening test covering bacteria, fungi, protozoa`  },
+               { title: `1200+ PATHOGENS`, description: `Comprehensive single screening test covering bacteria, fungi, protozoa`  },
+            ]}
+         />
 
       </StyledHome>
    )
