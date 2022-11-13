@@ -5,6 +5,7 @@ import { getActiveNews } from "../../utils/news";
 import styled from "@emotion/styled";
 import Section from '../../components/atoms/Section'
 import Link from "next/link";
+import SectionPosts from "../../components/organisms/SectionPosts";
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
@@ -33,22 +34,27 @@ const HeroSection = () => {
    return (
       <StyledHeroSection className="HeroSection ">
          <Section.Container className="mx-auto ">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col"></div>
-               <div className="grid__col bg-white py-8">
-                  <h3 className="mb-4 text-4xl font-extrabold">
-                     Bringing precision therapy<br />
-                     with Genomics, ensuring<br />
-                     improved personalised<br />
-                     patient outcomes<br />
+            <div className="flex gap-8 items-start">
+               <div className="md:w-6/12">
+                  <picture>
+                     <img src="//placehold.com" alt="" className="bg-gray-200 w-full" />
+                  </picture>
+               </div>
+               <div className="flex-1 bg-white py-8">
+                  <div className="flex justify-between mb-4">
+                     <span>APRIL 28, 2022</span>
+                     <span className="text-green-600 font-medium">SHARE</span>
+                  </div>
+                  <h3 className="mb-4 md:mb-8 text-4xl font-extrabold">
+                     Past, Present and Future of TB diagnosis: Laboratory perspective
                   </h3>
-                  <p className="font-bold text-muted">Stay on top with cutting edge technology</p>
+                  <p className="font-bold mb-4 text-blue-600">by XYZ, Lorem Ipsum</p>
+                  <p className="font-base text-muted line-clamp-4">
+                     {`Clinicians worldwide rely heavily (almost 70%) on the laboratory results, for diagnosing the illness, recommending the appropriate treatment and follow-ups. Hence it becomes an onus on`}
+                  </p>
                   <div className="mt-8 flex items-center gap-4">
                      <Link href={'#'} >
-                        <a className="btn-primary">BOOK A CALL</a>
-                     </Link>
-                     <Link href={'#'} >
-                        <a className="btn-secondary opacity-50">KNOW MORE</a>
+                        <a className="#">BOOK A CALL</a>
                      </Link>
                   </div>
                </div>
@@ -63,69 +69,10 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
    return (
       <StyledHome settings={settings}>
          <HeroSection />
-         <Section className="bg-gray-100">
-            <Section.Container className="container mx-auto py-12">
-               <h3 className="section-heading text-center">
-               Automated Bioinformatics Platform
-               </h3>
-               <p className="text-center mb-4 text-muted font-semibold">Localized Report with Software access</p>
-               <div className="flex flex-col md:flex-row gap-4 my-8 mx-auto md:w-6/12 ">
-                  <div className="flex-1">
-                     <h3 className="heading">{`TGS Assessment Profile`}</h3>
-                  </div>
-                  <div className="md:w-5/12">
-                     <h3 className="heading">{`TGS Assessment Profile`}</h3>
-                  </div>
-               </div>
-            </Section.Container>
-         </Section>
-         <Section className=" bg-blue-800 text-white">
-            <Section.Container className="container mx-auto py-12">
-               <h3 className="text-white section-heading section-heading--invert text-center">
-               Why Choose Haystack
-               </h3>
-               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 my-8">
-                  <div className="grid__col">
-                     <figure className="flex gap-4">
-                        <picture className="w-4/12"></picture>
-                        <figcaption className="flex-1 text-sm">
-                           <h4>1200+ PATHOGENS</h4>
-                           <p>Comprehensive single screening test covering bacteria, fungi, protozoa</p>
-                        </figcaption>
-                     </figure>
-                  </div>
-                  <div className="grid__col">
-                     <figure className="flex gap-4">
-                        <picture className="w-4/12"></picture>
-                        <figcaption className="flex-1 text-sm">
-                           <h4>1200+ PATHOGENS</h4>
-                           <p>Comprehensive single screening test covering bacteria, fungi, protozoa</p>
-                        </figcaption>
-                     </figure>
-                  </div>
-                  <div className="grid__col">
-                     <figure className="flex gap-4">
-                        <picture className="w-4/12"></picture>
-                        <figcaption className="flex-1 text-sm">
-                           <h4>1200+ PATHOGENS</h4>
-                           <p>Comprehensive single screening test covering bacteria, fungi, protozoa</p>
-                        </figcaption>
-                     </figure>
-                  </div>
-                  <div className="grid__col">
-                     <figure className="flex gap-4">
-                        <picture className="w-4/12"></picture>
-                        <figcaption className="flex-1 text-sm">
-                           <h4>1200+ PATHOGENS</h4>
-                           <p>Comprehensive single screening test covering bacteria, fungi, protozoa</p>
-                        </figcaption>
-                     </figure>
-                  </div>
-               </div>
-            </Section.Container>
-         </Section>
-
-
+         <SectionPosts
+            title={'Related Articles'}
+            posts={news}
+         />
       </StyledHome>
    )
 }

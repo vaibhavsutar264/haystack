@@ -46,7 +46,7 @@ const SectionPosts = (props: ISectionPros) => {
          <Section.Container className="container mx-auto py-12">
             <div className="w-50">
                <h3 className="section-heading">
-               In the news
+               {props.title ?? 'In the news'}
                </h3>
                <div className={`grid grid-cols-2 md:grid-cols-${props.posts?.length ?? 4}  gap-4`}>
                   {props.posts?.map((postItem, postItemIndex) => (
