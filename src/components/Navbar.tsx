@@ -9,13 +9,17 @@ import styled from "@emotion/styled";
 import settings from '../json/settings.json'
 import { SidebarNav } from "./index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
    faYoutube,
    faInstagram,
    faFacebookF,
    faLinkedin,
    faTwitter,
+   faX
 } from "@fortawesome/free-brands-svg-icons";
+import { XIcon, MenuIcon } from '@heroicons/react/outline'
+
 // import iocns from "@f";
 
 import menus from '../json/menus.json'
@@ -44,12 +48,38 @@ const StyledNavbar = styled.nav`
    &.bg-white {
       background: white !important;
    }
+
+   @media screen and (max-width: 600px)
+   {
+      .nav__menu-list {
+         padding: 1.5rem 1rem;
+         position: fixed;
+         top: 0;
+         left: 0;
+         right: 0;
+         background: white;
+         min-height: 100vh;
+         padding-top: 100px;
+         display: none;
+         &.active {
+            display: block;
+         }
+         .close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+         }
+      }
+   }
 `
 
 const Navbar = ({ renderMenu }) => {
    const [navActive, setNavActive] = useState(false);
    const [activeIdx, setActiveIdx] = useState(0);
    const [inView, setInView] = useState(false);
+   const toggleMenu = () => {
+      setNavActive(false)
+   }
    useEffect(() => {
       globalThis.addEventListener('scroll', ev => {
          if (document.body.getBoundingClientRect().top >= 0) {
@@ -96,6 +126,9 @@ const Navbar = ({ renderMenu }) => {
             </div>
 
             <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+               <div className="close md:hidden">
+                  <XIcon className="w-8 h-8" onClick={toggleMenu} />
+               </div>
                <div className="mb-3 text-sm flex gap-6 text-gray-500">
                   <Link href="/">hello@haystackanalytics.in</Link>
                   {settings.facebook_url ? (
@@ -146,11 +179,14 @@ const Navbar = ({ renderMenu }) => {
                      </a>
                   ) : null}
                </div>
-               <div className="flex gap-6 ">
+               <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0">
                   <Link className="font-medium" href="/science-corner">Science Corner</Link>
                   <Link className="font-medium" href="/about">About Us</Link>
                   <Link className="font-medium" href="/">Product</Link>
                </div>
+            </div>
+            <div className="mt-3 mr-3 md:hidden">
+               <MenuIcon className="w-8 h-8 cursor-pointer" onClick={() => setNavActive(true)} />
             </div>
          </nav>
          <div className={'container mx-auto py-3 flex items-center justify-center md:hidden'}>

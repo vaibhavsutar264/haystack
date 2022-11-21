@@ -48,7 +48,7 @@ export const SectionGridItem = (props: ISectionGridItem) => {
          </picture>
          <figcaption className="flex-1">
             <h4>{props.title}</h4>
-            <p>{props.description}</p>
+            <p className="text-sm">{props.description}</p>
          </figcaption>
       </figure>
    )

@@ -1,5 +1,6 @@
 // @ts-nocheck
 import data from "../json/data.json";
+import partners from "../json/partners.json";
 import OurPartners, { ClientsCarousel } from "../OurPartners";
 import TextVideo from "../TextVideo";
 import Precision from "../Precision";
@@ -13,17 +14,37 @@ import { getActivePosts, getPostFile, getPostFiles } from "../utils/posts";
 import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
-import heroBg from '../assets/haystack-body-bg.png'
+import heroBg from '../assets/HOME-03.jpg'
+import sec5 from '../assets/section-clinician-bg-doctor.png'
 import { useEffect, useMemo } from "react";
 import Section from '../components/atoms/Section'
-import Link from "../../node_modules/next/link";
+import Link from "next/link";
 import PostItem from "../components/molecules/PostItem";
 import SectionGridItems from "../components/organisms/SectionGridItems";
 import SectionPosts from "../components/organisms/SectionPosts";
+import Image from "next/image";
+import Carousel from "../components/organisms/Carousel";
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+
+
+const awards = [
+   { thumbnailUrl: '#' },
+   { thumbnailUrl: '#' },
+   { thumbnailUrl: '#' },
+   { thumbnailUrl: '#' },
+   { thumbnailUrl: '#' },
+   { thumbnailUrl: '#' },
+];
+
+const loadPartnerImg = ({ src }) => {
+   return `/assets/${src}`
+}
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
-      background-image: url("https://images.unsplash.com/photo-1659535901690-ab95a8539929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+      background-image: var(--bg);
       background-size: 60%;
       background-repeat: no-repeat;
       background-position: right center;
@@ -32,10 +53,10 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-   background-image: url(https://images.unsplash.com/photo-1659535901690-ab95a8539929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
    background-size: 60%;
    background-repeat: no-repeat;
    background-position: right center;
+   background-image: var(--bg);
    .section__container {
       min-height: calc(100vh - var(--safe-top-padding, 100px));
       display: flex;
@@ -46,10 +67,10 @@ const StyledHeroSection = styled(Section)`
 
 const HeroSection = () => {
    return (
-      <StyledHeroSection className="HeroSection ">
+      <StyledHeroSection className="HeroSection " style={{ '--bg': `url(${heroBg.src})` }}>
          <Section.Container className="mx-auto ">
             <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col bg-white py-8">
+               <div className="grid__col  py-8">
                   <h3 className="mb-4 text-4xl font-extrabold">Infectious Diseases<br/> Should Not Be Fatal</h3>
                   <p className="text-blue-600 text-lg font-bold">Universal Infectious Diseases Test (UID)</p>
                   <p className="text-muted">A Revolutionary Technology to Aid the Clinician</p>
@@ -146,7 +167,7 @@ function Home({ Component, pageProps, news, settings }) {
                <h3 className="section-heading text-center">
                   Our Partners
                </h3>
-               <div className="md:w-6/12 mx-auto">
+               <div className="md:w-6/12 mx-auto mb-12">
                   <div className="grid grid-cols-3">
                      <div className="bg-green-600 text-white p-8 text-center flex flex-col items-center justify-center">
                         <h3 className="text-3xl font-bold">100+</h3>
@@ -162,11 +183,26 @@ function Home({ Component, pageProps, news, settings }) {
                      </div>
                   </div>
                </div>
+               <div className="md:px-40">
+                  <Swiper
+                     spaceBetween={50}
+                     slidesPerView={5}
+                     onSlideChange={() => console.log('slide change')}
+                     onSwiper={(swiper: any) => console.log(swiper)}
+                  >
+                     {partners.data?.map((slide, slideIndex) => (
+                     <SwiperSlide key={`slide_${slideIndex}`}>
+                        <Image src={slide.thumbnailUrl} loader={loadPartnerImg} layout='fill' />
+                        {/* {JSON.stringify({ slide })} */}
+                     </SwiperSlide>
+                     ))}
+                  </Swiper>
+               </div>
             </Section.Container>
          </Section>
-         <Section className=" bg-gray-100">
-            <Section.Container className="container mx-auto py-12">
-               <div className="w-50">
+         <Section className="bg-gray-100" >
+            <Section.Container className="container mx-auto py-0 flex justify-between items-center">
+               <div className="grid__col">
                   <h3 className="section-heading">
                   How may we help you?
                   </h3>
@@ -177,6 +213,11 @@ function Home({ Component, pageProps, news, settings }) {
                      <Link href={'/diagnostician'}>
                         <a className="btn-primary">WE ARE A LAB / HOSPITAL</a>
                      </Link>
+                  </div>
+               </div>
+               <div className="grid__col">
+                  <div className="md:w-6/12 mx-auto flex">
+                     <Image src={sec5}  />
                   </div>
                </div>
 
@@ -191,24 +232,20 @@ function Home({ Component, pageProps, news, settings }) {
          <Section className="">
             <Section.Container className="container mx-auto py-12">
                <h3 className="section-heading text-center">
-                  Awards
+                  {`Awards & Recognition`}
                </h3>
-               <div className="md:w-6/12 mx-auto">
-                  <div className="grid grid-cols-3">
-                     <div className="bg-green-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">100+</h3>
-                        <p>CITIES</p>
-                     </div>
-                     <div className="bg-blue-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">500+</h3>
-                        <p>HOSPITALS</p>
-                     </div>
-                     <div className="bg-gray-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">100+</h3>
-                        <p>DOCTORS</p>
-                     </div>
-                  </div>
-               </div>
+               <Swiper
+                  spaceBetween={50}
+                  slidesPerView={5}
+                  onSlideChange={() => console.log('slide change')}
+                  onSwiper={(swiper: any) => console.log(swiper)}
+               >
+                  {awards?.map((slide, slideIndex) => (
+                  <SwiperSlide key={`slide_${slideIndex}`}>
+                     {JSON.stringify({ slide })}
+                  </SwiperSlide>
+                  ))}
+               </Swiper>
             </Section.Container>
          </Section>
       </StyledHome>
