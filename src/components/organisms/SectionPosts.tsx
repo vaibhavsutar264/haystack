@@ -52,6 +52,7 @@ const SectionPosts = (props: ISectionPros) => {
                   {props.posts?.map((postItem, postItemIndex) => (
                   <div className="grid__col" key={`postItemIndex_${postItemIndex}`}>
                      <PostItem
+                        date={postItem.date || 'MARCH 24, 2022'}
                         title={postItem.title}
                         thumbnailUrl={postItem.thumbnailUrl}
                         description={postItem.description}

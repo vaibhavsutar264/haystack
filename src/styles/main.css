@@ -74,6 +74,11 @@ body, #__next {
 .btn:hover {
    filter: brightness(0.8);
 }
+.awards-carousel .swiper-slide .w-48 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 .container
 {
    max-width: 90% !important;
