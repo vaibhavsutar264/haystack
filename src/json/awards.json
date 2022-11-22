@@ -1,10 +1,10 @@
 {
    "data": [
-      { "thumbnailUrl": "/assets/awards/award01.png" },
-      { "thumbnailUrl": "/assets/awards/award02.png" },
-      { "thumbnailUrl": "/assets/awards/award03.jpg" },
-      { "thumbnailUrl": "/assets/awards/award04.png" },
-      { "thumbnailUrl": "/assets/awards/award05.jpg" },
-      { "thumbnailUrl": "/assets/awards/award06.png" }
+      { "title": "Award title", "thumbnailUrl": "/assets/awards/award01.png" },
+      { "title": "Award title", "thumbnailUrl": "/assets/awards/award02.png" },
+      { "title": "Award title", "thumbnailUrl": "/assets/awards/award03.jpg" },
+      { "title": "Award title", "thumbnailUrl": "/assets/awards/award04.png" },
+      { "title": "Award title", "thumbnailUrl": "/assets/awards/award05.jpg" },
+      { "title": "Award title", "thumbnailUrl": "/assets/awards/award06.png" }
    ]
 }

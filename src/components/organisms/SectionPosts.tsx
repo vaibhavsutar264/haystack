@@ -38,6 +38,7 @@ interface ISectionPros {
    subtitle?: string,
    actions?: IHeroActionProps[],
    posts?: IPostItemProps[],
+   colsCount?: Number
 }
 
 const    SectionPosts = (props: ISectionPros) => {
@@ -48,7 +49,7 @@ const    SectionPosts = (props: ISectionPros) => {
                <h3 className="section-heading">
                {props.title ?? 'In the news'}
                </h3>
-               <div className={`grid grid-cols-2 md:grid-cols-${props.posts?.length ?? 3}  gap-4`}>
+               <div className={`grid grid-cols-2 md:grid-cols-${props.colsCount ?? 4}  gap-4`}>
                   {props.posts?.map((postItem, postItemIndex) => (
                   <div className="grid__col" key={`postItemIndex_${postItemIndex}`}>
                      <PostItem

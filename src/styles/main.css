@@ -83,3 +83,25 @@ body, #__next {
 {
    max-width: 1180px !important;
 }
+
+.hover-layer {
+   position: relative;
+   cursor: pointer;
+}
+.hover-layer:hover .hover-layer__overlay {
+   opacity: 1;
+}
+.hover-layer__overlay {
+   transition: all .5s ease;
+   opacity: 0;
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: #3570c8eb;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
