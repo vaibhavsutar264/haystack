@@ -265,11 +265,11 @@ function Home({ Component, pageProps, news, settings }) {
                         <p>CITIES</p>
                      </div>
                      <div className="bg-blue-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">500+</h3>
+                        <h3 className="text-3xl font-bold">100+</h3>
                         <p>HOSPITALS</p>
                      </div>
                      <div className="bg-gray-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">100+</h3>
+                        <h3 className="text-3xl font-bold">500+</h3>
                         <p>DOCTORS</p>
                      </div>
                   </div>
@@ -279,11 +279,7 @@ function Home({ Component, pageProps, news, settings }) {
                      className="partners-carousel"
                      spaceBetween={50}
                      navigation={true}
-                     autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                     }}
-                     modules={[Autoplay, Navigation]}
+                     modules={[Navigation]}
                      breakpoints={{
                         300: {
                            slidesPerView: 2,
@@ -294,8 +290,8 @@ function Home({ Component, pageProps, news, settings }) {
                            spaceBetween: 40,
                         },
                         1024: {
-                           slidesPerView: 5,
-                           spaceBetween: 50,
+                           slidesPerView: 4,
+                           spaceBetween: 20,
                         },
                      }}
                      onSlideChange={() => console.log('slide change')}
@@ -313,23 +309,19 @@ function Home({ Component, pageProps, news, settings }) {
             </Section.Container>
          </Section>
          <Section className="bg-gray-100" style={{ '--bg': `url(${sec5.src})` }}>
-            <Section.Container className="container mx-auto pt-12 md:py-0 flex flex-col md:flex-row justify-between items-center">
-               <div className="grid__col">
-                  <h3 className="section-heading">
+            <Section.Container className="container mx-auto flex flex-col md:flex-row justify-between items-center bg-highlight">
+               <div className="grid__col w-100">
+                  <h3 className="section-heading font-5xl">
                      How may we help you?
                   </h3>
-                  <div className="flex flex-col md:flex-row gap-8">
+                  <div className="flex flex-col md:flex-row gap-8 mt-8">
                      <Link href={'/clinician'}>
-                        <a className="btn-secondary">I AM A CLINICIAN</a>
+                        
+                        <a className="btn-secondary bg-gray-400">I AM A CLINICIAN</a>
                      </Link>
                      <Link href={'/diagnostician'}>
                         <a className="btn-primary">WE ARE A LAB / HOSPITAL</a>
                      </Link>
-                  </div>
-               </div>
-               <div className="grid__col">
-                  <div className="md:w-6/12 mx-auto flex">
-                     {/* <Image src={sec5} /> */}
                   </div>
                </div>
 
@@ -363,7 +355,7 @@ function Home({ Component, pageProps, news, settings }) {
                         spaceBetween: 40,
                      },
                      1024: {
-                        slidesPerView: 6,
+                        slidesPerView: 5,
                         spaceBetween: 50,
                      },
                   }}

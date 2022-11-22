@@ -54,7 +54,7 @@ body, #__next {
    @apply btn text-white text-center bg-green-600 px-8 py-4
 }
 .btn-secondary {
-   @apply btn text-white text-center bg-gray-600 px-8 py-4
+   @apply btn text-white text-center bg-gray-500 px-8 py-4
 }
 .btn-outline-info {
    @apply btn text-blue-600 text-center bg-white px-8 py-3 border-blue-600
@@ -121,4 +121,21 @@ body, #__next {
 .partners-carousel .swiper-button-next {
    --swiper-navigation-size: 1.5rem;
    color: var(--text-color)
+}
+.SectionGridItem img{
+
+   max-height: 3.5rem;
+}
+.bg-highlight
+{
+   background-image: var(--bg);
+   background-repeat: no-repeat;
+   background-size: 38%;
+   padding: 8rem 0;
+   background-position: right 0%;
+}
+.font-5xl
+{
+   font-size: 3rem;
+   line-height: 3.5rem;
 }

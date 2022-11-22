@@ -13,7 +13,7 @@ const PostItem = (props: IPostItem) => {
    return (
       <figure className="post-item item">
          <picture className="item__thumbnail">
-            <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-square bg-gray-200" />
+            <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-square bg-gray-200 object-cover" />
          </picture>
          <figcaption className="item__caption">
             <p className="font-medium text-sm mb-4 line-clamp-3">{props.date}</p>
