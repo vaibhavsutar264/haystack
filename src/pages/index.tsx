@@ -335,6 +335,7 @@ function Home({ Component, pageProps, news, settings }) {
          <SectionPosts
             title={`In the news`}
             posts={news}
+            colsCount={3}
          />
 
          <Section className="">
@@ -369,8 +370,11 @@ function Home({ Component, pageProps, news, settings }) {
                >
                   {awards.data?.map((slide, slideIndex) => (
                      <SwiperSlide key={`slide_${slideIndex}`} >
-                        <div className="w-48 h-48">
+                        <div className="w-48 h-48 hover-layer hover:text-white">
                            <img src={slide.thumbnailUrl} />
+                           <div className="hover-layer__overlay">
+                              <span>{slide.title}</span>
+                           </div>
                         </div>
                         {/* {JSON.stringify({ slide })} */}
                      </SwiperSlide>
