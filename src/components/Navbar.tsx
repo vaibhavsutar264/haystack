@@ -61,8 +61,10 @@ const StyledNavbar = styled.nav`
          min-height: 100vh;
          padding-top: 100px;
          display: none;
+         flex-direction: column-reverse;
+         justify-content: flex-end;
          &.active {
-            display: block;
+            display: flex;
          }
          .close {
             position: absolute;
@@ -129,7 +131,7 @@ const Navbar = ({ renderMenu }) => {
                <div className="close md:hidden">
                   <XIcon className="w-8 h-8" onClick={toggleMenu} />
                </div>
-               <div className="mb-3 text-sm flex gap-6 text-gray-500">
+               <div className="mb-3 md:mb-6 text-sm flex gap-6 text-gray-500 mt-6 md:mt-0">
                   <Link href="/">hello@haystackanalytics.in</Link>
                   {settings.facebook_url ? (
                      <a href={settings.facebook_url}>
@@ -180,9 +182,9 @@ const Navbar = ({ renderMenu }) => {
                   ) : null}
                </div>
                <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0">
-                  <Link className="font-medium" href="/science-corner">Science Corner</Link>
-                  <Link className="font-medium" href="/about">About Us</Link>
-                  <Link className="font-medium" href="/">Product</Link>
+                  <Link className="font-semibold" href="/science-corner">Science Corner</Link>
+                  <Link className="font-semibold" href="/about">About Us</Link>
+                  <Link className="font-semibold" href="/">Products</Link>
                </div>
             </div>
             <div className="mt-3 mr-3 md:hidden">

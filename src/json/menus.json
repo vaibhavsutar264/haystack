@@ -14,9 +14,9 @@
       }
    ],
    "navbar": [
-      { "label": "SCIENCE CORNER", "url": "/science-corner" },
-      { "label": "ABOUT US", "url": "/about" },
-      { "label": "PRODUCT", "url": "/universal" }
+      { "label": "Science Corner", "url": "/science-corner" },
+      { "label": "About Us", "url": "/about" },
+      { "label": "Product", "url": "/universal" }
 
    ],
    "productsHeader": [
