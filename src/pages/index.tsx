@@ -89,7 +89,7 @@ function Home({ Component, pageProps, news, settings }) {
                <p className="text-base text-muted">
                   {`Sepsis is the body's extreme response to an infection and is potentially life-threatening. This occurs when a pre-existing infection triggers a chain reaction throughout your body, often leading to shock, disability, multi organ failure, or even death.`}
                </p>
-               <div className="flex flex-col md:flex-row gap-4 my-8">
+               <div className="flex flex-col md:flex-row gap-4 my-8 mt-12">
                   <div className="md:w-5/12">
                      <h3 className="heading">SEPSIS AS A LEADING CAUSE OF DEATH</h3>
                      <SepsisChart />
@@ -99,22 +99,22 @@ function Home({ Component, pageProps, news, settings }) {
                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-4 mt-8">
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">18.5</div>
-                           <div className="text-lg mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
                            <div className="text-base font-extrabold text-green-600">CANCER PATIENTS</div>
                         </div>
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">422</div>
-                           <div className="text-lg mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
                            <div className="text-base font-extrabold text-green-600">DIABETES PATIENTS</div>
                         </div>
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">{'>1.5'}</div>
-                           <div className="text-lg mb-3 font-extrabold text-green-600">billion</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">billion</div>
                            <div className="text-base font-extrabold text-green-600">HYPERTENSION PATIENTS</div>
                         </div>
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">140</div>
-                           <div className="text-lg mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
                            <div className="text-base font-extrabold text-green-600">IMMUNE COMPROMISED PATIENTS</div>
                         </div>
                      </div>
