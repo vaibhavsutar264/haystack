@@ -59,8 +59,10 @@ const HeroSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8">
                   <h3 className="mb-4 text-4xl font-extrabold text-white md:text-muted">Infectious Diseases<br /> Should Not Be Fatal</h3>
-                  <p className="text-blue-600 text-lg font-bold">Universal Infectious Diseases Test (UID)</p>
-                  <p className="text-muted">A Revolutionary Technology to Aid the Clinician</p>
+                  <div class="my-8">
+                     <p className="text-blue-600 text-lg font-bold">Universal Infectious Diseases Test (UID)</p>
+                     <p className="text-muted">A Revolutionary Technology to Aid the Clinician</p>
+                  </div>
                   <div className="mt-8">
                      <Link href={'#'} >
                         <a className="btn-outline-info">KNOW MORE</a>
