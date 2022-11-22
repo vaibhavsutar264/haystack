@@ -17,8 +17,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import "swiper/css/navigation";
-import SepsisChart from "../components/SepsisChart";
 import { Navigation } from "swiper";
+import SepsisChart from "../components/SepsisChart";
 
 const loadPartnerImg = ({ src }) => {
    return `/assets/${src}`

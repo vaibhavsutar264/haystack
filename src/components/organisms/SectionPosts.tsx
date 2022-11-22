@@ -3,6 +3,11 @@ import Section from "../atoms/Section"
 import styled from "@emotion/styled";
 import Link from "next/link";
 import PostItem from "../molecules/PostItem";
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper"
 
 const StyledComponent = styled(Section)`
 background-image: url(https://images.unsplash.com/photo-1659535901690-ab95a8539929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
@@ -49,19 +54,43 @@ const    SectionPosts = (props: ISectionPros) => {
                <h3 className="section-heading">
                {props.title ?? 'In the news'}
                </h3>
-               <div className={`grid grid-cols-2 md:grid-cols-${props.colsCount ?? 4}  gap-4`}>
-                  {props.posts?.map((postItem, postItemIndex) => (
-                  <div className="grid__col" key={`postItemIndex_${postItemIndex}`}>
-                     <PostItem
-                        date={postItem.date || 'MARCH 24, 2022'}
-                        title={postItem.title}
-                        thumbnailUrl={postItem.thumbnailUrl}
-                        description={postItem.description}
-                        url={postItem.url}
-                     />
-                  </div>
+               <Swiper
+                  spaceBetween={50}
+                  autoplay={{
+                     delay: 2500,
+                     disableOnInteraction: false,
+                  }}
+                  breakpoints={{
+                     300: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                     },
+                     768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                     },
+                     1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                     },
+                  }}
+                  modules={[Autoplay]}
+                  onSlideChange={() => console.log('slide change')}
+                  onSwiper={(swiper: any) => console.log(swiper)}
+                  className="awards-carousel"
+               >
+                  {props.posts?.map((postItem, slideIndex) => (
+                     <SwiperSlide key={`slide_${slideIndex}`} >
+                        <PostItem
+                           date={postItem.date || 'MARCH 24, 2022'}
+                           title={postItem.title}
+                           thumbnailUrl={postItem.thumbnailUrl}
+                           description={postItem.description}
+                           url={postItem.url}
+                        />
+                     </SwiperSlide>
                   ))}
-               </div>
+               </Swiper>
             </div>
 
          </Section.Container>
