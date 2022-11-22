@@ -41,12 +41,12 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-   background-size: 60%;
+   background-size: contain;
    background-repeat: no-repeat;
-   background-position: right center;
+   background-position: 170% center;
    background-image: var(--bg);
    .section__container {
-      min-height: calc(100vh - var(--safe-top-padding, 100px));
+      min-height: calc(90vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -59,14 +59,14 @@ const HeroSection = () => {
          <Section.Container className="mx-auto ">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8">
-                  <h3 className="mb-4 text-4xl font-extrabold text-white md:text-muted">Infectious Diseases<br /> Should Not Be Fatal</h3>
+                  <h3 className="mb-4 text-banner font-extrabold text-white md:text-muted">Infectious Diseases<br /> Should Not Kill Anyone</h3>
                   <div class="my-8">
                      <p className="text-blue-600 text-lg font-bold">Universal Infectious Diseases Test (UID)</p>
                      <p className="text-muted">A Revolutionary Technology to Aid the Clinician</p>
                   </div>
-                  <div className="mt-8">
+                  <div className="mt-8 flex">
                      <Link href={'#'} >
-                        <a className="btn-outline-info">KNOW MORE</a>
+                        <a className="btn-outline-info font-bold">KNOW MORE</a>
                      </Link>
                   </div>
                </div>
