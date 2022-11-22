@@ -42,8 +42,8 @@ interface IHeroPros {
 
 export const SectionGridItem = (props: ISectionGridItem) => {
    return (
-      <figure className="flex gap-4 SectionGridItem">
-         <picture className="w-20">
+      <figure className="flex gap-6 SectionGridItem">
+         <picture className="w-14">
             <img src={props.thumbnailUrl} class="img" alt={props.title} className="w-100" />
          </picture>
          <figcaption className="flex-1">

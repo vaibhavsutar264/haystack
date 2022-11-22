@@ -41,7 +41,7 @@ interface ISectionPros {
    colsCount?: Number
 }
 
-const SectionPosts = (props: ISectionPros) => {
+const    SectionPosts = (props: ISectionPros) => {
    return (
       <StyledComponent className="SectionPosts ">
          <Section.Container className="container mx-auto py-12">

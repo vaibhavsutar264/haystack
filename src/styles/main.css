@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -81,7 +81,7 @@ body, #__next {
 }
 .container
 {
-   max-width: 90% !important;
+   max-width: 1180px !important;
 }
 
 .hover-layer {
