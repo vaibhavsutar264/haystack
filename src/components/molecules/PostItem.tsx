@@ -16,6 +16,7 @@ const PostItem = (props: IPostItem) => {
             <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-square bg-gray-200" />
          </picture>
          <figcaption className="item__caption">
+            <p className="font-medium text-sm mb-4 line-clamp-3">{props.date}</p>
             <p className="font-semibold text-sm mb-4 line-clamp-3">{props.title}</p>
             <p className="mb-4 text-sm line-clamp-3">{props.description}</p>
             <p>

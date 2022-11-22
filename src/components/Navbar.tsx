@@ -191,9 +191,6 @@ const Navbar = ({ renderMenu }) => {
                <MenuIcon className="w-8 h-8 cursor-pointer" onClick={() => setNavActive(true)} />
             </div>
          </nav>
-         <div className={'container mx-auto py-3 flex items-center justify-center md:hidden'}>
-            {renderMenu && renderMenu({ className: 'flex -mt-4', menuItems: productHeaderMenu })}
-         </div>
       </StyledNavbar>
    );
 };

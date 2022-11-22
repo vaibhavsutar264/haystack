@@ -273,6 +273,7 @@ function Home({ Component, pageProps, news, settings }) {
                </div>
                <div className="md:px-40">
                   <Swiper
+                     className="partners-carousel"
                      spaceBetween={50}
                      autoplay={{
                         delay: 2500,
@@ -298,14 +299,16 @@ function Home({ Component, pageProps, news, settings }) {
                   >
                      {partners.data?.map((slide, slideIndex) => (
                         <SwiperSlide key={`slide_${slideIndex}`}>
-                           <img src={slide.thumbnailUrl} layout='fill' />
+                           <div className="w-40 h-40 flex items-center justify-center">
+                              <img src={slide.thumbnailUrl} layout='contain' />
+                           </div>
                         </SwiperSlide>
                      ))}
                   </Swiper>
                </div>
             </Section.Container>
          </Section>
-         <Section className="bg-gray-100" >
+         <Section className="bg-gray-100" style={{ '--bg': `url(${sec5.src})` }}>
             <Section.Container className="container mx-auto pt-12 md:py-0 flex flex-col md:flex-row justify-between items-center">
                <div className="grid__col">
                   <h3 className="section-heading">
@@ -322,7 +325,7 @@ function Home({ Component, pageProps, news, settings }) {
                </div>
                <div className="grid__col">
                   <div className="md:w-6/12 mx-auto flex">
-                     <Image src={sec5} />
+                     {/* <Image src={sec5} /> */}
                   </div>
                </div>
 
