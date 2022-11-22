@@ -105,3 +105,8 @@ body, #__next {
    align-items: center;
    justify-content: center;
 }
+.text-banner
+{
+   font-size: 3rem;
+   line-height: 3.25rem;
+}
