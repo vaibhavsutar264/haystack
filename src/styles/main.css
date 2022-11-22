@@ -79,3 +79,7 @@ body, #__next {
    align-items: center;
    justify-content: center;
 }
+.container
+{
+   max-width: 90% !important;
+}
