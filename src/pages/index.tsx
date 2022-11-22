@@ -81,7 +81,7 @@ function Home({ Component, pageProps, news, settings }) {
       <StyledHome bodyClassName="home" settings={settings}>
          <HeroSection />
          <Section className="">
-            <Section.Container className="container mx-auto py-12">
+            <Section.Container className="container mx-auto py-16">
                <h3 className="section-heading">
                   Sepsis And Its Global Impact
                </h3>
@@ -132,7 +132,7 @@ function Home({ Component, pageProps, news, settings }) {
             ]}
          />
          <Section className="">
-            <Section.Container className="container mx-auto py-12">
+            <Section.Container className="container mx-auto py-16">
                <h3 className="section-heading">
                   The Current System Needs An<br /> Upgrade To Save Lives
                </h3>
@@ -253,7 +253,7 @@ function Home({ Component, pageProps, news, settings }) {
          </Section>
 
          <Section className="">
-            <Section.Container className="container mx-auto py-12">
+            <Section.Container className="container mx-auto py-16">
                <h3 className="section-heading text-center">
                   Our Partners
                </h3>
@@ -340,7 +340,7 @@ function Home({ Component, pageProps, news, settings }) {
          />
 
          <Section className="">
-            <Section.Container className="container mx-auto py-12">
+            <Section.Container className="container mx-auto py-16">
                <h3 className="section-heading text-center">
                   {`Awards & Recognition`}
                </h3>
@@ -360,7 +360,7 @@ function Home({ Component, pageProps, news, settings }) {
                         spaceBetween: 40,
                      },
                      1024: {
-                        slidesPerView: 5,
+                        slidesPerView: 6,
                         spaceBetween: 50,
                      },
                   }}

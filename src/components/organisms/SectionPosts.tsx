@@ -40,7 +40,7 @@ interface ISectionPros {
    posts?: IPostItemProps[],
 }
 
-const SectionPosts = (props: ISectionPros) => {
+const    SectionPosts = (props: ISectionPros) => {
    return (
       <StyledComponent className="SectionPosts ">
          <Section.Container className="container mx-auto py-12">
@@ -48,7 +48,7 @@ const SectionPosts = (props: ISectionPros) => {
                <h3 className="section-heading">
                {props.title ?? 'In the news'}
                </h3>
-               <div className={`grid grid-cols-2 md:grid-cols-${props.posts?.length ?? 4}  gap-4`}>
+               <div className={`grid grid-cols-2 md:grid-cols-${props.posts?.length ?? 3}  gap-4`}>
                   {props.posts?.map((postItem, postItemIndex) => (
                   <div className="grid__col" key={`postItemIndex_${postItemIndex}`}>
                      <PostItem
