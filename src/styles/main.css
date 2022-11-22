@@ -110,3 +110,15 @@ body, #__next {
    font-size: 3rem;
    line-height: 3.25rem;
 }
+.partners-carousel .swiper-wrapper  {
+   max-width: calc(100% - 200px);
+   margin: 0 auto;
+   overflow: hidden;
+
+   /* transform: translateX(-100px) */
+}
+.partners-carousel .swiper-button-prev,
+.partners-carousel .swiper-button-next {
+   --swiper-navigation-size: 1.5rem;
+   color: var(--text-color)
+}

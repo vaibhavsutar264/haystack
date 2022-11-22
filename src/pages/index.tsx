@@ -16,8 +16,9 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
+import "swiper/css/navigation";
 import SepsisChart from "../components/SepsisChart";
-
+import { Navigation } from "swiper";
 
 const loadPartnerImg = ({ src }) => {
    return `/assets/${src}`
@@ -273,15 +274,16 @@ function Home({ Component, pageProps, news, settings }) {
                      </div>
                   </div>
                </div>
-               <div className="md:px-40">
+               <div className="__">
                   <Swiper
                      className="partners-carousel"
                      spaceBetween={50}
+                     navigation={true}
                      autoplay={{
                         delay: 2500,
                         disableOnInteraction: false,
                      }}
-                     modules={[Autoplay]}
+                     modules={[Autoplay, Navigation]}
                      breakpoints={{
                         300: {
                            slidesPerView: 2,
