@@ -84,7 +84,7 @@ const    SectionPosts = (props: ISectionPros) => {
                         <PostItem
                            date={postItem.date || 'MARCH 24, 2022'}
                            title={postItem.title}
-                           thumbnailUrl={postItem.thumbnailUrl}
+                           thumbnailUrl={postItem.image_url}
                            description={postItem.description}
                            url={postItem.url}
                         />

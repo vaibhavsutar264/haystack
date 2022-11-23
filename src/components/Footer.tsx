@@ -103,7 +103,7 @@ function Footer({ settings = {}, menus }) {
                      </li>
                   </ul>
                </div>
-               <div className="md:w-6/12">
+               <div className="md:w-6/12 self-end">
                   <ul className="text-sm text-gray-600 flex flex-col gap-3 md:justify-end">
                      <li className="md:text-end">
                         <Link href="">Copyright 2022 - Haystack Analytics</Link>

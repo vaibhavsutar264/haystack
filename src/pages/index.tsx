@@ -89,7 +89,7 @@ function Home({ Component, pageProps, news, settings }) {
                <p className="text-base text-muted">
                   {`Sepsis is the body's extreme response to an infection and is potentially life-threatening. This occurs when a pre-existing infection triggers a chain reaction throughout your body, often leading to shock, disability, multi organ failure, or even death.`}
                </p>
-               <div className="flex flex-col md:flex-row gap-4 my-8">
+               <div className="flex flex-col md:flex-row gap-4 my-8 mt-16">
                   <div className="md:w-5/12">
                      <h3 className="heading">SEPSIS AS A LEADING CAUSE OF DEATH</h3>
                      <SepsisChart />
@@ -99,23 +99,23 @@ function Home({ Component, pageProps, news, settings }) {
                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-4 mt-8">
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">18.5</div>
-                           <div className="text-lg mb-3 font-extrabold text-green-600">millon</div>
-                           <div className="text-base font-extrabold text-green-600">CANCER PATIENTS</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-base font-semibold text-green-600">CANCER PATIENTS</div>
                         </div>
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">422</div>
-                           <div className="text-lg mb-3 font-extrabold text-green-600">millon</div>
-                           <div className="text-base font-extrabold text-green-600">DIABETES PATIENTS</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-base font-semibold text-green-600">DIABETES PATIENTS</div>
                         </div>
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">{'>1.5'}</div>
-                           <div className="text-lg mb-3 font-extrabold text-green-600">billion</div>
-                           <div className="text-base font-extrabold text-green-600">HYPERTENSION PATIENTS</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">billion</div>
+                           <div className="text-base font-semibold text-green-600">HYPERTENSION PATIENTS</div>
                         </div>
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">140</div>
-                           <div className="text-lg mb-3 font-extrabold text-green-600">millon</div>
-                           <div className="text-base font-extrabold text-green-600">IMMUNE COMPROMISED PATIENTS</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-base font-semibold text-green-600">IMMUNE COMPROMISED PATIENTS</div>
                         </div>
                      </div>
                   </div>
@@ -265,11 +265,11 @@ function Home({ Component, pageProps, news, settings }) {
                         <p>CITIES</p>
                      </div>
                      <div className="bg-blue-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">500+</h3>
+                        <h3 className="text-3xl font-bold">100+</h3>
                         <p>HOSPITALS</p>
                      </div>
                      <div className="bg-gray-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">100+</h3>
+                        <h3 className="text-3xl font-bold">500+</h3>
                         <p>DOCTORS</p>
                      </div>
                   </div>
@@ -279,11 +279,7 @@ function Home({ Component, pageProps, news, settings }) {
                      className="partners-carousel"
                      spaceBetween={50}
                      navigation={true}
-                     autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                     }}
-                     modules={[Autoplay, Navigation]}
+                     modules={[Navigation]}
                      breakpoints={{
                         300: {
                            slidesPerView: 2,
@@ -294,8 +290,8 @@ function Home({ Component, pageProps, news, settings }) {
                            spaceBetween: 40,
                         },
                         1024: {
-                           slidesPerView: 5,
-                           spaceBetween: 50,
+                           slidesPerView: 4,
+                           spaceBetween: 20,
                         },
                      }}
                      onSlideChange={() => console.log('slide change')}
@@ -313,23 +309,19 @@ function Home({ Component, pageProps, news, settings }) {
             </Section.Container>
          </Section>
          <Section className="bg-gray-100" style={{ '--bg': `url(${sec5.src})` }}>
-            <Section.Container className="container mx-auto pt-12 md:py-0 flex flex-col md:flex-row justify-between items-center">
-               <div className="grid__col">
-                  <h3 className="section-heading">
+            <Section.Container className="container mx-auto flex flex-col md:flex-row justify-between items-center bg-highlight">
+               <div className="grid__col w-100">
+                  <h3 className="section-heading font-5xl">
                      How may we help you?
                   </h3>
-                  <div className="flex flex-col md:flex-row gap-8">
+                  <div className="flex flex-col md:flex-row gap-8 mt-8">
                      <Link href={'/clinician'}>
-                        <a className="btn-secondary">I AM A CLINICIAN</a>
+                        
+                        <a className="btn-secondary bg-gray-400">I AM A CLINICIAN</a>
                      </Link>
                      <Link href={'/diagnostician'}>
                         <a className="btn-primary">WE ARE A LAB / HOSPITAL</a>
                      </Link>
-                  </div>
-               </div>
-               <div className="grid__col">
-                  <div className="md:w-6/12 mx-auto flex">
-                     {/* <Image src={sec5} /> */}
                   </div>
                </div>
 
@@ -363,7 +355,7 @@ function Home({ Component, pageProps, news, settings }) {
                         spaceBetween: 40,
                      },
                      1024: {
-                        slidesPerView: 6,
+                        slidesPerView: 5,
                         spaceBetween: 50,
                      },
                   }}
