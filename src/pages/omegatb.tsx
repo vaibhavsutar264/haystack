@@ -79,12 +79,132 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                Comparing ΩTB with current tests
                </h3>
                <div className="flex flex-col md:flex-row gap-4 my-8">
+                  <div className="md:w-4/12">
+                     <h3 className="heading">India accounts for <big className="text-blue-600">27Lakh</big> TB cases<br />out of <big className="text-blue-600">1Cr</big> cases across the world.</h3>
+                     <div className="mb-3 flex"></div>
+                     <img src="/assets/tbrand-pie-chart.svg" />
+                  </div>
                   <div className="flex-1">
-                     <h3 className="heading">{`TGS Assessment Profile`}</h3>
+                     <img src="/assets/tbrand-global-countries-map.svg" />
                   </div>
-                  <div className="md:w-5/12">
-                     <h3 className="heading">{`TGS Assessment Profile`}</h3>
-                  </div>
+               </div>
+            </Section.Container>
+         </Section>
+         {/* Comparing ΩTB (Omega TB) with current tests */}
+         <Section className="">
+            <Section.Container className="container mx-auto py-16">
+               <h3 className="section-heading">
+               Comparing ΩTB (Omega TB) with current tests
+               </h3>
+               <div className="table-wrapper w-full overflow-auto">
+                  <table>
+                     <thead>
+                        <tr className="text-blue-600 font-extrabold">
+                           <th className="text-left p-3 md:w-3/12">
+                              Tests for <br />ID
+                           </th>
+                           <th className="text-left p-3 md:w-2/12">
+                              Turn<br />
+                              Around Time
+                           </th>
+                           <th className="text-left p-3">
+                              Pathogen <br />Coverage
+                           </th>
+                           <th className="text-left p-3">
+                              Antibiotic<br />Coverage
+                           </th>
+                           <th className="text-left p-3">
+                              Additional <br />Information
+                           </th>
+                        </tr>
+                     </thead>
+                     <tbody className="text-sm text-muted">
+                        <tr className="bg-gray-100 bg-blue-100 mb-3 text-green-600 text-lg">
+                           <td className="p-3">
+                              <div className="flex items-center gap-3">
+                                 <img src="/assets/tests_icon.svg" alt="" className="w-10" />
+                                 <span className="font-semibold">UID Test</span>
+                              </div>
+                           </td>
+                           <td className="p-3">
+                              <div className="flex items-center gap-3">
+                                 <img src="/assets/turn_around_icon.svg" alt="" className="w-8" />
+                                 <div>8-12 hours</div>
+                              </div>
+                           </td>
+                           <td className="p-3">
+                              <div>{'>1200 pathogens*'}</div>
+                           </td>
+                           <td className="p-3">
+                              <div>{'ARGs'}</div>
+                              <div>{'Anti-microbial Resistance Genes'}</div>
+                           </td>
+                           <td className="p-3">
+                              <div>Species and Genus identification</div>
+                              <div>Poly-microbial Identification</div>
+                           </td>
+                        </tr>
+                        <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600">
+                           <td className="p-3">
+                              <div className="flex items-center gap-3">
+                                 <img src="/assets/culture_test.svg" alt="" className="w-8" />
+                                 <span className="font-semibold">Culture Test</span>
+                              </div>
+                           </td>
+                           <td className="p-3">
+                              <div>2-10 Days</div>
+                           </td>
+                           <td className="p-3">
+                              <div>{'Culturable bacteria and fungi'}</div>
+                           </td>
+                           <td className="p-3">
+                              <div>{'Selected Panel'}</div>
+                           </td>
+                           <td className="p-3">
+                           </td>
+                        </tr>
+                        <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600">
+                           <td className="p-3">
+                              <div className="flex items-center gap-3">
+                                 <img src="/assets/molecular_test_icon.svg" alt="" className="w-8" />
+                                 <span className="font-semibold">Molecular Test</span>
+                              </div>
+                           </td>
+                           <td className="p-3">
+                              <div>12-24 Hours</div>
+                           </td>
+                           <td className="p-3">
+                              <div>{'Up to 43 pathogens'}</div>
+                           </td>
+                           <td className="p-3">
+                              <div>{'1-5 Antibiotics'}</div>
+                           </td>
+                           <td className="p-3">
+                              <div>Upgradation of technology on existing set up is not possible or is very difficult</div>
+                           </td>
+                        </tr>
+                        <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600 ">
+                           <td className="p-3">
+                              <div className="flex items-center gap-3">
+                                 <img src="/assets/sequence_test.svg" alt="" className="w-8" />
+                                 <span className="font-semibold">Sequencing Test</span>
+                              </div>
+                           </td>
+                           <td className="p-3">
+                              <div>1-3 days</div>
+                           </td>
+                           <td className="p-3">
+                              <div>{'Several pathogens'}</div>
+                           </td>
+                           <td className="p-3">
+                              <div>{'Limitedly available with some'}</div>
+                           </td>
+                           <td className="p-3">
+
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
                </div>
             </Section.Container>
          </Section>
