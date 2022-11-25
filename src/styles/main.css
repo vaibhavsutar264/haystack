@@ -164,7 +164,7 @@ body, #__next {
    font-weight: 600;
 }
 .bg-light{
-   background: #fbfbfb;
+   background: #D6D7DB15;
 }
 .text-muted-new
 {
@@ -173,4 +173,21 @@ body, #__next {
 .post-title
 {
    min-height: 60px;
+}
+.border-spacing-table
+{
+   border-collapse: separate;
+   border-spacing: 0 0.3rem;
+}
+.bg-blue-trans
+{
+   background: #3470d320;
+}
+.bg-gray-trans
+{
+   background: #D6D7DB40;
+}
+.bg-gray-trans-1
+{
+   background: #D6D7DB20;
 }

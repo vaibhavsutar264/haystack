@@ -87,7 +87,7 @@ function Home({ Component, pageProps, news, settings }) {
                   Sepsis And Its Global Impact
                </h3>
                <p className="text-base text-muted">
-                  {`Sepsis is the body's extreme response to an infection and is potentially life-threatening. This occurs when a pre-existing infection triggers a chain reaction throughout your body, often leading to shock, disability, multi organ failure, or even death.`}
+                  Sepsis is the body's extreme response to an infection and is potentially life-threatening. This occurs when a pre-existing infection <br></br>triggers a chain reaction throughout your body, often leading to shock, disability, multi organ failure, or even death.
                </p>
                <div className="flex flex-col md:flex-row gap-4 my-8 mt-24">
                   <div className="md:w-5/12">
@@ -138,7 +138,7 @@ function Home({ Component, pageProps, news, settings }) {
                   The Current System Needs An<br /> Upgrade To Save Lives
                </h3>
                <div className="table-wrapper w-full overflow-auto">
-                  <table>
+                  <table class="border-spacing-table">
                      <thead>
                         <tr className="text-blue-600 font-extrabold">
                            <th className="text-left p-3 md:w-3/12">
@@ -160,7 +160,7 @@ function Home({ Component, pageProps, news, settings }) {
                         </tr>
                      </thead>
                      <tbody className="text-sm text-muted-new">
-                        <tr className="bg-gray-100 bg-blue-100 mb-3 text-green-600 text-lg">
+                        <tr className="bg-gray-100 bg-blue-trans mb-3 text-green-600 text-lg">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/tests_icon.svg" alt="" className="w-10" />
@@ -185,7 +185,7 @@ function Home({ Component, pageProps, news, settings }) {
                               <div>Poly-microbial Identification</div>
                            </td>
                         </tr>
-                        <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600">
+                        <tr className="bg-gray-trans mb-3 hover:text-green-600">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/culture_test.svg" alt="" className="w-8" />
@@ -204,7 +204,7 @@ function Home({ Component, pageProps, news, settings }) {
                            <td className="p-3">
                            </td>
                         </tr>
-                        <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600">
+                        <tr className="bg-gray-trans-1 mb-3 hover:text-green-600">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/molecular_test_icon.svg" alt="" className="w-8" />
@@ -224,7 +224,7 @@ function Home({ Component, pageProps, news, settings }) {
                               <div>Upgradation of technology on existing set up is not possible or is very difficult</div>
                            </td>
                         </tr>
-                        <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600 ">
+                        <tr className="bg-gray-trans mb-3 hover:text-green-600 ">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/sequence_test.svg" alt="" className="w-8" />
