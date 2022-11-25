@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 import Section from '../../components/atoms/Section'
 import Link from "next/link";
 import SectionPosts from "../../components/organisms/SectionPosts";
+import SectionBlogPosts from "../../components/organisms/SectionBlogPosts";
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
@@ -34,27 +35,28 @@ const HeroSection = () => {
    return (
       <StyledHeroSection className="HeroSection ">
          <Section.Container className="mx-auto ">
+            <h3 className="mb-4 font-extrabold text-blue-600 text-3xl">Blogs</h3>
             <div className="flex gap-8 items-start">
                <div className="md:w-6/12">
                   <picture>
                      <img src="//placehold.com" alt="" className="bg-gray-200 w-full" />
                   </picture>
                </div>
-               <div className="flex-1 bg-white py-8">
+               <div className="flex-1 bg-white  py-8">
                   <div className="flex justify-between mb-4">
-                     <span>APRIL 28, 2022</span>
+                     <b>APRIL 28, 2022</b>
                      <span className="text-green-600 font-medium">SHARE</span>
                   </div>
-                  <h3 className="mb-4 md:mb-8 text-4xl font-extrabold">
+                  <h3 className="mb-4 md:mb-12 text-4xl font-extrabold">
                      Past, Present and Future of TB diagnosis: Laboratory perspective
                   </h3>
-                  <p className="font-bold mb-4 text-blue-600">by XYZ, Lorem Ipsum</p>
+                  <p className="font-bold mb-4 md:mb-8 text-blue-600">by XYZ, Lorem Ipsum</p>
                   <p className="font-base text-muted line-clamp-4">
                      {`Clinicians worldwide rely heavily (almost 70%) on the laboratory results, for diagnosing the illness, recommending the appropriate treatment and follow-ups. Hence it becomes an onus on`}
                   </p>
-                  <div className="mt-8 flex items-center gap-4">
+                  <div className="mt-8 flex items-center justify-end gap-4">
                      <Link href={'#'} >
-                        <a className="#">BOOK A CALL</a>
+                        <a className="text-green-600 text-italic">Read More...</a>
                      </Link>
                   </div>
                </div>
@@ -69,8 +71,12 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
    return (
       <StyledHome settings={settings}>
          <HeroSection />
-         <SectionPosts
+         <SectionBlogPosts
             title={'Related Articles'}
+            posts={news}
+         />
+         <SectionBlogPosts
+            title={'Webinars'}
             posts={news}
          />
       </StyledHome>
