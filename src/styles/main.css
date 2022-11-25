@@ -148,3 +148,15 @@ body, #__next {
    font-size: 3rem;
    line-height: 3.5rem;
 }
+
+.table--striped table thead th {
+   padding: 1rem 0.5rem;
+}
+.table--striped table td {
+   background: #efefef;
+   margin-bottom: 4px;
+   padding: 0.5rem;
+}
+.table--striped table tbody tr:nth-child(even) td {
+   background: #ccc;
+}
