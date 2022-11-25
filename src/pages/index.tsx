@@ -89,7 +89,7 @@ function Home({ Component, pageProps, news, settings }) {
                <p className="text-base text-muted">
                   {`Sepsis is the body's extreme response to an infection and is potentially life-threatening. This occurs when a pre-existing infection triggers a chain reaction throughout your body, often leading to shock, disability, multi organ failure, or even death.`}
                </p>
-               <div className="flex flex-col md:flex-row gap-4 my-8 mt-16">
+               <div className="flex flex-col md:flex-row gap-4 my-8 mt-24">
                   <div className="md:w-5/12">
                      <h3 className="heading">SEPSIS AS A LEADING CAUSE OF DEATH</h3>
                      <SepsisChart />
@@ -132,8 +132,8 @@ function Home({ Component, pageProps, news, settings }) {
                { title: 'RESULT REPORTED IN 8-12 HOURS', thumbnailUrl: '/assets/timer_icon.svg', description: 'Hands on time < 4 hours Unbeatable turnaround time of 12 hours' },
             ]}
          />
-         <Section className="">
-            <Section.Container className="container mx-auto py-16">
+         <Section className="bg-light">
+            <Section.Container className="container mx-auto py-16 ">
                <h3 className="section-heading">
                   The Current System Needs An<br /> Upgrade To Save Lives
                </h3>
@@ -159,7 +159,7 @@ function Home({ Component, pageProps, news, settings }) {
                            </th>
                         </tr>
                      </thead>
-                     <tbody className="text-sm text-muted">
+                     <tbody className="text-sm text-muted-new">
                         <tr className="bg-gray-100 bg-blue-100 mb-3 text-green-600 text-lg">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
@@ -260,16 +260,16 @@ function Home({ Component, pageProps, news, settings }) {
                </h3>
                <div className="md:w-6/12 mx-auto mb-12">
                   <div className="grid grid-cols-3">
-                     <div className="bg-green-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">100+</h3>
+                     <div className="bg-green-600 text-white p-12 py-10 text-center flex flex-col items-center justify-center">
+                        <h3 className="text-5xl font-bold">100+</h3>
                         <p>CITIES</p>
                      </div>
-                     <div className="bg-blue-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">100+</h3>
+                     <div className="bg-blue-600 text-white p-12 py-10 text-center flex flex-col items-center justify-center">
+                        <h3 className="text-5xl font-bold">100+</h3>
                         <p>HOSPITALS</p>
                      </div>
-                     <div className="bg-gray-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">500+</h3>
+                     <div className="bg-gray-600 text-white p-12 py-10 text-center flex flex-col items-center justify-center">
+                        <h3 className="text-5xl font-bold">500+</h3>
                         <p>DOCTORS</p>
                      </div>
                   </div>

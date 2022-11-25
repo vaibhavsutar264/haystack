@@ -43,7 +43,7 @@ const StyledNavbar = styled.nav`
    position: fixed;
    top: 0;
    left: 0;
-   padding: 0.5rem 0 0.5rem 0;
+   padding: 1.5rem 0 1.5rem 0;
    z-index: 999;
    &.bg-white {
       background: white !important;
@@ -181,7 +181,7 @@ const Navbar = ({ renderMenu }) => {
                      </a>
                   ) : null}
                </div>
-               <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0">
+               <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end">
                   <Link className="font-semibold" href="/science-corner">Science Corner</Link>
                   <Link className="font-semibold" href="/about">About Us</Link>
                   <Link className="font-semibold" href="/">Products</Link>
