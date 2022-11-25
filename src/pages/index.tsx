@@ -279,7 +279,11 @@ function Home({ Component, pageProps, news, settings }) {
                      className="partners-carousel"
                      spaceBetween={50}
                      navigation={true}
-                     modules={[Navigation]}
+                     autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                     }}
+                     modules={[Navigation,Autoplay]}
                      breakpoints={{
                         300: {
                            slidesPerView: 2,
