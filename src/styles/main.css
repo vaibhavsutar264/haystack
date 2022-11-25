@@ -145,8 +145,8 @@ body, #__next {
 }
 .font-5xl
 {
-   font-size: 3rem;
-   line-height: 3.5rem;
+   font-size: 2.5rem;
+   line-height: 3rem;
 }
 
 .table--striped table thead th {
