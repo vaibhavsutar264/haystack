@@ -160,3 +160,34 @@ body, #__next {
 .table--striped table tbody tr:nth-child(even) td {
    background: #ccc;
 }
+.nav-menu-main a{
+   font-weight: 600;
+}
+.bg-light{
+   background: #D6D7DB15;
+}
+.text-muted-new
+{
+   color: #bebebe;
+}
+.post-title
+{
+   min-height: 60px;
+}
+.border-spacing-table
+{
+   border-collapse: separate;
+   border-spacing: 0 0.3rem;
+}
+.bg-blue-trans
+{
+   background: #3470d320;
+}
+.bg-gray-trans
+{
+   background: #D6D7DB40;
+}
+.bg-gray-trans-1
+{
+   background: #D6D7DB20;
+}

@@ -62,10 +62,10 @@ const SectionGridItems = (props: IHeroPros) => {
             <h3 className={`text-white section-heading section-heading--invert ${props.titleClassName}`}>
                {props.title}
             </h3>
-            <p className="text-base text-white">
-            {props.subtitle}
+            <p className="text-base text-white font-semibold">
+            {props.description}
             </p>
-            <div className={`grid ${props.gridClassName ?? 'grid-cols-1 md:grid-cols-3'}  gap-4 my-8`}>
+            <div className={`grid ${props.gridClassName ?? 'grid-cols-1 md:grid-cols-3'}  gap-4 my-8 mt-12`}>
                {props.items?.map((pitem, pitemIndex) => (
                <div className="grid__col" key={`pitemIndex_${pitemIndex}`}>
                   <SectionGridItem {...pitem} />

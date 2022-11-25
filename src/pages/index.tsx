@@ -87,9 +87,9 @@ function Home({ Component, pageProps, news, settings }) {
                   Sepsis And Its Global Impact
                </h3>
                <p className="text-base text-muted">
-                  {`Sepsis is the body's extreme response to an infection and is potentially life-threatening. This occurs when a pre-existing infection triggers a chain reaction throughout your body, often leading to shock, disability, multi organ failure, or even death.`}
+                  Sepsis is the body's extreme response to an infection and is potentially life-threatening. This occurs when a pre-existing infection <br></br>triggers a chain reaction throughout your body, often leading to shock, disability, multi organ failure, or even death.
                </p>
-               <div className="flex flex-col md:flex-row gap-4 my-8 mt-16">
+               <div className="flex flex-col md:flex-row gap-4 my-8 mt-24">
                   <div className="md:w-5/12">
                      <h3 className="heading">SEPSIS AS A LEADING CAUSE OF DEATH</h3>
                      <SepsisChart />
@@ -132,13 +132,13 @@ function Home({ Component, pageProps, news, settings }) {
                { title: 'RESULT REPORTED IN 8-12 HOURS', thumbnailUrl: '/assets/timer_icon.svg', description: 'Hands on time < 4 hours Unbeatable turnaround time of 12 hours' },
             ]}
          />
-         <Section className="">
-            <Section.Container className="container mx-auto py-16">
+         <Section className="bg-light">
+            <Section.Container className="container mx-auto py-16 ">
                <h3 className="section-heading">
                   The Current System Needs An<br /> Upgrade To Save Lives
                </h3>
                <div className="table-wrapper w-full overflow-auto">
-                  <table>
+                  <table class="border-spacing-table">
                      <thead>
                         <tr className="text-blue-600 font-extrabold">
                            <th className="text-left p-3 md:w-3/12">
@@ -159,8 +159,8 @@ function Home({ Component, pageProps, news, settings }) {
                            </th>
                         </tr>
                      </thead>
-                     <tbody className="text-sm text-muted">
-                        <tr className="bg-gray-100 bg-blue-100 mb-3 text-green-600 text-lg">
+                     <tbody className="text-sm text-muted-new">
+                        <tr className="bg-gray-100 bg-blue-trans mb-3 text-green-600 text-lg">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/tests_icon.svg" alt="" className="w-10" />
@@ -185,7 +185,7 @@ function Home({ Component, pageProps, news, settings }) {
                               <div>Poly-microbial Identification</div>
                            </td>
                         </tr>
-                        <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600">
+                        <tr className="bg-gray-trans mb-3">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/culture_test.svg" alt="" className="w-8" />
@@ -204,7 +204,7 @@ function Home({ Component, pageProps, news, settings }) {
                            <td className="p-3">
                            </td>
                         </tr>
-                        <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600">
+                        <tr className="bg-gray-trans-1 mb-3">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/molecular_test_icon.svg" alt="" className="w-8" />
@@ -224,7 +224,7 @@ function Home({ Component, pageProps, news, settings }) {
                               <div>Upgradation of technology on existing set up is not possible or is very difficult</div>
                            </td>
                         </tr>
-                        <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600 ">
+                        <tr className="bg-gray-trans mb-3">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/sequence_test.svg" alt="" className="w-8" />
@@ -260,16 +260,16 @@ function Home({ Component, pageProps, news, settings }) {
                </h3>
                <div className="md:w-6/12 mx-auto mb-12">
                   <div className="grid grid-cols-3">
-                     <div className="bg-green-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">100+</h3>
+                     <div className="bg-green-600 text-white p-12 py-10 text-center flex flex-col items-center justify-center">
+                        <h3 className="text-5xl font-bold">100+</h3>
                         <p>CITIES</p>
                      </div>
-                     <div className="bg-blue-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">100+</h3>
+                     <div className="bg-blue-600 text-white p-12 py-10 text-center flex flex-col items-center justify-center">
+                        <h3 className="text-5xl font-bold">100+</h3>
                         <p>HOSPITALS</p>
                      </div>
-                     <div className="bg-gray-600 text-white p-8 text-center flex flex-col items-center justify-center">
-                        <h3 className="text-3xl font-bold">500+</h3>
+                     <div className="bg-gray-600 text-white p-12 py-10 text-center flex flex-col items-center justify-center">
+                        <h3 className="text-5xl font-bold">500+</h3>
                         <p>DOCTORS</p>
                      </div>
                   </div>
@@ -279,7 +279,11 @@ function Home({ Component, pageProps, news, settings }) {
                      className="partners-carousel"
                      spaceBetween={50}
                      navigation={true}
-                     modules={[Navigation]}
+                     autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                     }}
+                     modules={[Navigation,Autoplay]}
                      breakpoints={{
                         300: {
                            slidesPerView: 2,
