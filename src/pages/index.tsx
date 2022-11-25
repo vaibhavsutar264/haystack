@@ -185,7 +185,7 @@ function Home({ Component, pageProps, news, settings }) {
                               <div>Poly-microbial Identification</div>
                            </td>
                         </tr>
-                        <tr className="bg-gray-trans mb-3 hover:text-green-600">
+                        <tr className="bg-gray-trans mb-3">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/culture_test.svg" alt="" className="w-8" />
@@ -204,7 +204,7 @@ function Home({ Component, pageProps, news, settings }) {
                            <td className="p-3">
                            </td>
                         </tr>
-                        <tr className="bg-gray-trans-1 mb-3 hover:text-green-600">
+                        <tr className="bg-gray-trans-1 mb-3">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/molecular_test_icon.svg" alt="" className="w-8" />
@@ -224,7 +224,7 @@ function Home({ Component, pageProps, news, settings }) {
                               <div>Upgradation of technology on existing set up is not possible or is very difficult</div>
                            </td>
                         </tr>
-                        <tr className="bg-gray-trans mb-3 hover:text-green-600 ">
+                        <tr className="bg-gray-trans mb-3">
                            <td className="p-3">
                               <div className="flex items-center gap-3">
                                  <img src="/assets/sequence_test.svg" alt="" className="w-8" />
