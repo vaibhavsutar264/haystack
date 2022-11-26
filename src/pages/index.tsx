@@ -374,7 +374,7 @@ function Home({ Component, pageProps, news, settings }) {
                         <div className="w-48 h-48 hover-layer hover:text-white">
                            <img src={slide.thumbnailUrl} />
                            <div className="hover-layer__overlay">
-                              <span>{slide.title}</span>
+                              <span class="text-center px-2">{slide.title}</span>
                            </div>
                         </div>
                         {/* {JSON.stringify({ slide })} */}
