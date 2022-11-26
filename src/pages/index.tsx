@@ -137,7 +137,7 @@ function Home({ Component, pageProps, news, settings }) {
                <h3 className="section-heading">
                   The Current System Needs An<br /> Upgrade To Save Lives
                </h3>
-               <div className="table-wrapper w-full overflow-auto">
+               <div className="table-wrapper w-full overflow-auto table--home">
                   <table class="border-spacing-table">
                      <thead>
                         <tr className="text-blue-600 font-extrabold">
@@ -320,7 +320,7 @@ function Home({ Component, pageProps, news, settings }) {
                   </h3>
                   <div className="flex flex-col md:flex-row gap-8 mt-8">
                      <Link href={'/clinician'}>
-                        
+
                         <a className="btn-secondary bg-gray-400">I AM A CLINICIAN</a>
                      </Link>
                      <Link href={'/diagnostician'}>
@@ -336,6 +336,7 @@ function Home({ Component, pageProps, news, settings }) {
             title={`In the news`}
             posts={news}
             colsCount={3}
+            enableCarousel={false}
          />
 
          <Section className="">

@@ -191,3 +191,18 @@ body, #__next {
 {
    background: #D6D7DB20;
 }
+.table--home tbody tr:hover td{
+   transition: all .5s ease;
+   padding: 1rem;
+   font-size: 1.125rem;
+   --tw-text-opacity: 1;
+   color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+.table--home tbody tr:hover {
+   background-color: #3470d320;
+}
+
+.limit-3 .item:nth-child(3) ~ .item {
+   display: none;
+}
