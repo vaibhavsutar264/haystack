@@ -89,7 +89,7 @@ const SectionBlogPosts = (props: ISectionBlogPros) => {
                            description={postItem.description}
                            author={postItem.author_name}
                            author_bio={postItem.author_bio}
-                           url={postItem.url}
+                           url={`/blog/${postItem.slug}`}
                         />
                      </SwiperSlide>
                   ))}

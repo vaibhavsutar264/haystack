@@ -19,11 +19,11 @@ const BlogPostItem = (props: IBlogPostItem) => {
          </picture>
          <figcaption className="item__caption my-6">
             <p className="font-medium text-sm line-clamp-3">{props.date}</p>
-            <p className="font-semibold text-md my-6 line-clamp-3 post-title min-70px">{props.title}</p>
+            <Link href={props.url}>
+               <p className="cursor-pointer font-semibold text-md my-6 line-clamp-3 post-title min-70px">{props.title}</p>
+            </Link>
             <p>
-               <Link href={props.url}>
-                  <a className="hlink hlink--success">{props.author_name} <span className="display-block author-bio">{props.author_bio}</span></a>
-               </Link>
+               <a className="hlink hlink--success">{props.author_name} <span className="display-block author-bio">{props.author_bio}</span></a>
             </p>
          </figcaption>
       </figure>
