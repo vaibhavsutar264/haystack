@@ -97,6 +97,7 @@ const SectionPosts = (props: ISectionPros) => {
                            title={postItem.title}
                            thumbnailUrl={postItem.image_url}
                            description={postItem.description}
+                           aspect="aspect-[16/9]"
                            url={postItem.url}
                         />
                      </SwiperSlide>
@@ -106,6 +107,8 @@ const SectionPosts = (props: ISectionPros) => {
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4 limit-3">
                   {props.posts?.map((postItem, slideIndex) => (
                      <ItemComponent
+                     thumbnailUrl={postItem.image_url}
+                     aspect="aspect-[4/3]"
                         key={`slide_${slideIndex}`}
                         {...postItem}
                      />

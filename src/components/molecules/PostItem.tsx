@@ -5,6 +5,7 @@ import Link from "next/link"
 interface IPostItem {
    title?: string,
    thumbnailUrl?: string,
+   aspect?: string,
    citation?: string,
    description?: any,
    url?: any,
@@ -13,7 +14,7 @@ const PostItem = (props: IPostItem) => {
    return (
       <figure className="post-item item">
          <picture className="item__thumbnail">
-            <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-[4/3] bg-gray-200 object-cover" />
+            <img src={props.thumbnailUrl} alt={props.title} className={`mb-3 ${props.aspect} bg-gray-200 object-cover`}/>
          </picture>
          <figcaption className="item__caption my-6">
             <p className="font-medium text-sm line-clamp-3">{props.date}</p>
