@@ -1,10 +1,10 @@
 {
    "data": [
-      { "title": "Award title", "thumbnailUrl": "/assets/awards/award01.png" },
-      { "title": "Award title", "thumbnailUrl": "/assets/awards/award02.png" },
-      { "title": "Award title", "thumbnailUrl": "/assets/awards/award03.jpg" },
-      { "title": "Award title", "thumbnailUrl": "/assets/awards/award04.png" },
+      { "title": "Winner CAHOTECH Pitch Fest for Healthcare Startups 2022", "thumbnailUrl": "/assets/awards/award01.png" },
+      { "title": "PM Narendra Modi launches our test at BIRAC’s Biotech Startup Expo 2022", "thumbnailUrl": "/assets/awards/award02.png" },
+      { "title": "Winners of NASSCOM 2020", "thumbnailUrl": "/assets/awards/award03.jpg" },
+      { "title": "Victors in 2020 Intel Plugin", "thumbnailUrl": "/assets/awards/award04.png" },
       { "title": "Award title", "thumbnailUrl": "/assets/awards/award05.jpg" },
-      { "title": "Award title", "thumbnailUrl": "/assets/awards/award06.png" }
+      { "title": "Multiple grants awarded", "thumbnailUrl": "/assets/awards/award06.png" }
    ]
 }
