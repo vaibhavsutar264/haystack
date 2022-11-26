@@ -70,11 +70,11 @@ const PostItem = (props) => {
                </div>
                <p className="mb-3">
                   <a href="#" className="underline text-blue-600">
-                  Prediction of treatment outcomes for multidrug-resistant tuberculosis by whole-genome sequencing
+                  {props.title}
                   </a>
                </p>
                <p className="mb-6">
-                  Reference: He G, Chen X, Chen J, Zhang W. International Journal of Infectious Disease
+                  {props.excerpt}
                </p>
                <p className="font-semibold">
                   JULY 2020
