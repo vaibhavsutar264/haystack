@@ -1,7 +1,7 @@
 // @ts-nocheck
 import AppTemplate from "../../components/templates/AppTemplate";
 import { getSettings } from "../../utils/settings";
-import { getActiveNews } from "../../utils/news";
+import { getActivePosts } from "../../utils/posts";
 import styled from "@emotion/styled";
 import Section from '../../components/atoms/Section'
 import Link from "next/link";
@@ -69,7 +69,7 @@ const HeroSection = () => {
    )
 }
 
-export default function Diagnostician({ Component, pageProps, news, settings }) {
+export default function Diagnostician({ Component, pageProps, posts, settings }) {
 
    return (
       <StyledHome settings={settings}>
@@ -77,7 +77,7 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
          <SectionBlogPosts
             title={'Recent Articles'}
             enableCarousel={true}
-            posts={news}
+            posts={posts}
          />
          <SectionPosts
             enableCarousel={true}
@@ -102,13 +102,13 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
 }
 
 export async function getStaticProps(context) {
-   let news = getActiveNews()
-   console.log({ news })
+   let posts = getActivePosts()
+   console.log({ posts })
    const settings = getSettings()
 
    return {
      props: {
-      news: JSON.parse(JSON.stringify(news)),
+      posts: JSON.parse(JSON.stringify(posts)),
       settings: JSON.parse(JSON.stringify(settings))
      }, // will be passed to the page component as props
    }

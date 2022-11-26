@@ -60,7 +60,7 @@ const HeroSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8">
                   <h3 className="mb-4 text-banner font-extrabold text-white md:text-muted">Infectious Diseases<br /> Should Not Kill Anyone</h3>
-                  <div class="my-8">
+                  <div className="my-8">
                      <p className="text-blue-600 text-lg font-bold">Universal Infectious Diseases Test (UID)</p>
                      <p className="text-muted">A Revolutionary Technology to Aid the Clinician</p>
                   </div>
@@ -138,7 +138,7 @@ function Home({ Component, pageProps, news, settings }) {
                   The Current System Needs An<br /> Upgrade To Save Lives
                </h3>
                <div className="table-wrapper w-full overflow-auto table--home">
-                  <table class="border-spacing-table">
+                  <table className="border-spacing-table">
                      <thead>
                         <tr className="text-blue-600 font-extrabold">
                            <th className="text-left p-3 md:w-3/12">
@@ -374,7 +374,7 @@ function Home({ Component, pageProps, news, settings }) {
                         <div className="w-48 h-48 hover-layer hover:text-white">
                            <img src={slide.thumbnailUrl} />
                            <div className="hover-layer__overlay">
-                              <span class="text-center px-2">{slide.title}</span>
+                              <span className="text-center px-2">{slide.title}</span>
                            </div>
                         </div>
                         {/* {JSON.stringify({ slide })} */}

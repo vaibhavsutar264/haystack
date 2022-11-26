@@ -97,6 +97,8 @@ const SectionPosts = (props: ISectionPros) => {
                            title={postItem.title}
                            thumbnailUrl={postItem.image_url}
                            description={postItem.description}
+                           author={postItem.author_name}
+                           author_bio={postItem.author_bio}
                            aspect="aspect-[16/9]"
                            url={postItem.url}
                         />
@@ -109,6 +111,7 @@ const SectionPosts = (props: ISectionPros) => {
                      <ItemComponent
                      thumbnailUrl={postItem.image_url}
                      aspect="aspect-[4/3]"
+                     
                         key={`slide_${slideIndex}`}
                         {...postItem}
                      />

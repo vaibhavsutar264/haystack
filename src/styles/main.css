@@ -173,6 +173,11 @@ body, #__next {
 .post-title
 {
    min-height: 60px;
+   font-weight: 700;
+}
+.post-title.min-70px
+{
+   min-height: 70px;
 }
 .border-spacing-table
 {
