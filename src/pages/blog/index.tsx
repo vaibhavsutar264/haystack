@@ -7,6 +7,9 @@ import Section from '../../components/atoms/Section'
 import Link from "next/link";
 import SectionPosts from "../../components/organisms/SectionPosts";
 import SectionBlogPosts from "../../components/organisms/SectionBlogPosts";
+import WebinarItem from "../../components/molecules/WebinarItem";
+
+import webinars from '../../json/webinars.json'
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
@@ -75,9 +78,23 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
             title={'Related Articles'}
             posts={news}
          />
-         <SectionBlogPosts
+         <SectionPosts
+            enableCarousel={false}
+            renderHeaderRight={() => (
+               <>
+                  <a href="https://www.youtube.com/@haystackanalytics3946" className="flex items-center gap-3 text-sm mb-4 md:mb-8">
+                     <img src="https://yt3.ggpht.com/IorwJ9Fi2ZSmiRtYqha8GiI9qJYSROhiahjFn-K9_ARla8lzC9OiLCSWHhh4Yix9uisYm7Hvsg=s176-c-k-c0x00ffffff-no-rj" alt="Haystack Analytics" className="w-10 h-10" />
+                     <div className="mr-3">
+                        <p className="font-semibold mb-0">Haystack Analytics</p>
+                        <span className="text-xs">77 subscribers</span>
+                     </div>
+                     <span className="bg-black text-white px-4 py-2 rounded-full">SUBSCRIBE</span>
+                  </a>
+               </>
+            )}
+            ItemComponent={WebinarItem}
             title={'Webinars'}
-            posts={news}
+            posts={webinars.data}
          />
       </StyledHome>
    )
