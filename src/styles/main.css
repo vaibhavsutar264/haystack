@@ -206,3 +206,10 @@ body, #__next {
 .limit-3 .item:nth-child(3) ~ .item {
    display: none;
 }
+
+.ReactModal__Overlay {
+   z-index: 9999;
+}
+.ReactModal__Content {
+   /* aspect-ratio: 16/9; */
+}

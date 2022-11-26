@@ -35,6 +35,7 @@ interface IPostItemProps {
    thumbnailUrl: string,
    onClick?: Function,
    url?: string,
+   postUrl?: string,
 }
 
 interface ISectionPros {
@@ -55,9 +56,14 @@ const SectionPosts = (props: ISectionPros) => {
       <StyledComponent className="SectionPosts ">
          <Section.Container className="container mx-auto py-12">
             <div className="w-50">
-               <h3 className="section-heading">
-               {props.title ?? 'In the news'}
-               </h3>
+               <div className="flex items-center justify-between">
+                  <div>
+                     <h3 className="section-heading">
+                     {props.title ?? 'In the news'}
+                     </h3>
+                  </div>
+                  <div>{props.renderHeaderRight && props.renderHeaderRight()}</div>
+               </div>
                {props.enableCarousel ? (
                <Swiper
                   spaceBetween={50}
@@ -101,11 +107,7 @@ const SectionPosts = (props: ISectionPros) => {
                   {props.posts?.map((postItem, slideIndex) => (
                      <ItemComponent
                         key={`slide_${slideIndex}`}
-                        date={postItem.date || 'MARCH 24, 2022'}
-                        title={postItem.title}
-                        thumbnailUrl={postItem.image_url}
-                        description={postItem.description}
-                        url={postItem.url}
+                        {...postItem}
                      />
                   ))}
                   </div>
