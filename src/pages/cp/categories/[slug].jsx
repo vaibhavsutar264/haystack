@@ -1,4 +1,5 @@
 import { Bootstrap } from "../../../../cp/src";
+import { getPostFile } from "../../../utils/posts";
 
 export default function post({ post }) {
    return (
@@ -20,7 +21,8 @@ export async function getStaticPaths() {
 
 
 export async function getStaticProps(context) {
-
+   const slug = context.params.slug
+   const post = getPostFile(slug)
    return {
      props: {
       // paths: slugs,
