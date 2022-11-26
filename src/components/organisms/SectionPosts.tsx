@@ -43,10 +43,14 @@ interface ISectionPros {
    subtitle?: string,
    actions?: IHeroActionProps[],
    posts?: IPostItemProps[],
-   colsCount?: Number
+   colsCount?: Number,
+   ItemComponent?: JSX.Element,
+   enableCarousel?: boolean
 }
 
-const    SectionPosts = (props: ISectionPros) => {
+const SectionPosts = (props: ISectionPros) => {
+   const { ItemComponent } = props
+
    return (
       <StyledComponent className="SectionPosts ">
          <Section.Container className="container mx-auto py-12">
@@ -54,6 +58,7 @@ const    SectionPosts = (props: ISectionPros) => {
                <h3 className="section-heading">
                {props.title ?? 'In the news'}
                </h3>
+               {props.enableCarousel ? (
                <Swiper
                   spaceBetween={50}
                   autoplay={{
@@ -81,7 +86,7 @@ const    SectionPosts = (props: ISectionPros) => {
                >
                   {props.posts?.map((postItem, slideIndex) => (
                      <SwiperSlide key={`slide_${slideIndex}`} >
-                        <PostItem
+                        <ItemComponent
                            date={postItem.date || 'MARCH 24, 2022'}
                            title={postItem.title}
                            thumbnailUrl={postItem.image_url}
@@ -91,6 +96,20 @@ const    SectionPosts = (props: ISectionPros) => {
                      </SwiperSlide>
                   ))}
                </Swiper>
+               ): (
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 limit-3">
+                  {props.posts?.map((postItem, slideIndex) => (
+                     <ItemComponent
+                        key={`slide_${slideIndex}`}
+                        date={postItem.date || 'MARCH 24, 2022'}
+                        title={postItem.title}
+                        thumbnailUrl={postItem.image_url}
+                        description={postItem.description}
+                        url={postItem.url}
+                     />
+                  ))}
+                  </div>
+               )}
             </div>
 
          </Section.Container>
@@ -98,4 +117,8 @@ const    SectionPosts = (props: ISectionPros) => {
    )
 }
 
+SectionPosts.defaultProps = {
+   ItemComponent: PostItem,
+   enableCarousel: true
+}
 export default SectionPosts
