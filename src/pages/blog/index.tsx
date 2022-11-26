@@ -75,11 +75,12 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
       <StyledHome settings={settings}>
          <HeroSection />
          <SectionBlogPosts
-            title={'Related Articles'}
+            title={'Recent Articles'}
+            enableCarousel={true}
             posts={news}
          />
          <SectionPosts
-            enableCarousel={false}
+            enableCarousel={true}
             renderHeaderRight={() => (
                <>
                   <a href="https://www.youtube.com/@haystackanalytics3946" className="flex items-center gap-3 text-sm mb-4 md:mb-8">
