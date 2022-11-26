@@ -87,6 +87,8 @@ const SectionBlogPosts = (props: ISectionBlogPros) => {
                            title={postItem.title}
                            thumbnailUrl={postItem.image_url}
                            description={postItem.description}
+                           author={postItem.author_name}
+                           author_bio={postItem.author_bio}
                            url={postItem.url}
                         />
                      </SwiperSlide>

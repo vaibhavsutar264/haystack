@@ -29,10 +29,10 @@ const WebinarItem = (props: IWebinarItem) => {
       <>
       <figure className="post-item item">
          <picture className="item__thumbnail" onClick={() => setModalIsOpen(true)}>
-            <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-[4/3] bg-gray-200 object-cover" />
+            <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-[16/9] bg-gray-200 object-cover" />
          </picture>
          <figcaption className="item__caption my-6">
-            <p className="font-semibold my-6 line-clamp-3 text-xl">{props.title}</p>
+            <p className="font-semibold my-6 line-clamp-3 text-xl post-title">{props.title}</p>
          </figcaption>
       </figure>
       <Modal isOpen={modalIsOpen} style={customModalStyle}>

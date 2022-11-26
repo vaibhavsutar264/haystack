@@ -173,6 +173,11 @@ body, #__next {
 .post-title
 {
    min-height: 60px;
+   font-weight: 700;
+}
+.post-title.min-70px
+{
+   min-height: 70px;
 }
 .border-spacing-table
 {
@@ -196,11 +201,6 @@ body, #__next {
    padding: 1rem;
    font-size: 1.125rem;
    --tw-text-opacity: 1;
-   color: rgb(22 163 74 / var(--tw-text-opacity));
-}
-
-.table--home tbody tr:hover {
-   background-color: #3470d320;
 }
 
 .limit-3 .item:nth-child(3) ~ .item {
