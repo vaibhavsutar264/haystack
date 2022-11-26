@@ -213,3 +213,7 @@ body, #__next {
 .ReactModal__Content {
    /* aspect-ratio: 16/9; */
 }
+
+.share-button svg {
+   transform: rotateY(-180deg);
+}

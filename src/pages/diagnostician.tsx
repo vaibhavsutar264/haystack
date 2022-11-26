@@ -51,12 +51,15 @@ const HeroSection = () => {
                <div className="grid__col"></div>
                <div className="grid__col bg-white py-8">
                   <h3 className="mb-4 text-4xl font-extrabold">
-                     Bringing precision therapy<br />
-                     with Genomics, ensuring<br />
-                     improved personalised<br />
-                     patient outcomes<br />
+                     Get started with<br />
+                     Genomics today with<br />
+                     a fully automatic AI based<br />
+                     bioinformatics platform
                   </h3>
-                  <p className="font-bold text-muted">Stay on top with cutting edge technology</p>
+                  <p className="font-bold text-muted">
+                     Be Ahead Of The Competition <br />
+                     With Revolutionary Technology
+                  </p>
                   <div className="mt-8 flex items-center gap-4">
                      <Link href={'#'} >
                         <a className="btn-primary">BOOK A CALL</a>
@@ -83,12 +86,11 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                Automated Bioinformatics Platform
                </h3>
                <p className="text-center mb-4 text-muted font-semibold">Localized Report with Software access</p>
-               <div className="flex flex-col md:flex-row gap-4 my-8 mx-auto md:w-6/12 ">
-                  <div className="flex-1">
-                     <h3 className="heading">{`TGS Assessment Profile`}</h3>
-                  </div>
-                  <div className="md:w-5/12">
-                     <h3 className="heading">{`TGS Assessment Profile`}</h3>
+               <div className="grid grid-cols-3 gap-4 my-8 mx-auto md:w-6/12 ">
+                  <div className="grid__col">
+                     <div className="">
+
+                     </div>
                   </div>
                </div>
             </Section.Container>
