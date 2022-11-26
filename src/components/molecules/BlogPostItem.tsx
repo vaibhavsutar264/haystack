@@ -13,7 +13,7 @@ const BlogPostItem = (props: IBlogPostItem) => {
    return (
       <figure className="post-item item">
          <picture className="item__thumbnail">
-            <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-[4/3] bg-gray-200 object-cover" />
+            <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-video bg-gray-200 object-cover" />
          </picture>
          <figcaption className="item__caption">
             <p className="font-medium text-sm mb-4 line-clamp-3">{props.date}</p>
