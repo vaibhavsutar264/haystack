@@ -99,12 +99,12 @@ function Home({ Component, pageProps, news, settings }) {
                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-4 mt-8">
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">18.5</div>
-                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">million</div>
                            <div className="text-base font-semibold text-green-600">CANCER PATIENTS</div>
                         </div>
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">422</div>
-                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">million</div>
                            <div className="text-base font-semibold text-green-600">DIABETES PATIENTS</div>
                         </div>
                         <div className="grid__col">
@@ -114,7 +114,7 @@ function Home({ Component, pageProps, news, settings }) {
                         </div>
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">140</div>
-                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">million</div>
                            <div className="text-base font-semibold text-green-600">IMMUNE COMPROMISED PATIENTS</div>
                         </div>
                      </div>
@@ -277,7 +277,7 @@ function Home({ Component, pageProps, news, settings }) {
                <div className="__">
                   <Swiper
                      className="partners-carousel"
-                     spaceBetween={50}
+                     spaceBetween={0}
                      navigation={true}
                      autoplay={{
                         delay: 2500,
@@ -294,16 +294,16 @@ function Home({ Component, pageProps, news, settings }) {
                            spaceBetween: 40,
                         },
                         1024: {
-                           slidesPerView: 4,
-                           spaceBetween: 20,
+                           slidesPerView: 5,
+                           spaceBetween: 0,
                         },
                      }}
                      onSlideChange={() => console.log('slide change')}
                      onSwiper={(swiper: any) => console.log(swiper)}
                   >
                      {partners.data?.map((slide, slideIndex) => (
-                        <SwiperSlide key={`slide_${slideIndex}`}>
-                           <div className="w-40 h-40 flex items-center justify-center">
+                        <SwiperSlide className="" key={`slide_${slideIndex}`}>
+                           <div className="w-36 flex items-center justify-center">
                               <img src={slide.thumbnailUrl} layout='contain' />
                            </div>
                         </SwiperSlide>
@@ -341,7 +341,7 @@ function Home({ Component, pageProps, news, settings }) {
 
          <Section className="">
             <Section.Container className="container mx-auto py-16">
-               <h3 className="section-heading text-center">
+               <h3 className="section-heading text-center mb-6">
                   {`Awards & Recognition`}
                </h3>
                <Swiper
@@ -371,10 +371,10 @@ function Home({ Component, pageProps, news, settings }) {
                >
                   {awards.data?.map((slide, slideIndex) => (
                      <SwiperSlide key={`slide_${slideIndex}`} >
-                        <div className="w-48 h-48 hover-layer hover:text-white">
+                        <div className="w-48 h-36 hover-layer hover:text-white">
                            <img src={slide.thumbnailUrl} />
                            <div className="hover-layer__overlay">
-                              <span className="text-center px-2">{slide.title}</span>
+                              <span className="text-center px-2 text-sm">{slide.title}</span>
                            </div>
                         </div>
                         {/* {JSON.stringify({ slide })} */}

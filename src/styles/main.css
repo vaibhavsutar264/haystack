@@ -205,7 +205,7 @@ body, #__next {
 }
 .table--home tbody tr:hover td{
    transition: all .5s ease;
-   padding: 1rem;
+   padding: 0.75rem !important;
    font-size: 1.125rem;
    --tw-text-opacity: 1;
 }
@@ -232,4 +232,9 @@ body, #__next {
    height:10px;
    width:100%;
    margin-bottom: 3.5rem;
+}
+.swiper-slide
+{
+   display:flex;
+   place-content: center;
 }
