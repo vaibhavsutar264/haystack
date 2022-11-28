@@ -99,6 +99,7 @@ const SectionPosts = (props: ISectionPros) => {
                            source={postItem.source}
                            thumbnailUrl={postItem.image_url}
                            description={postItem.description}
+                           reference = {postItem.reference}
                            author={postItem.author_name}
                            author_bio={postItem.author_bio}
                            aspect="aspect-[16/9]"

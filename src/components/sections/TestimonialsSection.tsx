@@ -45,12 +45,12 @@ export default function TestimonialsSection(props: ITestimonialsSection) {
                      {props.items?.map((slide, slideIndex) => (
                         <SwiperSlide key={`slide_${slideIndex}`} className="flex gap-3 items-start">
                            <div className="flex items-center justify-center">
-                              <img src={slide.avatar_url} layout='contain' className="w-16 h-16 rounded-full object-cover" alt={slide.author.name} />
+                              <img src={slide.avatar_url} layout='contain' className="w-20 h-20 rounded-full object-cover" alt={slide.author.name} />
                            </div>
                            <div className="flex-1">
-                              <p className="text-blue-600 font-bold">{slide.author.name}</p>
-                              <p className="text-sm ">{slide.author.bio}</p>
-                              <article>
+                              <p className="text-blue-600 font-bold text-lg mb-2">{slide.author.name}</p>
+                              {!!(slide.author.designation) ? <p className="text-xs mb-6 font-semibold">{slide.author.designation},<span className="block">{slide.author.company}</span></p>:""}
+                              <article className="text-muted text-sm">
                                  {`"`}{slide.message}{`"`}
                               </article>
                            </div>

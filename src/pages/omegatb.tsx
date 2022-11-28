@@ -11,6 +11,7 @@ import Link from "../../node_modules/next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import SectionPosts from "../components/organisms/SectionPosts";
+import ResearchItem from "../components/molecules/ResearchItem";
 
 
 const page = {
@@ -47,8 +48,8 @@ const HeroSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8">
                   <h3 className="mb-4 text-4xl font-extrabold">
-                     Omega TB (ΩTB ) is<br />
-                     a Universal Drug<br />
+                     ΩTB is a<br />
+                     Universal Drug<br />
                      Resistance Test for TB
                   </h3>
                   <p className="text-muted">A single test for simultaneous evaluation of all resistance markers, as
@@ -74,12 +75,12 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
          <Section className="">
             <Section.Container className="container mx-auto py-12">
                <h3 className="section-heading">
-                  Comparing ΩTB with current tests
+               TB and it’s global impact
                </h3>
                <div className="flex flex-col md:flex-row gap-4 my-8">
                   <div className="md:w-4/12">
-                     <h3 className="heading">India accounts for <big className="text-blue-600">27Lakh</big> TB cases<br />out of <big className="text-blue-600">1Cr</big> cases across the world.</h3>
-                     <div className="mb-3 flex"></div>
+                     <h3 className="text-md font-bold">India accounts for <big className="text-blue-600">27Lakh</big> TB cases<br />out of <big className="text-blue-600">1Cr</big> cases across the world.</h3>
+                     <div className="mb-12 flex"></div>
                      <img src="/assets/tb-pie-chart.png" alt="tb-pie-chart" />
                      {/* <TBPieChart /> */}
                   </div>
@@ -92,7 +93,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
          </Section>
          {/* Comparing ΩTB (Omega TB) with current tests */}
          <Section className="">
-            <Section.Container className="container mx-auto py-16">
+            <Section.Container className="container mx-auto py-20">
                <h3 className="section-heading">
                   Comparing ΩTB (Omega TB) with current tests
                </h3>
@@ -168,6 +169,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                               </tr>
                            </tbody>
                         </table>
+                        <p class="text-xs text-muted">*For smear positive samples</p>
                      </div>
                   </div>
                   <div className=" border ml-4 border-gray-100 mx-3"></div>
@@ -224,6 +226,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
             title={`Research Papers`}
             posts={research_papers.data}
             colsCount={3}
+            ItemComponent={ResearchItem}
          />
 
       </StyledHome>
