@@ -45,7 +45,7 @@ export const SectionGridItem = (props: ISectionGridItem) => {
    return (
       <figure className="flex gap-4 SectionGridItem">
          <picture className="w-14">
-            <img src={props.thumbnailUrl} class="img" alt={props.title} className="w-100" />
+            <img src={props.thumbnailUrl} className="img" alt={props.title} className="w-100" />
          </picture>
          <figcaption className="flex-1">
             <h4 className="mb-4 font-semibold text-md leading-none">{props.title}</h4>
