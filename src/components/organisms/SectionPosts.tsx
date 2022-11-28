@@ -41,6 +41,7 @@ interface IPostItemProps {
 interface ISectionPros {
    title?: string|any,
    subtitle?: string|any,
+   className?:string,
    subtitle?: string,
    actions?: IHeroActionProps[],
    posts?: IPostItemProps[],
@@ -53,7 +54,7 @@ const SectionPosts = (props: ISectionPros) => {
    const { ItemComponent } = props
 
    return (
-      <StyledComponent className="SectionPosts ">
+      <StyledComponent className={`SectionPosts ${props.className}`}>
          <Section.Container className="container mx-auto py-12">
             <div className="w-50">
                <div className="flex items-center justify-between">

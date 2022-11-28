@@ -50,7 +50,7 @@ interface ISectionBlogPros {
 const SectionBlogPosts = (props: ISectionBlogPros) => {
    return (
       <StyledComponent className="SectionBlogPosts ">
-         <Section.Container className="container mx-auto py-12">
+         <Section.Container className="container mx-auto pt-12">
             <div className="w-50">
                <h3 className="section-heading">
                {props.title ?? 'In the news'}
@@ -87,7 +87,7 @@ const SectionBlogPosts = (props: ISectionBlogPros) => {
                            title={postItem.title}
                            thumbnailUrl={postItem.image_url}
                            description={postItem.description}
-                           author={postItem.author_name}
+                           author_name={postItem.author_name}
                            author_bio={postItem.author_bio}
                            url={`/blog/${postItem.slug}`}
                         />
