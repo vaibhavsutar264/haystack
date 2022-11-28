@@ -57,15 +57,15 @@ export const SectionGridItem = (props: ISectionGridItem) => {
 
 const SectionGridItems = (props: IHeroPros) => {
    return (
-      <StyledHeroSection className="SectionGridItems bg-blue-800 text-white ">
-         <Section.Container className="container mx-auto py-12">
+      <StyledHeroSection className="SectionGridItems bg-blue-accent text-white ">
+         <Section.Container className="container mx-auto py-16">
             <h3 className={`text-white section-heading section-heading--invert ${props.titleClassName}`}>
                {props.title}
             </h3>
             <p className="text-base text-white font-semibold">
             {props.description}
             </p>
-            <div className={`grid ${props.gridClassName ?? 'grid-cols-1 md:grid-cols-3'}  gap-4 my-8 mt-12`}>
+            <div className={`grid ${props.gridClassName ?? 'grid-cols-1 md:grid-cols-3 gap-4'}   my-8 mt-12`}>
                {props.items?.map((pitem, pitemIndex) => (
                <div className="grid__col" key={`pitemIndex_${pitemIndex}`}>
                   <SectionGridItem {...pitem} />

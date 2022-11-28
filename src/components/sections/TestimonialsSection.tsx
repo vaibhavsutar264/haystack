@@ -22,10 +22,10 @@ export default function TestimonialsSection(props: ITestimonialsSection) {
    return (
       <Section className="bg-gray-100 py-0">
          <Section.Container className="container mx-auto py-16">
-            <h3 className="section-heading ">
+            <h3 className="section-heading flex">
                {props.title}
             </h3>
-            <div className="__">
+            <div className="flex mt-8">
                   <Swiper
                      className="testimonials-carousel"
                      spaceBetween={50}

@@ -35,7 +35,7 @@
       ,
       {
          "message": "Whole Genome Sequencing is the future gold standard in DST. It is comprehensive, accessible, affordable, and above all less time-consuming making the technology efficient and effective.",
-         "avatar_url": "https://via.placeholder.com/150",
+         "avatar_url": "/assets/testimonials/dr-v-k-jain.png",
          "category": "omega",
          "author": {
             "name": "Dr. V. K. Jain",
@@ -46,7 +46,7 @@
       ,
       {
          "message": "Whole Genome Sequencing has the potential to be the game changer in the treatment of TB and can ensure a bright future for TB patients.",
-         "avatar_url": "https://via.placeholder.com/150",
+         "avatar_url": "/assets/testimonials/dr-digambar-behera.png",
          "category": "omega",
          "author": {
             "name": "Dr. Digambar Behera",
@@ -57,7 +57,7 @@
       ,
       {
          "message": "TB WGS is our most powerful weapon for comprehensive, effective, and early diagnosis of TB and drug resistance, and the first and the most crucial step in our END TB Mission.",
-         "avatar_url": "https://via.placeholder.com/150",
+         "avatar_url": "/assets/testimonials/dr-rajendra-prasad.png",
          "category": "omega",
          "author": {
             "name": "Dr. Rajendra Prasad",

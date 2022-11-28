@@ -48,13 +48,13 @@ const HeroSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8">
                   <h3 className="mb-4 text-4xl font-extrabold">
-                     ΩTB is a<br />
+                     ΩTB® is a<br />
                      Universal Drug<br />
                      Resistance Test for TB
                   </h3>
-                  <p className="text-muted">A single test for simultaneous evaluation of all resistance markers, as
-                     well as the differentiation between mixed infection, relapse
-                     and reinfection</p>
+                  <p className="text-muted w-11/12">A single test for simultaneous evaluation of all resistance markers, 
+                  as well as the differentiation between mixed infection, relapse
+                  and reinfection</p>
                   <div className="mt-8">
                      <Link href={'#'} >
                         <a className="btn-outline-info">VIEW BROCHURE</a>
@@ -95,15 +95,15 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
          <Section className="">
             <Section.Container className="container mx-auto py-20">
                <h3 className="section-heading">
-                  Comparing ΩTB (Omega TB) with current tests
+                  Comparing ΩTB® <span className="text-xl">(Omega TB)</span> with current tests
                </h3>
-               <div className="flex ">
-                  <div className="md:w-10/12">
+               <div className="flex justify-between">
+                  <div className="md:w-7/12">
                      <div className="table-wrapper w-full overflow-auto">
-                        <table className="w-full">
+                        <table className="w-full border-spacing-table table--striped">
                            <thead>
                               <tr className="text-blue-600 font-extrabold">
-                                 <th className="text-left p-3 md:w-1/12">
+                                 <th className="text-left p-3 md:w-2/12">
 
                                  </th>
                                  <th className="text-left p-3 md:w-3/12">
@@ -115,10 +115,10 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                               </tr>
                            </thead>
                            <tbody className="text-sm text-muted">
-                              <tr className="bg-blue-100 mb-3 text-green-600 text-lg">
+                              <tr className="bg-blue-trans mb-3 text-green-600 text-base font-semibold">
                                  <td className="p-3">
-                                    <div className="flex items-center gap-3">
-                                       <img src="/assets/tests_icon.svg" alt="" className="w-10" />
+                                    <div className="flex items-center justify-center gap-3">
+                                       <img src="/assets/tests_icon.svg" alt="" className="w-8 h-8" />
                                     </div>
                                  </td>
                                  <td className="p-3">
@@ -128,42 +128,42 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                                     <div>{'18 antibiotics including bedaquiline, delamanid, etc.'}</div>
                                  </td>
                               </tr>
-                              <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600">
-                                 <td className="p-3">
-                                    <div className="flex items-center gap-3">
-                                       <img src="/assets/culture_test.svg" alt="" className="w-8" />
+                              <tr className="bg-gray-trans mb-3 text-sm">
+                                 <td className="p-3 py-1">
+                                    <div className="flex items-center justify-center gap-3">
+                                       <img src="/assets/culture_test.svg" alt="" className="w-5 h-5" />
                                     </div>
                                  </td>
-                                 <td className="p-3">
-                                    <span className="font-semibold">Culture Test</span>
+                                 <td className="p-3 py-1">
+                                    <span>Culture Test</span>
                                  </td>
-                                 <td className="p-3">
+                                 <td className="p-3 py-1">
                                     <div>{'13 - 15 anti-biotics'}</div>
                                  </td>
                               </tr>
-                              <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600">
-                                 <td className="p-3">
-                                    <div className="flex items-center gap-3">
-                                       <img src="/assets/culture_test.svg" alt="" className="w-8" />
+                              <tr className="bg-gray-trans-1  mb-3 text-sm">
+                                 <td className="p-3 py-1">
+                                    <div className="flex items-center justify-center gap-3">
+                                       <img src="/assets/cbnat.svg" alt="" className="w-5 h-5" />
                                     </div>
                                  </td>
-                                 <td className="p-3">
-                                    <span className="font-semibold">CBNAAT</span>
+                                 <td className="p-3 py-1">
+                                    <span>CBNAAT</span>
                                  </td>
-                                 <td className="p-3">
+                                 <td className="p-3 py-1">
                                     <div>{'1 - 2 antibiotics'}</div>
                                  </td>
                               </tr>
-                              <tr className="bg-gray-100 hover:bg-blue-100 mb-3 hover:text-green-600">
-                                 <td className="p-3">
-                                    <div className="flex items-center gap-3">
-                                       <img src="/assets/culture_test.svg" alt="" className="w-8" />
+                              <tr className="bg-gray-trans  mb-3 text-sm">
+                                 <td className="p-3 py-1">
+                                    <div className="flex items-center justify-center gap-3">
+                                       <img src="/assets/testube-grey.svg" alt="" className="w-5 h-5" />
                                     </div>
                                  </td>
-                                 <td className="p-3">
-                                    <span className="font-semibold">LPA</span>
+                                 <td className="p-3 py-1">
+                                    <span>LPA</span>
                                  </td>
-                                 <td className="p-3">
+                                 <td className="p-3 py-1">
                                     <div>{'Targeted for first line or second line'}</div>
                                  </td>
                               </tr>
@@ -172,8 +172,8 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                         <p class="text-xs text-muted">*For smear positive samples</p>
                      </div>
                   </div>
-                  <div className=" border ml-4 border-gray-100 mx-3"></div>
-                  <div >
+                  <div className=" border ml-12 border-gray-300"></div>
+                  <div className="md:w-4/12 ">
                      <h4>ΩTB<sup>®</sup> Assessment Profile</h4>
                      <div className="flex gap-4 md:mt-4">
                         <div className="w-4/12">
@@ -210,12 +210,12 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
          <SectionGridItems
             title={`Benefits of ΩTB®`}
             titleClassName="text-center"
-            gridClassName={'grid-cols-1 md:grid-cols-4'}
+            gridClassName={'grid-cols-1 md:grid-cols-4 gap-10'}
             items={[
-               { title: 'Comprehensive', thumbnailUrl: '/assets', description: `DST results for 18 antibiotics. To identify mixed infections of TB and co-infection including NTM/MOTT` },
-               { title: 'Validated', thumbnailUrl: '/assets', description: `DST results for 18 antibiotics. To identify mixed infections of TB and co-infection including NTM/MOTT` },
-               { title: 'Accurate', thumbnailUrl: '/assets', description: `DST results for 18 antibiotics. To identify mixed infections of TB and co-infection including NTM/MOTT` },
-               { title: 'Affordable', thumbnailUrl: '/assets', description: `DST results for 18 antibiotics. To identify mixed infections of TB and co-infection including NTM/MOTT` },
+               { title: 'Comprehensive', thumbnailUrl: '/assets/testtube.svg', description: `DR profile of 18 drugs, Mixed infections and Co-infections incl NTM` },
+               { title: 'Validated', thumbnailUrl: '/assets/time.svg', description: `Tested and validated on >10,000 genomes and >300 clinical samples` },
+               { title: 'Accurate', thumbnailUrl: '/assets/micro.svg', description: `High sensitivity and specificity comparable to molecular methods` },
+               { title: 'Affordable', thumbnailUrl: '/assets/hand.svg', description: `Test cost less than or comparable to culture testing` },
             ]}
          />
          <TestimonialsSection

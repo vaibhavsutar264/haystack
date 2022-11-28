@@ -238,3 +238,12 @@ body, #__next {
    display:flex;
    place-content: center;
 }
+.bg-blue-accent
+{
+   background:#284578;
+}
+.text-reference
+{
+   font-size: 0.8rem;
+   min-height: 50px;
+}
