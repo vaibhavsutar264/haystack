@@ -11,7 +11,10 @@
    --heading-size: 2rem;
    --text-color: #5d5d5d;
 }
-
+.text-base
+{
+   font-size: 0.9375rem;
+}
 @layer base {
    body, html {
       font-family: var(--font-family);
@@ -83,6 +86,10 @@ body, #__next {
 {
    max-width: 1180px !important;
 }
+.btn-secondary:hover{
+   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+   filter:none;
+}
 
 .hover-layer {
    position: relative;
@@ -110,10 +117,9 @@ body, #__next {
    font-size: 2.5rem;
    line-height: 2.75rem;
 }
-.partners-carousel .swiper-wrapper  {
+/* .partners-carousel .swiper-wrapper  {
    margin: 0 auto;
    overflow: hidden;
-   /* transform: translateX(-100px) */
 }
 .partners-carousel .swiper-button-prev {
    left: -30px;
@@ -130,7 +136,7 @@ body, #__next {
    height: 100% !important;
    transform: translateY(-50%) !important;
    opacity: 1 !important;
-}
+} */
 .SectionGridItem img{
 
    max-height: 3.5rem;
@@ -146,7 +152,7 @@ body, #__next {
 }
 .font-5xl
 {
-   font-size: 2.5rem;
+   font-size: 2.3rem;
    line-height: 3rem;
 }
 

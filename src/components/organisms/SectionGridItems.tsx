@@ -48,7 +48,7 @@ export const SectionGridItem = (props: ISectionGridItem) => {
             <img src={props.thumbnailUrl} class="img" alt={props.title} className="w-100" />
          </picture>
          <figcaption className="flex-1">
-            <h4 className="mb-4 font-semibold text-md">{props.title}</h4>
+            <h4 className="mb-4 font-semibold text-md leading-none">{props.title}</h4>
             <p className="text-sm">{props.description}</p>
          </figcaption>
       </figure>

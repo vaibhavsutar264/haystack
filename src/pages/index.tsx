@@ -321,10 +321,10 @@ function Home({ Component, pageProps, news, settings }) {
                   <div className="flex flex-col md:flex-row gap-8 mt-8">
                      <Link href={'/clinician'}>
 
-                        <a className="btn-secondary bg-gray-400">I AM A CLINICIAN</a>
+                        <a className="btn-secondary bg-gray-400 text-xl">I AM A CLINICIAN</a>
                      </Link>
                      <Link href={'/diagnostician'}>
-                        <a className="btn-primary">WE ARE A LAB / HOSPITAL</a>
+                        <a className="btn-secondary bg-gray-400 text-xl">WE ARE A LAB / HOSPITAL</a>
                      </Link>
                   </div>
                </div>
