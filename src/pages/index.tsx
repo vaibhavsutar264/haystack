@@ -6,7 +6,7 @@ import AppTemplate from "../components/templates/AppTemplate";
 import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
-import heroBg from '../assets/HOME-03.jpg'
+import heroBg from '../assets/homepage-banner.png'
 import sec5 from '../assets/section-clinician-bg-doctor.png'
 import Section from '../components/atoms/Section'
 import Link from "next/link";
@@ -41,12 +41,14 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-   background-size: contain;
+  
    background-repeat: no-repeat;
-   background-position: 170% center;
+   background-position: right;
+   background-size: contain;
    background-image: var(--bg);
+   background-repeat: no-repeat;
    .section__container {
-      min-height: calc(90vh - var(--safe-top-padding, 100px));
+      min-height: calc(100vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
