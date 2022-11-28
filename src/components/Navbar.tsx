@@ -131,8 +131,9 @@ const Navbar = ({ renderMenu }) => {
                <div className="close md:hidden">
                   <XIcon className="w-8 h-8" onClick={toggleMenu} />
                </div>
-               <div className="mb-3 md:mb-6 text-sm flex gap-6 text-gray-500 mt-6 md:mt-0">
+               <div className="mb-3 md:mb-6 text-sm flex gap-6 text-gray-500 mt-6 content-end md:mt-0">
                   <Link href="/">hello@haystackanalytics.in</Link>
+                  <div class="mb-3 md:mb-6 text-sm flex gap-2 text-gray-500 mt-6 md:mt-0">
                   {settings.facebook_url ? (
                      <a href={settings.facebook_url}>
                         <FontAwesomeIcon
@@ -180,6 +181,7 @@ const Navbar = ({ renderMenu }) => {
                         />
                      </a>
                   ) : null}
+                  </div>
                </div>
                <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end">
                   <Link className="font-semibold" href="/science-corner">Science Corner</Link>
