@@ -10,9 +10,15 @@ import { Navigation } from "swiper";
 interface ITestimonialsSection {
    title: string,
    items: any[],
+   category: string
 }
 
 export default function TestimonialsSection(props: ITestimonialsSection) {
+   const items = props.items.filter((data)=>
+   {
+      return data.category == props.category;
+   }
+   );
    return (
       <Section className="bg-gray-100 py-0">
          <Section.Container className="container mx-auto py-16">
@@ -42,7 +48,7 @@ export default function TestimonialsSection(props: ITestimonialsSection) {
                      onSlideChange={() => console.log('slide change')}
                      onSwiper={(swiper: any) => console.log(swiper)}
                   >
-                     {props.items?.map((slide, slideIndex) => (
+                     {items ?.map((slide, slideIndex) => (
                         <SwiperSlide key={`slide_${slideIndex}`} className="flex gap-3 items-start">
                            <div className="flex items-center justify-center">
                               <img src={slide.avatar_url} layout='contain' className="w-20 h-20 rounded-full object-cover" alt={slide.author.name} />

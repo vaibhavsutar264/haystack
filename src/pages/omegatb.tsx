@@ -221,6 +221,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
          <TestimonialsSection
             title={`Testimonials`}
             items={testimonials.data}
+            category={'omega'}
          />
          <SectionPosts
             title={`Research Papers`}
