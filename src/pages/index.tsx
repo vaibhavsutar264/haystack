@@ -6,7 +6,7 @@ import AppTemplate from "../components/templates/AppTemplate";
 import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
-import heroBg from '../assets/HOME-03.jpg'
+import heroBg from '../assets/homepage-banner.png'
 import sec5 from '../assets/section-clinician-bg-doctor.png'
 import Section from '../components/atoms/Section'
 import Link from "next/link";
@@ -41,12 +41,14 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-   background-size: contain;
+  
    background-repeat: no-repeat;
-   background-position: 170% center;
+   background-position: right;
+   background-size: contain;
    background-image: var(--bg);
+   background-repeat: no-repeat;
    .section__container {
-      min-height: calc(90vh - var(--safe-top-padding, 100px));
+      min-height: calc(100vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -99,12 +101,12 @@ function Home({ Component, pageProps, news, settings }) {
                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-4 mt-8">
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">18.5</div>
-                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">million</div>
                            <div className="text-base font-semibold text-green-600">CANCER PATIENTS</div>
                         </div>
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">422</div>
-                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">million</div>
                            <div className="text-base font-semibold text-green-600">DIABETES PATIENTS</div>
                         </div>
                         <div className="grid__col">
@@ -114,7 +116,7 @@ function Home({ Component, pageProps, news, settings }) {
                         </div>
                         <div className="grid__col">
                            <div className="text-4xl font-extrabold text-green-600">140</div>
-                           <div className="text-3xl mb-3 font-extrabold text-green-600">millon</div>
+                           <div className="text-3xl mb-3 font-extrabold text-green-600">million</div>
                            <div className="text-base font-semibold text-green-600">IMMUNE COMPROMISED PATIENTS</div>
                         </div>
                      </div>
@@ -277,7 +279,7 @@ function Home({ Component, pageProps, news, settings }) {
                <div className="__">
                   <Swiper
                      className="partners-carousel"
-                     spaceBetween={50}
+                     spaceBetween={0}
                      navigation={true}
                      autoplay={{
                         delay: 2500,
@@ -294,16 +296,16 @@ function Home({ Component, pageProps, news, settings }) {
                            spaceBetween: 40,
                         },
                         1024: {
-                           slidesPerView: 4,
-                           spaceBetween: 20,
+                           slidesPerView: 5,
+                           spaceBetween: 0,
                         },
                      }}
                      onSlideChange={() => console.log('slide change')}
                      onSwiper={(swiper: any) => console.log(swiper)}
                   >
                      {partners.data?.map((slide, slideIndex) => (
-                        <SwiperSlide key={`slide_${slideIndex}`}>
-                           <div className="w-40 h-40 flex items-center justify-center">
+                        <SwiperSlide className="" key={`slide_${slideIndex}`}>
+                           <div className="w-36 flex items-center justify-center">
                               <img src={slide.thumbnailUrl} layout='contain' />
                            </div>
                         </SwiperSlide>
@@ -321,10 +323,10 @@ function Home({ Component, pageProps, news, settings }) {
                   <div className="flex flex-col md:flex-row gap-8 mt-8">
                      <Link href={'/clinician'}>
 
-                        <a className="btn-secondary bg-gray-400">I AM A CLINICIAN</a>
+                        <a className="btn-secondary bg-gray-400 text-xl">I AM A CLINICIAN</a>
                      </Link>
                      <Link href={'/diagnostician'}>
-                        <a className="btn-primary">WE ARE A LAB / HOSPITAL</a>
+                        <a className="btn-secondary bg-gray-400 text-xl">WE ARE A LAB / HOSPITAL</a>
                      </Link>
                   </div>
                </div>
@@ -341,7 +343,7 @@ function Home({ Component, pageProps, news, settings }) {
 
          <Section className="">
             <Section.Container className="container mx-auto py-16">
-               <h3 className="section-heading text-center">
+               <h3 className="section-heading text-center mb-6">
                   {`Awards & Recognition`}
                </h3>
                <Swiper
@@ -371,10 +373,10 @@ function Home({ Component, pageProps, news, settings }) {
                >
                   {awards.data?.map((slide, slideIndex) => (
                      <SwiperSlide key={`slide_${slideIndex}`} >
-                        <div className="w-48 h-48 hover-layer hover:text-white">
+                        <div className="w-48 h-36 hover-layer hover:text-white">
                            <img src={slide.thumbnailUrl} />
                            <div className="hover-layer__overlay">
-                              <span className="text-center px-2">{slide.title}</span>
+                              <span className="text-center px-2 text-sm">{slide.title}</span>
                            </div>
                         </div>
                         {/* {JSON.stringify({ slide })} */}

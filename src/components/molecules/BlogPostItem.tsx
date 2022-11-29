@@ -23,7 +23,7 @@ const BlogPostItem = (props: IBlogPostItem) => {
                <p className="cursor-pointer font-semibold text-md my-6 line-clamp-3 post-title min-70px">{props.title}</p>
             </Link>
             <p>
-               <a className="hlink hlink--success">{props.author_name} <span className="display-block author-bio">{props.author_bio}</span></a>
+               <a className="font-bold text-blue-600">{props.author_name} <span className="flex author-bio font-normal text-blue-600">{props.author_bio}</span></a>
             </p>
          </figcaption>
       </figure>

@@ -1,22 +1,42 @@
 {
    "data": [
       {
-         "thumbnailUrl": "/assets/partners/partner-10.png"
+         "thumbnailUrl": "/assets/partners/p-1.jpg"
       },
       {
-         "thumbnailUrl": "/assets/partners/partner-11.jpg"
+         "thumbnailUrl": "/assets/partners/p-2.jpg"
       },
       {
-         "thumbnailUrl": "/assets/partners/partner-12.png"
+         "thumbnailUrl": "/assets/partners/p-3.jpg"
       },
       {
-         "thumbnailUrl": "/assets/partners/partner-13.png"
+         "thumbnailUrl": "/assets/partners/p-4.jpg"
       },
       {
-         "thumbnailUrl": "/assets/partners/partner-14.jpg"
+         "thumbnailUrl": "/assets/partners/p-5.jpg"
       },
       {
-         "thumbnailUrl": "/assets/partners/partner-15.png"
+         "thumbnailUrl": "/assets/partners/p-6.jpg"
+      }
+      ,
+      {
+         "thumbnailUrl": "/assets/partners/p-7.jpg"
+      }
+      ,
+      {
+         "thumbnailUrl": "/assets/partners/p-8.jpg"
+      }
+      ,
+      {
+         "thumbnailUrl": "/assets/partners/p-9.jpg"
+      }
+      ,
+      {
+         "thumbnailUrl": "/assets/partners/p-10.jpg"
+      }
+      ,
+      {
+         "thumbnailUrl": "/assets/partners/p-11.jpg"
       }
    ]
 }

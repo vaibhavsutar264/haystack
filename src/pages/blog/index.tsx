@@ -81,6 +81,7 @@ export default function Diagnostician({ Component, pageProps, posts, settings })
          />
          <SectionPosts
             enableCarousel={true}
+            className="webinar"
             renderHeaderRight={() => (
                <>
                   <a href="https://www.youtube.com/@haystackanalytics3946" className="flex items-center gap-3 text-sm mb-4 md:mb-8">

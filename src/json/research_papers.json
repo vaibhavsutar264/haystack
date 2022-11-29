@@ -1,10 +1,10 @@
 {
    "data": [
       {
-         "title": "Highlights on the Application of Genomics and bioinformatics in the fight against infectious diseases - chellaneges and opportunities in africa",
-         "excerpt": "Saikoi Y Bah Collins Misita Moranga",
-         "thumbnail_url": "https://via.placeholder.com/400",
-         "url": "#",
+         "title": "Prediction of treatment outcomes for multidrug-resistant tuberculosis by whole-genome sequencing.",
+         "reference": "He G, Chen X, Chen J, Zhang W",
+         "image_url": "/assets/research/research-1.jpg",
+         "url": "https://pubmed.ncbi.nlm.nih.gov/32339719/",
          "category": "clinician",
          "authors": [
             { "name": "Saikoi Y Bah" },
@@ -12,32 +12,50 @@
          ]
       },
       {
-         "title": "Highlights on the Application of Genomics and bioinformatics in the fight against infectious diseases - chellaneges and opportunities in africa",
-         "excerpt": "Saikoi Y Bah Collins Misita Moranga",
-         "thumbnail_url": "https://via.placeholder.com/400",
-         "url": "#",
-         "category": "clinician",
+         "title": "Cost-effectiveness of molecular diagnostic assays for the therapy of severe sepsis and septic shock in the emergency department.",
+         "reference": "Zacharioudakis IM, Zervou FN, Shehadeh F, Mylonakis E",
+         "image_url": "/assets/research/research-2.jpg",
+         "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0217508",
          "authors": [
             { "name": "Saikoi Y Bah" },
             { "name": "Collins Misita Moranga" }
          ]
       },
       {
-         "title": "Highlights on the Application of Genomics and bioinformatics in the fight against infectious diseases - chellaneges and opportunities in africa",
-         "excerpt": "Saikoi Y Bah Collins Misita Moranga",
-         "thumbnail_url": "https://via.placeholder.com/400",
-         "url": "#",
-         "category": "clinician",
+         "title": "The Effect of Molecular Rapid Diagnostic Testing on Clinical Outcomes in Bloodstream Infections: A Systematic Review and Meta-analysis.",
+         "reference": "Timbrook TT, Morton JB, McConeghy KW, Caffrey AR, Mylonakis E, LaPlante KL",
+         "image_url": "/assets/research/research-3.jpg",
+         "url": "https://pubmed.ncbi.nlm.nih.gov/27678085/",
          "authors": [
             { "name": "Saikoi Y Bah" },
             { "name": "Collins Misita Moranga" }
          ]
       },
       {
-         "title": "Highlights on the Application of Genomics and bioinformatics in the fight against infectious diseases - chellaneges and opportunities in africa",
-         "excerpt": "Saikoi Y Bah Collins Misita Moranga",
-         "thumbnail_url": "https://via.placeholder.com/400",
-         "url": "#",
+         "title": "Whole genome sequencing of Mycobacterium tuberculosis isolates and clinical outcomes of patients treated for multidrug-resistant tuberculosis in Tanzania.",
+         "reference": "Katale BZ, Mbelele PM, Lema NA, Campino S, Mshana SE, Rweyemamu MM, Phelan JE, Keyyu JD, Majigo M, Mbugi EV, Dockrell HM, Clark TG, Matee MI, Mpagama S",
+         "image_url": "https://via.placeholder.com/400",
+         "url": "https://doi.org/10.1186/s12864-020-6577-1",
+         "authors": [
+            { "name": "Saikoi Y Bah" },
+            { "name": "Collins Misita Moranga" }
+         ]
+      },
+      {
+         "title": "Whole Genome Sequencing of Mycobacterium tuberculosis Clinical Isolates From India Reveals Genetic Heterogeneity and Region-Specific Variations That Might Affect Drug Susceptibility.",
+         "reference": "Advani J, Verma R, Chatterjee O, et al",
+         "image_url": "https://via.placeholder.com/400",
+         "url": "https://www.frontiersin.org/articles/10.3389/fmicb.2019.00309/full",
+         "authors": [
+            { "name": "Saikoi Y Bah" },
+            { "name": "Collins Misita Moranga" }
+         ]
+      },
+      {
+         "title": "Analysis of Serial Multidrug-Resistant Tuberculosis Strains Causing Treatment Failure and Within-Host Evolution by Whole Genome Sequencing. MSphere.",
+         "reference": "Chen X, He G, Lin S, Wang S, Sun F, Chen J, Zhanga W",
+         "image_url": "https://via.placeholder.com/400",
+         "url": "https://journals.asm.org/doi/10.1128/mSphere.00884-20",
          "category": "diagnostic",
          "authors": [
             { "name": "Saikoi Y Bah" },
@@ -45,10 +63,10 @@
          ]
       },
       {
-         "title": "Highlights on the Application of Genomics and bioinformatics in the fight against infectious diseases - chellaneges and opportunities in africa",
-         "excerpt": "Saikoi Y Bah Collins Misita Moranga",
-         "thumbnail_url": "https://via.placeholder.com/400",
-         "url": "#",
+         "title": "Optimization of sepsis therapy based on patient-specific digital precision diagnostics using next generation sequencing(DigiSep-Trial)—study protocol for a randomized, controlled, interventional, open-label, multicenter trial.",
+         "reference": "Brenner T, Skarabis A, Stevens P, et al",
+         "image_url": "https://via.placeholder.com/400",
+         "url": "https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-021-05667-x",
          "category": "diagnostic",
          "authors": [
             { "name": "Saikoi Y Bah" },
@@ -56,10 +74,10 @@
          ]
       },
       {
-         "title": "Highlights on the Application of Genomics and bioinformatics in the fight against infectious diseases - chellaneges and opportunities in africa",
-         "excerpt": "Saikoi Y Bah Collins Misita Moranga",
-         "thumbnail_url": "https://via.placeholder.com/400",
-         "url": "#",
+         "title": "Rapid Next-Generation Sequencing- Based Diagnostics of Bacteremia in Septic Patients.",
+         "reference": "Grumaz C, Hoffmann A, Vainshtein Y, et al",
+         "image_url": "https://via.placeholder.com/400",
+         "url": "https://doi.org/10.1016/j.jmoldx.2019.12.006",
          "category": "diagnostic",
          "authors": [
             { "name": "Saikoi Y Bah" },

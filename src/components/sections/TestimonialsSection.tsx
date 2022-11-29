@@ -10,16 +10,22 @@ import { Navigation } from "swiper";
 interface ITestimonialsSection {
    title: string,
    items: any[],
+   category: string
 }
 
 export default function TestimonialsSection(props: ITestimonialsSection) {
+   const items = props.items.filter((data)=>
+   {
+      return data.category == props.category;
+   }
+   );
    return (
       <Section className="bg-gray-100 py-0">
          <Section.Container className="container mx-auto py-16">
-            <h3 className="section-heading ">
+            <h3 className="section-heading flex">
                {props.title}
             </h3>
-            <div className="__">
+            <div className="flex mt-8">
                   <Swiper
                      className="testimonials-carousel"
                      spaceBetween={50}
@@ -42,15 +48,15 @@ export default function TestimonialsSection(props: ITestimonialsSection) {
                      onSlideChange={() => console.log('slide change')}
                      onSwiper={(swiper: any) => console.log(swiper)}
                   >
-                     {props.items?.map((slide, slideIndex) => (
+                     {items ?.map((slide, slideIndex) => (
                         <SwiperSlide key={`slide_${slideIndex}`} className="flex gap-3 items-start">
                            <div className="flex items-center justify-center">
-                              <img src={slide.avatar_url} layout='contain' className="w-16 h-16 rounded-full object-cover" alt={slide.author.name} />
+                              <img src={slide.avatar_url} layout='contain' className="w-20 h-20 rounded-full object-cover" alt={slide.author.name} />
                            </div>
                            <div className="flex-1">
-                              <p className="text-blue-600 font-bold">{slide.author.name}</p>
-                              <p className="text-sm ">{slide.author.bio}</p>
-                              <article>
+                              <p className="text-blue-600 font-bold text-lg mb-2">{slide.author.name}</p>
+                              {!!(slide.author.designation) ? <p className="text-xs mb-6 font-semibold">{slide.author.designation},<span className="block">{slide.author.company}</span></p>:""}
+                              <article className="text-muted text-sm">
                                  {`"`}{slide.message}{`"`}
                               </article>
                            </div>

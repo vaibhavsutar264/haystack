@@ -41,6 +41,7 @@ interface IPostItemProps {
 interface ISectionPros {
    title?: string|any,
    subtitle?: string|any,
+   className?:string,
    subtitle?: string,
    actions?: IHeroActionProps[],
    posts?: IPostItemProps[],
@@ -53,7 +54,7 @@ const SectionPosts = (props: ISectionPros) => {
    const { ItemComponent } = props
 
    return (
-      <StyledComponent className="SectionPosts ">
+      <StyledComponent className={`SectionPosts ${props.className}`}>
          <Section.Container className="container mx-auto py-12">
             <div className="w-50">
                <div className="flex items-center justify-between">
@@ -95,8 +96,10 @@ const SectionPosts = (props: ISectionPros) => {
                         <ItemComponent
                            date={postItem.date || 'MARCH 24, 2022'}
                            title={postItem.title}
+                           source={postItem.source}
                            thumbnailUrl={postItem.image_url}
                            description={postItem.description}
+                           reference = {postItem.reference}
                            author={postItem.author_name}
                            author_bio={postItem.author_bio}
                            aspect="aspect-[16/9]"
@@ -110,6 +113,7 @@ const SectionPosts = (props: ISectionPros) => {
                   {props.posts?.map((postItem, slideIndex) => (
                      <ItemComponent
                      thumbnailUrl={postItem.image_url}
+                     source={postItem.source}
                      aspect="aspect-[4/3]"
                      
                         key={`slide_${slideIndex}`}

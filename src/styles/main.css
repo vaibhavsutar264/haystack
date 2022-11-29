@@ -11,7 +11,10 @@
    --heading-size: 2rem;
    --text-color: #5d5d5d;
 }
-
+.text-base
+{
+   font-size: 0.9375rem;
+}
 @layer base {
    body, html {
       font-family: var(--font-family);
@@ -34,7 +37,7 @@ body, #__next {
 }
 
 .section-heading {
-   @apply text-3xl font-extrabold text-muted mb-5
+   @apply text-3xl font-bold text-muted mb-5
 }
 .section-heading--invert {
    @apply text-white
@@ -83,6 +86,10 @@ body, #__next {
 {
    max-width: 1180px !important;
 }
+.btn-secondary:hover{
+   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+   filter:none;
+}
 
 .hover-layer {
    position: relative;
@@ -107,13 +114,12 @@ body, #__next {
 }
 .text-banner
 {
-   font-size: 3rem;
-   line-height: 3.25rem;
+   font-size: 2.5rem;
+   line-height: 2.75rem;
 }
-.partners-carousel .swiper-wrapper  {
+/* .partners-carousel .swiper-wrapper  {
    margin: 0 auto;
    overflow: hidden;
-   /* transform: translateX(-100px) */
 }
 .partners-carousel .swiper-button-prev {
    left: -30px;
@@ -130,10 +136,11 @@ body, #__next {
    height: 100% !important;
    transform: translateY(-50%) !important;
    opacity: 1 !important;
-}
+} */
 .SectionGridItem img{
 
    max-height: 3.5rem;
+   width:50px;
 }
 .bg-highlight
 {
@@ -145,7 +152,7 @@ body, #__next {
 }
 .font-5xl
 {
-   font-size: 2.5rem;
+   font-size: 2.3rem;
    line-height: 3rem;
 }
 
@@ -198,7 +205,7 @@ body, #__next {
 }
 .table--home tbody tr:hover td{
    transition: all .5s ease;
-   padding: 1rem;
+   padding: 0.75rem !important;
    font-size: 1.125rem;
    --tw-text-opacity: 1;
 }
@@ -216,4 +223,27 @@ body, #__next {
 
 .share-button svg {
    transform: rotateY(-180deg);
+}
+.SectionPosts.webinar .section__container::before
+{
+   content:"";
+   display:block;
+   background:#EFEFEF;
+   height:10px;
+   width:100%;
+   margin-bottom: 3.5rem;
+}
+.swiper-slide
+{
+   display:flex;
+   place-content: center;
+}
+.bg-blue-accent
+{
+   background:#284578;
+}
+.text-reference
+{
+   font-size: 0.8rem;
+   min-height: 50px;
 }
