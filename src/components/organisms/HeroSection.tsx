@@ -4,16 +4,16 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 
 const StyledHeroSection = styled(Section)`
-background-image: url(https://images.unsplash.com/photo-1659535901690-ab95a8539929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
-background-size: 60%;
-background-repeat: no-repeat;
-background-position: right center;
-.section__container {
-   min-height: calc(100vh - var(--safe-top-padding, 100px));
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-}
+   background-image: url(https://images.unsplash.com/photo-1659535901690-ab95a8539929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+   background-size: 60%;
+   background-repeat: no-repeat;
+   background-position: right center;
+   .section__container {
+      min-height: calc(100vh - var(--safe-top-padding, 100px));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
 `
 
 interface IHeroActionProps {
