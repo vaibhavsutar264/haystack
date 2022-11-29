@@ -19,6 +19,7 @@ import 'swiper/css';
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import SepsisChart from "../components/SepsisChart";
+import { sortBy } from "lodash";
 
 const loadPartnerImg = ({ src }) => {
    return `/assets/${src}`
@@ -41,7 +42,7 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-  
+
    background-repeat: no-repeat;
    background-position: right;
    background-size: contain;
@@ -336,7 +337,7 @@ function Home({ Component, pageProps, news, settings }) {
          {/* {JSON.stringify({ news })} */}
          <SectionPosts
             title={`In the news`}
-            posts={news}
+            posts={sortBy(news, 'date', 'desc')}
             colsCount={3}
             enableCarousel={false}
          />

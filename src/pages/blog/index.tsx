@@ -34,7 +34,7 @@ const StyledHeroSection = styled(Section)`
    }
 `
 
-const HeroSection = () => {
+const HeroSection = ({ title, date, description, citation, image }) => {
    return (
       <StyledHeroSection className="HeroSection ">
          <Section.Container className="mx-auto ">
@@ -42,20 +42,20 @@ const HeroSection = () => {
             <div className="flex gap-8 items-start">
                <div className="md:w-6/12">
                   <picture>
-                     <img src="//placehold.com" alt="" className="bg-gray-200 w-full" />
+                     <img src={image} alt="" className="bg-gray-200 w-full" />
                   </picture>
                </div>
                <div className="flex-1 bg-white  py-8">
                   <div className="flex justify-between mb-4">
-                     <b>APRIL 28, 2022</b>
+                     <b>{date}</b>
                      <span className="text-green-600 font-medium">SHARE</span>
                   </div>
                   <h3 className="mb-4 md:mb-12 text-4xl font-extrabold">
-                     Past, Present and Future of TB diagnosis: Laboratory perspective
+                     {title}
                   </h3>
-                  <p className="font-bold mb-4 md:mb-8 text-blue-600">by XYZ, Lorem Ipsum</p>
+                  <p className="font-bold mb-4 md:mb-8 text-blue-600">{citation}</p>
                   <p className="font-base text-muted line-clamp-4">
-                     {`Clinicians worldwide rely heavily (almost 70%) on the laboratory results, for diagnosing the illness, recommending the appropriate treatment and follow-ups. Hence it becomes an onus on`}
+                     {description}
                   </p>
                   <div className="mt-8 flex items-center justify-end gap-4">
                      <Link href={'#'} >
@@ -70,14 +70,22 @@ const HeroSection = () => {
 }
 
 export default function Diagnostician({ Component, pageProps, posts, settings }) {
+   const heroPost = posts?.find(post => post.isfeatured)
+   const otherPosts = posts?.filter(p => !p.isfeatured)
 
    return (
       <StyledHome settings={settings}>
-         <HeroSection />
+         <HeroSection
+            title={heroPost.title}
+            date={heroPost.date}
+            description={heroPost.excerpt}
+            image={heroPost.image_url}
+            citation={`by ${heroPost.author_name}`}
+         />
          <SectionBlogPosts
             title={'Recent Articles'}
             enableCarousel={true}
-            posts={posts}
+            posts={otherPosts}
          />
          <SectionPosts
             enableCarousel={true}
