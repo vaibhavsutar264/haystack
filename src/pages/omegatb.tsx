@@ -210,7 +210,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
          <SectionGridItems
             title={`Benefits of ΩTB®`}
             titleClassName="text-center"
-            gridClassName={'grid-cols-1 md:grid-cols-4 gap-10'}
+            gridClassName={'grid-cols-1 md:grid-cols-4 gap-8 w-11/12 mx-auto'}
             items={[
                { title: 'Comprehensive', thumbnailUrl: '/assets/testtube.svg', description: `DR profile of 18 drugs, Mixed infections and Co-infections incl NTM` },
                { title: 'Validated', thumbnailUrl: '/assets/time.svg', description: `Tested and validated on >10,000 genomes and >300 clinical samples` },

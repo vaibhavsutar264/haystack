@@ -282,7 +282,7 @@ function Home({ Component, pageProps, news, settings }) {
                </div>
                <div className="relative">
                   <Swiper
-                     className="partners-carousel"
+                     className="partners-carousel w-4/5"
                      spaceBetween={0}
                      navigation={true}
                      ref={partnersCarousel}
