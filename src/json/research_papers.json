@@ -34,7 +34,7 @@
       {
          "title": "Whole genome sequencing of Mycobacterium tuberculosis isolates and clinical outcomes of patients treated for multidrug-resistant tuberculosis in Tanzania.",
          "reference": "Katale BZ, Mbelele PM, Lema NA, Campino S, Mshana SE, Rweyemamu MM, Phelan JE, Keyyu JD, Majigo M, Mbugi EV, Dockrell HM, Clark TG, Matee MI, Mpagama S",
-         "image_url": "https://via.placeholder.com/400",
+         "image_url": "/assets/research/research-4.jpg",
          "url": "https://doi.org/10.1186/s12864-020-6577-1",
          "authors": [
             { "name": "Saikoi Y Bah" },
@@ -44,7 +44,7 @@
       {
          "title": "Whole Genome Sequencing of Mycobacterium tuberculosis Clinical Isolates From India Reveals Genetic Heterogeneity and Region-Specific Variations That Might Affect Drug Susceptibility.",
          "reference": "Advani J, Verma R, Chatterjee O, et al",
-         "image_url": "https://via.placeholder.com/400",
+         "image_url": "/assets/research/research-5.jpg",
          "url": "https://www.frontiersin.org/articles/10.3389/fmicb.2019.00309/full",
          "authors": [
             { "name": "Saikoi Y Bah" },
@@ -54,7 +54,7 @@
       {
          "title": "Analysis of Serial Multidrug-Resistant Tuberculosis Strains Causing Treatment Failure and Within-Host Evolution by Whole Genome Sequencing. MSphere.",
          "reference": "Chen X, He G, Lin S, Wang S, Sun F, Chen J, Zhanga W",
-         "image_url": "https://via.placeholder.com/400",
+         "image_url": "/assets/research/research-6.jpg",
          "url": "https://journals.asm.org/doi/10.1128/mSphere.00884-20",
          "category": "diagnostic",
          "authors": [
@@ -65,7 +65,7 @@
       {
          "title": "Optimization of sepsis therapy based on patient-specific digital precision diagnostics using next generation sequencing(DigiSep-Trial)—study protocol for a randomized, controlled, interventional, open-label, multicenter trial.",
          "reference": "Brenner T, Skarabis A, Stevens P, et al",
-         "image_url": "https://via.placeholder.com/400",
+         "image_url": "/assets/research/research-7.jpg",
          "url": "https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-021-05667-x",
          "category": "diagnostic",
          "authors": [
@@ -76,7 +76,7 @@
       {
          "title": "Rapid Next-Generation Sequencing- Based Diagnostics of Bacteremia in Septic Patients.",
          "reference": "Grumaz C, Hoffmann A, Vainshtein Y, et al",
-         "image_url": "https://via.placeholder.com/400",
+         "image_url": "/assets/research/research-8.jpg",
          "url": "https://doi.org/10.1016/j.jmoldx.2019.12.006",
          "category": "diagnostic",
          "authors": [

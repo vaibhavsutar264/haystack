@@ -258,11 +258,16 @@ body, #__next {
 }
 .swiper-button-prev, .swiper-rtl .swiper-button-next
 {
-   left: -30px !important;
+   left: -50px !important;
     right: auto;
 }
 .swiper-button-next, .swiper-rtl .swiper-button-prev
 {
-   right: -30px !important;
+   right: -50px !important;
     left: auto;
+}
+.map-image
+{
+   max-width: 120%;
+   width:115%;
 }
