@@ -38,6 +38,9 @@ interface IPostItemProps {
    postUrl?: string,
 }
 
+interface ICarouselProps {
+
+}
 interface ISectionPros {
    title?: string|any,
    subtitle?: string|any,
@@ -47,7 +50,8 @@ interface ISectionPros {
    posts?: IPostItemProps[],
    colsCount?: Number,
    ItemComponent?: JSX.Element,
-   enableCarousel?: boolean
+   enableCarousel?: boolean,
+   carouselProps: ICarouselProps|any
 }
 
 const SectionPosts = (props: ISectionPros) => {
@@ -89,6 +93,7 @@ const SectionPosts = (props: ISectionPros) => {
                   modules={[Autoplay]}
                   onSlideChange={() => console.log('slide change')}
                   onSwiper={(swiper: any) => console.log(swiper)}
+                  {...props.carouselProps}
                   className="awards-carousel"
                >
                   {props.posts?.map((postItem, slideIndex) => (
@@ -115,7 +120,7 @@ const SectionPosts = (props: ISectionPros) => {
                      thumbnailUrl={postItem.image_url}
                      source={postItem.source}
                      aspect="aspect-[4/3]"
-                     
+
                         key={`slide_${slideIndex}`}
                         {...postItem}
                      />

@@ -392,8 +392,8 @@ function Home({ Component, pageProps, news, settings }) {
                         </SwiperSlide>
                      ))}
                   </Swiper>
-                  <div className="swiper-button--outer swiper-button-prev" onClick={() => awardsCarousel.current?.slidePrev()}></div>
-                  <div className="swiper-button--outer swiper-button-next" onClick={() => awardsCarousel.current?.slideNext()}></div>
+                  {/* <div className="swiper-button--outer swiper-button-prev" onClick={() => awardsCarousel.current?.slidePrev()}></div>
+                  <div className="swiper-button--outer swiper-button-next" onClick={() => awardsCarousel.current?.slideNext()}></div> */}
                </div>
             </Section.Container>
          </Section>

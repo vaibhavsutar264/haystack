@@ -23,6 +23,8 @@ import PostItem from "../components/molecules/PostItem";
 import SectionPosts from "../components/organisms/SectionPosts";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import DiagnosticianPostItem from "../components/molecules/DiagnosticianPostItem";
+import ResearchItem from "../components/molecules/ResearchItem";
+import { Navigation } from "../components/organisms/SidebarNav/Navigation";
 
 const StyledHome = styled(AppTemplate)`
 `
@@ -89,8 +91,9 @@ export default function Clinician({ Component, pageProps, news, settings }) {
          />
          <SectionPosts
             title={'Research Papers'}
-            enableCarousel={false}
-            ItemComponent={DiagnosticianPostItem}
+            enableCarousel={true}
+            carouselProps={{  modules: [ Navigation ], navigation: true, }}
+            ItemComponent={ResearchItem}
             posts={research_papers.data}
          />
 

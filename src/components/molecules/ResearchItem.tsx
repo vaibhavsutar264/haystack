@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 
-interface IPostItem {
+interface IResearchItem {
    title?: string,
    source?: string,
    thumbnailUrl?: string,
@@ -11,7 +11,7 @@ interface IPostItem {
    reference?: any,
    url?: any,
 }
-const PostItem = (props: IPostItem) => {
+const ResearchItem = (props: IResearchItem) => {
    return (
       <figure className="post-item item">
          <picture className="item__thumbnail">
@@ -30,4 +30,4 @@ const PostItem = (props: IPostItem) => {
    )
 }
 
-export default PostItem
+export default ResearchItem
