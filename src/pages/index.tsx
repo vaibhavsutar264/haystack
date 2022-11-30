@@ -297,11 +297,11 @@ function Home({ Component, pageProps, news, settings }) {
                      breakpoints={{
                         300: {
                            slidesPerView: 2,
-                           spaceBetween: 20,
+                           spaceBetween: 0,
                         },
                         768: {
                            slidesPerView: 4,
-                           spaceBetween: 40,
+                           spaceBetween: 0,
                         },
                         1024: {
                            slidesPerView: 5,

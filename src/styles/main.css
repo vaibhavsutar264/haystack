@@ -251,3 +251,18 @@ body, #__next {
    font-size: 0.8rem;
    min-height: 50px;
 }
+.swiper-button-next:after, .swiper-button-prev:after
+{
+   font-size: 25px !important;
+    color: gray !important;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next
+{
+   left: -30px !important;
+    right: auto;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev
+{
+   right: -30px !important;
+    left: auto;
+}
