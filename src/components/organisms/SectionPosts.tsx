@@ -8,6 +8,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper"
+import { useRef } from "react";
+
 
 const StyledComponent = styled(Section)`
 background-image: url(https://images.unsplash.com/photo-1659535901690-ab95a8539929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
@@ -56,7 +58,7 @@ interface ISectionPros {
 
 const SectionPosts = (props: ISectionPros) => {
    const { ItemComponent } = props
-
+   const partnersCarousel = useRef(null)
    return (
       <StyledComponent className={`SectionPosts ${props.className}`}>
          <Section.Container className="container mx-auto py-12">
@@ -70,8 +72,11 @@ const SectionPosts = (props: ISectionPros) => {
                   <div>{props.renderHeaderRight && props.renderHeaderRight()}</div>
                </div>
                {props.enableCarousel ? (
+               <>
+               <div className="relative">
                <Swiper
                   spaceBetween={50}
+                  ref={partnersCarousel}
                   autoplay={{
                      delay: 2500,
                      disableOnInteraction: false,
@@ -92,7 +97,8 @@ const SectionPosts = (props: ISectionPros) => {
                   }}
                   modules={[Autoplay]}
                   onSlideChange={() => console.log('slide change')}
-                  onSwiper={(swiper: any) => console.log(swiper)}
+                  
+                  onSwiper={(swiper: any) => partnersCarousel.current = swiper}
                   {...props.carouselProps}
                   className="awards-carousel"
                >
@@ -113,6 +119,10 @@ const SectionPosts = (props: ISectionPros) => {
                      </SwiperSlide>
                   ))}
                </Swiper>
+               <div className="swiper-button--outer swiper-button-prev" onClick={() => partnersCarousel.current?.slidePrev()}></div>
+               <div className="swiper-button--outer swiper-button-next" onClick={() => partnersCarousel.current?.slideNext()}></div>
+               </div>
+               </>
                ): (
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4 limit-3">
                   {props.posts?.map((postItem, slideIndex) => (

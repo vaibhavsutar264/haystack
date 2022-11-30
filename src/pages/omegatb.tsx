@@ -34,7 +34,7 @@ const StyledHeroSection = styled(Section)`
    background-image: url("/assets/omega-tb-banner.png");
    background-size: cover;
    .section__container {
-      min-height: calc(100vh - var(--safe-top-padding, 100px));
+      min-height: calc(85vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -85,7 +85,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                      {/* <TBPieChart /> */}
                   </div>
                   <div className="flex-1">
-                     <img src="/assets/tb-world-map.png" alt="tb-world-map" />
+                     <img src="/assets/tb-world-map.png" alt="tb-world-map" className="map-image"/>
                      {/* <TBWorldMap /> */}
                   </div>
                </div>
@@ -98,8 +98,8 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                   Comparing ΩTB® <span className="text-xl">(Omega TB)</span> with current tests
                </h3>
                <div className="flex justify-between">
-                  <div className="md:w-7/12">
-                     <div className="table-wrapper w-full overflow-auto">
+                  <div className="md:w-6/12">
+                     <div className="table-wrapper w-full overflow-auto flex flex-col justify-between h-full">
                         <table className="w-full border-spacing-table table--striped">
                            <thead>
                               <tr className="text-blue-600 font-extrabold">
@@ -173,10 +173,10 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                      </div>
                   </div>
                   <div className=" border ml-12 border-gray-300"></div>
-                  <div className="md:w-4/12 ">
+                  <div className="md:w-5/12 ">
                      <h4>ΩTB<sup>®</sup> Assessment Profile</h4>
                      <div className="flex gap-4 md:mt-4">
-                        <div className="w-4/12">
+                        <div className="w-6/12">
                            <img src="/assets/omega-tb-assessment-profile.png" alt="omega-tb-assessment-profile" />
                         </div>
                         <div className="flex-1">
