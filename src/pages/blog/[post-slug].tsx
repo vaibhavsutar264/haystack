@@ -24,10 +24,12 @@ export default function Post({ Component, pageProps, post = {}, }) {
             title={post.title}
             citation={post.citation}
             date={post.date}
+            author_name={post.author_name}
+            author_bio={post.author_bio}
             thumbnailUrl={post.image_url}
          />
          <Section>
-            <Section.Container className="mx-auto mb-8">
+            <Section.Container className="mx-auto mb-8 post-content">
                <div dangerouslySetInnerHTML={{ __html: post.description  }}></div>
             </Section.Container>
          </Section>

@@ -10,7 +10,7 @@ background-size: 60%;
 background-repeat: no-repeat;
 background-position: right center;
 .section__container {
-   min-height: calc(100vh - var(--safe-top-padding, 100px));
+   min-height: calc(85vh - var(--safe-top-padding, 100px));
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -28,7 +28,7 @@ const ShareButton = () => {
    )
 }
 
-const BlogPostHeroSection = ({ title, date, thumbnailUrl }) => {
+const BlogPostHeroSection = ({ title, date, thumbnailUrl,author_name,author_bio }) => {
    return (
       <StyledHeroSection className="BlogPostHeroSection ">
          <Section.Container className="mx-auto ">
@@ -38,7 +38,7 @@ const BlogPostHeroSection = ({ title, date, thumbnailUrl }) => {
                      <img src={thumbnailUrl} alt="" className="bg-gray-100 w-full" />
                   </div>
                </div>
-               <div className="flex-1 bg-white  py-8">
+               <div className="flex-1 bg-white">
                   <div className="h-full flex flex-col justify-between">
                      <div className="flex justify-between mb-4">
                         <b>{date}</b>
@@ -48,7 +48,7 @@ const BlogPostHeroSection = ({ title, date, thumbnailUrl }) => {
                      <h3 className="mb-4 md:mb-12 text-4xl font-extrabold">
                         {title}
                      </h3>
-                     <p className="font-bold mb-4 md:mb-8 text-blue-600">by XYZ, Lorem Ipsum</p>
+                     <p className="font-bold mb-0 text-blue-600 text-sm">by {author_name}, {author_bio}</p>
                   </div>
 
                </div>
