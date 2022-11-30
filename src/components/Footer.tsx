@@ -3,6 +3,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "@emotion/styled";
 import settings from '../json/settings.json'
+import menus from '../json/menus.json'
 
 import {
    faYoutube,
@@ -12,14 +13,13 @@ import {
    faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
-import footerMenus from '../json/menus.json'
 import Image from "next/image";
 
 const StyledFooter = styled.footer`
 
 `
 
-function Footer({ settings = {}, menus }) {
+function Footer({  }) {
    return (
       <StyledFooter className="bg-gray-100">
          <div className="container mx-auto py-8 px-3 md:px-0">
@@ -33,24 +33,20 @@ function Footer({ settings = {}, menus }) {
                </div>
                <div className="md:w-3/12">
                   <ul className="text-sm text-gray-600 flex flex-col gap-3">
-                     <li>
-                        <Link href="">Science Corner</Link>
+                     {menus.footer?.map((fm, fmIndex) => (
+                     <li key={`fm_${fmIndex}`}>
+                        <Link href={fm.url}>{fm.title}</Link>
                      </li>
-                     <li>
-                        <Link href="">About Us</Link>
-                     </li>
-                     <li>
-                        <Link href="">Product</Link>
-                     </li>
+                     ))}
                   </ul>
                </div>
                <div className="md:w-3/12">
                   <ul className="text-sm text-gray-600 flex flex-col gap-3">
                      <li>
-                        <Link href="">{settings.email}</Link>
+                        <a>{settings.email}</a>
                      </li>
                      <li>
-                        <Link href="">99999999</Link>
+                        <a>{settings.phone_number}</a>
                      </li>
                      <li className="flex items-center gap-6 text-xl">
                         {settings.facebook_url ? (
@@ -117,7 +113,7 @@ function Footer({ settings = {}, menus }) {
 }
 
 Footer.defaultProps = {
-   menus: footerMenus.footer
+   // menus: footerMenus.footer
 }
 
 export default Footer;

@@ -20,6 +20,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import SepsisChart from "../components/SepsisChart";
 import { sortBy } from "lodash";
+import { useRef } from "react";
 
 const loadPartnerImg = ({ src }) => {
    return `/assets/${src}`
@@ -80,6 +81,8 @@ const HeroSection = () => {
 }
 
 function Home({ Component, pageProps, news, settings }) {
+   const partnersCarousel = useRef(null)
+   const awardsCarousel = useRef(null)
 
    return (
       <StyledHome bodyClassName="home" settings={settings}>
@@ -277,11 +280,15 @@ function Home({ Component, pageProps, news, settings }) {
                      </div>
                   </div>
                </div>
-               <div className="__">
+               <div className="relative">
                   <Swiper
                      className="partners-carousel"
                      spaceBetween={0}
                      navigation={true}
+                     ref={partnersCarousel}
+                     onSlideChange={console.info}
+                     onReachEnd={console.info}
+                     onReachBeginning={console.info}
                      autoplay={{
                         delay: 2500,
                         disableOnInteraction: false,
@@ -301,8 +308,7 @@ function Home({ Component, pageProps, news, settings }) {
                            spaceBetween: 0,
                         },
                      }}
-                     onSlideChange={() => console.log('slide change')}
-                     onSwiper={(swiper: any) => console.log(swiper)}
+                     onSwiper={(swiper: any) => partnersCarousel.current = swiper}
                   >
                      {partners.data?.map((slide, slideIndex) => (
                         <SwiperSlide className="" key={`slide_${slideIndex}`}>
@@ -312,6 +318,8 @@ function Home({ Component, pageProps, news, settings }) {
                         </SwiperSlide>
                      ))}
                   </Swiper>
+                  <div className="swiper-button--outer swiper-button-prev" onClick={() => partnersCarousel.current?.slidePrev()}></div>
+                  <div className="swiper-button--outer swiper-button-next" onClick={() => partnersCarousel.current?.slideNext()}></div>
                </div>
             </Section.Container>
          </Section>
@@ -347,43 +355,46 @@ function Home({ Component, pageProps, news, settings }) {
                <h3 className="section-heading text-center mb-6">
                   {`Awards & Recognition`}
                </h3>
-               <Swiper
-                  spaceBetween={50}
-                  autoplay={{
-                     delay: 2500,
-                     disableOnInteraction: false,
-                  }}
-                  breakpoints={{
-                     300: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                     },
-                     768: {
-                        slidesPerView: 4,
-                        spaceBetween: 40,
-                     },
-                     1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 50,
-                     },
-                  }}
-                  modules={[Autoplay]}
-                  onSlideChange={() => console.log('slide change')}
-                  onSwiper={(swiper: any) => console.log(swiper)}
-                  className="awards-carousel"
-               >
-                  {awards.data?.map((slide, slideIndex) => (
-                     <SwiperSlide key={`slide_${slideIndex}`} >
-                        <div className="w-48 h-36 hover-layer hover:text-white">
-                           <img src={slide.thumbnailUrl} />
-                           <div className="hover-layer__overlay">
-                              <span className="text-center px-2 text-sm">{slide.title}</span>
+               <div className="relative">
+                  <Swiper
+                     spaceBetween={50}
+                     autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                     }}
+                     breakpoints={{
+                        300: {
+                           slidesPerView: 2,
+                           spaceBetween: 20,
+                        },
+                        768: {
+                           slidesPerView: 4,
+                           spaceBetween: 40,
+                        },
+                        1024: {
+                           slidesPerView: 5,
+                           spaceBetween: 50,
+                        },
+                     }}
+                     modules={[Autoplay]}
+                     onSwiper={(swiper: any) => awardsCarousel.current = swiper}
+                     className="awards-carousel"
+                  >
+                     {awards.data?.map((slide, slideIndex) => (
+                        <SwiperSlide key={`slide_${slideIndex}`} >
+                           <div className="w-48 h-36 hover-layer hover:text-white">
+                              <img src={slide.thumbnailUrl} />
+                              <div className="hover-layer__overlay">
+                                 <span className="text-center px-2 text-sm">{slide.title}</span>
+                              </div>
                            </div>
-                        </div>
-                        {/* {JSON.stringify({ slide })} */}
-                     </SwiperSlide>
-                  ))}
-               </Swiper>
+                           {/* {JSON.stringify({ slide })} */}
+                        </SwiperSlide>
+                     ))}
+                  </Swiper>
+                  <div className="swiper-button--outer swiper-button-prev" onClick={() => awardsCarousel.current?.slidePrev()}></div>
+                  <div className="swiper-button--outer swiper-button-next" onClick={() => awardsCarousel.current?.slideNext()}></div>
+               </div>
             </Section.Container>
          </Section>
       </StyledHome>

@@ -7,6 +7,7 @@ import Image from "next/image";
 import useHeadroom from "react-useheadroom";
 import styled from "@emotion/styled";
 import settings from '../json/settings.json'
+import menus from '../json/menus.json'
 import { SidebarNav } from "./index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -22,7 +23,6 @@ import { XIcon, MenuIcon } from '@heroicons/react/outline'
 
 // import iocns from "@f";
 
-import menus from '../json/menus.json'
 const productHeaderMenu = menus.productsHeader
 import { useInView } from 'react-intersection-observer'
 
@@ -132,7 +132,7 @@ const Navbar = ({ renderMenu }) => {
                   <XIcon className="w-8 h-8" onClick={toggleMenu} />
                </div>
                <div className="mb-3 md:mb-6 text-sm flex gap-6 text-gray-500 mt-6 justify-end md:mt-0">
-                  <Link href="/">hello@haystackanalytics.in</Link>
+                  <Link href="/">{settings.email}</Link>
                   <div className="mb-3 md:mb-2 text-sm flex gap-2 text-gray-500 mt-6 md:mt-0">
                   {settings.facebook_url ? (
                      <a href={settings.facebook_url}>
@@ -184,9 +184,9 @@ const Navbar = ({ renderMenu }) => {
                   </div>
                </div>
                <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end">
-                  <Link className="font-semibold" href="/science-corner">Science Corner</Link>
-                  <Link className="font-semibold" href="/about">About Us</Link>
-                  <Link className="font-semibold" href="/">Products</Link>
+                  {menus.navbar.map((mn, mnIndex) => (
+                  <Link key={`mn${mnIndex}`} className="font-semibold" href={mn.url}>{mn.label}</Link>
+                  ))}
                </div>
             </div>
             <div className="mt-3 mr-3 md:hidden">
