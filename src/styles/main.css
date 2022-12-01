@@ -283,3 +283,15 @@ body, #__next {
 .share-button svg{
    transform: scaleX(-1);
 }
+.table-icons .text-green-600 svg path{
+
+}
+.table-icons .text-green-600 svg path{
+   stroke: #03D873;
+    stroke-width: 2px;
+}
+
+.table-icons .text-red-600 svg path{
+   stroke: #FB0102;
+    stroke-width: 2px;
+}
