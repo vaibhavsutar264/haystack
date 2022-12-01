@@ -1,4 +1,4 @@
-import { sortBy } from 'lodash';
+import { orderBy } from 'lodash';
 
 const path = require('path')
 // export const isBrowser = () => typeof document !== "undefined"
@@ -10,16 +10,16 @@ export const isEven = (indexNumber) => indexNumber % 2 == 0
 // export const sortByDate = (posts, field = 'date') => sortBy(posts, field, 'desc')
 
 export const filteredPosts = (posts, field = 'date') => {
-   return sortBy(posts, field, 'desc')
+   return orderBy(posts, field, 'desc')
 }
 export const filteredTestimonials = (items, field = 'date') => {
-   return sortBy(items, field, 'desc')
+   return orderBy(items, field, 'desc')
 }
 export const filteredResearchPapers = (items, field = 'date') => {
-   return sortBy(items, field, 'desc')
+   return orderBy(items, field, 'desc')
 }
 export const filteredNews = (items, field = 'date') => {
-   return sortBy(items, field, 'desc')
+   return orderBy(items, field, 'desc')
 }
 
 export const loadImage = ({ src, width, quality }) => {
