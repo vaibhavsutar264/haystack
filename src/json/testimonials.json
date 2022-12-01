@@ -1,38 +1,29 @@
 {
    "data": [
       {
-         "message": "The NGS approach overcomes many of the significance challenges associated with conventional phenotypic testing, as well as the limitations of other less comprehensive molecular tests by providing rapid, detailed sequence information for multiple gene regions or whole genomes of interest.",
-         "avatar_url": "https://via.placeholder.com/150",
+         "message": "We must have a comprehensive diagnostic test which will help diagnose the latent as well as other forms of tuberculosis in a stipulated time and cost effective. And i can say that whole genome sequencing fulfils all the criteria!  ",
+         "avatar_url": "/assets/testimonials/dr-anil-kumar-singal.png",
+         "category": "clinician",
+         "author": {
+            "name": "Dr. Anil Kumar Singal"
+         }
+      },
+      {
+         "message": "The NGS approach overcomes  many of the significance  challenges associated with  conventional phenotypic testing,  as well as the limitations of other  less comprehensive molecular  tests by providing rapid, detailed  sequence information for  multiple gene regions or whole  genomes of interest",
+         "avatar_url": "/assets/testimonials/dr-nikhil-sarangdhar.png",
          "category": "clinician",
          "author": {
             "name": "Dr. Nikhil Sarangdhar"
          }
       },
       {
-         "message": "We must have a comprehensive diagnostic test which will help diagnose the latent as well as other forms of tuberculosis in a stipulated time and cost effective. And I can say that Whole Genome Sequencing fulfils all the criteria!",
+         "message": "From the public health  perspective, what i have seen  is that WGS has helped few  rare cases where our  molecular diagnostics were  not giving enough clue but in  such cases WGS has helped in  the management with the  correct regimen.",
          "avatar_url": "https://via.placeholder.com/150",
          "category": "clinician",
          "author": {
-            "name": "Dr. Anilkumar Singal"
+            "name": "Dr. C Sumalata"
          }
       },
-      {
-         "message": "The NGS approach overcomes many of the significance challenges associated with conventional phenotypic testing, as well as the limitations of other less comprehensive molecular tests by providing rapid, detailed sequence information for multiple gene regions or whole genomes of interest.",
-         "avatar_url": "https://via.placeholder.com/150",
-         "category": "diagnostic",
-         "author": {
-            "name": "Dr. Nikhil Sarangdhar"
-         }
-      },
-      {
-         "message": "We must have a comprehensive diagnostic test which will help diagnose the latent as well as other forms of tuberculosis in a stipulated time and cost effective. And I can say that Whole Genome Sequencing fulfils all the criteria!",
-         "avatar_url": "https://via.placeholder.com/150",
-         "category": "diagnostic",
-         "author": {
-            "name": "Dr. Anilkumar Singal"
-         }
-      }
-      ,
       {
          "message": "Whole Genome Sequencing is the future gold standard in DST. It is comprehensive, accessible, affordable, and above all less time-consuming making the technology efficient and effective.",
          "avatar_url": "/assets/testimonials/dr-v-k-jain.png",

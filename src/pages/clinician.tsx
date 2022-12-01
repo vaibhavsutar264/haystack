@@ -32,11 +32,11 @@ const StyledHome = styled(AppTemplate)`
 
 const StyledHeroSection = styled(Section)`
    background-repeat: no-repeat;
-   background-position: right center;
+   background-position: bottom center;
    background-image: url(${props => props.bg});
    background-size: 100%;
    .section__container {
-      min-height: calc(100vh - var(--safe-top-padding, 100px));
+      min-height: calc(95vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -49,11 +49,11 @@ const HeroSection = (props) => {
          <Section.Container className="mx-auto ">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col"></div>
-               <div className="grid__col  py-8">
-                  <h3 className="mb-4 text-4xl font-extrabold" dangerouslySetInnerHTML={{ __html: props.title }}>
+               <div className="grid__col p-8 md:pl-24">
+                  <h3 className="mb-4 text-3xl font-extrabold" dangerouslySetInnerHTML={{ __html: props.title }}>
                   </h3>
-                  <p className="font-bold text-muted">Stay on top with cutting edge technology</p>
-                  <div className="mt-8 flex items-center gap-4">
+                  <p className="font-bold text-muted text-lg">Stay on top with cutting edge technology</p>
+                  <div className="mt-24 flex items-center gap-4">
                      {props.primaryAction && (
                      <Link href={props.primaryAction.href} >
                         <a className="btn-primary">{props.primaryAction.title}</a>
@@ -89,6 +89,7 @@ export default function Clinician({ Component, pageProps, news, settings }) {
          <TestimonialsSection
             title="Testimonials"
             items={filteredTestimonials(testimonials.data)}
+            category="clinician"
          />
          <SectionPosts
             title={'Research Papers'}
