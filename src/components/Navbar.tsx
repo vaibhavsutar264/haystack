@@ -132,7 +132,7 @@ const Navbar = ({ renderMenu }) => {
                   <XIcon className="w-8 h-8" onClick={toggleMenu} />
                </div>
                <div className="mb-3 md:mb-6 text-sm flex gap-6 text-gray-500 mt-6 justify-end md:mt-0">
-                  <Link href="/">{settings.email}</Link>
+                  <a  className="text-dark" href={`mailto:${settings.email}`}>{settings.email}</a>
                   <div className="mb-3 md:mb-2 text-sm flex gap-2 text-gray-500 mt-6 md:mt-0">
                   {settings.facebook_url ? (
                      <a href={settings.facebook_url}>
