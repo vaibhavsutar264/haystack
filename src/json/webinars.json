@@ -3,20 +3,20 @@
       {
          "title": "Part 01/03 - Hear the applications of WGS in TB diagnosis from the pride of AIMS | HaystackAnalytics",
          "date": "",
-         "thumbnailUrl": "",
-         "postUrl": "https://www.youtube.com/embed/MdP2uBi86To"
+         "image_url": "/assets/webinar/webinar-1.jpg",
+         "postUrl": "https://www.youtube.com/embed/EC1E4sQKKiI"
       },
       {
          "title": "How to Catch the Notorious Ones in Tuberculosis | Dr. Eema Chaudhary | HaystackAnalytics",
          "date": "",
-         "thumbnailUrl": "",
-         "postUrl": "https://www.youtube.com/embed/MdP2uBi86To"
+         "image_url": "/assets/webinar/webinar-2.jpg",
+         "postUrl": "https://www.youtube.com/embed/UhY6ES3R9U4"
       },
       {
          "title": "HaystackAnalytics: Unlocking Clinical Genomics by Automating Bioinformatics.",
          "date": "",
-         "thumbnailUrl": "",
-         "postUrl": "https://www.youtube.com/embed/MdP2uBi86To"
+         "image_url": "/assets/webinar/webinar-3.jpg",
+         "postUrl": "https://www.youtube.com/embed/38YX4ezWY2M"
       }
    ]
 }

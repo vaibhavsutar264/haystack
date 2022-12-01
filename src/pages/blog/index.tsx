@@ -8,6 +8,7 @@ import Link from "next/link";
 import SectionPosts from "../../components/organisms/SectionPosts";
 import SectionBlogPosts from "../../components/organisms/SectionBlogPosts";
 import WebinarItem from "../../components/molecules/WebinarItem";
+import { sortBy } from "lodash";
 
 import webinars from '../../json/webinars.json'
 
@@ -27,7 +28,7 @@ const StyledHeroSection = styled(Section)`
    background-repeat: no-repeat;
    background-position: right center;
    .section__container {
-      min-height: calc(100vh - var(--safe-top-padding, 100px));
+      min-height: calc(90vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -40,26 +41,26 @@ const HeroSection = ({ title, date, description, citation, image }) => {
          <Section.Container className="mx-auto ">
             <h3 className="mb-4 font-extrabold text-blue-600 text-3xl">Blogs</h3>
             <div className="flex gap-8 items-start">
-               <div className="md:w-6/12">
+               <div className="md:w-7/12">
                   <picture>
-                     <img src={image} alt="" className="bg-gray-200 w-full" />
+                     <img src={image} alt="" className="bg-gray-200 w-full aspect-[16/9]" />
                   </picture>
                </div>
-               <div className="flex-1 bg-white  py-8">
+               <div className="flex-1 bg-white">
                   <div className="flex justify-between mb-4">
                      <b>{date}</b>
                      <span className="text-green-600 font-medium">SHARE</span>
                   </div>
-                  <h3 className="mb-4 md:mb-12 text-4xl font-extrabold">
+                  <h3 className="mb-4 md:mb-12 text-3xl font-bold">
                      {title}
                   </h3>
-                  <p className="font-bold mb-4 md:mb-8 text-blue-600">{citation}</p>
+                  <p className="font-semibold mb-4 md:mb-8 text-blue-600">{citation}</p>
                   <p className="font-base text-muted line-clamp-4">
                      {description}
                   </p>
                   <div className="mt-8 flex items-center justify-end gap-4">
                      <Link href={'#'} >
-                        <a className="text-green-600 text-italic">Read More...</a>
+                        <a className="text-green-600 italic">Read More...</a>
                      </Link>
                   </div>
                </div>
@@ -80,15 +81,15 @@ export default function Diagnostician({ Component, pageProps, posts, settings })
             date={heroPost.date}
             description={heroPost.excerpt}
             image={heroPost.image_url}
-            citation={`by ${heroPost.author_name}`}
+            citation={`by ${heroPost.author_name}, ${heroPost.author_bio}`}
          />
          <SectionBlogPosts
             title={'Recent Articles'}
             enableCarousel={true}
-            posts={otherPosts}
+            posts={sortBy(otherPosts, 'date', 'desc')}
          />
          <SectionPosts
-            enableCarousel={true}
+            enableCarousel={webinars.data?.length > 3}
             className="webinar"
             renderHeaderRight={() => (
                <>
@@ -104,7 +105,7 @@ export default function Diagnostician({ Component, pageProps, posts, settings })
             )}
             ItemComponent={WebinarItem}
             title={'Webinars'}
-            posts={webinars.data}
+            posts={sortBy(webinars.data, 'date', 'desc')}
          />
       </StyledHome>
    )
