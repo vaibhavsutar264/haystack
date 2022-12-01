@@ -10,7 +10,7 @@ background-size: 60%;
 background-repeat: no-repeat;
 background-position: right center;
 .section__container {
-   min-height: calc(85vh - var(--safe-top-padding, 100px));
+   min-height: calc(80vh - var(--safe-top-padding, 100px));
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -41,14 +41,14 @@ const BlogPostHeroSection = ({ title, date, thumbnailUrl,author_name,author_bio 
                <div className="flex-1 bg-white">
                   <div className="h-full flex flex-col justify-between">
                      <div className="flex justify-between mb-4">
-                        <b>{date}</b>
+                        <span className="text-base font-bold">{date}</span>
                         {/* <span className="text-green-600 font-medium">SHARE</span> */}
                         <ShareButton />
                      </div>
-                     <h3 className="mb-4 md:mb-12 text-4xl font-extrabold">
+                     <h3 className="mb-4 md:mb-12 text-3xl font-bold md:w-4/5">
                         {title}
                      </h3>
-                     <p className="font-bold mb-0 text-blue-600 text-sm">by {author_name}, {author_bio}</p>
+                     <p className="font-bold mb-0 text-blue-600 text-sm md:w-4/5">by {author_name}, {author_bio}</p>
                   </div>
 
                </div>

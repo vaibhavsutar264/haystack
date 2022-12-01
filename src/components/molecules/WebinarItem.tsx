@@ -32,24 +32,24 @@ const WebinarItem = (props: IWebinarItem) => {
             <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-[16/9] bg-gray-200 object-cover" />
          </picture>
          <figcaption className="item__caption my-6">
-            <p className="font-semibold my-6 line-clamp-3 text-xl post-title">{props.title}</p>
+            <p className="font-semibold my-6 line-clamp-3 text-lg post-title">{props.title}</p>
          </figcaption>
       </figure>
       <Modal isOpen={modalIsOpen} style={customModalStyle}>
          <div className="w-full">
-            <div className="aspect-w-16 aspect-h-9 mb-4">
-               {/* {JSON.stringify({ props })} */}
-               <iframe width="100%" height="100%" src={props.postUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p className="text-lg font-semibold mb-3">
-               {props.title}
-            </p>
-            <button className="flex gap-3 items-center" type="button" onClick={() => setModalIsOpen(false)}>
+         <button className="flex gap-3 items-center" type="button" onClick={() => setModalIsOpen(false)}>
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                </svg>
                <span>Close</span>
             </button>
+            <div className="aspect-w-16 aspect-h-9 mb-4">
+               {/* {JSON.stringify({ props })} */}
+               <iframe width="100%" height="100%" src={props.postUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            {/* <p className="text-lg font-semibold mb-3">
+               {props.title}
+            </p> */}
          </div>
       </Modal>
       </>

@@ -21,7 +21,16 @@ const StyledHome = styled(AppTemplate)`
    }
 
 `
-
+const ShareButton = () => {
+   return (
+      <div className="flex items-center gap-2 text-sm text-blue-600 cursor-pointer share-button">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+            <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+         </svg>
+         <span></span>
+      </div>
+   )
+}
 const StyledHeroSection = styled(Section)`
    background-image: url(https://images.unsplash.com/photo-1659535901690-ab95a8539929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
    background-size: 60%;
@@ -35,11 +44,11 @@ const StyledHeroSection = styled(Section)`
    }
 `
 
-const HeroSection = ({ title, date, description, citation, image }) => {
+const HeroSection = ({ title, date, description, citation, image, url }) => {
    return (
       <StyledHeroSection className="HeroSection ">
          <Section.Container className="mx-auto ">
-            <h3 className="mb-4 font-extrabold text-blue-600 text-3xl">Blogs</h3>
+            <h3 className="mb-8 font-extrabold text-blue-600 text-3xl">Blogs</h3>
             <div className="flex gap-8 items-start">
                <div className="md:w-7/12">
                   <picture>
@@ -48,19 +57,21 @@ const HeroSection = ({ title, date, description, citation, image }) => {
                </div>
                <div className="flex-1 bg-white">
                   <div className="flex justify-between mb-4">
-                     <b>{date}</b>
-                     <span className="text-green-600 font-medium">SHARE</span>
+                     <span className="text-base font-bold">{date}</span>
+                     <span className="text-green-600 font-normal text-base flex items-center gap-2 share-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
+                        <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
+                     </svg>SHARE</span>
                   </div>
-                  <h3 className="mb-4 md:mb-12 text-3xl font-bold">
+                  <h3 className="mb-4 md:mb-12 text-3xl font-bold md:w-4/5">
                      {title}
                   </h3>
-                  <p className="font-semibold mb-4 md:mb-8 text-blue-600">{citation}</p>
-                  <p className="font-base text-muted line-clamp-4">
+                  <p className="font-semibold mb-4 md:mb-8 text-blue-600 text-sm">{citation}</p>
+                  <p className="font-base text-muted line-clamp-4 md:w-4/5">
                      {description}
                   </p>
-                  <div className="mt-8 flex items-center justify-end gap-4">
-                     <Link href={'#'} >
-                        <a className="text-green-600 italic">Read More...</a>
+                  <div className="-mt-2 flex items-center justify-end gap-4">
+                     <Link href={url} >
+                        <a className="text-green-600 italic text-sm">Read More...</a>
                      </Link>
                   </div>
                </div>
@@ -79,6 +90,7 @@ export default function Diagnostician({ Component, pageProps, posts, settings })
          <HeroSection
             title={heroPost.title}
             date={heroPost.date}
+            url={`/blog/${heroPost.slug}`}
             description={heroPost.excerpt}
             image={heroPost.image_url}
             citation={`by ${heroPost.author_name}, ${heroPost.author_bio}`}
