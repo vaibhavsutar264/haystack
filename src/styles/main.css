@@ -60,7 +60,7 @@ body, #__next {
    @apply btn text-white text-center bg-gray-500 px-8 py-4
 }
 .btn-outline-info {
-   @apply btn text-blue-600 text-center bg-white px-8 py-3 border-blue-600
+   @apply btn text-blue-600 text-center bg-transparent px-8 py-3 border-blue-600
 }
 .hlink {
    @apply font-medium
@@ -164,12 +164,12 @@ body, #__next {
    padding: 1rem 0.5rem;
 }
 .table--striped table td {
-   background: #efefef;
+   background: #D6D7DB20;
    margin-bottom: 4px;
    padding: 0.5rem;
 }
 .table--striped table tbody tr:nth-child(even) td {
-   background: #ccc;
+   background: #D6D7DB60;
 }
 .nav-menu-main a{
    font-weight: 600;

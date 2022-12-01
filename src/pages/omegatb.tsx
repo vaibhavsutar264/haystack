@@ -57,7 +57,7 @@ const HeroSection = () => {
                   and reinfection</p>
                   <div className="mt-8">
                      <Link href={'#'} >
-                        <a className="btn-outline-info">VIEW BROCHURE</a>
+                        <a className="btn-outline-info bg-transparent">VIEW BROCHURE</a>
                      </Link>
                   </div>
                </div>
