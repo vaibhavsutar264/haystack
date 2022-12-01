@@ -24,6 +24,7 @@ import testimonials from "../json/testimonials.json";
 import research_papers from "../json/research_papers.json";
 import SectionPosts from "../components/organisms/SectionPosts";
 import DiagnosticianPostItem from "../components/molecules/DiagnosticianPostItem";
+import { filteredPosts, filteredResearchPapers } from "../utils/index";
 
 const StyledHome = styled(AppTemplate)`
 
@@ -154,13 +155,13 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
 
          <TestimonialsSection
             title={'Testimonials'}
-            items={testimonials.data}
+            items={filteredPosts(testimonials.data)}
          />
          <SectionPosts
             title={'Research Papers'}
             enableCarousel={false}
             ItemComponent={DiagnosticianPostItem}
-            posts={research_papers.data}
+            posts={filteredResearchPapers(research_papers.data)}
          />
          <Section className="SectionGridItems bg-blue-800 text-white ">
             <Section.Container className="container mx-auto py-12 text-center">
