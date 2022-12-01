@@ -33,7 +33,7 @@ const StyledHeroSection = styled(Section)`
    background-image: url("/assets/product-disease-banner.png");
    background-size: cover;
    .section__container {
-      min-height: calc(100vh - var(--safe-top-padding, 100px));
+      min-height: calc(85vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -53,10 +53,10 @@ const HeroSection = () => {
                   <p className="text-muted">A life saving product.</p>
                   <div className="mt-8 flex items-center gap-4">
                      <Link href={'#'} >
-                        <a className="btn-outline-info">VIEW PATHOGEN LIST</a>
+                        <a className="btn-outline-info bg-transparent">VIEW PATHOGEN LIST</a>
                      </Link>
                      <Link href={'#'} >
-                        <a className="btn-outline-info">VIEW BROCHURE</a>
+                        <a className="btn-outline-info bg-transparent">VIEW BROCHURE</a>
                      </Link>
                   </div>
                </div>
@@ -310,7 +310,7 @@ export default function Diseases({ Component, pageProps, news, settings }) {
          <SectionGridItems
             title={`Benefits of UID`}
             titleClassName="text-center"
-            gridClassName={'grid-cols-1 md:grid-cols-3'}
+            gridClassName={'grid-cols-1 md:grid-cols-3 gap-8 w-11/12 mx-auto'}
             items={[
                { title: 'Personalised treatment/ therapy', thumbnailUrl: '/assets/diseas-personal-therapy.png', description: `Know the infection before starting the treatment` },
                { title: 'Accurate from start to finish', thumbnailUrl: '/assets/disease-accurate-finish.png', description: `1200+ pathogens including bacteria, fungi, protozoa.` },
