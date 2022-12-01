@@ -21,6 +21,7 @@ import { Navigation } from "swiper";
 import SepsisChart from "../components/SepsisChart";
 import { sortBy } from "lodash";
 import { useRef } from "react";
+import { filteredNews } from "../utils/index";
 
 const loadPartnerImg = ({ src }) => {
    return `/assets/${src}`
@@ -345,7 +346,7 @@ function Home({ Component, pageProps, news, settings }) {
          {/* {JSON.stringify({ news })} */}
          <SectionPosts
             title={`In the news`}
-            posts={sortBy(news, 'date', 'desc')}
+            posts={filteredNews(news, 'date')}
             colsCount={3}
             enableCarousel={false}
          />

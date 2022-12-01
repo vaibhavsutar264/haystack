@@ -14,6 +14,7 @@ import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
 import { getActivePosts, getPostFile, getPostFiles } from "../utils/posts";
 import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
+import { filteredPosts, filteredResearchPapers, filteredTestimonials } from "../utils/index";
 import styled from "@emotion/styled";
 import heroBg from '../assets/haystack-body-bg.png'
 import { useEffect, useMemo } from "react";
@@ -87,14 +88,14 @@ export default function Clinician({ Component, pageProps, news, settings }) {
          />
          <TestimonialsSection
             title="Testimonials"
-            items={testimonials.data}
+            items={filteredTestimonials(testimonials.data)}
          />
          <SectionPosts
             title={'Research Papers'}
             enableCarousel={true}
             carouselProps={{  modules: [ Navigation ], navigation: true, }}
             ItemComponent={ResearchItem}
-            posts={research_papers.data}
+            posts={filteredResearchPapers(research_papers.data)}
          />
 
       </StyledHome>
