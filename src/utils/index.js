@@ -22,6 +22,13 @@ export const filteredNews = (items, field = 'date') => {
    return orderBy(items, field, 'desc')
 }
 
+export const dateFormat = (date) => {
+   if (!date) {
+      return date
+   }
+   return new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium',  timeZone: 'Asia/Kolkata' }).format(new Date(date))
+}
+
 export const loadImage = ({ src, width, quality }) => {
    // return import()
 }
