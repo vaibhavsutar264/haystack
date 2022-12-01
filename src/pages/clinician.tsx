@@ -34,6 +34,7 @@ const StyledHeroSection = styled(Section)`
    background-repeat: no-repeat;
    background-position: bottom center;
    background-image: url(${props => props.bg});
+   background-repeat: no-repeat;
    background-size: 100%;
    .section__container {
       min-height: calc(95vh - var(--safe-top-padding, 100px));
@@ -47,9 +48,9 @@ const HeroSection = (props) => {
    return (
       <StyledHeroSection className="HeroSection " bg={props.bg}>
          <Section.Container className="mx-auto ">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col"></div>
-               <div className="grid__col p-8 md:pl-24">
+            <div className="flex items-center justify-center">
+               <div className="w-7/12"></div>
+               <div className="w-5/12 p-8 md:pl-10">
                   <h3 className="mb-4 text-3xl font-extrabold" dangerouslySetInnerHTML={{ __html: props.title }}>
                   </h3>
                   <p className="font-bold text-muted text-lg">Stay on top with cutting edge technology</p>

@@ -25,6 +25,7 @@ import research_papers from "../json/research_papers.json";
 import SectionPosts from "../components/organisms/SectionPosts";
 import DiagnosticianPostItem from "../components/molecules/DiagnosticianPostItem";
 import { filteredPosts, filteredResearchPapers } from "../utils/index";
+import ResearchItem from "../components/molecules/ResearchItem";
 
 const StyledHome = styled(AppTemplate)`
 
@@ -47,20 +48,20 @@ const HeroSection = () => {
    return (
       <StyledHeroSection className="HeroSection ">
          <Section.Container className="mx-auto ">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col"></div>
-               <div className="grid__col md:ml-12 py-8">
-                  <h3 className="mb-4 text-4xl font-extrabold">
+            <div className="flex items-center justify-center">
+               <div className="w-7/12"></div>
+               <div className="w-5/12 md:ml-12 py-8">
+                  <h3 className="mb-4 text-3xl font-extrabold">
                      Get started with<br />
                      Genomics today with<br />
                      a fully automatic AI based<br />
                      bioinformatics platform
                   </h3>
-                  <p className="font-bold text-muted">
+                  <p className="font-bold text-muted text-lg">
                      Be Ahead Of The Competition <br />
                      With Revolutionary Technology
                   </p>
-                  <div className="mt-8 flex items-center gap-4">
+                  <div className="mt-16 flex items-center gap-4">
                      <Link href={'#'} >
                         <a className="btn-primary">BOOK A CALL</a>
                      </Link>
@@ -82,25 +83,25 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
          <HeroSection />
          <Section className="bg-gray-100">
             <Section.Container className="container mx-auto py-12">
-               <h3 className="section-heading text-center">
+               <h3 className="font-extrabold text-center text-3xl mb-4">
                Automated Bioinformatics Platform
                </h3>
-               <p className="text-center mb-4 text-muted font-semibold">Localized Report with Software access</p>
-               <div className="grid grid-cols-3 gap-4 my-8 mx-auto md:w-8/12 ">
+               <p className="text-center mb-4 text-muted font-bold">Localized Report with Software access</p>
+               <div className="grid grid-cols-3 gap-4 my-16 mb-24 mx-auto md:w-6/12 ">
                   <div className="grid__col">
-                     <div className="flex gap-4">
+                     <div className="flex gap-2">
                         <div>
-                           <img src="/assets/diagnostician-icon1.png" className="w-16 h-16" />
+                           <img src="/assets/diagnostician-icon1.png" className="w-10 h-10" />
                         </div>
                         <div className="flex-1">
-                           <h3 className="text-blue-600 font-bold">ZERO UPSKILLING REQUIRED</h3>
+                           <h3 className="text-blue-600 font-bold">ZERO <br/>UPSKILLING REQUIRED</h3>
                         </div>
                      </div>
                   </div>
                   <div className="grid__col">
-                     <div className="flex gap-4">
+                     <div className="flex gap-2">
                         <div>
-                           <img src="/assets/diagnostician-icon2.png" className="w-16 h-16" />
+                           <img src="/assets/diagnostician-icon2.png" className="w-10 h-10" />
                         </div>
                         <div className="flex-1">
                            <h3 className="text-blue-600 font-bold">COMPLETE BIOINFORMATICS PLATFORM</h3>
@@ -108,9 +109,9 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                      </div>
                   </div>
                   <div className="grid__col">
-                     <div className="flex gap-4">
+                     <div className="flex gap-2">
                         <div>
-                           <img src="/assets/diagnostician-icon3.png" className="w-16 h-16" />
+                           <img src="/assets/diagnostician-icon3.png" className="w-10 h-10" />
                         </div>
                         <div className="flex-1">
                            <h3 className="text-blue-600 font-bold">NO SYSTEM UPGRADES REQUIRED</h3>
@@ -131,11 +132,11 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
             </Section.Container>
          </Section>
          <Section className=" bg-blue-800 text-white">
-            <Section.Container className="container mx-auto py-12">
-               <h3 className="text-white section-heading section-heading--invert text-center">
+            <Section.Container className="container mx-auto py-20">
+               <h3 className="text-white font-extrabold text-center text-3xl mb-4">
                Why Choose HaystackAnalytics
                </h3>
-               <p className="text-white text-center">
+               <p className="text-white text-center text-sm">
                HaystackAnalytics enables you to get started with genomics, <br />
                via a fully automated AI-powered bio informatics platform
                </p>
@@ -156,15 +157,16 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
          <TestimonialsSection
             title={'Testimonials'}
             items={filteredPosts(testimonials.data)}
+            category="diagnostician"
          />
          <SectionPosts
             title={'Research Papers'}
-            enableCarousel={false}
-            ItemComponent={DiagnosticianPostItem}
+            enableCarousel={true}
+            ItemComponent={ResearchItem}
             posts={filteredResearchPapers(research_papers.data)}
          />
          <Section className="SectionGridItems bg-blue-800 text-white ">
-            <Section.Container className="container mx-auto py-12 text-center">
+            <Section.Container className="container mx-auto py-24 text-center">
                <h3 className={`text-white section-heading section-heading--invert `}>
                   {'Why Partner With Us'}
                </h3>
