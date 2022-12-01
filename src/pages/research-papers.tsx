@@ -58,7 +58,7 @@ const PostItem = (props) => {
          <figure className="flex md:flex-row flex-col gap-4 items-center">
             <div className="md:w-4/12 ">
                <div className="aspect-w-16 aspect-h-9">
-                  <img src={props.thumbnail_url} alt="" className="w-full object-cover" />
+                  <img src={props.image_url} alt="" className="w-full object-cover" />
                </div>
             </div>
             <figcaption className="flex-1">
@@ -68,16 +68,16 @@ const PostItem = (props) => {
                      <ShareButton />
                   </div>
                </div>
-               <p className="mb-3">
-                  <a href="#" className="underline text-blue-600">
+               <p className="mb-3 w-10/12">
+                  <a href="#" className="hover:underline underline-offset-2 text-blue-600">
                   {props.title}
                   </a>
                </p>
-               <p className="mb-6">
-                  {props.excerpt}
+               <p className="mb-6 text-sm w-7/12">
+                  {props.reference}
                </p>
                <p className="font-semibold">
-                  JULY 2020
+                  {props.date}
                </p>
             </figcaption>
          </figure>
@@ -102,14 +102,14 @@ export default function ResearchPapers({ Component, pageProps, news, settings })
                   </li>
                   ))}
                </ol>
-               <div className="flex justify-end">
+               {/* <div className="flex justify-end">
                   <div>
                      <span>1 / 12 ...................</span>
                      <Link href="/">
                      View all
                      </Link>
                   </div>
-               </div>
+               </div> */}
             </Section.Container>
          </Section>
 
