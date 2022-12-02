@@ -10,7 +10,9 @@ import SectionBlogPosts from "../../components/organisms/SectionBlogPosts";
 import WebinarItem from "../../components/molecules/WebinarItem";
 import { sortBy } from "lodash";
 
+
 import webinars from '../../json/webinars.json'
+import ShareButton from "../../components/molecules/ShareButton";
 
 const StyledHome = styled(AppTemplate)`
    .HeroSection {
@@ -21,16 +23,6 @@ const StyledHome = styled(AppTemplate)`
    }
 
 `
-const ShareButton = () => {
-   return (
-      <div className="flex items-center gap-2 text-sm text-blue-600 cursor-pointer share-button">
-         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
-            <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
-         </svg>
-         <span></span>
-      </div>
-   )
-}
 const StyledHeroSection = styled(Section)`
    background-image: url(https://images.unsplash.com/photo-1659535901690-ab95a8539929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
    background-size: 60%;
@@ -42,8 +34,8 @@ const StyledHeroSection = styled(Section)`
       flex-direction: column;
       justify-content: center;
    }
-`
 
+`
 const HeroSection = ({ title, date, description, citation, image, url }) => {
    return (
       <StyledHeroSection className="HeroSection ">
@@ -56,12 +48,8 @@ const HeroSection = ({ title, date, description, citation, image, url }) => {
                   </picture>
                </div>
                <div className="flex-1 bg-white">
-                  <div className="flex justify-between mb-4">
-                     <span className="text-base font-bold">{date}</span>
-                     <span className="text-green-600 font-normal text-base flex items-center gap-2 share-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
-                        <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
-                     </svg>SHARE</span>
-                  </div>
+
+                  <ShareButton title={globalThis.document?.title} url={globalThis.location?.href} />
                   <h3 className="mb-4 md:mb-12 text-3xl font-bold md:w-4/5">
                      {title}
                   </h3>
