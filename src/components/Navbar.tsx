@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import NavItem from "./NavItem";
 // import data from "./data/data.json";
@@ -25,6 +25,7 @@ import { XIcon, MenuIcon } from '@heroicons/react/outline'
 
 const productHeaderMenu = menus.productsHeader
 import { useInView } from 'react-intersection-observer'
+import { useRouter } from "next/router";
 
 const MENU_LIST = [
    {
@@ -76,10 +77,14 @@ const StyledNavbar = styled.nav`
 `
 
 const Navbar = ({ renderMenu }) => {
+   const router = useRouter()
    const [navActive, setNavActive] = useState(false);
    const [ dropdownOpened, setDropdownOpened ] = useState(false)
    const [activeIdx, setActiveIdx] = useState(0);
    const [inView, setInView] = useState(false);
+   const isActiveMenu = useMemo(() => {
+
+   }, [  ])
    const toggleMenu = () => {
       setNavActive(false)
    }
@@ -186,7 +191,9 @@ const Navbar = ({ renderMenu }) => {
                </div>
                <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end relative">
                   {menus.navbar.map((mn, mnIndex) => (
-                  <Link key={`mn${mnIndex}`} className="font-semibold" href={mn.url}>{mn.label}</Link>
+                  <Link key={`mn${mnIndex}`} href={mn.url}>
+                     <a className={`${router.pathname == mn.url ? 'active text-blue-600': ''}`}>{mn.label}</a>
+                  </Link>
                   ))}
                   <div onClick={() => setDropdownOpened(prev => !prev)} className="font-semibold flex gap-2 items-center " href={'#'} >
                      <span className="cursor-pointer">{'Products'}</span>
@@ -199,12 +206,12 @@ const Navbar = ({ renderMenu }) => {
                      <ol className="flex flex-col gap-3">
                         <li>
                            <Link href="/omegatb">
-                              <a className="px-3 cursor-pointer hover:text-blue-600">OmegaTB</a>
+                              <a className={`px-3 cursor-pointer hover:text-blue-600 ${router.pathname == '/omegatb' ? 'active text-blue-600': ' '}`}>OmegaTB</a>
                            </Link>
                         </li>
                         <li>
                            <Link href="/universal">
-                              <a className="px-3 cursor-pointer hover:text-blue-600">Universal</a>
+                              <a className={`px-3 cursor-pointer hover:text-blue-600 ${router.pathname == '/universal' ? 'active text-blue-600': ' '}`}>Universal</a>
                            </Link>
                         </li>
                      </ol>
