@@ -49,7 +49,7 @@ const HeroSection = ({ title, date, description, citation, image, url }) => {
                </div>
                <div className="flex-1 bg-white">
 
-                  <ShareButton title={globalThis.document.title} url={globalThis.location?.href} />
+                  <ShareButton title={globalThis.document?.title} url={globalThis.location?.href} />
                   <h3 className="mb-4 md:mb-12 text-3xl font-bold md:w-4/5">
                      {title}
                   </h3>
