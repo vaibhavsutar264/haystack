@@ -77,6 +77,7 @@ const StyledNavbar = styled.nav`
 
 const Navbar = ({ renderMenu }) => {
    const [navActive, setNavActive] = useState(false);
+   const [ dropdownOpened, setDropdownOpened ] = useState(false)
    const [activeIdx, setActiveIdx] = useState(0);
    const [inView, setInView] = useState(false);
    const toggleMenu = () => {
@@ -183,10 +184,31 @@ const Navbar = ({ renderMenu }) => {
                   ) : null}
                   </div>
                </div>
-               <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end">
+               <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end relative">
                   {menus.navbar.map((mn, mnIndex) => (
                   <Link key={`mn${mnIndex}`} className="font-semibold" href={mn.url}>{mn.label}</Link>
                   ))}
+                  <div onClick={() => setDropdownOpened(prev => !prev)} className="font-semibold flex gap-2 items-center " href={'#'} >
+                     <span className="cursor-pointer">{'Products'}</span>
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                     </svg>
+
+                  </div>
+                  <div className={`absolute top-8 bg-white py-3 rounded-lg shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
+                     <ol className="flex flex-col gap-3">
+                        <li>
+                           <Link href="/omegatb">
+                              <a className="px-3 cursor-pointer hover:text-blue-600">OmegaTB</a>
+                           </Link>
+                        </li>
+                        <li>
+                           <Link href="/universal">
+                              <a className="px-3 cursor-pointer hover:text-blue-600">Universal</a>
+                           </Link>
+                        </li>
+                     </ol>
+                  </div>
                </div>
             </div>
             <div className="mt-3 mr-3 md:hidden">
