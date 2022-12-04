@@ -49,6 +49,23 @@ export const getActivePosts = () => {
    })
    return posts
 }
+export const getRelatedPosts = (categorySlug) => {
+   console.log({ categorySlug })
+   let posts = []
+   const files = getPostFiles()
+   files?.map(catItem => {
+      const cpost = getPostFile(catItem.slug)
+      if (cpost && cpost.status.includes('active')) {
+         if (cpost.category == categorySlug) {
+            posts.push({
+               ...catItem,
+               ...cpost
+            })
+         }
+      }
+   })
+   return posts
+}
 
 export const getPostFile = (fileName) => {
    try {

@@ -1,7 +1,7 @@
 // @ts-nocheck
 import AppTemplate from "../../components/templates/AppTemplate";
 import { getSettings } from "../../utils/settings";
-import { getActivePosts, getPostFile } from "../../utils/posts";
+import { getActivePosts, getPostFile, getRelatedPosts } from "../../utils/posts";
 import styled from "@emotion/styled";
 import Section from '../../components/atoms/Section'
 import Link from "next/link";
@@ -9,14 +9,25 @@ import SectionPosts from "../../components/organisms/SectionPosts";
 import SectionBlogPosts from "../../components/organisms/SectionBlogPosts";
 import WebinarItem from "../../components/molecules/WebinarItem";
 import settings from '../../json/settings.json'
+// import settings from '../../json/settings.json'
 import webinars from '../../json/webinars.json'
 import BlogPostHeroSection from "../../components/sections/BlogPostHeroSection";
+import { useEffect, useState } from "react";
+import axios from 'axios'
 
 const StyledHome = styled(AppTemplate)`
 
 `
 
+
 export default function Post({ Component, pageProps, post = {}, }) {
+
+   const [ posts, setPosts ] = useState(null)
+   useEffect(() => {
+      axios.get(`/api/related-posts?category=${post.category}`).then(({ data }) => {
+         setPosts(data.data)
+      })
+   }, [ post ])
 
    return (
       <StyledHome settings={settings}>
@@ -33,23 +44,25 @@ export default function Post({ Component, pageProps, post = {}, }) {
                <div dangerouslySetInnerHTML={{ __html: post.description  }}></div>
             </Section.Container>
          </Section>
-         {/* {JSON.stringify({ post })} */}
+         {posts ? (
          <SectionPosts
             title={`Recent Articles`}
-
+            posts={posts}
          />
+         ): null}
       </StyledHome>
    )
 }
 
 export async function getStaticProps(context) {
-   console.info(context)
+   // console.info(context)
    const slug = context.params['post-slug']
    const post = getPostFile(slug)
-
+   // const relatedPosts = getRelatedPosts(post.category)
    return {
      props: {
       post: JSON.parse(JSON.stringify(post)),
+      // relatedPosts: JSON.parse(JSON.stringify(relatedPosts))
      }, // will be passed to the page component as props
    }
 }
