@@ -11,6 +11,7 @@ export default function SepsisChart(props) {
                xmlns="http://www.w3.org/2000/svg"
                xmlnsXlink="http://www.w3.org/1999/xlink"
                xmlSpace="preserve"
+               className="SepsisChart"
                style={{
                   fillRule: "evenodd",
                   clipRule: "evenodd",
@@ -79,7 +80,7 @@ export default function SepsisChart(props) {
                               />
                            </g>
                         </g>
-                        <g transform="matrix(0.656385,0.754426,0.754426,-0.656385,300.716,1554.88)">
+                        <g id="red" transform="matrix(0.656385,0.754426,0.754426,-0.656385,300.716,1554.88)">
                            <path
                               d="M48.065,-60.854L230.347,-60.854C230.224,-10.254 208.886,40.035 167.313,76.205C90.988,142.612 -23.027,134.887 -89.289,58.846L48.065,-60.854Z"
                               style={{ fill: "rgb(234,31,45)" }}

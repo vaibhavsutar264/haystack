@@ -48,6 +48,7 @@ export default function Post({ Component, pageProps, post = {}, }) {
          <SectionPosts
             title={`Recent Articles`}
             posts={posts}
+            enableCarousel={posts.length > 3}
          />
          ): null}
       </StyledHome>

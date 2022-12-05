@@ -171,7 +171,7 @@ body, #__next {
 .table--striped table tbody tr:nth-child(even) td {
    background: #D6D7DB60;
 }
-.nav-menu-main a{
+.nav-menu-main a:not(.font-regular){
    font-weight: 600;
 }
 .bg-light{
@@ -294,4 +294,8 @@ body, #__next {
 .table-icons .text-red-600 svg path{
    stroke: #FB0102;
     stroke-width: 2px;
+}
+
+.SepsisChart #red:hover {
+   transform: matrix(0.656385,0.754426,0.754426,-0.656385,287,1565.500) scale(0.90);
 }

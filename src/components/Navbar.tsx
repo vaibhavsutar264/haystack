@@ -197,21 +197,21 @@ const Navbar = ({ renderMenu }) => {
                   ))}
                   <div onClick={() => setDropdownOpened(prev => !prev)} className="font-semibold flex gap-2 items-center " href={'#'} >
                      <span className="cursor-pointer">{'Products'}</span>
-                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                      </svg>
 
                   </div>
-                  <div className={`absolute top-8 bg-white py-3 rounded-lg shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
+                  <div className={`absolute top-8 bg-white/70 py-4 md:py-6 px-3  shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
                      <ol className="flex flex-col gap-3">
                         <li>
                            <Link href="/omegatb">
-                              <a className={`px-3 cursor-pointer hover:text-blue-600 ${router.pathname == '/omegatb' ? 'active text-blue-600': ' '}`}>OmegaTB</a>
+                              <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == '/omegatb' ? 'active text-blue-600': ' '}`}>- OmegaTB</a>
                            </Link>
                         </li>
                         <li>
                            <Link href="/universal">
-                              <a className={`px-3 cursor-pointer hover:text-blue-600 ${router.pathname == '/universal' ? 'active text-blue-600': ' '}`}>Universal</a>
+                              <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == '/universal' ? 'active text-blue-600': ' '}`}>- Universal</a>
                            </Link>
                         </li>
                      </ol>
