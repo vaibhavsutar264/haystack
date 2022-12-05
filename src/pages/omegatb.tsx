@@ -58,9 +58,7 @@ const HeroSection = () => {
                   as well as the differentiation between mixed infection, relapse
                   and reinfection</p>
                   <div className="mt-8">
-                     <Link href={'#'} >
-                        <a className="btn-outline-info bg-transparent">VIEW BROCHURE</a>
-                     </Link>
+                     <a href="https://drive.google.com/file/d/1PwrID_9uXI_qAy-NQnPpTtxBO_ANwtEW/view" target="_blank" className="btn-outline-info bg-transparent">VIEW BROCHURE</a>
                   </div>
                </div>
             </div>
@@ -224,6 +222,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
             title={`Testimonials`}
             items={testimonials.data}
             category={'omega'}
+            bg="bg-gray-100"
          />
          <SectionPosts
             title={`Research Papers`}

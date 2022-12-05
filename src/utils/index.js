@@ -23,10 +23,11 @@ export const filteredNews = (items, field = 'date') => {
 }
 
 export const dateFormat = (date) => {
+   
    if (!date) {
       return date
    }
-   return new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium',  timeZone: 'Asia/Kolkata' }).format(new Date(date))
+   return new Intl.DateTimeFormat('en-GB', { dateStyle: 'long',  timeZone: 'Asia/Kolkata' }).format(new Date(date))
 }
 
 export const loadImage = ({ src, width, quality }) => {

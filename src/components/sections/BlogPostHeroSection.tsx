@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import Link from "next/link";
 import Image from "next/image";
 import ShareButton from "../molecules/ShareButton";
+import { dateFormat } from "../../utils/index"
 // import settings
 
 const StyledHeroSection = styled(Section)`
@@ -33,7 +34,7 @@ const BlogPostHeroSection = ({ title, date, thumbnailUrl,author_name,author_bio 
                <div className="flex-1 bg-white">
                   <div className="h-full flex flex-col justify-between">
                      <div className="flex justify-between mb-4">
-                        <span className="text-base font-bold">{date}</span>
+                        <span className="text-base font-bold">{dateFormat(date)}</span>
                         {/* <span className="text-green-600 font-medium">SHARE</span> */}
                         <ShareButton
                            title={globalThis.document?.title}

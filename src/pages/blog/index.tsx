@@ -8,7 +8,7 @@ import Link from "next/link";
 import SectionPosts from "../../components/organisms/SectionPosts";
 import SectionBlogPosts from "../../components/organisms/SectionBlogPosts";
 import WebinarItem from "../../components/molecules/WebinarItem";
-import { sortBy } from "lodash";
+import { orderBy } from "lodash";
 import { dateFormat } from "../../utils/index";
 
 
@@ -89,7 +89,7 @@ export default function Diagnostician({ Component, pageProps, posts, settings })
          <SectionBlogPosts
             title={'Recent Articles'}
             enableCarousel={true}
-            posts={sortBy(otherPosts, 'date', 'desc')}
+            posts={orderBy(otherPosts, 'date', 'desc')}
          />
          <SectionPosts
             enableCarousel={webinars.data?.length > 3}
@@ -108,7 +108,7 @@ export default function Diagnostician({ Component, pageProps, posts, settings })
             )}
             ItemComponent={WebinarItem}
             title={'Webinars'}
-            posts={sortBy(webinars.data, 'date', 'desc')}
+            posts={orderBy(webinars.data, 'date', 'desc')}
          />
       </StyledHome>
    )

@@ -194,7 +194,7 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                   <button type="button" onClick={() => setActiveTab2('4')} className={`text-white font-bold px-4 py-3 border-2 border-white ${activeTab2 == '4' ? 'active bg-white text-blue-900': ''}`}>{`I have a sequencer`}</button>
                   <button type="button" onClick={() => setActiveTab2('5')} className={`text-white font-bold px-4 py-3 border-2 border-white ${activeTab2 == '5' ? 'active bg-white text-blue-900': ''}`}>{`I don't have a sequencer`}</button>
                </div>
-               <div className="md:px-11 md:max-w-4xl mx-auto">
+               <div className="md:px-16 md:max-w-xl mx-auto text-left">
                   {activeTab2 == '4' && (
                   <div>
                      {`If you own a sequencer, HaystackAnalytics's bioinformatics platform is compatible with illumina, nanopore & BGI platforms.`}<br />

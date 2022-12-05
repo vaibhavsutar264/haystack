@@ -1,6 +1,7 @@
 // @ts-nocheck
 
 import Link from "next/link"
+import { dateFormat } from "../../utils/index"
 
 interface IBlogPostItem {
    title?: string,
@@ -18,7 +19,7 @@ const BlogPostItem = (props: IBlogPostItem) => {
             <img src={props.thumbnailUrl} alt={props.title} className="mb-3 aspect-[16/9] bg-gray-200 object-cover" />
          </picture>
          <figcaption className="item__caption my-6">
-            <p className="font-medium text-sm line-clamp-3">{props.date}</p>
+            <p className="font-medium text-sm line-clamp-3">{dateFormat(props.date)}</p>
             <Link href={props.url}>
                <p className="cursor-pointer font-semibold text-md my-6 line-clamp-3 post-title min-70px">{props.title}</p>
             </Link>
