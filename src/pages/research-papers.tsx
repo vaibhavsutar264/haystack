@@ -11,6 +11,7 @@ import Link from "../../node_modules/next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import SectionPosts from "../components/organisms/SectionPosts";
+import { dateFormat } from "../utils/index";
 
 
 const page = {
@@ -69,7 +70,7 @@ const PostItem = (props) => {
                   </div>
                </div>
                <p className="mb-3 w-10/12">
-                  <a href="#" className="hover:underline underline-offset-2 text-blue-600">
+                  <a href={props.url} className="hover:underline underline-offset-2 text-blue-600" target="_blank">
                   {props.title}
                   </a>
                </p>
@@ -77,7 +78,7 @@ const PostItem = (props) => {
                   {props.reference}
                </p>
                <p className="font-semibold">
-                  {props.date}
+               {dateFormat(props.date)}
                </p>
             </figcaption>
          </figure>
