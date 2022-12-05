@@ -314,12 +314,12 @@ export default function Diseases({ Component, pageProps, news, settings }) {
             ]}
          />
 
-         <TestimonialsSection
+         {/* <TestimonialsSection
             title={`Testimonials`}
             items={testimonials.data}
             category={'universal'}
             bg="bg-white"
-         />
+         /> */}
       </StyledHome>
    )
 }
