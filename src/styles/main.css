@@ -397,3 +397,7 @@ body, #__next {
 {
    min-width: 160px;
 }
+.read-or-hide{
+   color: #2A81B6;
+   cursor: pointer;
+ }
