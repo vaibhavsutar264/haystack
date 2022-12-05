@@ -9,6 +9,7 @@ import SectionPosts from "../../components/organisms/SectionPosts";
 import SectionBlogPosts from "../../components/organisms/SectionBlogPosts";
 import WebinarItem from "../../components/molecules/WebinarItem";
 import { sortBy } from "lodash";
+import { dateFormat } from "../../utils/index";
 
 
 import webinars from '../../json/webinars.json'
@@ -48,8 +49,10 @@ const HeroSection = ({ title, date, description, citation, image, url }) => {
                   </picture>
                </div>
                <div className="flex-1 bg-white">
-
-                  <ShareButton title={globalThis.document?.title} url={globalThis.location?.href} />
+                  <div className="flex justify-between">
+                     <span className="font-bold text-sm">{dateFormat(date)}</span>
+                     <ShareButton title={globalThis.document?.title} url={globalThis.location?.href} />
+                  </div>
                   <h3 className="mb-4 md:mb-12 text-3xl font-bold md:w-4/5">
                      {title}
                   </h3>
