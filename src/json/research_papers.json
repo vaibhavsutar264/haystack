@@ -6,6 +6,7 @@
          "image_url": "/assets/research/research-1.jpg",
          "url": "https://pubmed.ncbi.nlm.nih.gov/32339719/",
          "category": "clinician",
+         "date":"2020-04-24",
          "authors": [
             { "name": "Saikoi Y Bah" },
             { "name": "Collins Misita Moranga" }
@@ -16,6 +17,7 @@
          "reference": "Zacharioudakis IM, Zervou FN, Shehadeh F, Mylonakis E",
          "image_url": "/assets/research/research-2.jpg",
          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0217508",
+         "date":"2019-05-24",
          "authors": [
             { "name": "Saikoi Y Bah" },
             { "name": "Collins Misita Moranga" }
@@ -26,6 +28,7 @@
          "reference": "Timbrook TT, Morton JB, McConeghy KW, Caffrey AR, Mylonakis E, LaPlante KL",
          "image_url": "/assets/research/research-3.jpg",
          "url": "https://pubmed.ncbi.nlm.nih.gov/27678085/",
+         "date":"2017-01-01",
          "authors": [
             { "name": "Saikoi Y Bah" },
             { "name": "Collins Misita Moranga" }
@@ -36,6 +39,7 @@
          "reference": "Katale BZ, Mbelele PM, Lema NA, Campino S, Mshana SE, Rweyemamu MM, Phelan JE, Keyyu JD, Majigo M, Mbugi EV, Dockrell HM, Clark TG, Matee MI, Mpagama S",
          "image_url": "/assets/research/research-4.jpg",
          "url": "https://doi.org/10.1186/s12864-020-6577-1",
+         "date":"2020-02-21",
          "authors": [
             { "name": "Saikoi Y Bah" },
             { "name": "Collins Misita Moranga" }
@@ -46,6 +50,7 @@
          "reference": "Advani J, Verma R, Chatterjee O, et al",
          "image_url": "/assets/research/research-5.jpg",
          "url": "https://www.frontiersin.org/articles/10.3389/fmicb.2019.00309/full",
+         "date":"2019-02-26",
          "authors": [
             { "name": "Saikoi Y Bah" },
             { "name": "Collins Misita Moranga" }
@@ -57,6 +62,7 @@
          "image_url": "/assets/research/research-6.jpg",
          "url": "https://journals.asm.org/doi/10.1128/mSphere.00884-20",
          "category": "diagnostic",
+         "date":"2020-12-23",
          "authors": [
             { "name": "Saikoi Y Bah" },
             { "name": "Collins Misita Moranga" }
@@ -68,6 +74,7 @@
          "image_url": "/assets/research/research-7.jpg",
          "url": "https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-021-05667-x",
          "category": "diagnostic",
+         "date":"2021-10-18",
          "authors": [
             { "name": "Saikoi Y Bah" },
             { "name": "Collins Misita Moranga" }
@@ -79,6 +86,7 @@
          "image_url": "/assets/research/research-8.jpg",
          "url": "https://doi.org/10.1016/j.jmoldx.2019.12.006",
          "category": "diagnostic",
+         "date":"2020-03-01",
          "authors": [
             { "name": "Saikoi Y Bah" },
             { "name": "Collins Misita Moranga" }

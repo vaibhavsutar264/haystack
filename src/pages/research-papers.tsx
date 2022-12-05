@@ -11,6 +11,7 @@ import Link from "../../node_modules/next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import SectionPosts from "../components/organisms/SectionPosts";
+import { dateFormat } from "../utils/index";
 
 
 const page = {
@@ -77,7 +78,7 @@ const PostItem = (props) => {
                   {props.reference}
                </p>
                <p className="font-semibold">
-                  {props.date}
+               {dateFormat(props.date)}
                </p>
             </figcaption>
          </figure>
