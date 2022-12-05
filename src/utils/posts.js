@@ -49,14 +49,14 @@ export const getActivePosts = () => {
    })
    return posts
 }
-export const getRelatedPosts = (categorySlug) => {
+export const getRelatedPosts = (categorySlug, { exclude }) => {
    console.log({ categorySlug })
    let posts = []
    const files = getPostFiles()
    files?.map(catItem => {
       const cpost = getPostFile(catItem.slug)
       if (cpost && cpost.status.includes('active')) {
-         if (cpost.category == categorySlug) {
+         if (cpost.category == categorySlug && exclude != cpost.slug) {
             posts.push({
                ...catItem,
                ...cpost

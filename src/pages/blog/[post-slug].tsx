@@ -24,7 +24,7 @@ export default function Post({ Component, pageProps, post = {}, }) {
 
    const [ posts, setPosts ] = useState(null)
    useEffect(() => {
-      axios.get(`/api/related-posts?category=${post.category}`).then(({ data }) => {
+      axios.get(`/api/related-posts?category=${post.category}&exclude=${post.slug}`).then(({ data }) => {
          setPosts(data.data)
       })
    }, [ post ])
