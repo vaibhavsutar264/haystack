@@ -390,6 +390,10 @@ body, #__next {
    height: 32px;
 }
 
-.has-dropdown:hover ~ .dropdown-menu {
+.has-dropdown:hover > .dropdown-menu {
    display: block !important;
+}
+.dropdown-menu
+{
+   min-width: 160px;
 }

@@ -1,47 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 // @ts-nocheck
-import testimonials from "../json/testimonials.json";
 import research_papers from "../json/research_papers.json";
 import AppTemplate from "../components/templates/AppTemplate";
-import { getSettings } from "../utils/settings";
-import { getActiveNews } from "../utils/news";
+
 import styled from "@emotion/styled";
 import Section from '../components/atoms/Section'
-import Link from "../../node_modules/next/link";
-import SectionGridItems from "../components/organisms/SectionGridItems";
-import TestimonialsSection from "../components/sections/TestimonialsSection";
-import SectionPosts from "../components/organisms/SectionPosts";
+
 import ShareButton from "../components/molecules/ShareButton";
 import { dateFormat } from "../utils/index";
-
-
-const page = {
-   omegaComparisionTable: {
-      data: [
-         {
-            drugAnalytic: 'ΩTB ®',
-         }
-      ]
-   }
-}
+import { orderBy } from "lodash";
 
 const StyledHome = styled(AppTemplate)`
 
 `
-
-const StyledHeroSection = styled(Section)`
-   background-repeat: no-repeat;
-   background-position: right center;
-   background-image: url("/assets/omega-tb-banner.png");
-   background-size: cover;
-   .section__container {
-      min-height: calc(100vh - var(--safe-top-padding, 100px));
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-   }
-`
-
 
 const PostItem = (props) => {
    return (
@@ -80,8 +51,7 @@ const PostItem = (props) => {
 }
 
 
-export default function ResearchPapers({ Component, pageProps, news, settings }) {
-
+export default function ResearchPapers({ settings }) {
    return (
       <StyledHome settings={settings}>
          <Section className="">
@@ -90,7 +60,7 @@ export default function ResearchPapers({ Component, pageProps, news, settings })
                   RESEARCH PAPERS
                </h3>
                <ol className="flex flex-col gap-8 mb-6">
-                  {research_papers.data?.map((rp, rpIndex) => (
+                  {orderBy(research_papers.data, 'date', 'desc')?.map((rp, rpIndex) => (
                   <li key={`lis_${rpIndex}`}>
                      <PostItem {...rp} />
                   </li>
@@ -110,19 +80,6 @@ export default function ResearchPapers({ Component, pageProps, news, settings })
 
       </StyledHome>
    )
-}
-
-export async function getStaticProps(context) {
-   let news = getActiveNews()
-   console.log({ news })
-   const settings = getSettings()
-
-   return {
-      props: {
-         news: JSON.parse(JSON.stringify(news)),
-         settings: JSON.parse(JSON.stringify(settings)),
-      }, // will be passed to the page component as props
-   }
 }
 
 

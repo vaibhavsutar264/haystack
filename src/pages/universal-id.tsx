@@ -29,7 +29,7 @@ const StyledHome = styled(AppTemplate)`
 
 const StyledHeroSection = styled(Section)`
    background-repeat: no-repeat;
-   background-position: right center;
+   background-position: center;
    background-image: url("/assets/product-disease-banner.png");
    background-size: cover;
    .section__container {

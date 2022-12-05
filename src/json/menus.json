@@ -14,7 +14,7 @@
       }
    ],
    "navbar": [
-      { "label": "Science Corner", "url": "/blog" },
+      
       { "label": "About Us", "url": "/about" }
 
    ],
@@ -26,6 +26,17 @@
       {
          "label": "Omega TB",
          "url": "/omegatb"
+      }
+   ]
+   ,
+   "sciencecornerHeader": [
+      {
+         "label": "Blog",
+         "url": "/blog"
+      },
+      {
+         "label": "Research Papers",
+         "url": "/research-papers"
       }
    ]
 }
