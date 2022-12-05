@@ -11,6 +11,7 @@ import Link from "../../node_modules/next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import SectionPosts from "../components/organisms/SectionPosts";
+import ShareButton from "../components/molecules/ShareButton";
 import { dateFormat } from "../utils/index";
 
 
@@ -41,17 +42,6 @@ const StyledHeroSection = styled(Section)`
    }
 `
 
-const ShareButton = () => {
-   return (
-      <div className="flex items-center gap-2 text-sm hover:text-blue-600 cursor-pointer share-button">
-         <span>SHARE</span>
-         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16">
-            <path d="M5.921 11.9 1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z"/>
-         </svg>
-         <span></span>
-      </div>
-   )
-}
 
 const PostItem = (props) => {
    return (
@@ -66,7 +56,10 @@ const PostItem = (props) => {
                {/* {JSON.stringify({ props })} */}
                <div className="flex justify-end mb-4 md:-mt-6">
                   <div>
-                     <ShareButton />
+                     <ShareButton
+                        title={props?.title}
+                        url={props.url}
+                     />
                   </div>
                </div>
                <p className="mb-3 w-10/12">
