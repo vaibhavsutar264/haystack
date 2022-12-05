@@ -204,16 +204,13 @@ const Navbar = ({ renderMenu }) => {
                   </div>
                   <div className={`dropdown-menu absolute top-8 bg-white/70 py-4 md:py-6 px-3  shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
                      <ol className="flex flex-col gap-3">
+                        {menus.productsHeader.map((mn, mnIndex) => (
                         <li>
-                           <Link href="/omegatb">
-                              <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == '/omegatb' ? 'active text-blue-600': ' '}`}>- OmegaTB</a>
-                           </Link>
+                        <Link key={`mn${mnIndex}`} href={mn.url}>
+                        <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == mn.url ? 'active text-blue-600': ''}`}>- {mn.label}</a>
+                        </Link>
                         </li>
-                        <li>
-                           <Link href="/universal">
-                              <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == '/universal' ? 'active text-blue-600': ' '}`}>- Universal</a>
-                           </Link>
-                        </li>
+                        ))}
                      </ol>
                   </div>
                </div>
