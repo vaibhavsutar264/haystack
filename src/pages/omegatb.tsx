@@ -12,6 +12,8 @@ import SectionGridItems from "../components/organisms/SectionGridItems";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import SectionPosts from "../components/organisms/SectionPosts";
 import ResearchItem from "../components/molecules/ResearchItem";
+import TBWorldMap from "../components/TBWorldMap";
+import TBPieChart from "../components/TBPieChart";
 
 
 const page = {
@@ -52,7 +54,7 @@ const HeroSection = () => {
                      Universal Drug<br />
                      Resistance Test for TB
                   </h3>
-                  <p className="text-muted w-11/12">A single test for simultaneous evaluation of all resistance markers, 
+                  <p className="text-muted w-11/12">A single test for simultaneous evaluation of all resistance markers,
                   as well as the differentiation between mixed infection, relapse
                   and reinfection</p>
                   <div className="mt-8">
@@ -81,12 +83,12 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                   <div className="md:w-4/12">
                      <h3 className="text-md font-bold">India accounts for <big className="text-blue-600">27Lakh</big> TB cases<br />out of <big className="text-blue-600">1Cr</big> cases across the world.</h3>
                      <div className="mb-12 flex"></div>
-                     <img src="/assets/tb-pie-chart.png" alt="tb-pie-chart" />
-                     {/* <TBPieChart /> */}
+                     {/* <img src="/assets/tb-pie-chart.png" alt="tb-pie-chart" /> */}
+                     <TBPieChart />
                   </div>
                   <div className="flex-1">
-                     <img src="/assets/tb-world-map.png" alt="tb-world-map" className="map-image"/>
-                     {/* <TBWorldMap /> */}
+                     {/* <img src="/assets/tb-world-map.png" alt="tb-world-map" className="map-image"/> */}
+                     <TBWorldMap />
                   </div>
                </div>
             </Section.Container>
@@ -99,7 +101,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                </h3>
                <div className="flex justify-between">
                   <div className="md:w-6/12">
-                     <div className="table-wrapper w-full overflow-auto flex flex-col justify-between h-full">
+                     <div className="table-wrapper w-full overflow-auto flex flex-col justify-between h-full table--hover-sm">
                         <table className="w-full border-spacing-table table--striped">
                            <thead>
                               <tr className="text-blue-600 font-extrabold">
