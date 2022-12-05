@@ -7,9 +7,9 @@ import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import Section from '../components/atoms/Section'
+import TestimonialsSection from "../components/sections/TestimonialsSection";
 import Link from "../../node_modules/next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
-import TestimonialsSection from "../components/sections/TestimonialsSection";
 import SectionPosts from "../components/organisms/SectionPosts";
 
 
@@ -312,6 +312,13 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                { title: 'Accurate from start to finish', thumbnailUrl: '/assets/disease-accurate-finish.png', description: `1200+ pathogens including bacteria, fungi, protozoa.` },
                { title: 'Enabling antibiotic stewardship', thumbnailUrl: '/assets/disease-benefit-icon3.png', description: `Treat infections, protect patients from harm caused by unnecessary antibiotic use, and combat antibiotic resistance.` },
             ]}
+         />
+
+         <TestimonialsSection
+            title={`Testimonials`}
+            items={testimonials.data}
+            category={'universal'}
+            bg="bg-white"
          />
       </StyledHome>
    )

@@ -10,7 +10,8 @@ import { Navigation } from "swiper";
 interface ITestimonialsSection {
    title: string,
    items: any[],
-   category: string
+   category: string,
+   bg:string
 }
 
 export default function TestimonialsSection(props: ITestimonialsSection) {
@@ -20,12 +21,12 @@ export default function TestimonialsSection(props: ITestimonialsSection) {
    }
    );
    return (
-      <Section className="bg-gray-100 py-0">
+      <Section className={`${props.bg} py-0`}>
          <Section.Container className="container mx-auto py-16">
             <h3 className="section-heading flex">
                {props.title}
             </h3>
-            <div className="flex mt-8">
+            <div className="flex mt-8 relative">
                   <Swiper
                      className="testimonials-carousel"
                      spaceBetween={50}
@@ -63,6 +64,8 @@ export default function TestimonialsSection(props: ITestimonialsSection) {
                         </SwiperSlide>
                      ))}
                   </Swiper>
+                  <div className="swiper-button--outer swiper-button-prev" onClick={() => partnersCarousel.current?.slidePrev()}></div>
+                  <div className="swiper-button--outer swiper-button-next" onClick={() => partnersCarousel.current?.slideNext()}></div>
                </div>
          </Section.Container>
       </Section>

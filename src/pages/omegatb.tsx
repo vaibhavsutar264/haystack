@@ -222,6 +222,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
             title={`Testimonials`}
             items={testimonials.data}
             category={'omega'}
+            bg="bg-gray-100"
          />
          <SectionPosts
             title={`Research Papers`}
