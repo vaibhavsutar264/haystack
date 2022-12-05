@@ -32,9 +32,9 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-   background-repeat: no-repeat;
    background-position: right center;
    background-image: url('/assets/diagnostician-banner.png');
+   background-repeat: no-repeat;
    background-size: 100%;
    .section__container {
       min-height: calc(100vh - var(--safe-top-padding, 100px));
