@@ -195,14 +195,14 @@ const Navbar = ({ renderMenu }) => {
                      <a className={`${router.pathname == mn.url ? 'active text-blue-600': ''}`}>{mn.label}</a>
                   </Link>
                   ))}
-                  <div onClick={() => setDropdownOpened(prev => !prev)} className="font-semibold flex gap-2 items-center " href={'#'} >
+                  <div onClick={() => setDropdownOpened(prev => !prev)} className="font-semibold flex gap-2 items-center has-dropdown" href={'#'} >
                      <span className="cursor-pointer">{'Products'}</span>
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                      </svg>
 
                   </div>
-                  <div className={`absolute top-8 bg-white/70 py-4 md:py-6 px-3  shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
+                  <div className={`dropdown-menu absolute top-8 bg-white/70 py-4 md:py-6 px-3  shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
                      <ol className="flex flex-col gap-3">
                         <li>
                            <Link href="/omegatb">

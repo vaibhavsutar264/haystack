@@ -157,20 +157,17 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                <div className="md:px-11 md:max-w-4xl mx-auto">
                   {activeTab == '1' && (
                   <div>
-                     Content 1
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea odit ex aut et pariatur in molestiae iste, fugiat voluptatibus id corporis laudantium reiciendis velit repellendus ut cupiditate nemo rem laborum.
+                     {`HaystackAnalytic's software is designed as a desktop application which provides access to several clinical pipelines having the capability of going from raw sequenced data to final clinical report through a single click interface.`}
                   </div>
                   )}
                   {activeTab == '2' && (
                   <div>
-                     Content 2
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea odit ex aut et pariatur in molestiae iste, fugiat voluptatibus id corporis laudantium reiciendis velit repellendus ut cupiditate nemo rem laborum.
+                     {`HaystackAnalytic's bioinformatics plugs into the current lab technology layer & allows the current team to get started on clinical genomics reporting with minimal training. The current lab team becomes proficient in clinical genomics reporting.`}
                   </div>
                   )}
                   {activeTab == '3' && (
                   <div>
-                     Content 3
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea odit ex aut et pariatur in molestiae iste, fugiat voluptatibus id corporis laudantium reiciendis velit repellendus ut cupiditate nemo rem laborum.
+                     {`HaystackAnalytic's bioinformatics platform has pre-validated clinical applications for several conditions across clinical genomics & human genomics spectrum.`}
                   </div>
                   )}
                </div>
@@ -200,14 +197,15 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                <div className="md:px-11 md:max-w-4xl mx-auto">
                   {activeTab2 == '4' && (
                   <div>
-                     Content 4
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea odit ex aut et pariatur in molestiae iste, fugiat voluptatibus id corporis laudantium reiciendis velit repellendus ut cupiditate nemo rem laborum.
+                     {`If you own a sequencer, HaystackAnalytics's bioinformatics platform is compatible with illumina, nanopore & BGI platforms.`}<br />
+                     Connect with us to get access to several pre-validated clinical genomics applications.
                   </div>
                   )}
                   {activeTab2 == '5' && (
                   <div>
-                     Content 5
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea odit ex aut et pariatur in molestiae iste, fugiat voluptatibus id corporis laudantium reiciendis velit repellendus ut cupiditate nemo rem laborum.
+                     At HaystackAnalytics we have clinical apps for infectious diagnostics, built on nanopore platform which can be easily integrated into your lab with less than $10k of Capex. <br />
+                     Connect with us to get access to our nanopore based<br />
+                     applications & turnkey solutions.
                   </div>
                   )}
                </div>

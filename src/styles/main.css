@@ -389,3 +389,7 @@ body, #__next {
    width: 32px;
    height: 32px;
 }
+
+.has-dropdown:hover ~ .dropdown-menu {
+   display: block !important;
+}
