@@ -1,18 +1,22 @@
 import { useState } from "react";
 import Modal from 'react-modal';
-import { LinkedinShareButton, FacebookShareButton, WhatsappShareButton } from 'react-share';
+import { LinkedinShareButton, FacebookShareButton, WhatsappShareButton, TwitterShareButton, EmailShareButton } from 'react-share';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
    faYoutube,
    faInstagram,
+   // faEnvelope,
    faFacebookF,
    faLinkedin,
    faWhatsapp,
    faTwitter,
    faX
 } from "@fortawesome/free-brands-svg-icons";
+import {
+   faEnvelope
+} from "@fortawesome/free-regular-svg-icons";
 
 interface IShareButton {
    title: string,
@@ -59,11 +63,12 @@ export default function ShareButton(props: IShareButton) {
             contentLabel="Example Modal"
          >
             <div>
+               <p className="text-lg mb-3">{'Share '}</p>
                <p className="mb-3">{props.title}</p>
                <div className="bg-gray-800 text-white px-3 py-3">
                   <code>{props.url}</code>
                </div>
-               <div className="grid grid-cols-6 gap-4 mt-4 justify-center">
+               <div className="grid grid-cols-6 gap-4 mt-4 justify-center text-center text-xl">
                   <div className="grid__col">
                      <FacebookShareButton {...props}>
                         <FontAwesomeIcon
@@ -90,6 +95,25 @@ export default function ShareButton(props: IShareButton) {
                            icon={faWhatsapp}
                         />
                      </WhatsappShareButton>
+                  </div>
+                  <div className="grid__col">
+                     <EmailShareButton {...props}>
+                        {/* <FontAwesomeIcon icon="fa-solid fa-envelope" /> */}
+                        <FontAwesomeIcon
+                           id="icons"
+                           className="text-dark"
+                           icon={faEnvelope}
+                        />
+                     </EmailShareButton>
+                  </div>
+                  <div className="grid__col">
+                     <TwitterShareButton {...props}>
+                        <FontAwesomeIcon
+                           id="icons"
+                           className="text-dark"
+                           icon={faTwitter}
+                        />
+                     </TwitterShareButton>
                   </div>
                </div>
             </div>
