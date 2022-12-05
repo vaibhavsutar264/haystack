@@ -52,12 +52,8 @@ const HeroSection = () => {
                   </h3>
                   <p className="text-muted">A life saving product.</p>
                   <div className="mt-8 flex items-center gap-4">
-                     <Link href={'#'} >
-                        <a className="btn-outline-info bg-transparent">VIEW PATHOGEN LIST</a>
-                     </Link>
-                     <Link href={'#'} >
-                        <a className="btn-outline-info bg-transparent">VIEW BROCHURE</a>
-                     </Link>
+                        {/* <a href="" target="_blank" className="btn-outline-info bg-transparent">VIEW PATHOGEN LIST</a> */}
+                        <a href="https://drive.google.com/file/d/1GtlozhC8hEii-Ygrbj0v-V2alPe30tVW/view" target="_blank" className="btn-outline-info bg-transparent">VIEW BROCHURE</a>
                   </div>
                </div>
             </div>
