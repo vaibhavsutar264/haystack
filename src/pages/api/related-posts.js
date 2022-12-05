@@ -3,7 +3,8 @@ import { getRelatedPosts } from '../../utils/posts'
 
 export default function handler(req, res) {
    const categorySlug = req.query.category
-   const data = getRelatedPosts(categorySlug)
+   const exclude = req.query.exclude
+   const data = getRelatedPosts(categorySlug, { exclude })
 
    res.status(200).json({
       ok: true,
