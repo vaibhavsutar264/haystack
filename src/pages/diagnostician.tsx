@@ -14,7 +14,7 @@ import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import heroBg from '../assets/haystack-body-bg.png'
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Section from '../components/atoms/Section'
 import Link from "../../node_modules/next/link";
 import PostItem from "../components/molecules/PostItem";
@@ -78,6 +78,9 @@ const HeroSection = () => {
 
 export default function Diagnostician({ Component, pageProps, news, settings }) {
 
+   const [ activeTab, setActiveTab ] = useState()
+   const [ activeTab2, setActiveTab2 ] = useState()
+
    return (
       <StyledHome settings={settings}>
          <HeroSection />
@@ -108,7 +111,7 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                         </div>
                      </div>
                   </div>
-                  <div className="grid__col">
+                  <div className="grid__col md:ml-5">
                      <div className="flex gap-2">
                         <div>
                            <img src="/assets/diagnostician-icon3.png" className="w-10 h-10" />
@@ -141,15 +144,32 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                via a fully automated AI-powered bio informatics platform
                </p>
                <div className="flex items-center justify-center gap-4 my-8">
-                  <div className="border-2 border-white px-4 py-2 text-white font-bold">
+                  <button type="button" onClick={() => setActiveTab('1')}  className={`border-2 border-white px-4 py-2 text-white hover:bg-white hover:text-blue-900 cursor-pointer font-bold ${activeTab == '1' ? 'active bg-white text-blue-900': ''}`}>
                      One click reporting
-                  </div>
-                  <div className="border-2 border-white px-4 py-2 text-white font-bold">
+                  </button>
+                  <button type="button" onClick={() => setActiveTab('2')}  className={`border-2 border-white px-4 py-2 text-white hover:bg-white hover:text-blue-900 cursor-pointer font-bold ${activeTab == '2' ? 'active bg-white text-blue-900': ''}`}>
                      Plug & play lab upgrade
-                  </div>
-                  <div className="border-2 border-white px-4 py-2 text-white font-bold">
+                  </button>
+                  <button type="button" onClick={() => setActiveTab('3')}  className={`border-2 border-white px-4 py-2 text-white hover:bg-white hover:text-blue-900 cursor-pointer font-bold ${activeTab == '3' ? 'active bg-white text-blue-900': ''}`}>
                      Access to several clinical applications
+                  </button>
+               </div>
+               <div className="md:px-11 md:max-w-4xl mx-auto">
+                  {activeTab == '1' && (
+                  <div>
+                     {`HaystackAnalytic's software is designed as a desktop application which provides access to several clinical pipelines having the capability of going from raw sequenced data to final clinical report through a single click interface.`}
                   </div>
+                  )}
+                  {activeTab == '2' && (
+                  <div>
+                     {`HaystackAnalytic's bioinformatics plugs into the current lab technology layer & allows the current team to get started on clinical genomics reporting with minimal training. The current lab team becomes proficient in clinical genomics reporting.`}
+                  </div>
+                  )}
+                  {activeTab == '3' && (
+                  <div>
+                     {`HaystackAnalytic's bioinformatics platform has pre-validated clinical applications for several conditions across clinical genomics & human genomics spectrum.`}
+                  </div>
+                  )}
                </div>
             </Section.Container>
          </Section>
@@ -171,12 +191,23 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                   {'Why Partner With Us'}
                </h3>
                <div className="flex items-center gap-6 my-6 justify-center">
-                  <Link href={'/'}>
-                     <a className="text-white font-bold px-4 py-3 border-2 border-white">{`I have a sequencer`}</a>
-                  </Link>
-                  <Link href={'/'}>
-                     <a className="text-white font-bold px-4 py-3 border-2 border-white">{`I don't have a sequencer`}</a>
-                  </Link>
+                  <button type="button" onClick={() => setActiveTab2('4')} className={`text-white font-bold px-4 py-3 border-2 border-white ${activeTab2 == '4' ? 'active bg-white text-blue-900': ''}`}>{`I have a sequencer`}</button>
+                  <button type="button" onClick={() => setActiveTab2('5')} className={`text-white font-bold px-4 py-3 border-2 border-white ${activeTab2 == '5' ? 'active bg-white text-blue-900': ''}`}>{`I don't have a sequencer`}</button>
+               </div>
+               <div className="md:px-11 md:max-w-4xl mx-auto">
+                  {activeTab2 == '4' && (
+                  <div>
+                     {`If you own a sequencer, HaystackAnalytics's bioinformatics platform is compatible with illumina, nanopore & BGI platforms.`}<br />
+                     Connect with us to get access to several pre-validated clinical genomics applications.
+                  </div>
+                  )}
+                  {activeTab2 == '5' && (
+                  <div>
+                     At HaystackAnalytics we have clinical apps for infectious diagnostics, built on nanopore platform which can be easily integrated into your lab with less than $10k of Capex. <br />
+                     Connect with us to get access to our nanopore based<br />
+                     applications & turnkey solutions.
+                  </div>
+                  )}
                </div>
             </Section.Container>
          </Section>

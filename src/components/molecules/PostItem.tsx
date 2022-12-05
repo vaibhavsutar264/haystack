@@ -23,9 +23,11 @@ const PostItem = (props: IPostItem) => {
             <p className="font-semibold text-sm my-6 line-clamp-3 post-title">{props.title}</p>
             <p className="mb-4 text-sm line-clamp-3">{props.description}</p>
             <p>
+               {props.url && (
                <Link href={props.url}>
                   <a className="hlink--success text-md font-semibold">Read more</a>
                </Link>
+               )}
             </p>
          </figcaption>
       </figure>

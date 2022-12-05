@@ -171,7 +171,7 @@ body, #__next {
 .table--striped table tbody tr:nth-child(even) td {
    background: #D6D7DB60;
 }
-.nav-menu-main a{
+.nav-menu-main a:not(.font-regular){
    font-weight: 600;
 }
 .bg-light{
@@ -244,7 +244,7 @@ body, #__next {
 }
 .bg-blue-accent
 {
-   background:#284578;
+   background:#324766;
 }
 .text-reference
 {
@@ -294,4 +294,102 @@ body, #__next {
 .table-icons .text-red-600 svg path{
    stroke: #FB0102;
     stroke-width: 2px;
+}
+.SepsisChart {
+   overflow: visible;
+}
+.SepsisChart #gray,
+.SepsisChart #blue,
+.SepsisChart #red,
+.SepsisChart #green {
+   transition: all .5s ease;
+}
+.SepsisChart #gray:hover {
+   transform: translate(-11px, -13px);
+}
+.SepsisChart #red:hover {
+   transform: translate(8px, 16px);
+}
+.SepsisChart #blue:hover {
+   transform: translate(10px, 16px);
+}
+.SepsisChart #green:hover {
+   transform: translate(-8px, 14px);
+}
+
+.table--home {
+
+}
+@media screen and (min-width: 800px) {
+   .table--home tr td:first-child {
+      width: 295px;
+   }
+   .table--home tr td:nth-child(2) {
+      width: 195px;
+   }
+   .table--home tr td:nth-child(3) {
+      width: 172px;
+   }
+   .table--home tr td:last-child {
+      width: 314px;
+   }
+}
+
+
+
+
+#countries_chart #path-1,
+#countries_chart #path-2,
+#countries_chart #path-3,
+#countries_chart #path-4,
+#countries_chart #path-5,
+#countries_chart #path-6,
+#countries_chart #path-7,
+#countries_chart #path-8,
+#countries_chart #path-9 {
+   transition: all .5s ease;
+}
+#countries_chart #path-1:hover {
+   transform: translate(10px, 10px);
+}
+#countries_chart #path-2:hover {
+   transform: translate(10px, 10px);
+}
+#countries_chart #path-3:hover {
+   transform: translate(-7px, 5px);
+}
+#countries_chart #path-4:hover {
+   transform: translate(10px, 3px);
+}
+#countries_chart #path-5:hover {
+   transform: translate(-11px, -4px);
+}
+#countries_chart #path-6:hover {
+   transform: translate(-6px, -5px);
+}
+#countries_chart #path-7:hover {
+   transform: translate(-9px, -15px);
+}
+#countries_chart #path-8:hover {
+   transform: translate(-3px, -9px);
+}
+#countries_chart #path-9:hover {
+   transform: translate(-1px, -14px);
+}
+
+.table--hover-sm tr:hover td {
+   font-size: 1rem;
+   padding: 0.5rem;
+}
+.table--hover-sm tr:hover td img,
+.table--hover-sm tr:hover td {
+   transition: all .5s ease;
+}
+.table--hover-sm tr:hover td img {
+   width: 32px;
+   height: 32px;
+}
+
+.has-dropdown:hover ~ .dropdown-menu {
+   display: block !important;
 }
