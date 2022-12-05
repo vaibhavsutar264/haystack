@@ -70,7 +70,7 @@ const PostItem = (props) => {
                   </div>
                </div>
                <p className="mb-3 w-10/12">
-                  <a href="#" className="hover:underline underline-offset-2 text-blue-600">
+                  <a href={props.url} className="hover:underline underline-offset-2 text-blue-600" target="_blank">
                   {props.title}
                   </a>
                </p>
