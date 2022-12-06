@@ -52,6 +52,7 @@ const StyledNavbar = styled.nav`
 
    @media screen and (max-width: 600px)
    {
+      padding: 0.5rem 0 0.5rem 0;
       .nav__menu-list {
          padding: 1.5rem 1rem;
          position: fixed;

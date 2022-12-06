@@ -30,7 +30,7 @@ const StyledHeroSection = styled(Section)`
    background-repeat: no-repeat;
    background-position: right center;
    .section__container {
-      min-height: calc(90vh - var(--safe-top-padding, 100px));
+      min-height: 60vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
