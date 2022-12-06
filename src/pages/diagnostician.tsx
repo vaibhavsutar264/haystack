@@ -85,12 +85,12 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
       <StyledHome settings={settings}>
          <HeroSection />
          <Section className="bg-gray-100">
-            <Section.Container className="container mx-auto py-12">
+            <Section.Container className="container mx-auto py-20">
                <h3 className="font-extrabold text-center text-3xl mb-4">
                Automated Bioinformatics Platform
                </h3>
                <p className="text-center mb-4 text-muted font-bold">Localized Report with Software access</p>
-               <div className="grid grid-cols-3 gap-4 my-16 mb-24 mx-auto md:w-6/12 ">
+               <div className="grid grid-cols-3 gap-4 mt-16 mx-auto md:w-6/12 ">
                   <div className="grid__col">
                      <div className="flex gap-2">
                         <div>
