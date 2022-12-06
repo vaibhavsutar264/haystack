@@ -61,10 +61,10 @@ const HeroSection = () => {
                      Be Ahead Of The Competition <br />
                      With Revolutionary Technology
                   </p>
-                  <div className="mt-16 flex items-center gap-4">
-                     <Link href={'#'} >
+                  <div className="mt-16 flex items-center">
+                     {/* <Link href={'#'} >
                         <a className="btn-primary">BOOK A CALL</a>
-                     </Link>
+                     </Link> */}
                      <Link href={'#'} >
                         <a className="btn-secondary opacity-50">KNOW MORE</a>
                      </Link>
@@ -122,7 +122,7 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                      </div>
                   </div>
                </div>
-               <div className="text-center  mt-6 mb-6 flex items-center justify-center gap-4">
+               {/* <div className="text-center  mt-6 mb-6 flex items-center justify-center gap-4">
                   <div>
                      <h3 className="text-green-600 text-xl font-bold">Book a Detailed Call With Our Expert Today</h3>
                   </div>
@@ -131,7 +131,7 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                         <a className="text-white bg-green-600 px-4 py-3 font-bold">CONNECT WITH US</a>
                      </Link>
                   </div>
-               </div>
+               </div> */}
             </Section.Container>
          </Section>
          <Section className=" bg-blue-800 text-white">
