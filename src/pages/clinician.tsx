@@ -46,7 +46,7 @@ const StyledHeroSection = styled(Section)`
 
 const HeroSection = (props) => {
    return (
-      <StyledHeroSection className="HeroSection " bg={props.bg}>
+      <StyledHeroSection className="HeroSection " bg={props.bg} data-aos="fade-up">
          <Section.Container className="mx-auto ">
             <div className="flex items-center justify-center">
                <div className="w-7/12"></div>

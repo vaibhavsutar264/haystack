@@ -39,7 +39,7 @@ const StyledHeroSection = styled(Section)`
 `
 const HeroSection = ({ title, date, description, citation, image, url }) => {
    return (
-      <StyledHeroSection className="HeroSection ">
+      <StyledHeroSection className="HeroSection " data-aos="fade-up">
          <Section.Container className="mx-auto ">
             <h3 className="mb-8 font-extrabold text-blue-600 text-3xl">Blogs</h3>
             <div className="flex gap-8 items-start">

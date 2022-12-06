@@ -223,18 +223,17 @@ const Navbar = ({ renderMenu }) => {
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                      </svg>
-
-                  </div>
-                  <div className={`dropdown-menu absolute top-8 bg-white/70 py-4 md:py-6 px-3  shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
-                     <ol className="flex flex-col gap-3">
-                        {menus.productsHeader.map((mn, mnIndex) => (
-                        <li>
-                        <Link key={`mn${mnIndex}`} href={mn.url}>
-                        <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == mn.url ? 'active text-blue-600': ''}`}>- {mn.label}</a>
-                        </Link>
-                        </li>
-                        ))}
-                     </ol>
+                     <div className={`dropdown-menu absolute top-5 bg-white/70 py-4 md:py-6 px-3  shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
+                        <ol className="flex flex-col gap-3">
+                           {menus.productsHeader.map((mn, mnIndex) => (
+                           <li key={`mnss_${mnIndex}`}>
+                           <Link key={`mn${mnIndex}`} href={mn.url}>
+                           <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == mn.url ? 'active text-blue-600': ''}`}>- {mn.label}</a>
+                           </Link>
+                           </li>
+                           ))}
+                        </ol>
+                     </div>
                   </div>
                   </div>
                </div>

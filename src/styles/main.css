@@ -390,6 +390,23 @@ body, #__next {
    height: 32px;
 }
 
+.has-dropdown:hover .dropdown-menu {
+   display: block !important;
+}
+.has-dropdown .dropdown-menu {
+   min-width: 200px;
+}
+@media screen and (min-width: 1000px) {
+   .has-dropdown .dropdown-menu {
+      /* min-width: 200px; */
+      transform: translate(-20%, 0);
+   }
+
+}
+
+.nprogress-busy #__next {
+   opacity: 0.5;
+}
 .has-dropdown:hover > .dropdown-menu {
    display: block !important;
 }
