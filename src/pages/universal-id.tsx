@@ -42,7 +42,7 @@ const StyledHeroSection = styled(Section)`
 
 const HeroSection = () => {
    return (
-      <StyledHeroSection className="HeroSection ">
+      <StyledHeroSection className="HeroSection " data-aos="fade-up">
          <Section.Container className="mx-auto ">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8">

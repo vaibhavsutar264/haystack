@@ -22,7 +22,7 @@ const StyledHeroSection = styled(Section)`
 
 const BlogPostHeroSection = ({ title, date, thumbnailUrl,author_name,author_bio }) => {
    return (
-      <StyledHeroSection className="BlogPostHeroSection ">
+      <StyledHeroSection className="BlogPostHeroSection " data-aos="fade-up">
          <Section.Container className="mx-auto ">
             <div className="flex gap-8 items-stretch">
                <div className="md:w-7/12">
