@@ -12,6 +12,7 @@ import settings from '../../json/settings.json'
 // import settings from '../../json/settings.json'
 import webinars from '../../json/webinars.json'
 import BlogPostHeroSection from "../../components/sections/BlogPostHeroSection";
+import { orderBy } from "lodash";
 import { useEffect, useState } from "react";
 import axios from 'axios'
 
@@ -45,9 +46,9 @@ export default function Post({ Component, pageProps, post = {}, }) {
             </Section.Container>
          </Section>
          {posts ? (
-         <SectionPosts
+         <SectionBlogPosts
             title={`Recent Articles`}
-            posts={posts}
+            posts={orderBy(posts, 'date', 'desc')}
             enableCarousel={posts.length > 3}
          />
          ): null}

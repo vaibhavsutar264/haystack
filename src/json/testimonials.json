@@ -3,7 +3,7 @@
       {
          "message": "We must have a comprehensive diagnostic test which will help diagnose the latent as well as other forms of tuberculosis in a stipulated time and cost effective. And i can say that whole genome sequencing fulfils all the criteria!  ",
          "avatar_url": "/assets/testimonials/dr-anil-kumar-singal.png",
-         "category": "clinician",
+         "category": "clinician,diagnostician",
          "author": {
             "name": "Dr. Anil Kumar Singal"
          }
@@ -11,7 +11,7 @@
       {
          "message": "The NGS approach overcomes  many of the significance  challenges associated with  conventional phenotypic testing,  as well as the limitations of other  less comprehensive molecular  tests by providing rapid, detailed  sequence information for  multiple gene regions or whole  genomes of interest.",
          "avatar_url": "/assets/testimonials/dr-nikhil-sarangdhar.png",
-         "category": "clinician",
+         "category": "clinician,diagnostician",
          "author": {
             "name": "Dr. Nikhil Sarangdhar"
          }
@@ -19,31 +19,7 @@
       {
          "message": "From the public health  perspective, what i have seen  is that WGS has helped few  rare cases where our  molecular diagnostics were  not giving enough clue but in  such cases WGS has helped in  the management with the  correct regimen.",
          "avatar_url": "https://via.placeholder.com/150",
-         "category": "clinician",
-         "author": {
-            "name": "Dr. C Sumalata"
-         }
-      },
-      {
-         "message": "We must have a comprehensive diagnostic test which will help diagnose the latent as well as other forms of tuberculosis in a stipulated time and cost effective. And i can say that whole genome sequencing fulfils all the criteria!  ",
-         "avatar_url": "/assets/testimonials/dr-anil-kumar-singal.png",
-         "category": "diagnostician",
-         "author": {
-            "name": "Dr. Anil Kumar Singal"
-         }
-      },
-      {
-         "message": "The NGS approach overcomes  many of the significance  challenges associated with  conventional phenotypic testing,  as well as the limitations of other  less comprehensive molecular  tests by providing rapid, detailed  sequence information for  multiple gene regions or whole  genomes of interest.",
-         "avatar_url": "/assets/testimonials/dr-nikhil-sarangdhar.png",
-         "category": "diagnostician",
-         "author": {
-            "name": "Dr. Nikhil Sarangdhar"
-         }
-      },
-      {
-         "message": "From the public health  perspective, what i have seen  is that WGS has helped few  rare cases where our  molecular diagnostics were  not giving enough clue but in  such cases WGS has helped in  the management with the  correct regimen.",
-         "avatar_url": "https://via.placeholder.com/150",
-         "category": "diagnostician",
+         "category": "clinician,diagnostician",
          "author": {
             "name": "Dr. C Sumalata"
          }
@@ -78,6 +54,61 @@
             "name": "Dr. Rajendra Prasad",
             "designation": "Advisory Board",
             "company": "HaystackAnalytics Pvt Ltd"
+         }
+      }
+      ,
+      {
+         "message": "Whole Genome Sequencing is the Swiss Army Knife for the diagnosis of TB and detecting mutations associated with drug resistance in MT Complex.",
+         "avatar_url": "/assets/testimonials/dr-v-anilkumar.png",
+         "category": "omega",
+         "author": {
+            "name": "Dr. V. Anilkumar",
+            "designation": "Clinical professor & HOD Microbiology",
+            "company": "Amruta Institute of Medical Sciences, Kochi"
+         }
+      }
+      ,
+      {
+         "message": "Suspect earlier, treat earlier with Whole Genome Sequencing. Whole Genome Sequencing is the key to the right treatment not only for new patients but also for patients who are existingly taking treatment.",
+         "avatar_url": "/assets/testimonials/dr-eema-chaudhary.png",
+         "category": "omega",
+         "author": {
+            "name": "Dr. Eema Chaudhary",
+            "designation": "Professor and Head of the Department, TB and Respiratory Diseases",
+            "company": "Subharti Medical College, Meerut"
+         }
+      }
+      ,
+      {
+         "message": "We are heading towards an era of medicine where bioinformatics and NGS technology are going to play a big role in clinical research as well as patient care. Molecular detection and identification of microbial pathogens using next-generation sequencing is an important step forward toward early, rapid and comprehensive diagnostics and would provide a new tool for clinical microbiologists and infectious disease experts.",
+         "avatar_url": "/assets/testimonials/dr-sanjay-bhattacharya.png",
+         "category": "universal,clinician,diagnostician",
+         "author": {
+            "name": "Dr. Sanjay Bhattacharya",
+            "designation": "Consultant in Microbiology",
+            "company": "Tata Medical Center, Kolkata"
+         }
+      }
+      ,
+      {
+         "message": "The earlier we diagnose a disease the better are the chances of a successful treatment. The precision with which right drugs are prescribed further enhances the success of treatment. Using Genome Sequencing as a diagnostic tool has helped us to reach both these goals.",
+         "avatar_url": "/assets/testimonials/dr-ameeta-joshi.png",
+         "category": "universal,clinician,diagnostician",
+         "author": {
+            "name": "Dr. Ameeta Joshi",
+            "designation": "Prof Head Microbiology",
+            "company": "Grant Medical College, JJ Hospital, Mumbai"
+         }
+      }
+      ,
+      {
+         "message": "Microbiology diagnostics has entered an exciting phase, where many genomic methods are now available to routine clinical microbiology labs for diagnosis of infections. The research to clinical, gap seems to be narrowing , especially with methods like sequencing promising faster turnaround times for the diagnosis of deadly infections. Genomics appears to be the answer to a whole lot of challenges we traditionally faced as clinical Microbiologists.",
+         "avatar_url": "/assets/testimonials/dr-aruna-poojary.png",
+         "category": "universal,clinician,diagnostician",
+         "author": {
+            "name": "Dr. Aruna Poojary",
+            "designation": "Head of Dept , Pathology & Microbiology",
+            "company": "Breach Candy Hospital Trust, Mumbai"
          }
       }
    ]

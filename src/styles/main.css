@@ -407,3 +407,14 @@ body, #__next {
 .nprogress-busy #__next {
    opacity: 0.5;
 }
+.has-dropdown:hover > .dropdown-menu {
+   display: block !important;
+}
+.dropdown-menu
+{
+   min-width: 160px;
+}
+.read-or-hide{
+   color: #2A81B6;
+   cursor: pointer;
+ }

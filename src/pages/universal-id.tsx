@@ -7,9 +7,9 @@ import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import Section from '../components/atoms/Section'
+import TestimonialsSection from "../components/sections/TestimonialsSection";
 import Link from "../../node_modules/next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
-import TestimonialsSection from "../components/sections/TestimonialsSection";
 import SectionPosts from "../components/organisms/SectionPosts";
 
 
@@ -29,7 +29,7 @@ const StyledHome = styled(AppTemplate)`
 
 const StyledHeroSection = styled(Section)`
    background-repeat: no-repeat;
-   background-position: right center;
+   background-position: center;
    background-image: url("/assets/product-disease-banner.png");
    background-size: cover;
    .section__container {
@@ -52,12 +52,8 @@ const HeroSection = () => {
                   </h3>
                   <p className="text-muted">A life saving product.</p>
                   <div className="mt-8 flex items-center gap-4">
-                     <Link href={'#'} >
-                        <a className="btn-outline-info bg-transparent">VIEW PATHOGEN LIST</a>
-                     </Link>
-                     <Link href={'#'} >
-                        <a className="btn-outline-info bg-transparent">VIEW BROCHURE</a>
-                     </Link>
+                        {/* <a href="" target="_blank" className="btn-outline-info bg-transparent">VIEW PATHOGEN LIST</a> */}
+                        <a href="https://drive.google.com/file/d/1GtlozhC8hEii-Ygrbj0v-V2alPe30tVW/view" target="_blank" className="btn-outline-info bg-transparent">VIEW BROCHURE</a>
                   </div>
                </div>
             </div>
@@ -317,6 +313,13 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                { title: 'Enabling antibiotic stewardship', thumbnailUrl: '/assets/disease-benefit-icon3.png', description: `Treat infections, protect patients from harm caused by unnecessary antibiotic use, and combat antibiotic resistance.` },
             ]}
          />
+
+         {/* <TestimonialsSection
+            title={`Testimonials`}
+            items={testimonials.data}
+            category={'universal'}
+            bg="bg-white"
+         /> */}
       </StyledHome>
    )
 }

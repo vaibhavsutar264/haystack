@@ -70,7 +70,7 @@ const HeroSection = () => {
                      <p className="text-muted">A Revolutionary Technology to Aid the Clinician</p>
                   </div>
                   <div className="mt-8 flex">
-                     <Link href={'#'} >
+                     <Link href={'/universal-id'} >
                         <a className="btn-outline-info font-bold">KNOW MORE</a>
                      </Link>
                   </div>
