@@ -41,7 +41,7 @@ const PostItem = (props) => {
                <p className="mb-6 text-sm w-7/12">
                   {props.reference}
                </p>
-               <p className="font-semibold">
+               <p className="font-semibold text-sm">
                {dateFormat(props.date)}
                </p>
             </figcaption>
