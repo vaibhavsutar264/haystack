@@ -16,16 +16,14 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import ContactForm from "./ContactForm";
+import ContactFormProvider from "./providers/ContactFormProvider";
 
 const StyledFooter = styled.footer`
 
 `
 
 function Footer({  }) {
-   const [ contactFormOpened, setContactFormOpened ] = useState(false)
-   const onContactClick = () => {
-      setContactFormOpened(true)
-   }
+
    return (
       <StyledFooter className="bg-gray-100">
          <div className="container mx-auto py-8 px-3 md:px-0">
@@ -45,7 +43,13 @@ function Footer({  }) {
                      </li>
                      ))}
                      <li >
-                        <a href={'#'} onClick={onContactClick}>{'Contact'}</a>
+                        <ContactFormProvider
+                           renderTrigger={(rprops) => (
+                              <>
+                              <a href={'#'} {...rprops}>{'Contact'}</a>
+                              </>
+                           )}
+                        />
                      </li>
                   </ul>
                </div>
@@ -117,10 +121,7 @@ function Footer({  }) {
                </div>
             </div>
          </div>
-         <ContactForm
-            isOpen={contactFormOpened}
-            onCloseClick={() => setContactFormOpened(false)}
-         />
+
       </StyledFooter>
    );
 }
