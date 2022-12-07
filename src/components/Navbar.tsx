@@ -192,15 +192,15 @@ const Navbar = ({ renderMenu }) => {
                   </div>
                </div>
                <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end relative">
-                  <div className="has-dropdown">
-                     <div onClick={() => setDropdownOpened1(prev => !prev)} className="font-semibold flex gap-2 items-center " href={'#'} >
+                  <div className="has-dropdown font-semibold">
+                     <div  className="font-semibold flex gap-2 items-center " href={'#'} >
                         <span className="cursor-pointer">{'Science Corner'}</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                         </svg>
 
                      </div>
-                     <div className={`dropdown-menu absolute top-8 left-0 bg-white/70 py-4 md:py-6 px-3  shadow-lg ${dropdownOpened1 ? '': 'hidden'}`}>
+                     <div className={`dropdown-menu absolute top-5 left-0 bg-white py-4 md:py-6 px-3  shadow-lg ${dropdownOpened1 ? '': 'hidden'}`}>
                         <ol className="flex flex-col gap-3">
                            {menus.sciencecornerHeader.map((mn, mnIndex) => (
                            <li>
@@ -218,12 +218,12 @@ const Navbar = ({ renderMenu }) => {
                   </Link>
                   ))}
                   <div className="has-dropdown">
-                  <div onClick={() => setDropdownOpened(prev => !prev)} className="font-semibold flex gap-2 items-center has-dropdown" href={'#'} >
+                  <div  className="font-semibold flex gap-2 items-center has-dropdown" href={'#'} >
                      <span className="cursor-pointer">{'Products'}</span>
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                      </svg>
-                     <div className={`dropdown-menu absolute top-5 bg-white/70 py-4 md:py-6 px-3  shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
+                     <div className={`dropdown-menu absolute top-5 bg-white py-4 md:py-6 px-3  shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
                         <ol className="flex flex-col gap-3">
                            {menus.productsHeader.map((mn, mnIndex) => (
                            <li key={`mnss_${mnIndex}`}>
