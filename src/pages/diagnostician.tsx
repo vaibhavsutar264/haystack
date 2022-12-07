@@ -26,6 +26,7 @@ import SectionPosts from "../components/organisms/SectionPosts";
 import DiagnosticianPostItem from "../components/molecules/DiagnosticianPostItem";
 import { filteredPosts, filteredResearchPapers } from "../utils/index";
 import ResearchItem from "../components/molecules/ResearchItem";
+import ContactFormProvider from "../components/providers/ContactFormProvider";
 
 const StyledHome = styled(AppTemplate)`
 
@@ -65,9 +66,13 @@ const HeroSection = () => {
                      {/* <Link href={'#'} >
                         <a className="btn-primary">BOOK A CALL</a>
                      </Link> */}
-                     <Link href={'#'} >
-                        <a className="btn-secondary opacity-50">KNOW MORE</a>
-                     </Link>
+                     <ContactFormProvider
+                        renderTrigger={(rprops) => (
+                           <>
+                           <a {...rprops} className="btn-secondary opacity-50 cursor-pointer">{'KNOW MORE'}</a>
+                           </>
+                        )}
+                     />
                   </div>
                </div>
             </div>
