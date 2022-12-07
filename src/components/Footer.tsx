@@ -1,9 +1,10 @@
 // @ts-nocheck
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "@emotion/styled";
 import settings from '../json/settings.json'
 import menus from '../json/menus.json'
+import Modal from 'react-modal'
 
 import {
    faYoutube,
@@ -14,12 +15,17 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
+import ContactForm from "./ContactForm";
 
 const StyledFooter = styled.footer`
 
 `
 
 function Footer({  }) {
+   const [ contactFormOpened, setContactFormOpened ] = useState(false)
+   const onContactClick = () => {
+      setContactFormOpened(true)
+   }
    return (
       <StyledFooter className="bg-gray-100">
          <div className="container mx-auto py-8 px-3 md:px-0">
@@ -38,6 +44,9 @@ function Footer({  }) {
                         <Link href={fm.url}>{fm.title}</Link>
                      </li>
                      ))}
+                     <li >
+                        <a href={'#'} onClick={onContactClick}>{'Contact'}</a>
+                     </li>
                   </ul>
                </div>
                <div className="md:w-3/12">
@@ -108,6 +117,10 @@ function Footer({  }) {
                </div>
             </div>
          </div>
+         <ContactForm
+            isOpen={contactFormOpened}
+            onCloseClick={() => setContactFormOpened(false)}
+         />
       </StyledFooter>
    );
 }
