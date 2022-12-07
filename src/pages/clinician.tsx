@@ -26,6 +26,7 @@ import TestimonialsSection from "../components/sections/TestimonialsSection";
 import DiagnosticianPostItem from "../components/molecules/DiagnosticianPostItem";
 import ResearchItem from "../components/molecules/ResearchItem";
 import { Navigation } from "../components/organisms/SidebarNav/Navigation";
+import ContactFormProvider from "../components/providers/ContactFormProvider";
 
 const StyledHome = styled(AppTemplate)`
 `
@@ -65,6 +66,15 @@ const HeroSection = (props) => {
                         <a className="btn-secondary opacity-50">{props.secondaryAction.title}</a>
                      </Link>
                      )}
+                     {props.defaultAction && (
+                     <ContactFormProvider
+                        renderTrigger={(rprops) => (
+                           <>
+                           <a {...rprops} className="btn-secondary opacity-50 cursor-pointer">{'KNOW MORE'}</a>
+                           </>
+                        )}
+                     />
+                     )}
                   </div>
                </div>
             </div>
@@ -83,8 +93,9 @@ export default function Clinician({ Component, pageProps, news, settings }) {
                improved personalised<br />
                patient outcomes`}
             description={`Stay on top with cutting edge technology`}
-            primaryAction={{ title: 'BOOK A CALL', href: '#' }}
-            secondaryAction={{ title: 'KNOW MORE', href: '#' }}
+            // primaryAction={{ title: 'BOOK A CALL', href: '#' }}
+            // secondaryAction={{ title: 'KNOW MORE', href: '#' }}
+            defaultAction={true}
             bg={'/assets/clinician-bg.jpg'}
          />
          <TestimonialsSection

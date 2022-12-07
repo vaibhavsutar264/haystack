@@ -204,7 +204,7 @@ const Navbar = ({ renderMenu }) => {
                      <div className={`dropdown-menu absolute top-5 left-0 bg-white py-4 md:py-6 px-3  shadow-lg ${dropdownOpened1 ? '': 'hidden'}`}>
                         <ol className="flex flex-col gap-3">
                            {menus.sciencecornerHeader.map((mn, mnIndex) => (
-                           <li>
+                           <li key={`scm_${mnIndex}`}>
                            <Link key={`mn${mnIndex}`} href={mn.url}>
                            <a className={`px-3 font-regular cursor-pointer hover:text-blue-600 ${router.pathname == mn.url ? 'active text-blue-600': ''}`}>- {mn.label}</a>
                            </Link>
