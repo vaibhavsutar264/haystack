@@ -428,3 +428,14 @@ body, #__next {
    transition: all .5s ease;
    cursor: pointer;
 }
+.contact-form input:focus-visible{
+   border:none;
+}
+.ReactModal__Overlay
+{
+   background-color: transparent !important;
+}
+.bg-light-gray-button
+{
+   background:#F6F6F6;
+}
