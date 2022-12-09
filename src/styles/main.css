@@ -42,13 +42,13 @@ body, #__next {
 }
 
 .section-heading {
-   @apply text-3xl font-bold text-muted mb-5
+   @apply text-xl md:text-3xl font-bold text-muted mb-5
 }
 .section-heading--invert {
    @apply text-white
 }
 .heading {
-   @apply text-xl font-extrabold text-muted mb-3
+   @apply text-lg md:text-xl font-extrabold text-muted mb-3
 }
 
 .table-wrapper table {
@@ -156,7 +156,7 @@ body, #__next {
    background-image: var(--bg);
    background-repeat: no-repeat;
    background-size: 38%;
-   padding: 8rem 0;
+   padding: 8rem 1rem;
    background-position: right 0%;
 }
 .font-5xl
@@ -438,4 +438,34 @@ body, #__next {
 .bg-light-gray-button
 {
    background:#F6F6F6;
+}
+@media screen and (max-width: 768px) {
+   .swiper-button-prev, .swiper-rtl .swiper-button-next
+   {
+      left: -10px !important;
+       right: auto;
+   }
+   .swiper-button-next, .swiper-rtl .swiper-button-prev
+   {
+      right: -10px !important;
+       left: auto;
+   }
+   .text-5xl
+   {
+      font-size: 2rem;
+   }
+   .font-5xl
+   {
+      font-size: 2rem;
+      line-height: 2.5rem;
+   }
+   .post-title
+   {
+      min-height: 20px;
+   }
+   .text-banner {
+      font-size: 2rem;
+      line-height: 2.5rem;
+  }
+  
 }
