@@ -124,7 +124,7 @@ const SectionPosts = (props: ISectionPros) => {
                </div>
                </>
                ): (
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 limit-3">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 limit-3">
                   {props.posts?.map((postItem, slideIndex) => (
                      <ItemComponent
                      thumbnailUrl={postItem.image_url}
