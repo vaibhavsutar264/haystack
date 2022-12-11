@@ -18,13 +18,12 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-   background-repeat: no-repeat;
-   background-position: bottom center;
-   background-image: url(${props => props.bg});
+   background-position: right center;
+   background-color: #3470D320;
    background-repeat: no-repeat;
    background-size: 100%;
    .section__container {
-      min-height: calc(95vh - var(--safe-top-padding, 100px));
+      min-height: calc(80vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -35,9 +34,11 @@ const HeroSection = (props) => {
    return (
       <StyledHeroSection className="HeroSection " bg={props.bg} data-aos="fade-up">
          <Section.Container className="mx-auto ">
-            <div className="flex flex-col md:flex-row items-center justify-center">
-               <div className="w-7/12"></div>
-               <div className="md:w-5/12 p-8 md:pl-10">
+            <div className="flex flex-col-reverse md:flex-row items-center px-2 md:px-0 justify-center">
+            <div className="p-4 md:p-0 md:w-7/12">
+                  <img src="/assets/clinician-image.png" className="w-full md:w-9/12" />
+               </div>
+               <div className="md:w-5/12 py-8 md:p-8 md:pl-10">
                   <h3 className="mb-4 text-3xl font-extrabold" dangerouslySetInnerHTML={{ __html: props.title }}>
                   </h3>
                   <p className="font-bold text-muted text-lg">Stay on top with cutting edge technology</p>
