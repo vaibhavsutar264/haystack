@@ -18,14 +18,14 @@ const PostItem = (props) => {
    return (
       <div>
          <figure className="flex md:flex-row flex-col gap-4 items-center">
-            <div className="md:w-4/12 ">
+            <div className="w-full md:w-4/12 ">
                <div className="aspect-w-16 aspect-h-9">
                   <img src={props.image_url} alt="" className="w-full object-cover" />
                </div>
             </div>
             <figcaption className="flex-1">
                {/* {JSON.stringify({ props })} */}
-               <div className="flex justify-end mb-4 md:-mt-6">
+               <div className="flex justify-end md:mb-4 md:-mt-6">
                   <div>
                      <ShareButton
                         title={props?.title}
@@ -33,12 +33,12 @@ const PostItem = (props) => {
                      />
                   </div>
                </div>
-               <p className="mb-3 w-10/12">
+               <p className="mb-3 md:w-10/12">
                   <a href={props.url} className="hover:underline underline-offset-2 text-blue-600" target="_blank">
                   {props.title}
                   </a>
                </p>
-               <p className="mb-6 text-sm w-7/12">
+               <p className="mb-3 md:mb-6 text-sm md:w-7/12">
                   {props.reference}
                </p>
                <p className="font-semibold text-sm">

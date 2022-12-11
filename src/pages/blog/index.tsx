@@ -42,7 +42,7 @@ const HeroSection = ({ title, date, description, citation, image, url }) => {
       <StyledHeroSection className="HeroSection " data-aos="fade-up">
          <Section.Container className="mx-auto ">
             <h3 className="mb-8 font-extrabold text-blue-600 text-3xl">Blogs</h3>
-            <div className="flex gap-8 items-start">
+            <div className="flex flex-col md:flex-row gap-8 items-start">
                <div className="md:w-7/12">
                   <picture>
                      <img src={image} alt="" className="bg-gray-200 w-full aspect-[16/9]" />
@@ -60,7 +60,7 @@ const HeroSection = ({ title, date, description, citation, image, url }) => {
                   <p className="font-base text-muted line-clamp-4 md:w-4/5">
                      {description}
                   </p>
-                  <div className="-mt-2 flex items-center justify-end gap-4">
+                  <div className="md:-mt-2 flex items-center justify-end gap-4">
                      <Link href={url} >
                         <a className="text-green-600 italic text-sm">Read More...</a>
                      </Link>

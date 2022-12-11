@@ -61,9 +61,9 @@ const SectionPosts = (props: ISectionPros) => {
    const partnersCarousel = useRef(null)
    return (
       <StyledComponent className={`SectionPosts ${props.className}`}>
-         <Section.Container className="container mx-auto py-12">
+         <Section.Container className="container mx-auto py-8 md:py-12">
             <div className="w-50">
-               <div className="flex items-center justify-between">
+               <div className="flex flex-col md:flex-row md:items-center justify-between">
                   <div>
                      <h3 className="section-heading">
                      {props.title ?? 'In the news'}

@@ -49,13 +49,13 @@ const HeroSection = (props) => {
    return (
       <StyledHeroSection className="HeroSection " bg={props.bg} data-aos="fade-up">
          <Section.Container className="mx-auto ">
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col md:flex-row items-center justify-center">
                <div className="w-7/12"></div>
-               <div className="w-5/12 p-8 md:pl-10">
+               <div className="md:w-5/12 p-8 md:pl-10">
                   <h3 className="mb-4 text-3xl font-extrabold" dangerouslySetInnerHTML={{ __html: props.title }}>
                   </h3>
                   <p className="font-bold text-muted text-lg">Stay on top with cutting edge technology</p>
-                  <div className="mt-24 flex items-center gap-4">
+                  <div className="mt-8 md:mt-24 flex items-center gap-4">
                      {props.primaryAction && (
                      <Link href={props.primaryAction.href} >
                         <a className="btn-primary">{props.primaryAction.title}</a>

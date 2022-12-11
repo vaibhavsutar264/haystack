@@ -25,7 +25,7 @@ const BlogPostHeroSection = ({ title, date, thumbnailUrl,author_name,author_bio 
    return (
       <StyledHeroSection className="BlogPostHeroSection " data-aos="fade-up">
          <Section.Container className="mx-auto ">
-            <div className="flex gap-8 items-stretch">
+            <div className="flex flex-col md:flex-row gap-8 items-stretch">
                <div className="md:w-7/12">
                   <div className="aspect-w-16 aspect-h-9">
                      <img src={thumbnailUrl} alt={title} layout="cover" className="bg-gray-100 w-full" />

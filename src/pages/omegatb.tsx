@@ -93,11 +93,11 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
          </Section>
          {/* Comparing ΩTB (Omega TB) with current tests */}
          <Section className="">
-            <Section.Container className="container mx-auto py-20">
+            <Section.Container className="container mx-auto py-12 md:py-20">
                <h3 className="section-heading">
                   Comparing ΩTB® <span className="text-xl">(Omega TB)</span> with current tests
                </h3>
-               <div className="flex justify-between">
+               <div className="flex flex-col md:flex-row justify-between">
                   <div className="md:w-6/12">
                      <div className="table-wrapper w-full overflow-auto flex flex-col justify-between h-full table--hover-sm">
                         <table className="w-full border-spacing-table table--striped">
@@ -172,7 +172,7 @@ export default function OmegaTab({ Component, pageProps, news, settings }) {
                         <p class="text-xs text-muted">*For smear positive samples</p>
                      </div>
                   </div>
-                  <div className=" border ml-12 border-gray-300"></div>
+                  <div className=" border my-4 md:my-0 md:ml-12 border-gray-300"></div>
                   <div className="md:w-5/12 ">
                      <h4>ΩTB<sup>®</sup> Assessment Profile</h4>
                      <div className="flex gap-4 md:mt-4">

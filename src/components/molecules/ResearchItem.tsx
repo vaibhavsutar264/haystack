@@ -19,7 +19,7 @@ const ResearchItem = (props: IResearchItem) => {
          </picture>
          <figcaption className="item__caption my-6">
             <p className="font-semibold text-sm my-6 line-clamp-3 post-title">{props.title}</p>
-            <p className="mb-4 text-sm  tracking-wider text-reference">{props.reference}</p>
+            <p className="mb-4 text-sm  tracking-wider line-clamp-3 text-reference">{props.reference}</p>
             <p>
                <Link href={props.url}>
                   <a className="hlink--success text-md font-semibold" target="_blank">Read more</a>
