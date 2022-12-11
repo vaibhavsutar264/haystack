@@ -1,14 +1,11 @@
 // @ts-nocheck
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import NavItem from "./NavItem";
-// import data from "./data/data.json";
 import Image from "next/image";
 import useHeadroom from "react-useheadroom";
 import styled from "@emotion/styled";
 import settings from '../json/settings.json'
 import menus from '../json/menus.json'
-import { SidebarNav } from "./index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -140,9 +137,9 @@ const Navbar = ({ renderMenu }) => {
                <div className="close md:hidden">
                   <XIcon className="w-8 h-8" onClick={toggleMenu} />
                </div>
-               <div className="mb-3 md:mb-6 text-sm flex gap-6 text-gray-500 mt-6 justify-end md:mt-0">
+               <div className="mb-3 md:mb-6 text-sm flex flex-col md:flex-row gap-6 text-gray-500 mt-6 justify-center md:justify-end md:mt-0">
                   <a  className="text-dark" href={`mailto:${settings.email}`}>{settings.email}</a>
-                  <div className="mb-3 md:mb-2 text-sm flex gap-2 text-gray-500 mt-6 md:mt-0">
+                  <div className="mb-3 md:mb-2 text-lg md:text-sm flex gap-6 md:gap-2 text-gray-500 md:mt-0">
                   {settings.facebook_url ? (
                      <a href={settings.facebook_url} target="_blank">
                         <FontAwesomeIcon
@@ -194,14 +191,14 @@ const Navbar = ({ renderMenu }) => {
                </div>
                <div className="flex gap-6 flex-col md:flex-row mt-6 md:mt-0 nav-menu-main justify-end relative">
                   <div className="has-dropdown">
-                     <div  className="font-semibold flex gap-2 items-center " href={'#'} >
+                     <div  className="font-semibold flex gap-2 justify-between items-center " href={'#'} >
                         <span className="cursor-pointer">{'Science Corner'}</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                         </svg>
 
                      </div>
-                     <div className={`dropdown-menu absolute top-5 left-0 bg-white py-4 md:py-6 px-3  shadow-lg ${dropdownOpened1 ? '': 'hidden'}`}>
+                     <div className={`dropdown-menu md:absolute top-5 left-0 bg-white py-4 md:py-6 px-3  md:shadow-lg ${dropdownOpened1 ? '': 'hidden'}`}>
                         <ol className="flex flex-col gap-3">
                            {menus.sciencecornerHeader.map((mn, mnIndex) => (
                            <li key={`scm_${mnIndex}`}>
@@ -219,13 +216,13 @@ const Navbar = ({ renderMenu }) => {
                   </Link>
                   ))}
                   <div className="has-dropdown">
-                     <div  className="font-semibold flex gap-2 items-center has-dropdown" href={'#'} >
+                     <div  className="font-semibold flex gap-2 justify-between items-center has-dropdown" href={'#'} >
                         <span className="cursor-pointer">{'Products'}</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                         </svg>
                      </div>
-                     <div className={`dropdown-menu absolute top-5 bg-white py-4 md:py-6 px-3  shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
+                     <div className={`dropdown-menu md:absolute top-5 bg-white py-4 md:py-6 px-3  md:shadow-lg ${dropdownOpened ? '': 'hidden'}`}>
                         <ol className="flex flex-col gap-3">
                            {menus.productsHeader.map((mn, mnIndex) => (
                            <li key={`mnss_${mnIndex}`}>

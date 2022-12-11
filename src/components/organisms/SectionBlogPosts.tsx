@@ -1,12 +1,11 @@
 // @ts-nocheck
 import Section from "../atoms/Section"
 import styled from "@emotion/styled";
-import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import "swiper/css/navigation";
-import { Navigation, Autoplay } from "swiper"
+import { Autoplay } from "swiper"
 import BlogPostItem from "../molecules/BlogPostItem";
 
 const StyledComponent = styled(Section)`
