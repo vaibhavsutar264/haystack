@@ -39,7 +39,7 @@ export default function TestimonialsSection(props: ITestimonialsSection) {
    const partnersCarousel = useRef(null)
    return (
       <Section className={`${props.bg} py-0`}>
-         <Section.Container className="container mx-auto py-16">
+         <Section.Container className="container mx-auto py-8 md:py-16">
             <h3 className="section-heading flex">
                {props.title}
             </h3>

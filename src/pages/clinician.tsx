@@ -1,29 +1,15 @@
 // @ts-nocheck
-import data from "../json/data.json";
 import research_papers from "../json/research_papers.json";
 import testimonials from "../json/testimonials.json";
-import OurPartners, { ClientsCarousel } from "../OurPartners";
-import TextVideo from "../TextVideo";
-import Precision from "../Precision";
-import Upgrade from "../Upgrade";
-import WeGotCovered from "../WeGotCovered";
-import VideoRemakeByPratikSir from "../VideoRemakeByPratikSir";
-import BgTransitionSection from "../components/BgTransitionSection";
 import AppTemplate from "../components/templates/AppTemplate";
-import HambergerMenuWithScriptTag from "../HambergerMenuWithScriptTag";
-import { getActivePosts, getPostFile, getPostFiles } from "../utils/posts";
 import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
-import { filteredPosts, filteredResearchPapers, filteredTestimonials } from "../utils/index";
+import {  filteredResearchPapers, filteredTestimonials } from "../utils/index";
 import styled from "@emotion/styled";
-import heroBg from '../assets/haystack-body-bg.png'
-import { useEffect, useMemo } from "react";
 import Section from '../components/atoms/Section'
 import Link from "next/link";
-import PostItem from "../components/molecules/PostItem";
 import SectionPosts from "../components/organisms/SectionPosts";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
-import DiagnosticianPostItem from "../components/molecules/DiagnosticianPostItem";
 import ResearchItem from "../components/molecules/ResearchItem";
 import { Navigation } from "../components/organisms/SidebarNav/Navigation";
 import ContactFormProvider from "../components/providers/ContactFormProvider";
@@ -49,13 +35,13 @@ const HeroSection = (props) => {
    return (
       <StyledHeroSection className="HeroSection " bg={props.bg} data-aos="fade-up">
          <Section.Container className="mx-auto ">
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col md:flex-row items-center justify-center">
                <div className="w-7/12"></div>
-               <div className="w-5/12 p-8 md:pl-10">
+               <div className="md:w-5/12 p-8 md:pl-10">
                   <h3 className="mb-4 text-3xl font-extrabold" dangerouslySetInnerHTML={{ __html: props.title }}>
                   </h3>
                   <p className="font-bold text-muted text-lg">Stay on top with cutting edge technology</p>
-                  <div className="mt-24 flex items-center gap-4">
+                  <div className="mt-8 md:mt-24 flex items-center gap-4">
                      {props.primaryAction && (
                      <Link href={props.primaryAction.href} >
                         <a className="btn-primary">{props.primaryAction.title}</a>
@@ -93,8 +79,6 @@ export default function Clinician({ Component, pageProps, news, settings }) {
                improved personalised<br />
                patient outcomes`}
             description={`Stay on top with cutting edge technology`}
-            // primaryAction={{ title: 'BOOK A CALL', href: '#' }}
-            // secondaryAction={{ title: 'KNOW MORE', href: '#' }}
             defaultAction={true}
             bg={'/assets/clinician-bg.jpg'}
          />

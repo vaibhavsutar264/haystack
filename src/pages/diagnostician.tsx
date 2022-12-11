@@ -49,9 +49,9 @@ const HeroSection = () => {
    return (
       <StyledHeroSection className="HeroSection " data-aos="fade-up">
          <Section.Container className="mx-auto ">
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col md:flex-row items-center justify-center">
                <div className="w-7/12"></div>
-               <div className="w-5/12 md:ml-12 py-8">
+               <div className="md:w-5/12 md:ml-12 py-8">
                   <h3 className="mb-4 text-3xl font-extrabold">
                      Get started with<br />
                      Genomics today with<br />
@@ -62,7 +62,7 @@ const HeroSection = () => {
                      Be Ahead Of The Competition <br />
                      With Revolutionary Technology
                   </p>
-                  <div className="mt-16 flex items-center">
+                  <div className="mt-8 md:mt-16 flex items-center">
                      {/* <Link href={'#'} >
                         <a className="btn-primary">BOOK A CALL</a>
                      </Link> */}
@@ -90,14 +90,14 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
       <StyledHome settings={settings}>
          <HeroSection />
          <Section className="bg-gray-100">
-            <Section.Container className="container mx-auto py-20">
+            <Section.Container className="container mx-auto py-12 md:py-20">
                <h3 className="font-extrabold text-center text-3xl mb-4">
                Automated Bioinformatics Platform
                </h3>
                <p className="text-center mb-4 text-muted font-bold">Localized Report with Software access</p>
-               <div className="grid grid-cols-3 gap-4 mt-16 mx-auto md:w-6/12 ">
+               <div className="grid md:grid-cols-3 gap-4 mt-8 md:mt-16 mx-auto md:w-6/12 ">
                   <div className="grid__col">
-                     <div className="flex gap-2">
+                     <div className="flex gap-2 items-center md:items-start">
                         <div>
                            <img src="/assets/diagnostician-icon1.png" className="w-10 h-10" />
                         </div>
@@ -107,7 +107,7 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                      </div>
                   </div>
                   <div className="grid__col">
-                     <div className="flex gap-2">
+                     <div className="flex gap-2 items-center md:items-start">
                         <div>
                            <img src="/assets/diagnostician-icon2.png" className="w-10 h-10" />
                         </div>
@@ -117,7 +117,7 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                      </div>
                   </div>
                   <div className="grid__col md:ml-5">
-                     <div className="flex gap-2">
+                     <div className="flex gap-2 items-center md:items-start">
                         <div>
                            <img src="/assets/diagnostician-icon3.png" className="w-10 h-10" />
                         </div>
@@ -140,7 +140,7 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
             </Section.Container>
          </Section>
          <Section className=" bg-blue-800 text-white">
-            <Section.Container className="container mx-auto py-20">
+            <Section.Container className="container mx-auto py-12 md:py-20">
                <h3 className="text-white font-extrabold text-center text-3xl mb-4">
                Why Choose HaystackAnalytics
                </h3>
@@ -148,7 +148,7 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
                HaystackAnalytics enables you to get started with genomics, <br />
                via a fully automated AI-powered bio informatics platform
                </p>
-               <div className="flex items-center justify-center gap-4 my-8">
+               <div className="flex flex-col md:flex-row items-center justify-center gap-4 my-8">
                   <button type="button" onClick={() => setActiveTab('1')}  className={`border-2 border-white px-4 py-2 text-white hover:bg-white hover:text-blue-900 cursor-pointer font-bold ${activeTab == '1' ? 'active bg-white text-blue-900': ''}`}>
                      One click reporting
                   </button>
@@ -191,11 +191,11 @@ export default function Diagnostician({ Component, pageProps, news, settings }) 
             posts={filteredResearchPapers(research_papers.data)}
          />
          <Section className="SectionGridItems bg-blue-800 text-white ">
-            <Section.Container className="container mx-auto py-24 text-center">
+            <Section.Container className="container mx-auto py-12 md:py-24 text-center">
                <h3 className={`text-white section-heading section-heading--invert `}>
                   {'Why Partner With Us'}
                </h3>
-               <div className="flex items-center gap-6 my-6 justify-center">
+               <div className="flex flex-col md:flex-row items-center gap-6 my-6 justify-center">
                   <button type="button" onClick={() => setActiveTab2('4')} className={`text-white font-bold px-4 py-3 border-2 border-white ${activeTab2 == '4' ? 'active bg-white text-blue-900': ''}`}>{`I have a sequencer`}</button>
                   <button type="button" onClick={() => setActiveTab2('5')} className={`text-white font-bold px-4 py-3 border-2 border-white ${activeTab2 == '5' ? 'active bg-white text-blue-900': ''}`}>{`I don't have a sequencer`}</button>
                </div>

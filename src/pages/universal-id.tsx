@@ -72,7 +72,7 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                <h3 className="section-heading">
                   The current system needs an <br />upgrade to save lives
                </h3>
-               <div className="table-wrapper table--striped table-icons">
+               <div className="table-wrapper overflow-auto table--striped table-icons">
                   <table className="w-full">
                      <thead>
                         <tr>
