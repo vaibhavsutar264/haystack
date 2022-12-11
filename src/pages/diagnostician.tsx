@@ -34,11 +34,11 @@ const StyledHome = styled(AppTemplate)`
 
 const StyledHeroSection = styled(Section)`
    background-position: right center;
-   background-image: url('/assets/diagnostician-banner.png');
+   background-color: #3470D320;
    background-repeat: no-repeat;
    background-size: 100%;
    .section__container {
-      min-height: calc(100vh - var(--safe-top-padding, 100px));
+      min-height: calc(80vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -49,8 +49,10 @@ const HeroSection = () => {
    return (
       <StyledHeroSection className="HeroSection " data-aos="fade-up">
          <Section.Container className="mx-auto ">
-            <div className="flex flex-col md:flex-row items-center justify-center">
-               <div className="w-7/12"></div>
+            <div className="flex flex-col-reverse md:flex-row items-center justify-center px-2 md:px-0">
+               <div className="p-4 md:p-0 md:w-7/12">
+                  <img src="/assets/diagnotician-image.png" className="w-full" />
+               </div>
                <div className="md:w-5/12 md:ml-12 py-8">
                   <h3 className="mb-4 text-3xl font-extrabold">
                      Get started with<br />
