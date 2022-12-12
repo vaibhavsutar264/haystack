@@ -46,7 +46,7 @@ const StyledHeroSection = styled(Section)`
       background-image: url('/assets/omega-mob-ban.jpg');
       background-position: bottom;
       .section__container {
-         min-height: calc(85vh - var(--safe-top-padding, 100px));
+         min-height: calc(100vh - var(--safe-top-padding, 100px));
          display: flex;
          flex-direction: column;
          justify-content: flex-start;
