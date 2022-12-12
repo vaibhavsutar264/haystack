@@ -31,15 +31,26 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-   background-repeat: no-repeat;
+  
    background-position: right center;
    background-image: url("/assets/omega-tb-banner.png");
-   background-size: cover;
+   background-size: contain;
+   background-repeat: no-repeat;
    .section__container {
       min-height: calc(85vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
+   }
+   @media (max-width: 768px) {
+      background-image: url('/assets/omega-mob-ban.jpg');
+      background-position: bottom;
+      .section__container {
+         min-height: calc(85vh - var(--safe-top-padding, 100px));
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+      }
    }
 `
 
@@ -50,8 +61,8 @@ const HeroSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8">
                   <h3 className="mb-4 text-4xl font-extrabold">
-                     ΩTB® is a<br />
-                     Universal Drug<br />
+                     ΩTB® is a <br />
+                     Universal Drug <br />
                      Resistance Test for TB
                   </h3>
                   <p className="text-muted w-11/12">A single test for simultaneous evaluation of all resistance markers,
