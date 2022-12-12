@@ -28,7 +28,7 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-   background-position: center;
+   background-position: right;
    background-image: url("/assets/product-disease-banner.png");
    background-size: contain;
    background-repeat: no-repeat;
@@ -56,11 +56,11 @@ const HeroSection = () => {
          <Section.Container className="mx-auto ">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8">
-                  <h3 className="mb-4 text-4xl font-extrabold">
+                  <h3 className="mb-4 text-2xl md:text-4xl font-extrabold">
                      Universal Infectious <br />
                      Diseases Test
                   </h3>
-                  <p className="text-muted">A life saving product.</p>
+                  <p className="text-muted text-sm md:text-base">A life saving product.</p>
                   <div className="mt-8 flex items-center gap-4">
                         {/* <a href="" target="_blank" className="btn-outline-info bg-transparent">VIEW PATHOGEN LIST</a> */}
                         <a href="https://drive.google.com/file/d/1GtlozhC8hEii-Ygrbj0v-V2alPe30tVW/view" target="_blank" className="btn-outline-info bg-transparent">VIEW BROCHURE</a>

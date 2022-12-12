@@ -32,9 +32,9 @@ const StyledHome = styled(AppTemplate)`
 
 const StyledHeroSection = styled(Section)`
   
-   background-position: right center;
+   background-position: right;
    background-image: url("/assets/omega-tb-banner.png");
-   background-size: contain;
+   background-size: cover;
    background-repeat: no-repeat;
    .section__container {
       min-height: calc(85vh - var(--safe-top-padding, 100px));
@@ -44,6 +44,7 @@ const StyledHeroSection = styled(Section)`
    }
    @media (max-width: 768px) {
       background-image: url('/assets/omega-mob-ban.jpg');
+      background-size: contain;
       background-position: bottom;
       .section__container {
          min-height: calc(100vh - var(--safe-top-padding, 100px));
@@ -60,12 +61,12 @@ const HeroSection = () => {
          <Section.Container className="mx-auto ">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8">
-                  <h3 className="mb-4 text-4xl font-extrabold">
+                  <h3 className="mb-4 text-2xl md:text-4xl font-extrabold">
                      ΩTB® is a <br />
                      Universal Drug <br />
                      Resistance Test for TB
                   </h3>
-                  <p className="text-muted w-11/12">A single test for simultaneous evaluation of all resistance markers,
+                  <p className="text-muted w-11/12 text-sm md:text-base">A single test for simultaneous evaluation of all resistance markers,
                   as well as the differentiation between mixed infection, relapse
                   and reinfection</p>
                   <div className="mt-8">
