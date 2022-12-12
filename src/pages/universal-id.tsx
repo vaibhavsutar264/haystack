@@ -56,7 +56,7 @@ const HeroSection = () => {
          <Section.Container className="mx-auto ">
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8">
-                  <h3 className="mb-4 text-2xl md:text-4xl font-extrabold">
+                  <h3 className="mb-4 text-4xl font-extrabold">
                      Universal Infectious <br />
                      Diseases Test
                   </h3>
