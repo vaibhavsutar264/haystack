@@ -28,15 +28,25 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-   background-repeat: no-repeat;
    background-position: center;
    background-image: url("/assets/product-disease-banner.png");
-   background-size: cover;
+   background-size: contain;
+   background-repeat: no-repeat;
    .section__container {
       min-height: calc(85vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
+   }
+   @media (max-width: 768px) {
+      background-image: url('/assets/universal-mob-ban.jpg');
+      background-position: bottom;
+      .section__container {
+         min-height: calc(85vh - var(--safe-top-padding, 100px));
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+      }
    }
 `
 
@@ -47,7 +57,7 @@ const HeroSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2">
                <div className="grid__col  py-8">
                   <h3 className="mb-4 text-4xl font-extrabold">
-                     Universal Infectious<br />
+                     Universal Infectious <br />
                      Diseases Test
                   </h3>
                   <p className="text-muted">A life saving product.</p>

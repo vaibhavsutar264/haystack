@@ -44,7 +44,6 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-
    background-repeat: no-repeat;
    background-position: right;
    background-size: contain;
@@ -56,6 +55,17 @@ const StyledHeroSection = styled(Section)`
       flex-direction: column;
       justify-content: center;
    }
+   @media (max-width: 768px) {
+      background-image: url('/assets/mob-ban.png');
+      background-position: bottom;
+      .section__container {
+         min-height: calc(85vh - var(--safe-top-padding, 100px));
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+      }
+   }
+
 `
 
 const HeroSection = () => {

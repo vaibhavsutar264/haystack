@@ -471,4 +471,11 @@ body, #__next {
   {
    display: none;
   }
+  .bg-highlight {
+   background-image: var(--bg);
+   background-repeat: no-repeat;
+   background-size: 50%;
+   padding: 4rem 1rem 20rem;
+   background-position: bottom;
+}
 }

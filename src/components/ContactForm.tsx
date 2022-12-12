@@ -36,7 +36,7 @@ export default function ContactForm(props: IContactForm|any) {
       })
    }
    return (
-      <Modal {...props} className="md:w-10/12 mx-auto md:my-4 md:mt-32">
+      <Modal {...props} className="md:w-10/12 mx-auto md:my-4 mt-16 md:mt-32">
          <form onSubmit={onSubmit} data-netlify="true" method="POST" name="contact" className='md:w-7/12 mx-auto p-4 md:p-6 md:px-32 md:py-8 bg-white/95 shadow-lg  relative contact-form rounded-3xl'>
             <button type='button' onClick={onCloseClick} className="absolute top-5 right-5 opacity-60 hover:opacity-100">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
