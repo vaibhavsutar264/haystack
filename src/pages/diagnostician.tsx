@@ -55,9 +55,9 @@ const HeroSection = () => {
                </div>
                <div className="md:w-5/12 md:ml-12 py-8">
                   <h3 className="mb-4 text-3xl font-extrabold">
-                     Get started with<br />
-                     Genomics today with<br />
-                     a fully automatic AI based<br />
+                     Get started with <br />
+                     Genomics today with <br />
+                     a fully automatic AI based <br />
                      bioinformatics platform
                   </h3>
                   <p className="font-bold text-muted text-lg">
