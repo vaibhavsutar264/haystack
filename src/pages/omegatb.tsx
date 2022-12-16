@@ -7,7 +7,6 @@ import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import Section from '../components/atoms/Section'
-import Link from "../../node_modules/next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import SectionPosts from "../components/organisms/SectionPosts";
@@ -58,9 +57,9 @@ const StyledHeroSection = styled(Section)`
 const HeroSection = () => {
    return (
       <StyledHeroSection className="HeroSection " data-aos="fade-up">
-         <Section.Container className="mx-auto ">
+         <Section.Container className="mx-auto px-0">
             <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col  py-8">
+               <div className="grid__col  py-8 px-3 md:px-0">
                   <h3 className="mb-4 text-4xl font-extrabold">
                      ΩTB® is a <br />
                      Universal Drug <br />

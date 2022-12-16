@@ -12,14 +12,12 @@ import Section from '../components/atoms/Section'
 import Link from "next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
 import SectionPosts from "../components/organisms/SectionPosts";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import SepsisChart from "../components/SepsisChart";
-import { sortBy } from "lodash";
 import { useRef } from "react";
 import { filteredNews } from "../utils/index";
 
@@ -71,9 +69,9 @@ const StyledHeroSection = styled(Section)`
 const HeroSection = () => {
    return (
       <StyledHeroSection className="HeroSection " data-aos="fade-up"  style={{ '--bg': `url(${heroBg.src})` }}>
-         <Section.Container className="mx-auto ">
+         <Section.Container className="mx-auto px-0">
             <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col  py-8">
+               <div className="grid__col px-3 md:px-0o py-8">
                   <h3 className="mb-4 text-banner font-extrabold text-muted">Infectious Diseases<br /> Should Not Kill Anyone</h3>
                   <div className="my-8">
                      <p className="text-blue-600 text-lg font-bold">Universal Infectious Diseases Test (UID)</p>

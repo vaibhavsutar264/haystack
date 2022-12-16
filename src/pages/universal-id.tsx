@@ -1,16 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 // @ts-nocheck
-import testimonials from "../json/testimonials.json";
-import research_papers from "../json/research_papers.json";
 import AppTemplate from "../components/templates/AppTemplate";
 import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import Section from '../components/atoms/Section'
-import TestimonialsSection from "../components/sections/TestimonialsSection";
-import Link from "../../node_modules/next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
-import SectionPosts from "../components/organisms/SectionPosts";
 
 
 const page = {
@@ -44,7 +39,7 @@ const StyledHeroSection = styled(Section)`
       background-position: bottom;
       .section__container {
          min-height: 40vh;
-         display: flex;
+         display: flex;px-3 md:px-0
          flex-direction: column;
          justify-content: flex-start;
       }
@@ -54,9 +49,9 @@ const StyledHeroSection = styled(Section)`
 const HeroSection = () => {
    return (
       <StyledHeroSection className="HeroSection " data-aos="fade-up">
-         <Section.Container className="mx-auto ">
+         <Section.Container className="mx-auto px-0">
             <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col  py-8">
+               <div className="grid__col py-8 px-3 md:px-0">
                   <h3 className="mb-4 text-4xl font-extrabold">
                      Universal Infectious <br />
                      Diseases Test
