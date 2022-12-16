@@ -1,16 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 // @ts-nocheck
-import testimonials from "../json/testimonials.json";
-import research_papers from "../json/research_papers.json";
 import AppTemplate from "../components/templates/AppTemplate";
 import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import Section from '../components/atoms/Section'
-import TestimonialsSection from "../components/sections/TestimonialsSection";
-import Link from "../../node_modules/next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
-import SectionPosts from "../components/organisms/SectionPosts";
 
 
 const page = {

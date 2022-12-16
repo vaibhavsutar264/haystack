@@ -12,14 +12,12 @@ import Section from '../components/atoms/Section'
 import Link from "next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
 import SectionPosts from "../components/organisms/SectionPosts";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import SepsisChart from "../components/SepsisChart";
-import { sortBy } from "lodash";
 import { useRef } from "react";
 import { filteredNews } from "../utils/index";
 

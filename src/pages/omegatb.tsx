@@ -7,7 +7,6 @@ import { getSettings } from "../utils/settings";
 import { getActiveNews } from "../utils/news";
 import styled from "@emotion/styled";
 import Section from '../components/atoms/Section'
-import Link from "../../node_modules/next/link";
 import SectionGridItems from "../components/organisms/SectionGridItems";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import SectionPosts from "../components/organisms/SectionPosts";
