@@ -291,14 +291,12 @@ body, #__next {
 .table-icons .text-green-600 svg path{
 
 }
-.table-icons .text-green-600 svg path{
-   stroke: #03D873;
-    stroke-width: 2px;
+.table-icons .text-green-600 span{
+   color: #06B455;
 }
 
-.table-icons .text-red-600 svg path{
-   stroke: #FB0102;
-    stroke-width: 2px;
+.table-icons .text-red-600 span{
+   color: #FB0102;
 }
 .SepsisChart {
    overflow: visible;
