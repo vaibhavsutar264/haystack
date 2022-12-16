@@ -112,7 +112,7 @@ function Footer({  }) {
                      </li>
                   </ul>
                </div>
-               <div className="w-full md:w-6/12 md:self-end">
+               <div className="w-full mt-4 md:mt-0 md:w-6/12 md:self-end">
                   <ul className="text-sm text-gray-600 flex flex-col gap-3 md:justify-end">
                      <li className="text-center md:text-end">
                         <Link href="">Copyright 2022 - Haystack Analytics</Link>

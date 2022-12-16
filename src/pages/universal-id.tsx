@@ -39,10 +39,11 @@ const StyledHeroSection = styled(Section)`
       justify-content: center;
    }
    @media (max-width: 768px) {
-      background-image: url('/assets/universal-mob-ban.jpg');
+      background-image: none;
+      background-size: contain;
       background-position: bottom;
       .section__container {
-         min-height: calc(100vh - var(--safe-top-padding, 100px));
+         min-height: 40vh;
          display: flex;
          flex-direction: column;
          justify-content: flex-start;
@@ -65,6 +66,9 @@ const HeroSection = () => {
                         {/* <a href="" target="_blank" className="btn-outline-info bg-transparent">VIEW PATHOGEN LIST</a> */}
                         <a href="https://drive.google.com/file/d/1GtlozhC8hEii-Ygrbj0v-V2alPe30tVW/view" target="_blank" className="btn-outline-info bg-transparent">VIEW BROCHURE</a>
                   </div>
+               </div>
+               <div className="grid__col block md:hidden">
+                  <img src="/assets/universal-mob-ban.jpg" alt="" className="w-full" />
                </div>
             </div>
          </Section.Container>
@@ -307,7 +311,7 @@ export default function Diseases({ Component, pageProps, news, settings }) {
                      </tbody>
                   </table>
                </div>
-               <p className="text-xs text-muted">
+               <p className="text-xs text-muted mt-4">
                   {`*In silico analysis, UID can identify >1200 pathogens, pre-clinical validation has been done for 48 pathogens`}
                </p>
             </Section.Container>

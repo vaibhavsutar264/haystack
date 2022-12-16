@@ -56,10 +56,10 @@ const StyledHeroSection = styled(Section)`
       justify-content: center;
    }
    @media (max-width: 768px) {
-      background-image: url('/assets/mob-ban.png');
+      background-image: none;
       background-position: bottom;
       .section__container {
-         min-height: calc(100vh - var(--safe-top-padding, 100px));
+         min-height: 40vh;
          display: flex;
          flex-direction: column;
          justify-content: flex-start;
@@ -84,6 +84,9 @@ const HeroSection = () => {
                         <a className="btn-outline-info font-bold">KNOW MORE</a>
                      </Link>
                   </div>
+               </div>
+               <div className="grid__col block md:hidden">
+                  <img src="/assets/mob-ban.png" alt="" className="w-full" />
                </div>
             </div>
          </Section.Container>
@@ -264,7 +267,7 @@ function Home({ Component, pageProps, news, settings }) {
                      </tbody>
                   </table>
                </div>
-               <p className="text-xs text-muted">
+               <p className="text-xs text-muted mt-4">
                   {`*In silico analysis, UID can identify >1200 pathogens, pre-clinical validation has been done for 48 pathogens`}
                </p>
             </Section.Container>

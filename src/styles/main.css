@@ -478,4 +478,8 @@ body, #__next {
    padding: 4rem 1rem 20rem;
    background-position: bottom;
 }
+.swiper
+{
+   padding:0 18px !important;
+}
 }

@@ -43,11 +43,11 @@ const StyledHeroSection = styled(Section)`
       justify-content: center;
    }
    @media (max-width: 768px) {
-      background-image: url('/assets/omega-mob-ban.jpg');
+      background-image: none;
       background-size: contain;
       background-position: bottom;
       .section__container {
-         min-height: calc(100vh - var(--safe-top-padding, 100px));
+         min-height: 40vh;
          display: flex;
          flex-direction: column;
          justify-content: flex-start;
@@ -72,6 +72,9 @@ const HeroSection = () => {
                   <div className="mt-8">
                      <a href="https://drive.google.com/file/d/1PwrID_9uXI_qAy-NQnPpTtxBO_ANwtEW/view" target="_blank" className="btn-outline-info bg-transparent">VIEW BROCHURE</a>
                   </div>
+               </div>
+               <div className="grid__col block md:hidden">
+                  <img src="/assets/omega-mob-ban.jpg" alt="" className="w-full" />
                </div>
             </div>
          </Section.Container>

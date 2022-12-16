@@ -36,7 +36,7 @@ export default function ContactForm(props: IContactForm|any) {
       })
    }
    return (
-      <Modal {...props} className="md:w-10/12 mx-auto md:my-4 mt-16 md:mt-32">
+      <Modal {...props} className="md:w-10/12 mx-auto md:my-4 mt-32">
          <form onSubmit={onSubmit} data-netlify="true" method="POST" name="contact" className='md:w-7/12 mx-auto p-4 md:p-6 md:px-32 md:py-8 bg-white/95 shadow-lg  relative contact-form rounded-3xl'>
             <button type='button' onClick={onCloseClick} className="absolute top-5 right-5 opacity-60 hover:opacity-100">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -55,25 +55,25 @@ export default function ContactForm(props: IContactForm|any) {
             )}
             <>
             <div className='mb-3 mt-8'>
-            <input type={'text'} name={'firstName'} required placeholder={'First name*'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-00 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-gray-500 placeholder:font-regular' />
+            <input type={'text'} name={'firstName'} required placeholder={'First name*'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 laceholder:text-gray-500 placeholder:font-regular' />
             </div>
             <div className='mb-3'>
-                  <input type={'text'} name={'lastName'} placeholder={'Last name*'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-gray-500 placeholder:font-regular' />
+                  <input type={'text'} name={'lastName'} placeholder={'Last name*'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 placeholder:text-gray-500 placeholder:font-regular' />
            </div>
             <div className='mb-3'>
-               <input type={'text'} name={'profession'} placeholder={'Profession*'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-gray-500 placeholder:font-regular' />
+               <input type={'text'} name={'profession'} placeholder={'Profession*'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 placeholder:text-gray-500 placeholder:font-regular' />
             </div>
             <div className='mb-3'>
-               <input type={'text'} name={'institute'} placeholder={'Institute/Company name'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-900 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-gray-500 placeholder:font-regular' />
+               <input type={'text'} name={'institute'} placeholder={'Institute/Company name'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 placeholder:text-gray-500 placeholder:font-regular' />
             </div>
             <div className='mb-3'>
-               <input type={'tel'} name={'phoneNumber'} required placeholder={'Phone number*'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-gray-500 placeholder:font-regular' />
+               <input type={'tel'} name={'phoneNumber'} required placeholder={'Phone number*'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 placeholder:text-gray-500 placeholder:font-regular' />
             </div>
             <div className='mb-3'>
-               <input type={'email'} name={'email'} required placeholder={'Email ID*'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-gray-500 placeholder:font-regular' />
+               <input type={'email'} name={'email'} required placeholder={'Email ID*'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 placeholder:text-gray-500 placeholder:font-regular' />
             </div>
             <div className='mb-3'>
-               <input name="body" id="body" type={'text'}  placeholder={'Short Message'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 placeholder:text-gray-500 placeholder:font-regular'/>
+               <input name="body" id="body" type={'text'}  placeholder={'Short Message'} className='bg-transparent border-b border-gray-400 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-1 placeholder:text-gray-500 placeholder:font-regular'/>
             </div>
             <input type="hidden" name="form-name" value="contact" />
             <div className='my-3 text-center mt-8'>
