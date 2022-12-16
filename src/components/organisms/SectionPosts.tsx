@@ -100,7 +100,7 @@ const SectionPosts = (props: ISectionPros) => {
                   
                   onSwiper={(swiper: any) => partnersCarousel.current = swiper}
                   {...props.carouselProps}
-                  className="awards-carousel"
+                  className="awards-carousel px-4 md:px-0"
                >
                   {props.posts?.map((postItem, slideIndex) => (
                      <SwiperSlide key={`slide_${slideIndex}`} >
