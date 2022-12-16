@@ -39,7 +39,7 @@ const StyledHeroSection = styled(Section)`
       background-position: bottom;
       .section__container {
          min-height: 40vh;
-         display: flex;
+         display: flex;px-3 md:px-0
          flex-direction: column;
          justify-content: flex-start;
       }
@@ -49,9 +49,9 @@ const StyledHeroSection = styled(Section)`
 const HeroSection = () => {
    return (
       <StyledHeroSection className="HeroSection " data-aos="fade-up">
-         <Section.Container className="mx-auto ">
+         <Section.Container className="mx-auto px-0">
             <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col  py-8">
+               <div className="grid__col py-8 px-3 md:px-0">
                   <h3 className="mb-4 text-4xl font-extrabold">
                      Universal Infectious <br />
                      Diseases Test
