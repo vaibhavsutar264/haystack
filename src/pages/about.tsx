@@ -25,15 +25,17 @@ const StyledHome = styled(AppTemplate)`
 `
 
 const StyledHeroSection = styled(Section)`
-   background-position: right center;
-   background-image: url("/assets/product-disease-banner.png");
+   background-position: center;
+   background-image: url("/assets/about-banner.jpg");
    background-size: cover;
+   background-position: center;
    background-repeat: no-repeat;
    .section__container {
       min-height: calc(85vh - var(--safe-top-padding, 100px));
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding:0px;
    }
    @media (max-width: 768px) {
       background-image: none;
@@ -50,9 +52,9 @@ const StyledHeroSection = styled(Section)`
 const HeroSection = () => {
    return (
       <StyledHeroSection className="HeroSection " data-aos="fade-up">
-         <Section.Container className="mx-auto ">
+         <Section.Container className="mx-auto px-0">
             <div className="grid grid-cols-1 md:grid-cols-2">
-               <div className="grid__col  py-8">
+               <div className="grid__col  py-8 px-3 md:px-0">
                   <h3 className="mb-4 text-3xl">
                   Building state-of-the-art<br/> 
                      <span className="font-extrabold"> genomics technology</span> for<br/>
@@ -61,7 +63,7 @@ const HeroSection = () => {
                   </h3>
                </div>
                <div className="grid__col block md:hidden">
-                  <img src="/assets/universal-mob-ban.jpg" alt="" className="w-full" />
+                  <img src="/assets/about-mob-banner.png" alt="" className="w-full" />
                </div>
             </div>
          </Section.Container>
@@ -160,7 +162,14 @@ export default function About({ Component, pageProps, news, settings }) {
                         <div className="hover-layer hover:text-white">
                            <img src="/assets/leaders/dr-anirvan-chatterjee.png" className="w-full aspect-square" />
                            <div className="hover-layer__overlay">
-                              <span className="text-center px-2 text-sm">Dummy Text</span>
+                              <span className="text-center px-6 text-md">Dr. Anirvan Chatterjee, CEO:
+                              Worked extensively in genomics
+                              for over a decade and has
+                              gained expertise in deployment
+                              of NGS-based analysis in
+                              healthcare with globally
+                              renowned NHS UK and DTU
+                              Denmark</span>
                            </div>
                         </div>
                         <h3 className="font-bold mt-4 text-xl">Dr. Anirvan Chatterjee</h3>
@@ -171,7 +180,12 @@ export default function About({ Component, pageProps, news, settings }) {
                         <div className="hover-layer hover:text-white">
                            <img src="/assets/leaders/gaurav-srivastava.png" className="w-full aspect-square" />
                            <div className="hover-layer__overlay">
-                              <span className="text-center px-2 text-sm">Dummy Text</span>
+                              <span className="text-center px-6 text-md">Mr. Gaurav Srivastava, COO: An
+                              alumus of IIT and CFM Institute
+                              has expertise in navigating
+                              operations of numerous tech
+                              startups such as Scrollback,
+                              OlaFoods and Holachef</span>
                            </div>
                         </div>
                         <h3 className="font-bold mt-4 text-xl">Gaurav Srivastava</h3>
@@ -182,7 +196,13 @@ export default function About({ Component, pageProps, news, settings }) {
                         <div className="hover-layer hover:text-white">
                            <img src="/assets/leaders/prof-dr-kiran-kondabagil.png" className="w-full aspect-square" />
                            <div className="hover-layer__overlay">
-                              <span className="text-center px-2 text-sm">Dummy Text</span>
+                              <span className="text-center px-6 text-md">Prof. Kiran Kondabagil, CSM: Head
+                              of Biosciences at the prestigious
+                              IIT-B with significant expertise in
+                              molecular biology, infectious
+                              disease, genomics and its
+                              applications in health and
+                              epidemiology</span>
                            </div>
                         </div>
                         <h3 className="font-bold mt-4 text-xl">Prof. Dr. Kiran Kondabagil</h3>
@@ -194,23 +214,8 @@ export default function About({ Component, pageProps, news, settings }) {
          <Section className="SectionGridItems bg-gray-100 ">
             <Section.Container className="container mx-auto py-12 md:py-16 text-center">
                <div className="flex flex-col md:flex-row items-center gap-6 my-6 justify-center">
-                  <button type="button" onClick={() => setActiveTab2('4')} className={`font-bold px-4 py-3 border-2 btn-outline-info bg-transparent opacity-50 ${activeTab2 == '4' ? 'opacity-100 active': ''}`}>{`Join The Healthcare Revolution Driven By NGS`}</button>
-                  <button type="button" onClick={() => setActiveTab2('5')} className={`font-bold px-4 py-3 border-2 btn-outline-info bg-transparent opacity-50 ${activeTab2 == '5' ? 'opacity-100 active': ''}`}>{`Find The Openings Here`}</button>
-               </div>
-               <div className="md:px-20 md:w-9/12 mx-auto text-left">
-                  {activeTab2 == '4' && (
-                  <div data-aos="zoom-in">
-                     {`If you own a sequencer, HaystackAnalytics's bioinformatics platform is compatible with illumina, nanopore & BGI platforms.`}<br />
-                     Connect with us to get access to several pre-validated clinical genomics applications.
-                  </div>
-                  )}
-                  {activeTab2 == '5' && (
-                  <div data-aos="zoom-in">
-                     At HaystackAnalytics we have clinical apps for infectious diagnostics, built on nanopore platform which can be easily integrated into your lab with less than $10k of Capex. <br />
-                     Connect with us to get access to our nanopore based<br />
-                     applications & turnkey solutions.
-                  </div>
-                  )}
+                  <a className={`font-bold px-4 py-3 border-2 btn-outline-info bg-transparent opacity-50 hover:opacity-100 active'`}>{`Join The Healthcare Revolution Driven By NGS`}</a>
+                  <a className={`font-bold px-4 py-3 border-2 btn-outline-info bg-transparent opacity-50 hover:opacity-100 active'`}>{`Find The Openings Here`}</a>
                </div>
             </Section.Container>
          </Section>
