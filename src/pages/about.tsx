@@ -1,7 +1,6 @@
 // @ts-nocheck
 import AppTemplate from "../components/templates/AppTemplate";
-import { getSettings } from "../utils/settings";
-import { getActiveNews } from "../utils/news";
+
 import team from "../json/team.json";
 import styled from "@emotion/styled";
 import { useState } from "react";
@@ -146,8 +145,8 @@ export default function About({ Component, pageProps, news, settings }) {
                         </SwiperSlide>
                      ))}
                   </Swiper>
-                  <div className="swiper-button--outer swiper-button-prev" onClick={() => teamCarousel.current?.slidePrev()}></div>
-                  <div className="swiper-button--outer swiper-button-next" onClick={() => teamCarousel.current?.slideNext()}></div>
+                  <div className="!flex md:!hidden swiper-button--outer swiper-button-prev " onClick={() => teamCarousel.current?.slidePrev()}></div>
+                  <div className="!flex md:!hidden swiper-button--outer swiper-button-next " onClick={() => teamCarousel.current?.slideNext()}></div>
                </div>
             </Section.Container>
          </Section>
@@ -270,15 +269,3 @@ export default function About({ Component, pageProps, news, settings }) {
    )
 }
 
-export async function getStaticProps(context) {
-   let news = getActiveNews()
-   console.log({ news })
-   const settings = getSettings()
-
-   return {
-     props: {
-      news: JSON.parse(JSON.stringify(news)),
-      settings: JSON.parse(JSON.stringify(settings))
-     }, // will be passed to the page component as props
-   }
-}

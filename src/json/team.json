@@ -1,16 +1,13 @@
 {
     "data": [
        {
-          "thumbnailUrl": "/assets/placeholder.png"
+          "thumbnailUrl": "/assets/team/about-3-min.jpg"
        },
        {
-            "thumbnailUrl": "/assets/placeholder.png"
+            "thumbnailUrl": "/assets/team/about-1-min.jpg"
        },
        {
-        "thumbnailUrl": "/assets/placeholder.png"
-       },
-       {
-            "thumbnailUrl": "/assets/placeholder.png"
+        "thumbnailUrl": "/assets/team/about-2-min.jpg"
        }
     ]
  }
