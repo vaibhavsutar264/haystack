@@ -140,7 +140,7 @@ export default function About({ Component, pageProps, news, settings }) {
                      {team.data?.map((slide, slideIndex) => (
                         <SwiperSlide className="" key={`slide_${slideIndex}`}>
                            <div className="w-full flex items-center justify-center">
-                              <img src={slide.thumbnailUrl} layout='contain' className="aspect-[16/9]"/>
+                              <img src={slide.thumbnailUrl} layout='contain'/>
                            </div>
                         </SwiperSlide>
                      ))}
