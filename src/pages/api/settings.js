@@ -10,7 +10,7 @@ export default async function handler(req, res) {
       console.log('filename: ', filePath)
       const isAlreadyExist = fs.existsSync(filePath)
       if (isAlreadyExist) {
-         // update
+         // updatek
          var createStream = fs.createWriteStream(filePath);
          createStream.write('')
          createStream.write(JSON.stringify(req.body))
